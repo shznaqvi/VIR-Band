@@ -15,14 +15,27 @@ public final class FormsContract {
     public static final String DATE_FORMAT = "yyyy-MM-dd'T'HH:mm'Z'";
     private final String TAG = "FormsContact";
     private Long ID;
-    private String FormNo;
-    private String VA_01;
-    private String VA_02;
-    private String VA_03;
-    private String VA_04;
-    private JSONObject VC;
-    private JSONObject VD;
-    private JSONObject VE;
+    private String FormNo; //FrmNo
+    private String VA_101; // Date of Interview
+    private String VA_101TIME; // Time of Interview
+    private String VA_102; // Name of Interviewer
+    private String VA_01; // Form No
+    private String VA_02; // Household #
+    private String VA_03 = "Gulshan Town, District East, Karachi Division, Karachi"; // Project Area / Town
+    private String VA_04; // Area / UC
+    private String VA_109; // Interview Status (1 = Complete; 2 = Incomplete; 3 = In-progress)
+    private String VB;
+    private String VC;
+    private String VD;
+    private String VE;
+    private String DEVICEID;
+    private String GPSLat;
+    private String GPSLng;
+    private String GPSAcc;
+    private String GPSTime;
+    private Boolean Synced = false;
+    private String SyncedDateTime ;
+    
 
     private Context context;
 
@@ -66,6 +79,15 @@ public final class FormsContract {
         this.VA_01 = va01;
     }
 
+
+    public String getFormNo() {
+        return this.FormNo;
+    }
+
+    public void setFormNo(String formNo) {
+        this.FormNo = formNo;
+    }
+
     public String getVA02() {
         return this.VA_02;
     }
@@ -90,42 +112,150 @@ public final class FormsContract {
         this.VA_04 = va04;
     }
 
-    public JSONObject getVC() {
+    public String getVB() {
+        return this.VB;
+    }
+
+    public void setVB(String VB) {
+        this.VB = VB;
+    }
+
+
+    public String getVC() {
         return this.VC;
     }
 
-    public void setVC(JSONObject VC) {
+    public void setVC(String VC) {
         this.VC = VC;
     }
 
-    public JSONObject getVD() {
+    public String getVD() {
         return this.VD;
     }
 
-    public void setVD(JSONObject VD) {
+    public void setVD(String VD) {
         this.VD = VD;
     }
 
-    public JSONObject getVE() {
+    public String getVE() {
         return this.VE;
     }
 
-    public void setVE(JSONObject VE) {
+    public void setVE(String VE) {
         this.VE = VE;
     }
 
+    public String getDeviceID() {
+        return this.DEVICEID;
+    }
+
+    public void setDeviceID(String deviceID) {
+        this.DEVICEID = deviceID;
+    }
+
+    public String getGPSLat() {
+        return this.GPSLat;
+    }
+
+    public void setGPSLat(String GPSLat) {
+        this.GPSLat = GPSLat;
+    }
+
+    public String getGPSLng() {
+        return this.GPSLng;
+    }
+
+    public void setGPSLng(String GPSLng) {
+        this.GPSLng = GPSLng;
+    }
+
+    public String getGPSAcc() {
+        return this.GPSAcc;
+    }
+
+    public void setGPSAcc(String GPSAcc) {
+        this.GPSAcc = GPSAcc;
+    }
+
+    public String getGPSTime() {
+        return this.GPSTime;
+    }
+
+    public void setGPSTime(String GPSTime) {
+        this.GPSTime = GPSTime;
+    }
+
+    public Boolean getSynced() {
+        return this.Synced;
+    }
+
+    public void setSynced(Boolean Synced) {
+        this.Synced = Synced;
+    }
+
+    public String getSyncedDateTime() {
+        return this.SyncedDateTime;
+    }
+
+    public void setSyncedDateTime(String SyncedDateTime) {
+        this.SyncedDateTime = SyncedDateTime;
+    }
+
+    public String getVA101() {
+        return this.VA_101;
+    }
+    public void setVA101(String va101) {
+        this.VA_101 = va101;
+    }
+
+
+    public String getVA101time() {
+        return this.VA_101TIME;
+    }
+    public void setVA101Time(String va101time) {
+        this.VA_101TIME = va101time;
+    }
+    public String getVA102() {
+        return this.VA_102;
+    }
+
+    public void setVA102(String va102) {
+        this.VA_102 = va102;
+    }
+
+    public String getVA109() {
+        return this.VA_109;
+    }
+
+    public void setVA109(String va109) {
+        this.VA_109 = va109;
+    }
 
     public static abstract class VIRForm implements BaseColumns {
 
         public static final String TABLE_NAME = "forms";
-        public static final String COLUMN_NAME_FORM_ID = "formid";
-        public static final String COLUMN_NAME_VA_FORMNO = "va_frmno";
+        public static final String COLUMN_NAME_NULLABLE = "NULLHACK";
+        public static final String _ID = "_id";
+        public static final String COLUMN_NAME_FORMNO = "va_frmno";
+        public static final String COLUMN_NAME_VA_101 = "va_101";
+        public static final String COLUMN_NAME_VA_101TIME = "va_101time";
+        public static final String COLUMN_NAME_VA_102 = "va_102";
         public static final String COLUMN_NAME_VA_01 = "va_01";
         public static final String COLUMN_NAME_VA_02 = "va_02";
         public static final String COLUMN_NAME_VA_03 = "va_03";
         public static final String COLUMN_NAME_VA_04 = "va_04";
+        public static final String COLUMN_NAME_VA_109 = "va_109";
+        public static final String COLUMN_NAME_VB = "vb";
         public static final String COLUMN_NAME_VC = "vc";
         public static final String COLUMN_NAME_VD = "vd";
         public static final String COLUMN_NAME_VE = "ve";
+        public static final String COLUMN_NAME_DEVICE_ID = "device_id";
+        public static final String COLUMN_NAME_GPS_LAT = "gps_lat";
+        public static final String COLUMN_NAME_GPS_LNG = "gps_lng";
+        public static final String COLUMN_NAME_GPS_ACCURACY = "gps_accuracy";
+        public static final String COLUMN_NAME_GPS_TIME = "gps_time";
+        public static final String COLUMN_NAME_SYNCED = "synced";
+        public static final String COLUMN_NAME_SYNCED_DATE_TIME = "synced_date_time";
+
     }
 }
