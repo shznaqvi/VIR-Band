@@ -67,12 +67,16 @@
             android:id="@+id/A04_a"
             android:layout_width="145dp"
             android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableRight="@android:drawable/btn_radio"
             android:text="@string/A104_a" />
 
         <RadioButton
             android:id="@+id/A04_b"
             android:layout_width="145dp"
             android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableRight="@android:drawable/btn_radio"
             android:text="@string/A104_b" />
     </RadioGroup>
 
