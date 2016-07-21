@@ -16,6 +16,8 @@
         android:layout_height="match_parent"
         android:background="@drawable/layout"
         android:orientation="vertical"
+        tools:context="com.example.hassannaqvi.virband.sC">
+
         tools:context="com.example.user.virband.Section2">
 <!--asdfasfas-->
 
@@ -111,7 +113,7 @@
                 android:layout_marginRight="40dp"
                 android:background="@color/colorPrimary"
                 android:singleLine="false"
-                android:text="@string/C13"
+                android:text="@string/AGE"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="25sp"
@@ -284,6 +286,7 @@
                     android:id="@+id/C18_d"
                     android:layout_width="145dp"
                     android:layout_height="wrap_content"
+                    android:text="@string/OTHER" />
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:text="@string/others" />
@@ -402,6 +405,7 @@
                     android:id="@+id/C20_g"
                     android:layout_width="145dp"
                     android:layout_height="wrap_content"
+                    android:text="@string/OTHER" />
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:text="@string/others" />
@@ -527,6 +531,7 @@
                     android:id="@+id/C22_d"
                     android:layout_width="145dp"
                     android:layout_height="wrap_content"
+                    android:text="@string/AUNT" />
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:text="@string/C22_d" />
@@ -535,6 +540,7 @@
                     android:id="@+id/C22_e"
                     android:layout_width="145dp"
                     android:layout_height="wrap_content"
+                    android:text="@string/OTHER" />
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:text="@string/others" />

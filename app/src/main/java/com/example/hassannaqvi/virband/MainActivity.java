@@ -6,22 +6,19 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Toast;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
 
-    @BindView(R.id.coordinatorLayout)
-    View coordinatorLayout;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,21 +32,17 @@ public class MainActivity extends AppCompatActivity {
             buildAlertMessageNoGps();
         }
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
 
         FormsDBHelper db = new FormsDBHelper(this);
-        Snackbar snackbar = Snackbar
-                .make(coordinatorLayout, "Last ID: " + String.valueOf(db.lastInsertId()), Snackbar.LENGTH_LONG);
-
-        snackbar.show();
-
+        Toast.makeText(this, "Last ID: " + String.valueOf(db.lastInsertId()), Toast.LENGTH_SHORT).show();
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
