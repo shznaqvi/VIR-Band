@@ -212,6 +212,43 @@ public class FormsDBHelper extends SQLiteOpenHelper {
     }
 
 
+    public int updateSC() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(VIRForm.COLUMN_NAME_VC, sA.fc.getVC());
+
+// Which row to update, based on the ID
+        String selection = VIRForm._ID + " LIKE ?";
+        String[] selectionArgs = {String.valueOf(sA.fc.getID())};
+
+        int count = db.update(VIRForm.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return count;
+    }
+
+    public int updateSD() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(VIRForm.COLUMN_NAME_VD, sA.fc.getVD());
+
+// Which row to update, based on the ID
+        String selection = VIRForm._ID + " LIKE ?";
+        String[] selectionArgs = {String.valueOf(sA.fc.getID())};
+
+        int count = db.update(VIRForm.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return count;
+    }
+
+
     private ContentValues getContentValues(FormsContract fc) {
         ContentValues values = new ContentValues();
         values.put(VIRForm._ID, fc.getID());

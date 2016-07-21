@@ -96,6 +96,8 @@ public class sA extends AppCompatActivity {
             A01.setError("Household Number not given!");
             Log.i(TAG, "A01- Household is empty");
             return false;
+        } else {
+            A01.setError(null);
         }
 
         if (A04.getCheckedRadioButtonId() == -1) {
@@ -103,7 +105,8 @@ public class sA extends AppCompatActivity {
             A04_b.setError("Please select an Area!");
             Log.i(TAG, "A04- Area not selected");
             return false;
-
+        } else {
+            A04_b.setError(null);
         }
         Toast.makeText(sA.this, "Validation... Successful!", Toast.LENGTH_SHORT).show();
         return true;

@@ -3,8 +3,6 @@ package com.example.hassannaqvi.virband;
 import android.Manifest;
 import android.app.Application;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -12,7 +10,6 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AlertDialog;
 import android.text.format.DateFormat;
 import android.widget.Toast;
 
@@ -23,17 +20,17 @@ public class VIRBandApp extends Application {
 
     private static final long MINIMUM_DISTANCE_CHANGE_FOR_UPDATES = 1; // in Meters
     private static final long MINIMUM_TIME_BETWEEN_UPDATES = 1000; // in Milliseconds
+    private static final int TWO_MINUTES = 1000 * 60 * 2;
 
-    protected LocationManager locationManager;
+
+    protected static LocationManager locationManager;
 
     @Override
     public void onCreate() {
         super.onCreate();
 
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        if (!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-            buildAlertMessageNoGps();
-        }
+
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
@@ -80,46 +77,84 @@ public class VIRBandApp extends Application {
 
     }
 
-    private void buildAlertMessageNoGps() {
-        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Your GPS seems to be disabled, do you want to enable it?")
-                .setCancelable(false)
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    public void onClick(final DialogInterface dialog, final int id) {
-                        startActivity(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS));
-                    }
-                })
-                .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    public void onClick(final DialogInterface dialog, final int id) {
-                        dialog.cancel();
-                    }
-                });
-        final AlertDialog alert = builder.create();
-        alert.show();
+    protected boolean isBetterLocation(Location location, Location currentBestLocation) {
+        if (currentBestLocation == null) {
+            // A new location is always better than no location
+            Toast.makeText(this, "New Location! Better: YES", Toast.LENGTH_SHORT).show();
+            return true;
+        }
 
+        long timeDelta = location.getTime() - currentBestLocation.getTime();
+        boolean isSignificantlyNewer = timeDelta > TWO_MINUTES;
+        boolean isSignificantlyOlder = timeDelta < -TWO_MINUTES;
+        boolean isNewer = timeDelta > 0;
+
+        if (isSignificantlyNewer) {
+            Toast.makeText(this, "Significantly Newer Location! Better: YES", Toast.LENGTH_SHORT).show();
+            return true;
+
+        } else if (isSignificantlyOlder) {
+            Toast.makeText(this, "Significantly Older Location! Better: NO", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        int accuracyDelta = (int) (location.getAccuracy() - currentBestLocation.getAccuracy());
+        boolean isLessAccurate = accuracyDelta > 0;
+        boolean isMoreAccurate = accuracyDelta < 0;
+        boolean isSignificantlyLessAccurate = accuracyDelta > 200;
+
+        boolean isFromSameProvider = isSameProvider(location.getProvider(),
+                currentBestLocation.getProvider());
+
+        if (isMoreAccurate) {
+            Toast.makeText(this, "More Accurate Location! Better: Yes", Toast.LENGTH_SHORT).show();
+            return true;
+        } else if (isNewer && !isLessAccurate) {
+            Toast.makeText(this, "Newer & Less Accurate Location! Better: YES", Toast.LENGTH_SHORT).show();
+            return true;
+        } else if (isNewer && !isSignificantlyLessAccurate && isFromSameProvider) {
+            Toast.makeText(this, "Newer & Not Less Accurate! Better: YES", Toast.LENGTH_SHORT).show();
+            return true;
+        }
+        Toast.makeText(this, "Better: No", Toast.LENGTH_SHORT).show();
+        return false;
+    }
+
+    private boolean isSameProvider(String provider1, String provider2) {
+        if (provider1 == null) {
+            return provider2 == null;
+        }
+        return provider1.equals(provider2);
     }
 
     private class MyLocationListener implements LocationListener {
 
         public void onLocationChanged(Location location) {
+
+
             SharedPreferences sharedPref = getSharedPreferences("GPSCoordinates", Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPref.edit();
 
+            Location bestLocation = new Location("storedProvider");
+            bestLocation.setAccuracy(Float.parseFloat(sharedPref.getString("Accuracy", null)));
+            bestLocation.setTime(Long.parseLong(sharedPref.getString("Time", null)));
+            bestLocation.setLatitude(Float.parseFloat(sharedPref.getString("Latitude", null)));
+            bestLocation.setLongitude(Float.parseFloat(sharedPref.getString("Longitude", null)));
 
-            editor.putString("Longitude", String.valueOf(location.getLongitude()));
-            editor.putString("Latitude", String.valueOf(location.getLatitude()));
-            editor.putString("Accuracy", String.valueOf(location.getAccuracy()));
-            editor.putString("Time", String.valueOf(location.getTime()));
-            String date = DateFormat.format("dd-MM-yyyy HH:mm", Long.parseLong(String.valueOf(location.getTime()))).toString();
-            Toast.makeText(getApplicationContext(),
-                    "GPS Commit! LAT: " + String.valueOf(location.getLongitude()) +
-                            " LNG: " + String.valueOf(location.getLatitude()) +
-                            " Accuracy: " + String.valueOf(location.getAccuracy()) +
-                            " Time: " + date,
-                    Toast.LENGTH_SHORT).show();
+            if (isBetterLocation(location, bestLocation)) {
+                editor.putString("Longitude", String.valueOf(location.getLongitude()));
+                editor.putString("Latitude", String.valueOf(location.getLatitude()));
+                editor.putString("Accuracy", String.valueOf(location.getAccuracy()));
+                editor.putString("Time", String.valueOf(location.getTime()));
+                String date = DateFormat.format("dd-MM-yyyy HH:mm", Long.parseLong(String.valueOf(location.getTime()))).toString();
+                Toast.makeText(getApplicationContext(),
+                        "GPS Commit! LAT: " + String.valueOf(location.getLongitude()) +
+                                " LNG: " + String.valueOf(location.getLatitude()) +
+                                " Accuracy: " + String.valueOf(location.getAccuracy()) +
+                                " Time: " + date,
+                        Toast.LENGTH_SHORT).show();
 
-            editor.apply();
-
+                editor.apply();
+            }
         }
 
         public void onStatusChanged(String s, int i, Bundle b) {

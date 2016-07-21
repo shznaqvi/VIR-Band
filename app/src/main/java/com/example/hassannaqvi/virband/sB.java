@@ -139,6 +139,8 @@ public class sB extends AppCompatActivity {
             B05.setError("Please enter index child name");
             Log.i(TAG, "Name of Index Child not given");
             return false;
+        } else {
+            B05.setError(null);
         }
 
         if (B06.getCheckedRadioButtonId() == -1) {
@@ -146,6 +148,8 @@ public class sB extends AppCompatActivity {
             B06_male.setError("Please select gender");
             Log.i(TAG, "Index Child's Gender not selected");
             return false;
+        } else {
+            B06_male.setError(null);
         }
 
         if (B08.getText().toString().isEmpty()) {
@@ -153,6 +157,8 @@ public class sB extends AppCompatActivity {
             B08.setError("Please enter age");
             Log.i(TAG, "Index Child's Age not given");
             return false;
+        } else {
+            B08.setError(null);
         }
 
         if (B09.getText().toString().isEmpty()) {
@@ -161,6 +167,8 @@ public class sB extends AppCompatActivity {
             Log.i(TAG, "Mother's Name not given");
             return false;
 
+        } else {
+            B09.setError(null);
         }
 
         if (B10.getText().toString().isEmpty()) {
@@ -169,6 +177,8 @@ public class sB extends AppCompatActivity {
             Log.i(TAG, "Father's Name not given");
             return false;
 
+        } else {
+            B10.setError(null);
         }
 
         if (B11.getCheckedRadioButtonId() == -1) {
@@ -176,8 +186,12 @@ public class sB extends AppCompatActivity {
             B11_e.setError("Please select the Place of Birth");
             Log.i(TAG, "Place of Birth not selected");
             return false;
-
+        } else {
+            B11_e.setError(null);
         }
+
+
+        Toast.makeText(this, "Validation... Successful!", Toast.LENGTH_SHORT).show();
 
         return true;
     }
