@@ -70,61 +70,61 @@
                         android:id="@+id/D23_a"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/D23_a" />
+                        android:text="@string/NA" />
 
                     <RadioButton
                         android:id="@+id/D23_b"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/D23_b" />
+                        android:text="@string/UNEDU" />
 
                     <RadioButton
                         android:id="@+id/D23_c"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/D23_c" />
+                        android:text="@string/PRI" />
 
                     <RadioButton
                         android:id="@+id/D23_d"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/D23_d" />
+                        android:text="@string/SEC" />
 
                     <RadioButton
                         android:id="@+id/D23_e"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/D23_e" />
+                        android:text="@string/METRIC" />
 
                     <RadioButton
                         android:id="@+id/D23_f"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/D23_f" />
+                        android:text="@string/INTER" />
 
                     <RadioButton
                         android:id="@+id/D23_g"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/D23_g" />
+                        android:text="@string/GRAD" />
 
                     <RadioButton
                         android:id="@+id/D23_h"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/D23_h" />
+                        android:text="@string/MS" />
 
                     <RadioButton
                         android:id="@+id/D23_i"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/D23_i" />
+                        android:text="@string/MADRSA" />
 
                     <RadioButton
                         android:id="@+id/D23_j"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/others" />
+                        android:text="@string/OTHER" />
                 </RadioGroup>
 
 
@@ -153,61 +153,61 @@
                 android:id="@+id/D24_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/D23_a" />
+                android:text="@string/NA" />
 
             <RadioButton
                 android:id="@+id/D24_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/D23_b" />
+                android:text="@string/UNEDU" />
 
             <RadioButton
                 android:id="@+id/D24_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/D23_c" />
+                android:text="@string/PRI" />
 
             <RadioButton
                 android:id="@+id/D24_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/D23_d" />
+                android:text="@string/SEC" />
 
             <RadioButton
                 android:id="@+id/D24_e"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/D23_e" />
+                android:text="@string/METRIC" />
 
             <RadioButton
                 android:id="@+id/D24_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/D23_f" />
+                android:text="@string/INTER" />
 
             <RadioButton
                 android:id="@+id/D24_g"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Graduation" />
+                android:text="@string/GRAD" />
 
             <RadioButton
                 android:id="@+id/D24_h"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/D23_h" />
+                android:text="@string/MS" />
 
             <RadioButton
                 android:id="@+id/D24_i"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/D23_i" />
+                android:text="@string/MADRSA" />
 
             <RadioButton
                 android:id="@+id/D24_j"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/others" />
+                android:text="@string/OTHER" />
         </RadioGroup>
 
 
@@ -233,61 +233,61 @@
                 android:id="@+id/D25_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/D23_a" />
+                android:text="@string/NA" />
 
             <RadioButton
                 android:id="@+id/D25_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/D23_b" />
+                android:text="@string/UNEDU" />
 
             <RadioButton
                 android:id="@+id/D25_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/D23_c" />
+                android:text="@string/PRI" />
 
             <RadioButton
                 android:id="@+id/D25_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/D23_d" />
+                android:text="@string/SEC" />
 
             <RadioButton
                 android:id="@+id/D25_e"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/D23_e" />
+                android:text="@string/METRIC" />
 
             <RadioButton
                 android:id="@+id/D25_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/D23_f" />
+                android:text="@string/INTER" />
 
             <RadioButton
                 android:id="@+id/D25_g"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/D23_g" />
+                android:text="@string/GRAD" />
 
             <RadioButton
                 android:id="@+id/D25_h"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/D23_h" />
+                android:text="@string/MS" />
 
             <RadioButton
                 android:id="@+id/D25_i"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/D23_h" />
+                android:text="@string/MADRSA" />
 
             <RadioButton
                 android:id="@+id/D25_j"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Other" />
+                android:text="@string/OTHER" />
         </RadioGroup>
 
 
@@ -313,37 +313,37 @@
                 android:id="@+id/D26_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/D26_a" />
+                android:text="@string/UNEMP" />
 
             <RadioButton
                 android:id="@+id/D26_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/D26_b" />
+                android:text="@string/GOVTEMP" />
 
             <RadioButton
                 android:id="@+id/D26_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/D26_c" />
+                android:text="@string/LABOUR" />
 
             <RadioButton
                 android:id="@+id/D26_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/D26_d" />
+                android:text="@string/PVTEMP" />
 
             <RadioButton
                 android:id="@+id/D26_e"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/D26_e" />
+                android:text="@string/PVTBUSI" />
 
             <RadioButton
                 android:id="@+id/D26_g"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/others" />
+                android:text="@string/OTHER" />
         </RadioGroup>
 
 
@@ -369,43 +369,43 @@
                 android:id="@+id/D27_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/D26_a" />
+                android:text="@string/UNEMP" />
 
             <RadioButton
                 android:id="@+id/D27_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/D26_b" />
+                android:text="@string/GOVTEMP" />
 
             <RadioButton
                 android:id="@+id/D27_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/D26_c" />
+                android:text="@string/LABOUR" />
 
             <RadioButton
                 android:id="@+id/D27_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/D26_d" />
+                android:text="@string/PVTEMP" />
 
             <RadioButton
                 android:id="@+id/D27_e"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/D26_e" />
+                android:text="@string/PVTBUSI" />
 
             <RadioButton
                 android:id="@+id/D27_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/D26_f" />
+                android:text="@string/D27_f" />
 
             <RadioButton
                 android:id="@+id/D27_g"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/others" />
+                android:text="@string/OTHER" />
         </RadioGroup>
 
 
@@ -461,7 +461,7 @@
                 android:id="@+id/D28_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/others" />
+                android:text="@string/OTHER" />
         </RadioGroup>
 
 
