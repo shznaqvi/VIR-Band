@@ -17,7 +17,7 @@
         android:background="@drawable/layout"
         android:orientation="vertical"
         tools:context="com.example.user.virband.Section2">
-
+<!--asdfasfas-->
 
         <ImageView
             android:layout_width="128dp"
