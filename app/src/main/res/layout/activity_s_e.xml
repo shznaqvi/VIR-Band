@@ -17,17 +17,9 @@
 
         <ImageView
             android:layout_width="128dp"
-            android:layout_height="88dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:background="@drawable/logo2" />
-
-        <pl.droidsonroids.gif.GifImageView
-            android:layout_width="wrap_content"
-            android:layout_height="97dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="_80dp"
-            android:src="@drawable/animate" />
+            android:src="@drawable/tvilogo" />
 
 
         <TextView
@@ -70,13 +62,13 @@
                     android:id="@+id/E29_a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/E29_a" />
+                    android:text="@string/YES" />
 
                 <RadioButton
                     android:id="@+id/E29_b"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/E29_b" />
+                    android:text="@string/NO" />
 
             </RadioGroup>
 
@@ -136,7 +128,7 @@
                 android:id="@+id/E30_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E30_f" />
+                android:text="@string/OTHER" />
 
         </RadioGroup>
 
@@ -170,7 +162,7 @@
                 android:id="@+id/E31_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E29_b" />
+                android:text="@string/E31_b" />
 
             <RadioButton
                 android:id="@+id/E31_c"
@@ -188,13 +180,13 @@
                 android:id="@+id/E31_e"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E31_e" />
+                android:text="@string/TV" />
 
             <RadioButton
                 android:id="@+id/E31_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E30_f" />
+                android:text="@string/E31_f" />
 
             <RadioButton
                 android:id="@+id/E31_g"
@@ -230,19 +222,20 @@
                 android:id="@+id/E31_l"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E31_l" />
+                android:text="@string/LEADER" />
 
             <RadioButton
                 android:id="@+id/E31_m"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E31_m" />
+                android:text="@string/OTHER" />
 
 
         </RadioGroup>
 
 
         <TextView
+            android:id="@+id/E32_txt"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
@@ -265,19 +258,19 @@
                 android:id="@+id/E32_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E32_a" />
+                android:text="@string/YES" />
 
             <RadioButton
                 android:id="@+id/E32_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E32_b" />
+                android:text="@string/NO" />
 
             <RadioButton
                 android:id="@+id/E32_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E32_c" />
+                android:text="@string/DNK" />
         </RadioGroup>
 
 
@@ -319,6 +312,12 @@
                 android:text="@string/E33_c" />
 
             <RadioButton
+                android:id="@+id/E33_d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/E33_d" />
+
+            <RadioButton
                 android:id="@+id/E33_e"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -328,19 +327,14 @@
                 android:id="@+id/E33_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E33_f" />
+                android:text="@string/NOTH" />
 
             <RadioButton
                 android:id="@+id/E33_g"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E33_g" />
+                android:text="@string/OTHER" />
 
-            <RadioButton
-                android:id="@+id/E33_h"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/E33_h" />
         </RadioGroup>
 
 
@@ -385,7 +379,7 @@
                 android:id="@+id/E34_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E34_d" />
+                android:text="@string/AUNT" />
 
             <RadioButton
                 android:id="@+id/E34_e"
@@ -409,7 +403,7 @@
                 android:id="@+id/E34_h"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E34_h" />
+                android:text="@string/LEADER" />
 
             <RadioButton
                 android:id="@+id/E34_i"
@@ -427,7 +421,7 @@
                 android:id="@+id/E34_k"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E34_k" />
+                android:text="@string/OTHER" />
         </RadioGroup>
 
 
@@ -454,13 +448,13 @@
                 android:id="@+id/E35_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E35_a" />
+                android:text="@string/YES" />
 
             <RadioButton
                 android:id="@+id/E35_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E35_b" />
+                android:text="@string/NO" />
 
         </RadioGroup>
 
@@ -505,7 +499,7 @@
                 android:id="@+id/E35a_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E35a_4" />
+                android:text="@string/OTHER" />
 
         </RadioGroup>
 
@@ -545,7 +539,7 @@
                 android:id="@+id/E36_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E36_c" />
+                android:text="@string/DNK" />
 
         </RadioGroup>
 
@@ -573,43 +567,43 @@
                 android:id="@+id/E36a_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E36a_1" />
+                android:text="@string/Ea_1" />
 
             <RadioButton
                 android:id="@+id/E36a_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E36a_2" />
+                android:text="@string/Ea_2" />
 
             <RadioButton
                 android:id="@+id/E36a_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E36a_3" />
+                android:text="@string/Ea_3" />
 
             <RadioButton
                 android:id="@+id/E36a_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E36a_4" />
+                android:text="@string/Ea_4" />
 
             <RadioButton
                 android:id="@+id/E36a_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E36a_5" />
+                android:text="@string/Ea_5" />
 
             <RadioButton
                 android:id="@+id/E36a_6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E36a_6" />
+                android:text="@string/DNK" />
 
             <RadioButton
                 android:id="@+id/E36a_7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E36a_7" />
+                android:text="@string/OTHER" />
 
         </RadioGroup>
 
@@ -655,13 +649,13 @@
                 android:id="@+id/E36b_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E36b_4" />
+                android:text="@string/DNK" />
 
             <RadioButton
                 android:id="@+id/E36b_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E36b_5" />
+                android:text="@string/OTHER" />
 
         </RadioGroup>
 
@@ -689,7 +683,7 @@
                 android:id="@+id/E37_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E37_a" />
+                android:text="@string/DNK" />
 
             <RadioButton
                 android:id="@+id/E37_b"
@@ -725,7 +719,7 @@
                 android:id="@+id/E37_g"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E37_g" />
+                android:text="@string/OTHER" />
 
         </RadioGroup>
 
@@ -753,7 +747,7 @@
                 android:id="@+id/E38_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E38_a" />
+                android:text="@string/DNK" />
 
             <RadioButton
                 android:id="@+id/E38_b"
@@ -783,7 +777,7 @@
                 android:id="@+id/E38_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E38_f" />
+                android:text="@string/OTHER" />
 
         </RadioGroup>
 
@@ -811,7 +805,7 @@
                 android:id="@+id/E39_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E39_a" />
+                android:text="@string/DNK" />
 
             <RadioButton
                 android:id="@+id/E39_b"
@@ -841,7 +835,7 @@
                 android:id="@+id/E39_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E39_f" />
+                android:text="@string/OTHER" />
 
         </RadioGroup>
 
@@ -881,7 +875,7 @@
                 android:id="@+id/E40_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E40_c" />
+                android:text="@string/DNK" />
 
         </RadioGroup>
 
@@ -909,43 +903,43 @@
                 android:id="@+id/E40a_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E40a_1" />
+                android:text="@string/Ea_1" />
 
             <RadioButton
                 android:id="@+id/E40a_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E40a_2" />
+                android:text="@string/Ea_2" />
 
             <RadioButton
                 android:id="@+id/E40a_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E40a_3" />
+                android:text="@string/Ea_3" />
 
             <RadioButton
                 android:id="@+id/E40a_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E40a_4" />
+                android:text="@string/Ea_4" />
 
             <RadioButton
                 android:id="@+id/E40a_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E40a_5" />
+                android:text="@string/Ea_5" />
 
             <RadioButton
                 android:id="@+id/E40a_6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E40a_6" />
+                android:text="@string/DNK" />
 
             <RadioButton
                 android:id="@+id/E40a_7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E40a_7" />
+                android:text="@string/OTHER" />
 
         </RadioGroup>
 
@@ -991,13 +985,13 @@
                 android:id="@+id/E40b_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E40b_4" />
+                android:text="@string/DNK" />
 
             <RadioButton
                 android:id="@+id/E40b_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E40b_5" />
+                android:text="@string/OTHER" />
 
 
         </RadioGroup>
@@ -1026,49 +1020,49 @@
                 android:id="@+id/E41_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E41_a" />
+                android:text="@string/PVTH" />
 
             <RadioButton
                 android:id="@+id/E41_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E41_b" />
+                android:text="@string/PVTC" />
 
             <RadioButton
                 android:id="@+id/E41_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E41_c" />
+                android:text="@string/GOVTH" />
 
             <RadioButton
                 android:id="@+id/E41_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E41_d" />
+                android:text="@string/GOVTD" />
 
             <RadioButton
                 android:id="@+id/E41_e"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E41_e" />
+                android:text="@string/EPIVC" />
 
             <RadioButton
                 android:id="@+id/E41_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E41_f" />
+                android:text="@string/HC" />
 
             <RadioButton
                 android:id="@+id/E41_g"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E41_g" />
+                android:text="@string/DNK" />
 
             <RadioButton
                 android:id="@+id/E41_h"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E41_h" />
+                android:text="@string/OTHER" />
 
 
         </RadioGroup>
@@ -1133,7 +1127,7 @@
                 android:id="@+id/E42_g"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E42_g" />
+                android:text="@string/OTHER" />
 
 
         </RadioGroup>
@@ -1192,7 +1186,7 @@
                 android:id="@+id/E43_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E43_f" />
+                android:text="@string/OTHER" />
 
 
         </RadioGroup>
@@ -1251,13 +1245,13 @@
                 android:id="@+id/E44_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E44_f" />
+                android:text="@string/NOTH" />
 
             <RadioButton
                 android:id="@+id/E44_g"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E44_g" />
+                android:text="@string/OTHER" />
         </RadioGroup>
 
 
@@ -1324,49 +1318,49 @@
                 android:id="@+id/E46_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E46_a" />
+                android:text="@string/PVTH" />
 
             <RadioButton
                 android:id="@+id/E46_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E46_b" />
+                android:text="@string/PVTC" />
 
             <RadioButton
                 android:id="@+id/E46_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E46_c" />
+                android:text="@string/GOVTH" />
 
             <RadioButton
                 android:id="@+id/E46_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E46_d" />
+                android:text="@string/GOVTD" />
 
             <RadioButton
                 android:id="@+id/E46_e"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E46_e" />
+                android:text="@string/EPIVC" />
 
             <RadioButton
                 android:id="@+id/E46_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E46_f" />
+                android:text="@string/HC" />
 
             <RadioButton
                 android:id="@+id/E46_g"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E46_g" />
+                android:text="@string/DNK" />
 
             <RadioButton
                 android:id="@+id/E46_h"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E46_h" />
+                android:text="@string/OTHER" />
 
         </RadioGroup>
 
@@ -1394,19 +1388,19 @@
                 android:id="@+id/E47_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E47_a" />
+                android:text="@string/YES" />
 
             <RadioButton
                 android:id="@+id/E47_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E47_b" />
+                android:text="@string/NO" />
 
             <RadioButton
                 android:id="@+id/E47_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E47_c" />
+                android:text="@string/DNK" />
 
 
         </RadioGroup>
@@ -1453,13 +1447,13 @@
                 android:id="@+id/E48_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E48_d" />
+                android:text="@string/DNK" />
 
             <RadioButton
                 android:id="@+id/E48_e"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E48_e" />
+                android:text="@string/OTHER" />
 
         </RadioGroup>
 
@@ -1499,13 +1493,13 @@
                 android:id="@+id/E49_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E49_c" />
+                android:text="@string/SMS" />
 
             <RadioButton
                 android:id="@+id/E49_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E49_d" />
+                android:text="@string/TV" />
 
             <RadioButton
                 android:id="@+id/E49_e"
@@ -1529,7 +1523,7 @@
                 android:id="@+id/E49_h"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E49_h" />
+                android:text="@string/OTHER" />
 
         </RadioGroup>
 
@@ -1557,19 +1551,19 @@
                 android:id="@+id/E50_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E50_a" />
+                android:text="@string/YES" />
 
             <RadioButton
                 android:id="@+id/E50_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E50_b" />
+                android:text="@string/NO" />
 
             <RadioButton
                 android:id="@+id/E50_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E50_c" />
+                android:text="@string/DNK" />
 
 
         </RadioGroup>
@@ -1589,7 +1583,7 @@
 
 
         <RadioGroup
-            android:id="@+id/E50A"
+            android:id="@+id/E50a"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -1623,13 +1617,13 @@
                 android:id="@+id/E50a_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E50a_5" />
+                android:text="@string/DNK" />
 
             <RadioButton
                 android:id="@+id/E50a_6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E50a_6" />
+                android:text="@string/OTHER" />
 
         </RadioGroup>
 
@@ -1682,13 +1676,13 @@
                 android:id="@+id/E50b_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E50b_5" />
+                android:text="@string/DNK" />
 
             <RadioButton
                 android:id="@+id/E50b_6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E50b_6" />
+                android:text="@string/OTHER" />
 
         </RadioGroup>
 
@@ -1717,19 +1711,19 @@
                 android:id="@+id/E51_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E51_a" />
+                android:text="@string/YES" />
 
             <RadioButton
                 android:id="@+id/E51_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E51_b" />
+                android:text="@string/NO" />
 
             <RadioButton
                 android:id="@+id/E51_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E51_c" />
+                android:text="@string/DNK" />
 
         </RadioGroup>
 
@@ -1758,13 +1752,13 @@
                 android:id="@+id/E51a_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E51a_1" />
+                android:text="@string/DNK" />
 
             <RadioButton
                 android:id="@+id/E51a_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E51a_2" />
+                android:text="@string/SMS" />
 
             <RadioButton
                 android:id="@+id/E51a_3"
@@ -1794,7 +1788,7 @@
                 android:id="@+id/E51a_7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E51a_7" />
+                android:text="@string/OTHER" />
 
         </RadioGroup>
 

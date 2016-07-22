@@ -23,6 +23,8 @@ public class sB extends AppCompatActivity {
 
     private static final String TAG = "SectionB";
 
+    public static JSONObject sb;
+
 
     @BindView(R.id.B05)
     EditText B05;
@@ -92,7 +94,7 @@ public class sB extends AppCompatActivity {
 
     public void SaveDraft() throws JSONException {
 
-        JSONObject sb = new JSONObject();
+        sb = new JSONObject();
 
         String spDateT = new SimpleDateFormat("dd-MM-yyyy HH:mm").format(B07.getCalendarView().getDate());
 

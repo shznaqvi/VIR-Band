@@ -111,7 +111,7 @@
                 android:layout_marginRight="40dp"
                 android:background="@color/colorPrimary"
                 android:singleLine="false"
-                android:text="@string/C13"
+                android:text="@string/AGE"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="25sp"
@@ -286,7 +286,7 @@
                     android:layout_height="wrap_content"
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
-                    android:text="@string/others" />
+                    android:text="@string/OTHER" />
             </RadioGroup>
 
             <TextView
@@ -404,7 +404,7 @@
                     android:layout_height="wrap_content"
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
-                    android:text="@string/others" />
+                    android:text="@string/OTHER" />
             </RadioGroup>
 
             <TextView
@@ -529,7 +529,7 @@
                     android:layout_height="wrap_content"
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
-                    android:text="@string/C22_d" />
+                    android:text="@string/AUNT" />
 
                 <RadioButton
                     android:id="@+id/C22_e"
@@ -537,7 +537,7 @@
                     android:layout_height="wrap_content"
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
-                    android:text="@string/others" />
+                    android:text="@string/OTHER" />
 
             </RadioGroup>
         </RelativeLayout>
