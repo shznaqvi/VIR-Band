@@ -120,7 +120,7 @@
                 android:layout_marginRight="40dp"
                 android:layout_marginTop="20dp"
                 android:background="@color/colorPrimary"
-                android:text="@string/B08"
+                android:text="@string/AGE"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="24sp" />
@@ -198,7 +198,7 @@
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
                 android:paddingRight="24dp"
-                android:text="@string/B11_a"
+                android:text="@string/PVTH"
                 android:textSize="18sp" />
 
             <RadioButton
@@ -208,6 +208,7 @@
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/B11_b"
+                android:text="@string/PVTC"
                 android:textSize="18sp" />
 
             <RadioButton
@@ -223,10 +224,12 @@
                 android:id="@+id/B11_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:button="@null"
+                android:text="@string/B11_d"
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
-                android:text="@string/B11_d"
-                android:textSize="18sp" />
+                android:text="@string/GOVTH"/>
 
             <RadioButton
                 android:id="@+id/B11_e"
@@ -235,6 +238,7 @@
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/others"
+                android:text="@string/OTHER"
                 android:textSize="18sp" />
 
 
@@ -249,7 +253,7 @@
             android:layout_marginTop="10dp"
             android:background="@color/green"
             android:onClick="submitSB"
-            android:text="@string/Submit"
+            android:text="@string/submit"
             android:textColor="@color/white" />
 
     </LinearLayout>
