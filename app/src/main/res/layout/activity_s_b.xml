@@ -207,7 +207,6 @@
                 android:layout_height="wrap_content"
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
-                android:text="@string/B11_b"
                 android:text="@string/PVTC"
                 android:textSize="18sp" />
 
@@ -224,12 +223,10 @@
                 android:id="@+id/B11_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:button="@null"
-                android:text="@string/B11_d"
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
-                android:text="@string/GOVTH"/>
+                android:text="@string/GOVTH"
+                android:textSize="18sp" />
 
             <RadioButton
                 android:id="@+id/B11_e"
@@ -237,7 +234,6 @@
                 android:layout_height="wrap_content"
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
-                android:text="@string/others"
                 android:text="@string/OTHER"
                 android:textSize="18sp" />
 

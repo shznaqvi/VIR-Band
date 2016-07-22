@@ -28,7 +28,7 @@
     <string name="female">Female</string>
     <string name="household_number">Household Number</string>
 
-    <string name="A"> شناختی تفصیلات </string>
+    <string name="sA"> شناختی تفصیلات </string>
     <string name="A01"> فارم نمبر </string>
     <string name="A02"> گھرانہ نمبر </string>
     <string name="A03"> پروجیکٹ کا علاقہ </string>
@@ -37,7 +37,7 @@
     <string name="A04_b"> پہلوان گوٹھ </string>
 
     <!-- SECTION B -->
-    <string name="B"> انڈیکس چائلڈ کی تفصیلات </string>
+    <string name="sB"> انڈیکس چائلڈ کی تفصیلات </string>
     <string name="B05"> نام </string>
     <string name="B06"> جنس </string>
     <string name="B06_a"> مرد </string>
@@ -54,7 +54,7 @@
     <string name="OTHER"> دیگر </string>
 
     <!-- SECTION C -->
-    <string name="C"> جوابدہندہ کی تفصیلات </string>
+    <string name="sC"> جوابدہندہ کی تفصیلات </string>
     <string name="C12"> نام </string>
     <string name="C14"> جنس </string>
     <string name="C14_m"> مرد </string>
@@ -84,8 +84,8 @@
     <string name="C21_a"> غیر شادی شدہ </string>
     <string name="C21_b"> شادی شدہ </string>
     <string name="C21_c"> طلاق یافتہ </string>
-    <string name="C21_e"> علیحدگی </string>
-    <string name="C21_f"> بیوہ </string>
+    <string name="C21_d"> علیحدگی </string>
+    <string name="C21_e"> بیوہ </string>
     <string name="C22"> انڈیکس چائلڈ سے رشتہ </string>
     <string name="C22_a"> والدہ </string>
     <string name="C22_b"> والد </string>
@@ -93,7 +93,7 @@
     <string name="AUNT"> خالہ/پھپھو/چچی/مامی </string>
 
     <!-- SECTION D -->
-    <string name="D"> انڈیکس چائلڈ کے خاندان کی سماجی ومعاشی حیثیت </string>
+    <string name="sD"> انڈیکس چائلڈ کے خاندان کی سماجی ومعاشی حیثیت </string>
     <string name="D23"> جوابدہندہ کی تعلیم حیثیت(اگر جوابدہندہ بچے کے والین ہوں تو یہ سوال نہیں پوچھیں اور اگلا سوال کریں ) </string>
     <string name="NA"> ناقابل اطلاق </string>
     <string name="UNEDU"> روایتی تعلیم سے نا آشناؒ </string>
@@ -122,7 +122,7 @@
     <string name="D28_e"> پندرہ ہزار سے بیس ہزار روپے تک </string>
 
     <!-- SECTION 'E' -->
-    <string name="E"> معلومات، رویہ اور عمل </string>
+    <string name="sE"> معلومات، رویہ اور عمل </string>
     <string name="E29"> کیا آپ نے کبھی ویکسینیشن (ٹیکے لگوانے)کے بارے میں سنا ہے </string>
     <string name="YES"> جی ہاں </string>
     <string name="NO"> جی نہیں </string>
@@ -145,14 +145,14 @@
     <string name="E31_j"> دوست </string>
     <string name="E31_k"> رشتےدار </string>
     <string name="LEADER"> مذہبی رہنما </string>
-    <string name="E32"> کیا آپ نے کبھی۔۔۔۔۔۔۔۔۔۔۔۔۔۔۔۔۔۔۔۔۔ کی ویکسینیشن کروائی (خالی جگہ میں انڈیکس چائلڈ کا نام لکھیں) </string>
+    <string name="E32"> کیا آپ نے کبھی ||| کی ویکسینیشن کروائی  </string>
     <string name="DNK"> نہیں معلوم </string>
     <string name="E33"> بچے پر ویکسینیشن کا اثر </string>
     <string name="E33_a"> بخار </string>
     <string name="E33_b"> بیماری </string>
     <string name="E33_c"> معذوری </string>
-    <string name="E33_e"> انتقال </string>
-    <string name="E33_f"> بیماریوں سے بچاوٗ </string>
+    <string name="E33_d"> انتقال </string>
+    <string name="E33_e"> بیماریوں سے بچاوٗ </string>
     <string name="NOTH"> کچھ نہیں ہوا </string>
     <string name="E34"> ٓپ کے خاندان میں ویکسینیشن کے حوالے سے کون فیصلہ کرتا ہے </string>
     <string name="E34_a"> بچے کی والدہ </string>
@@ -200,7 +200,7 @@
     <string name="E40"> کیا آپ کے خیال میں ساری ویکسین لگوانا اہم ہے </string>
     <string name="E40_a"> جی ہاں اہم ہے </string>
     <string name="E40_b"> جی نہیں ، غیر اہم ہے </string>
-    <string name="E40A">  </string>
+    <string name="E40a">  </string>
     <string name="E40b"> کیوں غیر اہم ہے </string>
     <string name="E40b_1"> بچہ بہت سے انجیکشن برداشت نہیں کر سکتا </string>
     <string name="E40b_2"> ویکسینیشن کی وجہ سے بچہ مزید غیر محفوظ ہو جاتا ہے </string>
