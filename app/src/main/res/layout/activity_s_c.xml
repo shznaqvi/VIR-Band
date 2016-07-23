@@ -289,7 +289,7 @@
                     android:text="@string/OTHER" />
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
-                    android:text="@string/others" />
+                    android:text="@string/OTHER" />
             </RadioGroup>
 
             <TextView
@@ -408,7 +408,7 @@
                     android:text="@string/OTHER" />
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
-                    android:text="@string/others" />
+                    android:text="@string/OTHER" />
             </RadioGroup>
 
             <TextView
@@ -534,7 +534,7 @@
                     android:text="@string/AUNT" />
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
-                    android:text="@string/C22_d" />
+                    android:text="@string/AUNT" />
 
                 <RadioButton
                     android:id="@+id/C22_e"
@@ -543,7 +543,7 @@
                     android:text="@string/OTHER" />
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
-                    android:text="@string/others" />
+                    android:text="@string/OTHER" />
 
             </RadioGroup>
         </RelativeLayout>

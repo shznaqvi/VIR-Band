@@ -235,6 +235,7 @@
 
 
         <TextView
+            android:id="@+id/E32_txt"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
@@ -311,6 +312,12 @@
                 android:text="@string/E33_c" />
 
             <RadioButton
+                android:id="@+id/E33_d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/E33_d" />
+
+            <RadioButton
                 android:id="@+id/E33_e"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -320,19 +327,14 @@
                 android:id="@+id/E33_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/E33_f" />
+                android:text="@string/NOTH" />
 
             <RadioButton
                 android:id="@+id/E33_g"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/NOTH" />
-
-            <RadioButton
-                android:id="@+id/E33_h"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/OTHER" />
+
         </RadioGroup>
 
 
@@ -884,7 +886,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:background="@color/colorPrimary"
-            android:text="@string/E40A"
+            android:text="@string/E40a"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="20sp"
@@ -1582,7 +1584,7 @@
 
 
         <RadioGroup
-            android:id="@+id/E50A"
+            android:id="@+id/E50a"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"

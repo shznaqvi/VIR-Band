@@ -143,6 +143,7 @@ public class sD extends AppCompatActivity {
         setContentView(R.layout.activity_s_d);
         ButterKnife.bind(this);
 
+
         //SKIP PATTERNS
 
         if (sC.respIsParent) {
