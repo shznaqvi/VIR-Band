@@ -16,7 +16,7 @@
         android:layout_height="match_parent"
         android:background="@drawable/layout"
         android:orientation="vertical"
-        tools:context="com.example.user.virband.Section2">
+        tools:context="com.example.hassannaqvi.virband.sC">
 <!--asdfasfas-->
 
         <ImageView

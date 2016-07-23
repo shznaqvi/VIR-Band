@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.hassannaqvi.virband.ScrollingActivity"
+    tools:context="com.example.hassannaqvi.virband.sVD"
     tools:showIn="@layout/activity_scrolling">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -23,12 +23,13 @@
             android:layout_gravity="center_horizontal"
             android:background="@drawable/logo2" />
 
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_marginTop="10dp"
             android:background="@color/colorPrimary"
-            android:text="Regrading Vaccination Dose"
+            android:text="@string/sVD"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="25dp"
@@ -41,7 +42,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:background="@color/colorPrimary"
-            android:text="What was the name of 1st vaccination dose"
+            android:text="@string/VD53"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="20sp"
@@ -56,60 +57,60 @@
             android:layout_marginTop="10dp">
 
             <RadioButton
-                android:id="@+id/VD53_A"
+                android:id="@+id/VD53_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Don't remember" />
+                android:text="@string/DNREM" />
+            <RadioButton
+                android:id="@+id/VD53_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/DNK" />
 
             <RadioButton
-                android:id="@+id/VD53_B"
+                android:id="@+id/VD53_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Don't know" />
+                android:text="@string/VD53_c" />
 
             <RadioButton
-                android:id="@+id/VD53_C"
+                android:id="@+id/VD53_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="BCG" />
+                android:text="@string/VD53_d" />
 
             <RadioButton
-                android:id="@+id/VD53_D"
+                android:id="@+id/VD53_e"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Penta" />
+                android:text="@string/VD53_e" />
 
             <RadioButton
-                android:id="@+id/VD53_E"
+                android:id="@+id/VD53_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="PCV" />
+                android:text="@string/VD53_f" />
 
             <RadioButton
-                android:id="@+id/VD53_F"
+                android:id="@+id/VD53_g"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="OPV" />
+                android:text="@string/VD53_g" />
 
             <RadioButton
-                android:id="@+id/VD53_G"
+                android:id="@+id/VD53_h"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pneumococcal" />
+                android:text="@string/VD53_h" />
 
             <RadioButton
-                android:id="@+id/VD53_H"
+                android:id="@+id/VD53_i"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Measles" />
-
-            <RadioButton
-                android:id="@+id/VD53_I"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Other" />
+                android:text="@string/OTHER" />
 
         </RadioGroup>
+
 
 
         <TextView
@@ -118,7 +119,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:background="@color/colorPrimary"
-            android:text="At what age 1st vaccination dose was administered"
+            android:text="@string/VD54"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="20sp"
@@ -133,42 +134,42 @@
             android:layout_marginTop="10dp">
 
             <RadioButton
-                android:id="@+id/VD54_A"
+                android:id="@+id/VD54_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="At birth" />
+                android:text="@string/VD54_a" />
+            <RadioButton
+                android:id="@+id/VD54_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/VD54_b" />
 
             <RadioButton
-                android:id="@+id/VD54_B"
+                android:id="@+id/VD54_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1 months" />
+                android:text="@string/VD54_c" />
 
             <RadioButton
-                android:id="@+id/VD54_C"
+                android:id="@+id/VD54_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2 months" />
+                android:text="@string/VD54_d" />
 
             <RadioButton
-                android:id="@+id/VD54_D"
+                android:id="@+id/VD54_e"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3 months" />
+                android:text="@string/VD54_e" />
 
             <RadioButton
-                android:id="@+id/VD54_E"
+                android:id="@+id/VD54_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="4 months" />
-
-            <RadioButton
-                android:id="@+id/VD54_F"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Other" />
+                android:text="@string/OTHER" />
 
         </RadioGroup>
+
 
 
         <TextView
@@ -177,7 +178,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:background="@color/colorPrimary"
-            android:text="Where(in human body)the vaccine was injected/given"
+            android:text="@string/VD55"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="20sp"
@@ -192,55 +193,54 @@
             android:layout_marginTop="10dp">
 
             <RadioButton
-                android:id="@+id/VD55_A"
+                android:id="@+id/VD55_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Oral" />
+                android:text="@string/VD55_a" />
+            <RadioButton
+                android:id="@+id/VD55_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/VD55_b" />
 
             <RadioButton
-                android:id="@+id/VD55_B"
+                android:id="@+id/VD55_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Right Thigh" />
+                android:text="@string/VD55_c" />
 
             <RadioButton
-                android:id="@+id/VD55_C"
+                android:id="@+id/VD55_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Left Thigh" />
+                android:text="@string/VD55_d" />
 
             <RadioButton
-                android:id="@+id/VD55_D"
+                android:id="@+id/VD55_e"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Right Arm" />
+                android:text="@string/VD55_e" />
 
             <RadioButton
-                android:id="@+id/VD55_E"
+                android:id="@+id/VD55_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Left Arm" />
+                android:text="@string/VD55_f" />
+            <RadioButton
+                android:id="@+id/VD55_g"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/DNK" />
 
             <RadioButton
-                android:id="@+id/VD55_F"
+                android:id="@+id/VD55_h"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hips" />
-
-            <RadioButton
-                android:id="@+id/VD55_G"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Don't know" />
-
-            <RadioButton
-                android:id="@+id/VD55_H"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Other" />
+                android:text="@string/OTHER" />
 
 
         </RadioGroup>
+
 
 
         <TextView
@@ -249,7 +249,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:background="@color/colorPrimary"
-            android:text="1st vaccine was administered"
+            android:text="@string/VD56"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="20sp"
@@ -264,40 +264,39 @@
             android:layout_marginTop="10dp">
 
             <RadioButton
-                android:id="@+id/VD56_A"
+                android:id="@+id/VD56_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="In time" />
+                android:text="@string/VD56_a" />
+            <RadioButton
+                android:id="@+id/VD56_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/VD56_b" />
 
             <RadioButton
-                android:id="@+id/VD56_B"
+                android:id="@+id/VD56_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Delayed" />
+                android:text="@string/VD56_c" />
 
             <RadioButton
-                android:id="@+id/VD56_C"
+                android:id="@+id/VD56_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Stopped" />
+                android:text="@string/VD56_d" />
 
             <RadioButton
-                android:id="@+id/VD56_D"
+                android:id="@+id/VD56_e"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Not due" />
+                android:text="@string/DNK" />
 
             <RadioButton
-                android:id="@+id/VD56_E"
+                android:id="@+id/VD56_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Don't remember" />
-
-            <RadioButton
-                android:id="@+id/VD56_F"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Don't know" />
+                android:text="@string/OTHER" />
 
 
         </RadioGroup>
@@ -309,7 +308,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:background="@color/colorPrimary"
-            android:text="Reason of Delayed, or Stopped vaccine"
+            android:text="@string/VD57"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="20sp"
@@ -327,6 +326,7 @@
             android:onClick="Section1"
             android:text="Submit"
             android:textColor="@color/white" />
+
 
     </LinearLayout>
 
