@@ -1,10 +1,15 @@
 package com.example.hassannaqvi.virband;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONException;
 
@@ -433,6 +438,19 @@ public class sE extends AppCompatActivity {
     @BindView(R.id.E51a_7)
     RadioButton E51a_7;
 
+    @BindView(R.id.fldGrpE40a)
+    LinearLayout fldGrpE40a;
+    @BindView(R.id.fldGrpE40b)
+    LinearLayout fldGrpE40b;
+    @BindView(R.id.fldGrpE48)
+    LinearLayout fldGrpE48;
+    @BindView(R.id.fldGrpE50a)
+    LinearLayout fldGrpE50a;
+    @BindView(R.id.fldGrpE50b)
+    LinearLayout fldGrpE50b;
+    @BindView(R.id.fldGrpE51a)
+    LinearLayout fldGrpE51a;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -448,8 +466,192 @@ public class sE extends AppCompatActivity {
         }
 
         // SKIP PATTERNS
+        E40.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId == E40_a.getId()) {
+                    fldGrpE40a.setVisibility(View.VISIBLE);
+                    fldGrpE40b.setVisibility(View.GONE);
+                    E40b.clearCheck();
+                } else if ((checkedId == E40_b.getId())) {
+                    fldGrpE40b.setVisibility(View.VISIBLE);
+                    fldGrpE40a.setVisibility(View.GONE);
+                    E40a.clearCheck();
+                }
+            }
+        });
+
+        E40.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId == E40_a.getId()) {
+                    fldGrpE40a.setVisibility(View.VISIBLE);
+                    fldGrpE40b.setVisibility(View.GONE);
+                    E40b.clearCheck();
+                } else if ((checkedId == E40_b.getId())) {
+                    fldGrpE40b.setVisibility(View.VISIBLE);
+                    fldGrpE40a.setVisibility(View.GONE);
+                    E40a.clearCheck();
+                }
+            }
+        });
+
+        E47.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId == E47_a.getId()) {
+                    fldGrpE48.setVisibility(View.VISIBLE);
+
+                } else {
+                    fldGrpE48.setVisibility(View.GONE);
+                    E48.clearCheck();
+                }
+            }
+        });
+
+        E50.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId == E50_a.getId()) {
+                    fldGrpE50a.setVisibility(View.VISIBLE);
+                    fldGrpE50b.setVisibility(View.GONE);
+                    E40b.clearCheck();
+                } else if ((checkedId == E50_b.getId())) {
+                    fldGrpE50b.setVisibility(View.VISIBLE);
+                    fldGrpE50a.setVisibility(View.GONE);
+                    E50a.clearCheck();
+                }
+            }
+        });
+
+        E51.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId == E50_a.getId()) {
+                    fldGrpE51a.setVisibility(View.VISIBLE);
+
+                } else {
+                    fldGrpE51a.setVisibility(View.GONE);
+                    E51a.clearCheck();
+                }
+            }
+        });
 
     }
 
+    public void submitSD(View v) throws JSONException {
+        if (formValidation()) {
+            SaveDraft();
+            if (UpdateDB()) {
+                Intent SE = new Intent(this, sVD.class);
+
+                startActivity(SE);
+            }
+        }
+
+    }
+
+    private boolean UpdateDB() {
+
+        return false;
+    }
+
+    private void SaveDraft() {
+
+    }
+
+    private boolean formValidation() {
+
+        if (E29.getCheckedRadioButtonId() == -1) {
+            Toast.makeText(this, "Please select one option", Toast.LENGTH_LONG).show();
+            E29_b.setError("Please select select one option");
+            Log.i(TAG, "No option selected");
+            return false;
+        } else {
+            E29_b.setError(null);
+        }
+
+        if (E30.getCheckedRadioButtonId() == -1) {
+            Toast.makeText(this, "Please select one option", Toast.LENGTH_LONG).show();
+            E30_f.setError("Please select select one option");
+            Log.i(TAG, "No option selected");
+            return false;
+        } else {
+            E30_f.setError(null);
+        }
+
+        if (E31.getCheckedRadioButtonId() == -1) {
+            Toast.makeText(this, "Please select one option", Toast.LENGTH_LONG).show();
+            E31_m.setError("Please select select one option");
+            Log.i(TAG, "No option selected");
+            return false;
+        } else {
+            E31_m.setError(null);
+        }
+
+        if (E32.getCheckedRadioButtonId() == -1) {
+            Toast.makeText(this, "Please select one option", Toast.LENGTH_LONG).show();
+            E32_c.setError("Please select select one option");
+            Log.i(TAG, "No option selected");
+            return false;
+        } else {
+            E32_c.setError(null);
+        }
+
+        if (E33.getCheckedRadioButtonId() == -1) {
+            Toast.makeText(this, "Please select one option", Toast.LENGTH_LONG).show();
+            E33_g.setError("Please select select one option");
+            Log.i(TAG, "No option selected");
+            return false;
+        } else {
+            E33_g.setError(null);
+        }
+
+        if (E34.getCheckedRadioButtonId() == -1) {
+            Toast.makeText(this, "Please select one option", Toast.LENGTH_LONG).show();
+            E34_k.setError("Please select select one option");
+            Log.i(TAG, "No option selected");
+            return false;
+        } else {
+            E34_k.setError(null);
+        }
+
+        if (E35.getCheckedRadioButtonId() == -1) {
+            Toast.makeText(this, "Please select one option", Toast.LENGTH_LONG).show();
+            E35_b.setError("Please select select one option");
+            Log.i(TAG, "No option selected");
+            return false;
+        }
+
+        if (E35_b.isChecked() && E35a.getCheckedRadioButtonId() == -1) {
+            Toast.makeText(this, "Please select one option", Toast.LENGTH_LONG).show();
+            E35a_4.setError("Please select select one option");
+            Log.i(TAG, "No option selected");
+            return false;
+        }
+
+        if (E36.getCheckedRadioButtonId() == -1) {
+            Toast.makeText(this, "Please select one option", Toast.LENGTH_LONG).show();
+            E36_c.setError("Please select select one option");
+            Log.i(TAG, "No option selected");
+            return false;
+        }
+
+        if (E36_a.isChecked() && E36a.getCheckedRadioButtonId() == -1) {
+            Toast.makeText(this, "Please select one option", Toast.LENGTH_LONG).show();
+            E36a_7.setError("Please select select one option");
+            Log.i(TAG, "No option selected");
+            return false;
+        }
+
+        if (E36_b.isChecked() && E36b.getCheckedRadioButtonId() == -1) {
+            Toast.makeText(this, "Please select one option", Toast.LENGTH_LONG).show();
+            E36b_5.setError("Please select select one option");
+            Log.i(TAG, "No option selected");
+            return false;
+        }
+
+        return true;
+    }
 
 }

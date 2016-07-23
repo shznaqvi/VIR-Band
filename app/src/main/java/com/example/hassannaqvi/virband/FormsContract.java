@@ -28,6 +28,7 @@ public final class FormsContract {
     private String VC;
     private String VD;
     private String VE;
+    private String IChild;
     private String DEVICEID;
     private String GPSLat;
     private String GPSLng;
@@ -145,6 +146,15 @@ public final class FormsContract {
         this.VE = VE;
     }
 
+    public String getIChild() {
+        return this.IChild;
+    }
+
+    public void setIChild(String IChild) {
+        this.IChild = IChild;
+    }
+
+
     public String getDeviceID() {
         return this.DEVICEID;
     }
@@ -249,6 +259,7 @@ public final class FormsContract {
         public static final String COLUMN_NAME_VC = "vc";
         public static final String COLUMN_NAME_VD = "vd";
         public static final String COLUMN_NAME_VE = "ve";
+        public static final String COLUMN_NAME_ICHILD = "ichild";
         public static final String COLUMN_NAME_DEVICE_ID = "device_id";
         public static final String COLUMN_NAME_GPS_LAT = "gps_lat";
         public static final String COLUMN_NAME_GPS_LNG = "gps_lng";

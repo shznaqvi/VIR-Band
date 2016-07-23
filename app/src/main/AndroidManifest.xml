@@ -71,13 +71,17 @@
 
         <activity
             android:name=".CalibrateLocation"
-            android:label="@string/title_activity_calibrate_location">
-
-        </activity>
+            android:label="@string/title_activity_calibrate_location" />
 
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".sVD" />
+        <activity
+            android:name=".ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
