@@ -63,73 +63,73 @@
                 android:id="@+id/VD53_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/DNREM"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"/>
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/DNREM" />
 
             <RadioButton
                 android:id="@+id/VD53_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/DNK"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"/>
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/DNK" />
 
             <RadioButton
                 android:id="@+id/VD53_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/VD53_c"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"/>
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/VD53_c" />
 
             <RadioButton
                 android:id="@+id/VD53_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/VD53_d"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"/>
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/VD53_d" />
 
             <RadioButton
                 android:id="@+id/VD53_e"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/VD53_e"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"/>
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/VD53_e" />
 
             <RadioButton
                 android:id="@+id/VD53_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/VD53_f"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"/>
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/VD53_f" />
 
             <RadioButton
                 android:id="@+id/VD53_g"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/VD53_g"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"/>
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/VD53_g" />
 
             <RadioButton
                 android:id="@+id/VD53_h"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/VD53_h"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"/>
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/VD53_h" />
 
             <RadioButton
                 android:id="@+id/VD53_i"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/OTHER"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"/>
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/OTHER" />
 
         </RadioGroup>
 
@@ -159,49 +159,49 @@
                 android:id="@+id/VD54_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/VD54_a"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"/>
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/VD54_a" />
 
             <RadioButton
                 android:id="@+id/VD54_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/VD54_b"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"/>
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/VD54_b" />
 
             <RadioButton
                 android:id="@+id/VD54_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/VD54_c"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"/>
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/VD54_c" />
 
             <RadioButton
                 android:id="@+id/VD54_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/VD54_d"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"/>
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/VD54_d" />
 
             <RadioButton
                 android:id="@+id/VD54_e"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/VD54_e"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"/>
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/VD54_e" />
 
             <RadioButton
                 android:id="@+id/VD54_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/OTHER"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"/>
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/OTHER" />
 
         </RadioGroup>
 
@@ -231,65 +231,65 @@
                 android:id="@+id/VD55_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/VD55_a"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"/>
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/VD55_a" />
 
             <RadioButton
                 android:id="@+id/VD55_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/VD55_b"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"/>
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/VD55_b" />
 
             <RadioButton
                 android:id="@+id/VD55_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/VD55_c"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"/>
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/VD55_c" />
 
             <RadioButton
                 android:id="@+id/VD55_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/VD55_d"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"/>
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/VD55_d" />
 
             <RadioButton
                 android:id="@+id/VD55_e"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/VD55_e"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"/>
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/VD55_e" />
 
             <RadioButton
                 android:id="@+id/VD55_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/VD55_f"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"/>
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/VD55_f" />
 
             <RadioButton
                 android:id="@+id/VD55_g"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/DNK"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"/>
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/DNK" />
 
             <RadioButton
                 android:id="@+id/VD55_h"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/OTHER"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"/>
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/OTHER" />
 
 
         </RadioGroup>
@@ -320,49 +320,49 @@
                 android:id="@+id/VD56_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/VD56_a"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"/>
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/VD56_a" />
 
             <RadioButton
                 android:id="@+id/VD56_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/VD56_b"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"/>
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/VD56_b" />
 
             <RadioButton
                 android:id="@+id/VD56_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/VD56_c"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"/>
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/VD56_c" />
 
             <RadioButton
                 android:id="@+id/VD56_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/VD56_d"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"/>
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/VD56_d" />
 
             <RadioButton
                 android:id="@+id/VD56_e"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/DNK"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"/>
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/DNK" />
 
             <RadioButton
                 android:id="@+id/VD56_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/OTHER"
                 android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"/>
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/OTHER" />
 
 
         </RadioGroup>
