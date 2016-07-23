@@ -61,6 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/DNREM" />
+
             <RadioButton
                 android:id="@+id/VD53_b"
                 android:layout_width="wrap_content"
@@ -112,7 +113,6 @@
         </RadioGroup>
 
 
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -138,6 +138,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/VD54_a" />
+
             <RadioButton
                 android:id="@+id/VD54_b"
                 android:layout_width="wrap_content"
@@ -171,7 +172,6 @@
         </RadioGroup>
 
 
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -197,6 +197,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/VD55_a" />
+
             <RadioButton
                 android:id="@+id/VD55_b"
                 android:layout_width="wrap_content"
@@ -226,6 +227,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/VD55_f" />
+
             <RadioButton
                 android:id="@+id/VD55_g"
                 android:layout_width="wrap_content"
@@ -240,7 +242,6 @@
 
 
         </RadioGroup>
-
 
 
         <TextView
@@ -268,6 +269,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/VD56_a" />
+
             <RadioButton
                 android:id="@+id/VD56_b"
                 android:layout_width="wrap_content"
