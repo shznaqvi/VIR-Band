@@ -13,7 +13,7 @@
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/layout"
         android:orientation="vertical"
         tools:context="com.example.hassannaqvi.virband.sB">
@@ -91,7 +91,8 @@
                 android:layout_alignRight="@+id/textView2"
                 android:layout_alignStart="@+id/textView2"
                 android:layout_alignTop="@+id/B08"
-                android:layout_marginLeft="40dp">
+                android:layout_marginLeft="20dp"
+                android:gravity="right">
 
                 <RadioButton
                     android:id="@+id/B06_male"
@@ -189,7 +190,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="20dp"
+            android:gravity="right">
 
             <RadioButton
                 android:id="@+id/B11_a"
@@ -197,7 +199,6 @@
                 android:layout_height="wrap_content"
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
-                android:paddingRight="24dp"
                 android:text="@string/PVTH"
                 android:textSize="18sp" />
 
@@ -207,7 +208,6 @@
                 android:layout_height="wrap_content"
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
-                android:text="@string/B11_b"
                 android:text="@string/PVTC"
                 android:textSize="18sp" />
 
@@ -226,9 +226,6 @@
                 android:layout_height="wrap_content"
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
-                android:text="@string/B11_d"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/GOVTH"
                 android:textSize="18sp" />
 
@@ -238,7 +235,6 @@
                 android:layout_height="wrap_content"
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
-                android:text="@string/others"
                 android:text="@string/OTHER"
                 android:textSize="18sp" />
 

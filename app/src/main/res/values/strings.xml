@@ -145,14 +145,14 @@
     <string name="E31_j"> دوست </string>
     <string name="E31_k"> رشتےدار </string>
     <string name="LEADER"> مذہبی رہنما </string>
-    <string name="E32"> کیا آپ نے کبھی۔۔۔۔۔۔۔۔۔۔۔۔۔۔۔۔۔۔۔۔۔ کی ویکسینیشن کروائی (خالی جگہ میں انڈیکس چائلڈ کا نام لکھیں) </string>
+    <string name="E32"> کیا آپ نے کبھی ||| کی ویکسینیشن کروائی  </string>
     <string name="DNK"> نہیں معلوم </string>
     <string name="E33"> بچے پر ویکسینیشن کا اثر </string>
     <string name="E33_a"> بخار </string>
     <string name="E33_b"> بیماری </string>
     <string name="E33_c"> معذوری </string>
-    <string name="E33_e"> انتقال </string>
-    <string name="E33_f"> بیماریوں سے بچاوٗ </string>
+    <string name="E33_d"> انتقال </string>
+    <string name="E33_e"> بیماریوں سے بچاوٗ </string>
     <string name="NOTH"> کچھ نہیں ہوا </string>
     <string name="E34"> ٓپ کے خاندان میں ویکسینیشن کے حوالے سے کون فیصلہ کرتا ہے </string>
     <string name="E34_a"> بچے کی والدہ </string>
@@ -200,7 +200,7 @@
     <string name="E40"> کیا آپ کے خیال میں ساری ویکسین لگوانا اہم ہے </string>
     <string name="E40_a"> جی ہاں اہم ہے </string>
     <string name="E40_b"> جی نہیں ، غیر اہم ہے </string>
-    <string name="E40A">  </string>
+    <string name="E40a">  </string>
     <string name="E40b"> کیوں غیر اہم ہے </string>
     <string name="E40b_1"> بچہ بہت سے انجیکشن برداشت نہیں کر سکتا </string>
     <string name="E40b_2"> ویکسینیشن کی وجہ سے بچہ مزید غیر محفوظ ہو جاتا ہے </string>
@@ -302,4 +302,6 @@
 
     <string name="submit">Submit</string>
     <string name="title_activity_calibrate_location">Map</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+
 </resources>
