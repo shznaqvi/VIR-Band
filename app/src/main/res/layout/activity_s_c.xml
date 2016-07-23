@@ -80,7 +80,8 @@
                 android:layout_below="@id/Sex"
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="40dp"
-                android:layout_marginTop="16dp">
+                android:layout_marginTop="16dp"
+                android:gravity="right">
 
                 <RadioButton
                     android:id="@+id/C14_male"
@@ -364,6 +365,8 @@
                     android:id="@+id/C20_b"
                     android:layout_width="145dp"
                     android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
                     android:text="@string/C20_b" />
 
                 <RadioButton
