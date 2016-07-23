@@ -44,92 +44,115 @@
             android:orientation="vertical"
             android:visibility="visible">
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="20dp">
-
-                <TextView
-                    android:layout_width="290dp"
-                    android:layout_height="35dp"
-                    android:background="@color/colorPrimary"
-                    android:text="@string/D23"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:textSize="24sp" />
-
-                <RadioGroup
-                    android:id="@+id/D23"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="40dp">
-
-                    <RadioButton
-                        android:id="@+id/D23_a"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/NA" />
-
-                    <RadioButton
-                        android:id="@+id/D23_b"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/UNEDU" />
-
-                    <RadioButton
-                        android:id="@+id/D23_c"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/PRI" />
-
-                    <RadioButton
-                        android:id="@+id/D23_d"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/SEC" />
-
-                    <RadioButton
-                        android:id="@+id/D23_e"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/METRIC" />
-
-                    <RadioButton
-                        android:id="@+id/D23_f"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/INTER" />
-
-                    <RadioButton
-                        android:id="@+id/D23_g"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/GRAD" />
-
-                    <RadioButton
-                        android:id="@+id/D23_h"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/MS" />
-
-                    <RadioButton
-                        android:id="@+id/D23_i"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/MADRSA" />
-
-                    <RadioButton
-                        android:id="@+id/D23_j"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/OTHER" />
-                </RadioGroup>
-
-
-            </RelativeLayout>
         </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="290dp"
+                android:layout_height="35dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/colorPrimary"
+                android:text="@string/D23"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <RadioGroup
+                android:id="@+id/D23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:gravity="right">
+
+                <RadioButton
+                    android:id="@+id/D23_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:text="@string/NA" />
+
+                <RadioButton
+                    android:id="@+id/D23_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:text="@string/UNEDU" />
+
+                <RadioButton
+                    android:id="@+id/D23_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:text="@string/PRI" />
+
+                <RadioButton
+                    android:id="@+id/D23_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:text="@string/SEC" />
+
+                <RadioButton
+                    android:id="@+id/D23_e"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:text="@string/METRIC" />
+
+                <RadioButton
+                    android:id="@+id/D23_f"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:text="@string/INTER" />
+
+                <RadioButton
+                    android:id="@+id/D23_g"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:text="@string/GRAD" />
+
+                <RadioButton
+                    android:id="@+id/D23_h"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:text="@string/MS" />
+
+                <RadioButton
+                    android:id="@+id/D23_i"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:text="@string/MADRSA" />
+
+                <RadioButton
+                    android:id="@+id/D23_j"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:text="@string/OTHER" />
+            </RadioGroup>
+
+
+        </RelativeLayout>
 
         <TextView
             android:layout_width="290dp"
@@ -144,69 +167,90 @@
 
         <RadioGroup
             android:id="@+id/D24"
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="10dp"
+            android:gravity="right">
 
             <RadioButton
                 android:id="@+id/D24_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/NA" />
 
             <RadioButton
                 android:id="@+id/D24_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/UNEDU" />
 
             <RadioButton
                 android:id="@+id/D24_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/PRI" />
 
             <RadioButton
                 android:id="@+id/D24_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/SEC" />
 
             <RadioButton
                 android:id="@+id/D24_e"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/METRIC" />
 
             <RadioButton
                 android:id="@+id/D24_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/INTER" />
 
             <RadioButton
                 android:id="@+id/D24_g"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/GRAD" />
 
             <RadioButton
                 android:id="@+id/D24_h"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/MS" />
 
             <RadioButton
                 android:id="@+id/D24_i"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/MADRSA" />
 
             <RadioButton
                 android:id="@+id/D24_j"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/OTHER" />
         </RadioGroup>
 
@@ -224,69 +268,90 @@
 
         <RadioGroup
             android:id="@+id/D25"
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="10dp"
+            android:gravity="right">
 
             <RadioButton
                 android:id="@+id/D25_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/NA" />
 
             <RadioButton
                 android:id="@+id/D25_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/UNEDU" />
 
             <RadioButton
                 android:id="@+id/D25_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/PRI" />
 
             <RadioButton
                 android:id="@+id/D25_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/SEC" />
 
             <RadioButton
                 android:id="@+id/D25_e"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/METRIC" />
 
             <RadioButton
                 android:id="@+id/D25_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/INTER" />
 
             <RadioButton
                 android:id="@+id/D25_g"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/GRAD" />
 
             <RadioButton
                 android:id="@+id/D25_h"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/MS" />
 
             <RadioButton
                 android:id="@+id/D25_i"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/MADRSA" />
 
             <RadioButton
                 android:id="@+id/D25_j"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/OTHER" />
         </RadioGroup>
 
@@ -304,45 +369,58 @@
 
         <RadioGroup
             android:id="@+id/D26"
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="10dp"
+            android:gravity="right">
 
             <RadioButton
                 android:id="@+id/D26_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/UNEMP" />
 
             <RadioButton
                 android:id="@+id/D26_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/GOVTEMP" />
 
             <RadioButton
                 android:id="@+id/D26_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/LABOUR" />
 
             <RadioButton
                 android:id="@+id/D26_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/PVTEMP" />
 
             <RadioButton
                 android:id="@+id/D26_e"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/PVTBUSI" />
 
             <RadioButton
                 android:id="@+id/D26_g"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/OTHER" />
         </RadioGroup>
 
@@ -360,51 +438,66 @@
 
         <RadioGroup
             android:id="@+id/D27"
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="10dp"
+            android:gravity="right">
 
             <RadioButton
                 android:id="@+id/D27_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/UNEMP" />
 
             <RadioButton
                 android:id="@+id/D27_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/GOVTEMP" />
 
             <RadioButton
                 android:id="@+id/D27_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/LABOUR" />
 
             <RadioButton
                 android:id="@+id/D27_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/PVTEMP" />
 
             <RadioButton
                 android:id="@+id/D27_e"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/PVTBUSI" />
 
             <RadioButton
                 android:id="@+id/D27_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/D27_f" />
 
             <RadioButton
                 android:id="@+id/D27_g"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/OTHER" />
         </RadioGroup>
 
@@ -422,45 +515,58 @@
 
         <RadioGroup
             android:id="@+id/D28"
-            android:layout_width="250dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp">
+            android:layout_marginTop="10dp"
+            android:gravity="right">
 
             <RadioButton
                 android:id="@+id/D28_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/D28_a" />
 
             <RadioButton
                 android:id="@+id/D28_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/D28_b" />
 
             <RadioButton
                 android:id="@+id/D28_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/D28_c" />
 
             <RadioButton
                 android:id="@+id/D28_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/D28_d" />
 
             <RadioButton
                 android:id="@+id/D28_e"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/D28_e" />
 
             <RadioButton
                 android:id="@+id/D28_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/OTHER" />
         </RadioGroup>
 
