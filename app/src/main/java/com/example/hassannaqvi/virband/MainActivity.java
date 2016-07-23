@@ -94,6 +94,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(oF);
     }
 
+    public void openVD(View v) {
+        Intent oF = new Intent(this, sVD.class);
+        startActivity(oF);
+    }
+
     public void checkLocation(View v) {
         Intent chkLoc = new Intent(this, CalibrateLocation.class);
         startActivity(chkLoc);

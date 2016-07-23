@@ -9,7 +9,7 @@
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/layout"
         android:orientation="vertical"
         tools:context="com.example.user.virband.Section2">
@@ -839,7 +839,6 @@
 
         </RadioGroup>
 
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -892,7 +891,13 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <RadioGroup
+        <LinearLayout
+            android:id="@+id/fldGrpE40a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioGroup
             android:id="@+id/E40a"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
@@ -942,8 +947,13 @@
                 android:text="@string/OTHER" />
 
         </RadioGroup>
+        </LinearLayout>
 
-
+        <LinearLayout
+            android:id="@+id/fldGrpE40b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -995,7 +1005,7 @@
 
 
         </RadioGroup>
-
+        </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
@@ -1405,6 +1415,11 @@
 
         </RadioGroup>
 
+        <LinearLayout
+            android:id="@+id/fldGrpE48"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
@@ -1456,7 +1471,7 @@
                 android:text="@string/OTHER" />
 
         </RadioGroup>
-
+        </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
@@ -1568,7 +1583,11 @@
 
         </RadioGroup>
 
-
+        <LinearLayout
+            android:id="@+id/fldGrpE50a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -1626,8 +1645,13 @@
                 android:text="@string/OTHER" />
 
         </RadioGroup>
+        </LinearLayout>
 
-
+        <LinearLayout
+            android:id="@+id/fldGrpE50b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -1685,7 +1709,7 @@
                 android:text="@string/OTHER" />
 
         </RadioGroup>
-
+        </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
@@ -1727,6 +1751,11 @@
 
         </RadioGroup>
 
+        <LinearLayout
+            android:id="@+id/fldGrpE51a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
@@ -1791,7 +1820,7 @@
                 android:text="@string/OTHER" />
 
         </RadioGroup>
-
+        </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
