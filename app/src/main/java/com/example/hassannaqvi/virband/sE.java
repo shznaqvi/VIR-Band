@@ -506,6 +506,11 @@ public class sE extends AppCompatActivity {
                     fldGrpE36b.setVisibility(View.VISIBLE);
                     fldGrpE36a.setVisibility(View.GONE);
                     E36a.clearCheck();
+                } else if ((checkedId == E36_c.getId())) {
+                    fldGrpE36a.setVisibility(View.GONE);
+                    fldGrpE36b.setVisibility(View.GONE);
+                    E36a.clearCheck();
+                    E36b.clearCheck();
                 }
             }
         });
