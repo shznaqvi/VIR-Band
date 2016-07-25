@@ -447,6 +447,12 @@ public class sE extends AppCompatActivity {
     @BindView(R.id.E52_c)
     RadioButton E52_c;
 
+    @BindView(R.id.fldGrpE35a)
+    LinearLayout fldGrpE35a;
+    @BindView(R.id.fldGrpE36a)
+    LinearLayout fldGrpE36a;
+    @BindView(R.id.fldGrpE36b)
+    LinearLayout fldGrpE36b;
     @BindView(R.id.fldGrpE40a)
     LinearLayout fldGrpE40a;
     @BindView(R.id.fldGrpE40b)
@@ -477,6 +483,33 @@ public class sE extends AppCompatActivity {
         }
 
         // SKIP PATTERNS
+        E35.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId == E35_b.getId()) {
+                    fldGrpE35a.setVisibility(View.VISIBLE);
+                } else {
+                    fldGrpE35a.setVisibility(View.GONE);
+                    E35a.clearCheck();
+                }
+            }
+        });
+
+        E36.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId == E36_a.getId()) {
+                    fldGrpE36a.setVisibility(View.VISIBLE);
+                    fldGrpE36b.setVisibility(View.GONE);
+                    E36b.clearCheck();
+                } else if ((checkedId == E36_b.getId())) {
+                    fldGrpE36b.setVisibility(View.VISIBLE);
+                    fldGrpE36a.setVisibility(View.GONE);
+                    E36a.clearCheck();
+                }
+            }
+        });
+
         E40.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {

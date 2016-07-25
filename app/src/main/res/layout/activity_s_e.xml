@@ -555,6 +555,11 @@
 
         </RadioGroup>
 
+        <LinearLayout
+            android:id="@+id/fldGrpE35a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -608,7 +613,7 @@
                 android:text="@string/OTHER" />
 
         </RadioGroup>
-
+        </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
@@ -656,7 +661,11 @@
 
         </RadioGroup>
 
-
+        <LinearLayout
+            android:id="@+id/fldGrpE36a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -734,7 +743,13 @@
                 android:text="@string/OTHER" />
 
         </RadioGroup>
+        </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/fldGrpE36b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
@@ -797,7 +812,7 @@
                 android:text="@string/OTHER" />
 
         </RadioGroup>
-
+        </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
@@ -1065,10 +1080,14 @@
 
         </RadioGroup>
 
-
+        <LinearLayout
+            android:id="@+id/fldGrpE40a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:background="@color/colorPrimary"
@@ -1078,11 +1097,7 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <LinearLayout
-            android:id="@+id/fldGrpE40a"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+
 
             <RadioGroup
             android:id="@+id/E40a"
@@ -1678,7 +1693,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:background="@color/colorPrimary"
-            android:text=""
+            android:text="@string/E47"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="20sp"
@@ -1881,7 +1896,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:background="@color/colorPrimary"
-            android:text=""
+            android:text="@string/E50"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="20sp"
