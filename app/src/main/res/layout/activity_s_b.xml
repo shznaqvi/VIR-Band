@@ -28,8 +28,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:layout_marginTop="20dp"
             android:background="@color/colorPrimary"
+            android:padding="12dp"
             android:text="@string/B05"
             android:textAlignment="center"
             android:textColor="@color/white"
@@ -39,6 +41,7 @@
             android:id="@+id/B05"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:digits="QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm"
             android:inputType="text"
             android:textSize="24sp" />
@@ -46,10 +49,12 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
             android:background="@color/colorPrimary"
+            android:padding="12dp"
             android:text="@string/B07"
             android:textAlignment="center"
             android:textColor="@color/white"
@@ -63,6 +68,7 @@
             android:calendarViewShown="false"
             android:datePickerMode="calendar"
             android:endYear="2016"
+            android:paddingTop="8dp"
             android:spinnersShown="true"
             android:startYear="2014" />
 
@@ -76,9 +82,11 @@
                 android:id="@+id/textView2"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:layout_marginLeft="40dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="16dp"
                 android:background="@color/colorPrimary"
+                android:padding="12dp"
                 android:text="@string/B06"
                 android:textAlignment="center"
                 android:textColor="@color/white"
@@ -91,7 +99,9 @@
                 android:layout_alignRight="@+id/textView2"
                 android:layout_alignStart="@+id/textView2"
                 android:layout_alignTop="@+id/B08"
+                android:layout_marginBottom="8dp"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
                 android:gravity="right">
 
                 <RadioButton
@@ -100,8 +110,8 @@
                     android:layout_height="wrap_content"
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
-                    android:text="@string/male"
-                    android:textSize="18sp" />
+                    android:text="@string/B06_a"
+                    android:textSize="24sp" />
 
                 <RadioButton
                     android:id="@+id/B06_female"
@@ -109,8 +119,8 @@
                     android:layout_height="wrap_content"
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
-                    android:text="@string/female"
-                    android:textSize="18sp" />
+                    android:text="@string/B06_b"
+                    android:textSize="24sp" />
             </RadioGroup>
 
             <TextView
@@ -118,9 +128,11 @@
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
+                android:layout_marginBottom="8dp"
                 android:layout_marginRight="40dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="16dp"
                 android:background="@color/colorPrimary"
+                android:padding="12dp"
                 android:text="@string/AGE"
                 android:textAlignment="center"
                 android:textColor="@color/white"
@@ -134,16 +146,19 @@
                 android:layout_below="@+id/textView"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginRight="40dp"
+                android:layout_marginTop="8dp"
                 android:digits="0,1,2,3,4,5,6,7,8,9,*,-, ,y,m"
-                android:inputType="text" />
+                android:inputType="date" />
 
         </RelativeLayout>
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
             android:background="@color/colorPrimary"
+            android:padding="12dp"
             android:text="@string/B09"
             android:textAlignment="center"
             android:textColor="@color/white"
@@ -154,14 +169,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
+            android:layout_marginTop="8dp"
             android:digits="QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm"
             android:inputType="text" />
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
             android:background="@color/colorPrimary"
+            android:padding="12dp"
             android:text="@string/B10"
             android:textAlignment="center"
             android:textColor="@color/white"
@@ -171,6 +189,7 @@
             android:id="@+id/B10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:digits="QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm"
             android:inputType="text" />
 
@@ -178,8 +197,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
             android:background="@color/colorPrimary"
+            android:padding="12dp"
             android:text="@string/B11"
             android:textAlignment="center"
             android:textColor="@color/white"
@@ -189,8 +210,9 @@
             android:id="@+id/B11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_gravity="right"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
             android:gravity="right">
 
             <RadioButton
@@ -200,7 +222,7 @@
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/PVTH"
-                android:textSize="18sp" />
+                android:textSize="24sp" />
 
             <RadioButton
                 android:id="@+id/B11_b"
@@ -209,7 +231,7 @@
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/PVTC"
-                android:textSize="18sp" />
+                android:textSize="24sp" />
 
             <RadioButton
                 android:id="@+id/B11_c"
@@ -218,7 +240,7 @@
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/B11_c"
-                android:textSize="18sp" />
+                android:textSize="24sp" />
 
             <RadioButton
                 android:id="@+id/B11_d"
@@ -227,7 +249,7 @@
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/GOVTH"
-                android:textSize="18sp" />
+                android:textSize="24sp" />
 
             <RadioButton
                 android:id="@+id/B11_e"
@@ -236,7 +258,7 @@
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/OTHER"
-                android:textSize="18sp" />
+                android:textSize="24sp" />
 
 
         </RadioGroup>
@@ -247,11 +269,12 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="20dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="16dp"
             android:background="@color/green"
             android:onClick="submitSB"
             android:text="@string/submit"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:textSize="24dp" />
 
     </LinearLayout>
 </ScrollView>

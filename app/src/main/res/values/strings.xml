@@ -154,7 +154,7 @@
     <string name="E33_d"> انتقال </string>
     <string name="E33_e"> بیماریوں سے بچاوٗ </string>
     <string name="NOTH"> کچھ نہیں ہوا </string>
-    <string name="E34"> ٓپ کے خاندان میں ویکسینیشن کے حوالے سے کون فیصلہ کرتا ہے </string>
+    <string name="E34"> آپ کے خاندان میں ویکسینیشن کے حوالے سے کون فیصلہ کرتا ہے</string>
     <string name="E34_a"> بچے کی والدہ </string>
     <string name="E34_b"> بچے کے والد </string>
     <string name="E34_c"> بچے کے چچا /ماموں/پھوپھا /خالو </string>
@@ -168,7 +168,7 @@
     <string name="E35a_1"> یہ ویکسین بیکار ہوتی ہیں </string>
     <string name="E35a_2"> مذہب میں اس کی اجازت نہیں ہے </string>
     <string name="E35a_3"> یہ بچے کے لئے نقصاندہ ہے </string>
-    <string name="E36"> ٓپ کے خیال میں کیا نومولود بچوں کے لئے ویکسینیشن ضروری ہے </string>
+    <string name="E36"> آپ کے خیال میں کیا نومولود بچوں کے لئے ویکسینیشن ضروری ہے </string>
     <string name="E36_a"> جی ہاں </string>
     <string name="E36_b"> جی نہیں </string>
     <string name="E36a"> کیوں ضروری ہے </string>
@@ -200,7 +200,7 @@
     <string name="E40"> کیا آپ کے خیال میں ساری ویکسین لگوانا اہم ہے </string>
     <string name="E40_a"> جی ہاں اہم ہے </string>
     <string name="E40_b"> جی نہیں ، غیر اہم ہے </string>
-    <string name="E40a">  </string>
+    <string name="E40a"> کیوں اہم ہے  </string>
     <string name="E40b"> کیوں غیر اہم ہے </string>
     <string name="E40b_1"> بچہ بہت سے انجیکشن برداشت نہیں کر سکتا </string>
     <string name="E40b_2"> ویکسینیشن کی وجہ سے بچہ مزید غیر محفوظ ہو جاتا ہے </string>
