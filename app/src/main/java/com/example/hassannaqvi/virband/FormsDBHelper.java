@@ -16,7 +16,7 @@ import java.util.Collection;
  */
 public class FormsDBHelper extends SQLiteOpenHelper {
 
-    public static final int DATABASE_VERSION = 1;
+    public static final int DATABASE_VERSION = 3;
     public static final String DATABASE_NAME = "vir_band.db";
     private static final String TEXT_TYPE = " TEXT";
     private static final String COMMA_SEP = ",";
@@ -41,8 +41,9 @@ public class FormsDBHelper extends SQLiteOpenHelper {
                     VIRForm.COLUMN_NAME_GPS_LAT + TEXT_TYPE + COMMA_SEP +
                     VIRForm.COLUMN_NAME_GPS_LNG + TEXT_TYPE + COMMA_SEP +
                     VIRForm.COLUMN_NAME_GPS_ACCURACY + TEXT_TYPE + COMMA_SEP +
-                    VIRForm.COLUMN_NAME_GPS_TIME + TEXT_TYPE +
-
+                    VIRForm.COLUMN_NAME_GPS_TIME + TEXT_TYPE + COMMA_SEP +
+                    VIRForm.COLUMN_NAME_SYNCED + TEXT_TYPE + COMMA_SEP +
+                    VIRForm.COLUMN_NAME_SYNCED_DATE_TIME +
                     " )";
     private static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + VIRForm.TABLE_NAME;
@@ -152,10 +153,14 @@ public class FormsDBHelper extends SQLiteOpenHelper {
         String[] columns = {
                 VIRForm._ID,
                 VIRForm.COLUMN_NAME_FORMNO,
+                VIRForm.COLUMN_NAME_VA_101,
+                VIRForm.COLUMN_NAME_VA_101TIME,
+                VIRForm.COLUMN_NAME_VA_102,
                 VIRForm.COLUMN_NAME_VA_01,
                 VIRForm.COLUMN_NAME_VA_02,
                 VIRForm.COLUMN_NAME_VA_03,
                 VIRForm.COLUMN_NAME_VA_04,
+                VIRForm.COLUMN_NAME_VA_109,
                 VIRForm.COLUMN_NAME_VB,
                 VIRForm.COLUMN_NAME_VC,
                 VIRForm.COLUMN_NAME_VD,
@@ -204,12 +209,75 @@ public class FormsDBHelper extends SQLiteOpenHelper {
         return allFC;
     }
 
+    public Collection<FormsContract> getAllFormsToSync() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                VIRForm._ID,
+                VIRForm.COLUMN_NAME_FORMNO,
+                VIRForm.COLUMN_NAME_VA_101,
+                VIRForm.COLUMN_NAME_VA_101TIME,
+                VIRForm.COLUMN_NAME_VA_102,
+                VIRForm.COLUMN_NAME_VA_01,
+                VIRForm.COLUMN_NAME_VA_02,
+                VIRForm.COLUMN_NAME_VA_03,
+                VIRForm.COLUMN_NAME_VA_04,
+                VIRForm.COLUMN_NAME_VA_109,
+                VIRForm.COLUMN_NAME_VB,
+                VIRForm.COLUMN_NAME_VC,
+                VIRForm.COLUMN_NAME_VD,
+                VIRForm.COLUMN_NAME_VE,
+                VIRForm.COLUMN_NAME_ICHILD,
+                VIRForm.COLUMN_NAME_DEVICE_ID,
+                VIRForm.COLUMN_NAME_GPS_LAT,
+                VIRForm.COLUMN_NAME_GPS_LNG,
+                VIRForm.COLUMN_NAME_GPS_ACCURACY,
+                VIRForm.COLUMN_NAME_GPS_TIME,
+                VIRForm.COLUMN_NAME_SYNCED,
+                VIRForm.COLUMN_NAME_SYNCED_DATE_TIME
+
+
+        };
+        String whereClause = VIRForm.COLUMN_NAME_SYNCED+"=?";
+        String[] whereArgs = {"false"};
+        String groupBy = null;
+        String having = null;
+
+        String orderBy =
+                VIRForm._ID + " ASC";
+
+        Collection<FormsContract> allFC = new ArrayList<FormsContract>();
+        try {
+            c = db.query(
+                    VIRForm.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                allFC.add(hydrate(c));
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allFC;
+    }
+
     public int updateSB() {
         SQLiteDatabase db = this.getReadableDatabase();
 
 // New value for one column
         ContentValues values = new ContentValues();
         values.put(VIRForm.COLUMN_NAME_VB, sA.fc.getVB());
+        values.put(VIRForm.COLUMN_NAME_FORMNO, sA.fc.getFormNo());
 
 // Which row to update, based on the ID
         String selection = VIRForm._ID + " LIKE ?";

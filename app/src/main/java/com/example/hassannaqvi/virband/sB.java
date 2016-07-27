@@ -65,6 +65,7 @@ public class sB extends AppCompatActivity {
     }
 
     public void submitSB(View v) throws JSONException {
+        Log.d(TAG, String.valueOf(B06.getCheckedRadioButtonId() + " || " + R.id.B06_male));
 
         if (formValidation()) {
             SaveDraft();
@@ -99,13 +100,18 @@ public class sB extends AppCompatActivity {
         String spDateT = new SimpleDateFormat("dd-MM-yyyy HH:mm").format(B07.getCalendarView().getDate());
 
         sb.put("B05", B05.getText().toString());
-        switch (B06.getCheckedRadioButtonId()) {
-            case R.id.B06_male:
-                sb.put("B06", "a");
-            case R.id.B06_female:
-                sb.put("B06", "b");
-            default:
-                sb.put("B06", "ns"); // none selected
+        Log.d(TAG, String.valueOf(B06.getCheckedRadioButtonId() + "" + R.id.B06_male));
+
+        int i = B06.getCheckedRadioButtonId();
+        if (i == R.id.B06_male) {
+            sb.put("B06", "a");
+
+        } else if (i == R.id.B06_female) {
+            sb.put("B06", "b");
+
+
+        } else {
+            sb.put("B06", "ns"); // none selected
         }
         sb.put("B07", spDateT);
         sb.put("B08", B08.getText().toString());
@@ -114,16 +120,20 @@ public class sB extends AppCompatActivity {
         switch (B11.getCheckedRadioButtonId()) {
             case R.id.B11_a:
                 sb.put("B11", "a");
+                break;
             case R.id.B11_b:
                 sb.put("B11", "b");
+                break;
             case R.id.B11_c:
                 sb.put("B11", "c");
+                break;
             case R.id.B11_d:
                 sb.put("B11", "d");
+                break;
             case R.id.B11_e:
                 sb.put("B11", "e");
-            default:
-                sb.put("B11", "ns"); // none selected
+                break;
+
 
         }
 
@@ -152,8 +162,9 @@ public class sB extends AppCompatActivity {
             return false;
         } else {
             B06_male.setError(null);
-        }
 
+        }
+        Log.d(TAG, String.valueOf(B06.getCheckedRadioButtonId()));
         if (B08.getText().toString().isEmpty()) {
             Toast.makeText(sB.this, "Please enter age", Toast.LENGTH_LONG).show();
             B08.setError("Please enter age");

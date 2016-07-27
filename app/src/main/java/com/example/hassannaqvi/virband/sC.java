@@ -155,8 +155,7 @@ public class sC extends AppCompatActivity {
                 sc.put("C14", "a");
             case R.id.C14_female:
                 sc.put("C14", "b");
-            default:
-                sc.put("C14", "ns"); // none selected
+
         }
         sc.put("C15", C15.getText().toString());
         switch (C16.getCheckedRadioButtonId()) {
@@ -164,8 +163,7 @@ public class sC extends AppCompatActivity {
                 sc.put("C16", "a");
             case R.id.C16_b:
                 sc.put("C16", "b");
-            default:
-                sc.put("C16", "ns"); // none selected
+
         }
         sc.put("C17_a", C17_a.getText().toString());
         sc.put("C17_b", C17_b.getText().toString());
@@ -178,8 +176,7 @@ public class sC extends AppCompatActivity {
                 sc.put("C18", "c");
              case R.id.C18_d:
                 sc.put("C18", "d");
-            default:
-                sc.put("C18", "ns"); // none selected
+
         }
 switch (C19.getCheckedRadioButtonId()) {
             case R.id.C19_a:
@@ -187,9 +184,8 @@ switch (C19.getCheckedRadioButtonId()) {
             case R.id.C19_b:
                 sc.put("C19", "b");
 
-            default:
-                sc.put("C19", "ns"); // none selected
-        }
+
+}
         switch (C20.getCheckedRadioButtonId()) {
             case R.id.C20_a:
                 sc.put("C20", "a");
@@ -206,8 +202,7 @@ switch (C19.getCheckedRadioButtonId()) {
             case R.id.C20_g:
                 sc.put("C20", "g");
 
-            default:
-                sc.put("C20", "ns"); // none selected
+
         }
 switch (C21.getCheckedRadioButtonId()) {
             case R.id.C21_a:
@@ -221,8 +216,6 @@ switch (C21.getCheckedRadioButtonId()) {
             case R.id.C21_e:
                 sc.put("C21", "e");
 
-            default:
-                sc.put("C21", "ns"); // none selected
         }
 switch (C22.getCheckedRadioButtonId()) {
             case R.id.C22_a:
@@ -236,9 +229,8 @@ switch (C22.getCheckedRadioButtonId()) {
             case R.id.C22_e:
                 sc.put("C22", "e");
 
-            default:
-                sc.put("C22", "ns"); // none selected
-        }
+
+}
         sA.fc.setVC(sc.toString());
         Toast.makeText(this, "Saving Draft... Successful!", Toast.LENGTH_SHORT).show();
     }

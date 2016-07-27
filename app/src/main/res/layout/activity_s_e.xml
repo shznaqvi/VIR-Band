@@ -2272,14 +2272,14 @@
 
 
         <Button
-            android:id="@+id/btnsubmitSD"
+            android:id="@+id/btnsubmitSE"
             android:layout_width="225dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
             android:background="@color/green"
-            android:onClick="Section1"
+            android:onClick="submitSE"
             android:text="Submit"
             android:textColor="@color/white" />
 

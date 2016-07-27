@@ -593,7 +593,7 @@ public class sE extends AppCompatActivity {
 
     }
 
-    public void submitSD(View v) throws JSONException {
+    public void submitSE(View v) throws JSONException {
         if (formValidation()) {
             SaveDraft();
             if (UpdateDB()) {
@@ -630,8 +630,7 @@ public class sE extends AppCompatActivity {
             case R.id.E29_b:
                 se.put("E29", "b");
 
-            default:
-                se.put("E29", "ns"); // none selected
+
         }
 
         switch (E30.getCheckedRadioButtonId()) {
@@ -648,8 +647,7 @@ public class sE extends AppCompatActivity {
             case R.id.E30_f:
                 se.put("E30", "f");
 
-            default:
-                se.put("E30", "ns"); // none selected
+
         }
 
         switch (E31.getCheckedRadioButtonId()) {
@@ -680,8 +678,7 @@ public class sE extends AppCompatActivity {
             case R.id.E31_m:
                 se.put("E31", "m");
 
-            default:
-                se.put("E31", "ns"); // none selected
+
         }
 
         switch (E32.getCheckedRadioButtonId()) {
@@ -692,8 +689,7 @@ public class sE extends AppCompatActivity {
             case R.id.E32_c:
                 se.put("E32", "c");
 
-            default:
-                se.put("E32", "ns"); // none selected
+
         }
 
         switch (E33.getCheckedRadioButtonId()) {
@@ -713,8 +709,6 @@ public class sE extends AppCompatActivity {
                 se.put("E33", "g");
 
 
-            default:
-                se.put("E33", "ns"); // none selected
         }
 
         switch (E34.getCheckedRadioButtonId()) {
@@ -741,8 +735,7 @@ public class sE extends AppCompatActivity {
             case R.id.E34_k:
                 se.put("E34", "k");
 
-            default:
-                se.put("E34", "ns"); // none selected
+
         }
 
         switch (E35.getCheckedRadioButtonId()) {
@@ -752,8 +745,6 @@ public class sE extends AppCompatActivity {
                 se.put("E35", "b");
 
 
-            default:
-                se.put("E35", "ns"); // none selected
         }
 
         switch (E35a.getCheckedRadioButtonId()) {
@@ -767,8 +758,6 @@ public class sE extends AppCompatActivity {
                 se.put("E35a", "4");
 
 
-            default:
-                se.put("E35a", "ns"); // none selected
         }
 
         switch (E36.getCheckedRadioButtonId()) {
@@ -780,8 +769,6 @@ public class sE extends AppCompatActivity {
                 se.put("E36", "c");
 
 
-            default:
-                se.put("E36", "ns"); // none selected
         }
 
         switch (E36a.getCheckedRadioButtonId()) {
@@ -801,8 +788,6 @@ public class sE extends AppCompatActivity {
                 se.put("E36a", "7");
 
 
-            default:
-                se.put("E36a", "ns"); // none selected
         }
 
         switch (E36b.getCheckedRadioButtonId()) {
@@ -817,8 +802,7 @@ public class sE extends AppCompatActivity {
             case R.id.E36b_5:
                 se.put("E36b", "5");
 
-            default:
-                se.put("E36b", "ns"); // none selected
+
         }
 
         switch (E37.getCheckedRadioButtonId()) {
@@ -833,8 +817,6 @@ public class sE extends AppCompatActivity {
             case R.id.E37_e:
                 se.put("E37", "e");
 
-            default:
-                se.put("E37", "ns"); // none selected
         }
 
         switch (E38.getCheckedRadioButtonId()) {
@@ -851,8 +833,7 @@ public class sE extends AppCompatActivity {
             case R.id.E38_f:
                 se.put("E38", "f");
 
-            default:
-                se.put("E38", "ns"); // none selected
+
         }
 
         switch (E39.getCheckedRadioButtonId()) {
@@ -869,8 +850,7 @@ public class sE extends AppCompatActivity {
             case R.id.E39_f:
                 se.put("E39", "f");
 
-            default:
-                se.put("E39", "ns"); // none selected
+
         }
 
         switch (E40.getCheckedRadioButtonId()) {
@@ -881,8 +861,7 @@ public class sE extends AppCompatActivity {
             case R.id.E40_c:
                 se.put("E40", "c");
 
-            default:
-                se.put("E40", "ns"); // none selected
+
         }
 
         switch (E40a.getCheckedRadioButtonId()) {
@@ -901,8 +880,7 @@ public class sE extends AppCompatActivity {
             case R.id.E40a_7:
                 se.put("E40a", "7");
 
-            default:
-                se.put("E40a", "ns"); // none selected
+
         }
 
         switch (E40b.getCheckedRadioButtonId()) {
@@ -917,8 +895,7 @@ public class sE extends AppCompatActivity {
             case R.id.E40b_5:
                 se.put("E40b", "5");
 
-            default:
-                se.put("E40b", "ns"); // none selected
+
         }
 
         switch (E41.getCheckedRadioButtonId()) {
@@ -939,8 +916,6 @@ public class sE extends AppCompatActivity {
             case R.id.E41_h:
                 se.put("E41", "h");
 
-            default:
-                se.put("E41", "ns"); // none selected
         }
 
         switch (E42.getCheckedRadioButtonId()) {
@@ -959,8 +934,7 @@ public class sE extends AppCompatActivity {
             case R.id.E42_g:
                 se.put("E42", "g");
 
-            default:
-                se.put("E42", "ns"); // none selected
+
         }
 
         switch (E43.getCheckedRadioButtonId()) {
@@ -977,8 +951,7 @@ public class sE extends AppCompatActivity {
             case R.id.E43_f:
                 se.put("E43", "f");
 
-            default:
-                se.put("E43", "ns"); // none selected
+
         }
 
         switch (E44.getCheckedRadioButtonId()) {
@@ -997,8 +970,7 @@ public class sE extends AppCompatActivity {
             case R.id.E44_g:
                 se.put("E44", "g");
 
-            default:
-                se.put("E44", "ns"); // none selected
+
         }
 
         switch (E45.getCheckedRadioButtonId()) {
@@ -1009,8 +981,7 @@ public class sE extends AppCompatActivity {
             case R.id.E45_c:
                 se.put("E45", "c");
 
-            default:
-                se.put("E45", "ns"); // none selected
+
         }
 
         switch (E46.getCheckedRadioButtonId()) {
@@ -1031,8 +1002,7 @@ public class sE extends AppCompatActivity {
             case R.id.E46_h:
                 se.put("E46", "h");
 
-            default:
-                se.put("E46", "ns"); // none selected
+
         }
 
         switch (E47.getCheckedRadioButtonId()) {
@@ -1043,8 +1013,7 @@ public class sE extends AppCompatActivity {
             case R.id.E47_c:
                 se.put("E47", "c");
 
-            default:
-                se.put("E47", "ns"); // none selected
+
         }
 
         switch (E48.getCheckedRadioButtonId()) {
@@ -1059,8 +1028,7 @@ public class sE extends AppCompatActivity {
             case R.id.E48_e:
                 se.put("E48", "e");
 
-            default:
-                se.put("E48", "ns"); // none selected
+
         }
 
         switch (E49.getCheckedRadioButtonId()) {
@@ -1081,8 +1049,7 @@ public class sE extends AppCompatActivity {
             case R.id.E49_h:
                 se.put("E49", "h");
 
-            default:
-                se.put("E49", "ns"); // none selected
+
         }
 
         switch (E50.getCheckedRadioButtonId()) {
@@ -1093,8 +1060,7 @@ public class sE extends AppCompatActivity {
             case R.id.E50_c:
                 se.put("E50", "c");
 
-            default:
-                se.put("E50", "ns"); // none selected
+
         }
 
         switch (E50a.getCheckedRadioButtonId()) {
@@ -1111,8 +1077,7 @@ public class sE extends AppCompatActivity {
             case R.id.E50a_6:
                 se.put("E50a", "6");
 
-            default:
-                se.put("E50a", "ns"); // none selected
+
         }
 
         switch (E50b.getCheckedRadioButtonId()) {
@@ -1129,8 +1094,7 @@ public class sE extends AppCompatActivity {
             case R.id.E50b_6:
                 se.put("E50b", "6");
 
-            default:
-                se.put("E50b", "ns"); // none selected
+
         }
 
         switch (E51.getCheckedRadioButtonId()) {
@@ -1141,8 +1105,6 @@ public class sE extends AppCompatActivity {
             case R.id.E51_c:
                 se.put("E51", "c");
 
-            default:
-                se.put("E51", "ns"); // none selected
         }
 
         switch (E51a.getCheckedRadioButtonId()) {
@@ -1161,8 +1123,7 @@ public class sE extends AppCompatActivity {
             case R.id.E51a_7:
                 se.put("E51a", "7");
 
-            default:
-                se.put("E51a", "ns"); // none selected
+
         }
 
         switch (E52.getCheckedRadioButtonId()) {
@@ -1173,8 +1134,7 @@ public class sE extends AppCompatActivity {
             case R.id.E52_c:
                 se.put("E52", "c");
 
-            default:
-                se.put("E52", "ns"); // none selected
+
         }
 
     }

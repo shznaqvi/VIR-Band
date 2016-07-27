@@ -205,8 +205,7 @@ public class sD extends AppCompatActivity {
                 sd.put("D23", "i");
             case R.id.D23_j:
                 sd.put("D23", "j");
-            default:
-                sd.put("D23", "ns"); // none selected
+
         }
 
         switch (D24.getCheckedRadioButtonId()) {
@@ -230,8 +229,7 @@ public class sD extends AppCompatActivity {
                 sd.put("D24", "i");
             case R.id.D24_j:
                 sd.put("D24", "j");
-            default:
-                sd.put("D24", "ns"); // none selected
+
         }
 
         switch (D25.getCheckedRadioButtonId()) {
@@ -255,8 +253,7 @@ public class sD extends AppCompatActivity {
                 sd.put("D25", "i");
             case R.id.D25_j:
                 sd.put("D25", "j");
-            default:
-                sd.put("D25", "ns"); // none selected
+
         }
 
         switch (D26.getCheckedRadioButtonId()) {
@@ -273,8 +270,7 @@ public class sD extends AppCompatActivity {
             case R.id.D26_g:
                 sd.put("D26", "g");
 
-            default:
-                sd.put("D26", "ns"); // none selected
+
         }
 
         switch (D27.getCheckedRadioButtonId()) {
@@ -293,8 +289,7 @@ public class sD extends AppCompatActivity {
             case R.id.D27_g:
                 sd.put("D27", "g");
 
-            default:
-                sd.put("D27", "ns"); // none selected
+
         }
 
         switch (D28.getCheckedRadioButtonId()) {
@@ -311,8 +306,7 @@ public class sD extends AppCompatActivity {
             case R.id.D28_f:
                 sd.put("D28", "f");
 
-            default:
-                sd.put("D28", "ns"); // none selected
+
         }
 
 

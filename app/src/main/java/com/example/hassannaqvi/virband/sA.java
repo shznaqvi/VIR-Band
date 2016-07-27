@@ -28,8 +28,8 @@ public class sA extends AppCompatActivity {
     String deviceId;
 
 
-    @BindView(R.id.A01)
-    EditText A01;
+    @BindView(R.id.A02)
+    EditText A02;
     @BindView(R.id.A04)
     RadioGroup A04;
     @BindView(R.id.A04_a)
@@ -75,12 +75,15 @@ public class sA extends AppCompatActivity {
 
         fc.setVA101(dtToday);
         fc.setVA102("TestUser");
-        fc.setVA01(A01.getText().toString());
+        fc.setVA02(A02.getText().toString());
+
+
         switch (A04.getCheckedRadioButtonId()) {
             case R.id.A04_a:
                 fc.setVA04("a");
             case R.id.A04_b:
                 fc.setVA04("b");
+
         }
         fc.setVA109("3");
         fc.setDeviceID(deviceId);
@@ -91,13 +94,13 @@ public class sA extends AppCompatActivity {
 
     public Boolean formValidation() {
 
-        if (A01.getText().toString().isEmpty()) {
+        if (A02.getText().toString().isEmpty()) {
 
-            A01.setError("Household Number not given!");
+            A02.setError("Household Number not given!");
             Log.i(TAG, "A01- Household is empty");
             return false;
         } else {
-            A01.setError(null);
+            A02.setError(null);
         }
 
         if (A04.getCheckedRadioButtonId() == -1) {
