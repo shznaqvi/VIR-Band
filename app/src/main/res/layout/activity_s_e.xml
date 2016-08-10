@@ -1104,8 +1104,8 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:gravity="right">
+                android:layout_marginTop="10dp"
+                android:gravity="right">
 
             <RadioButton
                 android:id="@+id/E40a_1"
