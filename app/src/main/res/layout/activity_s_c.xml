@@ -134,8 +134,9 @@
                 android:layout_alignParentRight="true"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginRight="40dp"
-                android:layout_marginTop="70dp"
-                android:inputType="date" />
+                android:layout_marginTop="80dp"
+                android:inputType="date"
+                android:maxLength="2" />
 
         </RelativeLayout>
 
@@ -234,6 +235,8 @@
                 android:layout_marginTop="8dp"
                 android:hint="@string/C17_a"
                 android:inputType="phone"
+                android:maxLength="8"
+                android:phoneNumber="false"
                 android:textSize="24sp" />
 
             <EditText
@@ -244,6 +247,7 @@
                 android:layout_below="@+id/C17_a"
                 android:hint="@string/C17_b"
                 android:inputType="phone"
+                android:maxLength="11"
                 android:textSize="24sp" />
 
 

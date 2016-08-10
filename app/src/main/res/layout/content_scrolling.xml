@@ -84,7 +84,7 @@
                 android:layout_height="wrap_content"
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
-                android:text="@string/VD53_c"
+                android:text="@string/VD53_C_E"
                 android:textSize="24sp" />
 
             <RadioButton
@@ -93,7 +93,7 @@
                 android:layout_height="wrap_content"
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
-                android:text="@string/VD53_d"
+                android:text="@string/VD53_D_E"
                 android:textSize="24sp" />
 
             <RadioButton
@@ -102,7 +102,7 @@
                 android:layout_height="wrap_content"
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
-                android:text="@string/VD53_e"
+                android:text="@string/VD53_E_E"
                 android:textSize="24sp" />
 
             <RadioButton
@@ -111,7 +111,7 @@
                 android:layout_height="wrap_content"
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
-                android:text="@string/VD53_f"
+                android:text="@string/VD53_F_E"
                 android:textSize="24sp" />
 
             <RadioButton
@@ -120,7 +120,7 @@
                 android:layout_height="wrap_content"
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
-                android:text="@string/VD53_g"
+                android:text="@string/VD53_G_E"
                 android:textSize="24sp" />
 
             <RadioButton
@@ -129,7 +129,7 @@
                 android:layout_height="wrap_content"
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
-                android:text="@string/VD53_h"
+                android:text="@string/VD53_H_E"
                 android:textSize="24sp" />
 
             <RadioButton
@@ -437,7 +437,7 @@
             android:layout_marginTop="16dp"
             android:background="@color/green"
             android:onClick="Section1"
-            android:text="Submit"
+            android:text="@string/submit"
             android:textColor="@color/white"
             android:textSize="24sp" />
 

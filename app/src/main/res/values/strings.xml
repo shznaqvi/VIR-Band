@@ -275,11 +275,17 @@
     <string name="VD53"> پہلی مرتبہ لگنے والی ویکسینیشن کا نام کیا تھا </string>
     <string name="DNREM"> نہیں یاد </string>
     <string name="VD53_c"> بی سی جی </string>
+    <string name="VD53_C_E">BCG</string>
     <string name="VD53_d"> پینٹا </string>
+    <string name="VD53_D_E">PENTA</string>
     <string name="VD53_e"> پی سی وی </string>
+    <string name="VD53_E_E">PCV</string>
     <string name="VD53_f"> او پی وی </string>
+    <string name="VD53_F_E">OPV</string>
     <string name="VD53_g"> نیموکوکل </string>
+    <string name="VD53_G_E">Pneumococcal</string>
     <string name="VD53_h"> خسرہ </string>
+    <string name="VD53_H_E">Measles</string>
     <string name="VD54"> کس عمر میں پہلی مرتبہ ویکسین لگائی گئ تھی </string>
     <string name="VD54_a"> پیدائش کے فوراً بعد </string>
     <string name="VD54_b"> ایک ماہ کی عمر میں </string>

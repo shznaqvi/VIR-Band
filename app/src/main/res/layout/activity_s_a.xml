@@ -73,7 +73,7 @@
             android:layout_height="wrap_content"
             android:button="@null"
             android:drawableRight="@android:drawable/btn_radio"
-            android:text="@string/A104_a"
+            android:text="@string/A04_a"
             android:textSize="24sp" />
 
         <RadioButton
@@ -82,7 +82,7 @@
             android:layout_height="wrap_content"
             android:button="@null"
             android:drawableRight="@android:drawable/btn_radio"
-            android:text="@string/A104_b"
+            android:text="@string/A04_b"
             android:textSize="24sp" />
     </RadioGroup>
 
