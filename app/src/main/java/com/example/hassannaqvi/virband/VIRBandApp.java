@@ -135,10 +135,11 @@ public class VIRBandApp extends Application {
             SharedPreferences.Editor editor = sharedPref.edit();
 
             Location bestLocation = new Location("storedProvider");
-            bestLocation.setAccuracy(Float.parseFloat(sharedPref.getString("Accuracy", null)));
-            bestLocation.setTime(Long.parseLong(sharedPref.getString("Time", null)));
-            bestLocation.setLatitude(Float.parseFloat(sharedPref.getString("Latitude", null)));
-            bestLocation.setLongitude(Float.parseFloat(sharedPref.getString("Longitude", null)));
+
+            bestLocation.setAccuracy(Float.parseFloat(sharedPref.getString("Accuracy", "00")));
+            bestLocation.setTime(Long.parseLong(sharedPref.getString("Time", "00")));
+            bestLocation.setLatitude(Float.parseFloat(sharedPref.getString("Latitude", "00")));
+            bestLocation.setLongitude(Float.parseFloat(sharedPref.getString("Longitude", "00")));
 
             if (isBetterLocation(location, bestLocation)) {
                 editor.putString("Longitude", String.valueOf(location.getLongitude()));
