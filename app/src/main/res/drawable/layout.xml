@@ -13,6 +13,6 @@
         android:right="16dp"
         android:top="16dp"></padding>
 
-    <corners android:radius="2dp"></corners>
+    <corners android:radius="3dp"></corners>
 
 </shape>
