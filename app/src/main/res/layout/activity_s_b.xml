@@ -33,7 +33,7 @@
             android:background="@color/colorPrimary"
             android:padding="12dp"
             android:text="@string/sB"
-            android:textAlignment="center"
+            android:textAlignment="viewEnd"
             android:textColor="@color/white"
             android:textSize="24sp" />
 
@@ -159,9 +159,8 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginRight="40dp"
                 android:layout_marginTop="8dp"
-                android:digits="0,1,2,3,4,5,6,7,8,9,*,-, ,y,m"
-                android:editable="false"
-                android:inputType="date"
+                android:digits="0,1,2,3,4,5,6,7,8,9"
+                android:inputType="phone"
                 android:maxLength="2" />
 
         </RelativeLayout>

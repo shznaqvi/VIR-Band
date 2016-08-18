@@ -30,7 +30,7 @@
             android:background="@color/colorPrimary"
             android:padding="12dp"
             android:text="@string/sE"
-            android:textAlignment="center"
+            android:textAlignment="viewEnd"
             android:textColor="@color/white"
             android:textSize="24sp" />
 
