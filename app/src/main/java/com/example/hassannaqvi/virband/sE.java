@@ -627,6 +627,7 @@ public class sE extends AppCompatActivity {
         switch (E29.getCheckedRadioButtonId()) {
             case R.id.E29_a:
                 se.put("E29", "a");
+                break;
             case R.id.E29_b:
                 se.put("E29", "b");
 
@@ -636,17 +637,22 @@ public class sE extends AppCompatActivity {
         switch (E30.getCheckedRadioButtonId()) {
             case R.id.E30_a:
                 se.put("E30", "a");
+                break;
             case R.id.E30_b:
                 se.put("E30", "b");
+                break;
             case R.id.E30_c:
                 se.put("E30", "c");
+                break;
             case R.id.E30_d:
                 se.put("E30", "d");
+                break;
             case R.id.E30_e:
                 se.put("E30", "e");
+                break;
             case R.id.E30_f:
                 se.put("E30", "f");
-
+                break;
 
         }
 
@@ -1136,6 +1142,11 @@ public class sE extends AppCompatActivity {
 
 
         }
+
+        sA.fc.setVB(se.toString());
+
+        Toast.makeText(this, "Saving Draft... Successful!", Toast.LENGTH_SHORT).show();
+
 
     }
 

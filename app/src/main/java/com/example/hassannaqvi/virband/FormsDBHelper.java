@@ -36,7 +36,12 @@ public class FormsDBHelper extends SQLiteOpenHelper {
                     VIRForm.COLUMN_NAME_VC + TEXT_TYPE + COMMA_SEP +
                     VIRForm.COLUMN_NAME_VD + TEXT_TYPE + COMMA_SEP +
                     VIRForm.COLUMN_NAME_VE + TEXT_TYPE + COMMA_SEP +
-                    VIRForm.COLUMN_NAME_ICHILD + TEXT_TYPE + COMMA_SEP +
+                    VIRForm.COLUMN_NAME_ICHILD_1 + TEXT_TYPE + COMMA_SEP +
+                    VIRForm.COLUMN_NAME_ICHILD_2 + TEXT_TYPE + COMMA_SEP +
+                    VIRForm.COLUMN_NAME_ICHILD_3 + TEXT_TYPE + COMMA_SEP +
+                    VIRForm.COLUMN_NAME_ICHILD_4 + TEXT_TYPE + COMMA_SEP +
+                    VIRForm.COLUMN_NAME_ICHILD_5 + TEXT_TYPE + COMMA_SEP +
+                    VIRForm.COLUMN_NAME_ICHILD_6 + TEXT_TYPE + COMMA_SEP +
                     VIRForm.COLUMN_NAME_DEVICE_ID + TEXT_TYPE + COMMA_SEP +
                     VIRForm.COLUMN_NAME_GPS_LAT + TEXT_TYPE + COMMA_SEP +
                     VIRForm.COLUMN_NAME_GPS_LNG + TEXT_TYPE + COMMA_SEP +
@@ -108,7 +113,12 @@ public class FormsDBHelper extends SQLiteOpenHelper {
         values.put(VIRForm.COLUMN_NAME_VC, fc.getVC());
         values.put(VIRForm.COLUMN_NAME_VD, fc.getVD());
         values.put(VIRForm.COLUMN_NAME_VE, fc.getVE());
-        values.put(VIRForm.COLUMN_NAME_ICHILD, fc.getVE());
+        values.put(VIRForm.COLUMN_NAME_ICHILD_1, fc.getVE());
+        values.put(VIRForm.COLUMN_NAME_ICHILD_2, fc.getVE());
+        values.put(VIRForm.COLUMN_NAME_ICHILD_3, fc.getVE());
+        values.put(VIRForm.COLUMN_NAME_ICHILD_4, fc.getVE());
+        values.put(VIRForm.COLUMN_NAME_ICHILD_5, fc.getVE());
+        values.put(VIRForm.COLUMN_NAME_ICHILD_6, fc.getVE());
         values.put(VIRForm.COLUMN_NAME_DEVICE_ID, fc.getDeviceID());
         values.put(VIRForm.COLUMN_NAME_GPS_LAT, fc.getGPSLat());
         values.put(VIRForm.COLUMN_NAME_GPS_LNG, fc.getGPSLng());
@@ -165,7 +175,12 @@ public class FormsDBHelper extends SQLiteOpenHelper {
                 VIRForm.COLUMN_NAME_VC,
                 VIRForm.COLUMN_NAME_VD,
                 VIRForm.COLUMN_NAME_VE,
-                VIRForm.COLUMN_NAME_ICHILD,
+                VIRForm.COLUMN_NAME_ICHILD_1,
+                VIRForm.COLUMN_NAME_ICHILD_2,
+                VIRForm.COLUMN_NAME_ICHILD_3,
+                VIRForm.COLUMN_NAME_ICHILD_4,
+                VIRForm.COLUMN_NAME_ICHILD_5,
+                VIRForm.COLUMN_NAME_ICHILD_6,
                 VIRForm.COLUMN_NAME_DEVICE_ID,
                 VIRForm.COLUMN_NAME_GPS_LAT,
                 VIRForm.COLUMN_NAME_GPS_LNG,
@@ -227,7 +242,12 @@ public class FormsDBHelper extends SQLiteOpenHelper {
                 VIRForm.COLUMN_NAME_VC,
                 VIRForm.COLUMN_NAME_VD,
                 VIRForm.COLUMN_NAME_VE,
-                VIRForm.COLUMN_NAME_ICHILD,
+                VIRForm.COLUMN_NAME_ICHILD_1,
+                VIRForm.COLUMN_NAME_ICHILD_2,
+                VIRForm.COLUMN_NAME_ICHILD_3,
+                VIRForm.COLUMN_NAME_ICHILD_4,
+                VIRForm.COLUMN_NAME_ICHILD_5,
+                VIRForm.COLUMN_NAME_ICHILD_6,
                 VIRForm.COLUMN_NAME_DEVICE_ID,
                 VIRForm.COLUMN_NAME_GPS_LAT,
                 VIRForm.COLUMN_NAME_GPS_LNG,
@@ -345,6 +365,114 @@ public class FormsDBHelper extends SQLiteOpenHelper {
         return count;
     }
 
+    public int updateIChild1() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(VIRForm.COLUMN_NAME_ICHILD_1, sA.fc.getIChild1());
+
+// Which row to update, based on the ID
+        String selection = VIRForm._ID + " LIKE ?";
+        String[] selectionArgs = {String.valueOf(sA.fc.getID())};
+
+        int count = db.update(VIRForm.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return count;
+    }
+
+    public int updateIChild2() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        // New value for one column
+        ContentValues values = new ContentValues();
+        values.put(VIRForm.COLUMN_NAME_ICHILD_2, sA.fc.getIChild2());
+
+        // Which row to update, based on the ID
+        String selection = VIRForm._ID + " LIKE ?";
+        String[] selectionArgs = {String.valueOf(sA.fc.getID())};
+
+        int count = db.update(VIRForm.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return count;
+    }
+
+    public int updateIChild3() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        // New value for one column
+        ContentValues values = new ContentValues();
+        values.put(VIRForm.COLUMN_NAME_ICHILD_3, sA.fc.getIChild3());
+
+        // Which row to update, based on the ID
+        String selection = VIRForm._ID + " LIKE ?";
+        String[] selectionArgs = {String.valueOf(sA.fc.getID())};
+
+        int count = db.update(VIRForm.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return count;
+    }
+
+    public int updateIChild4() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        // New value for one column
+        ContentValues values = new ContentValues();
+        values.put(VIRForm.COLUMN_NAME_ICHILD_4, sA.fc.getIChild4());
+
+        // Which row to update, based on the ID
+        String selection = VIRForm._ID + " LIKE ?";
+        String[] selectionArgs = {String.valueOf(sA.fc.getID())};
+
+        int count = db.update(VIRForm.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return count;
+    }
+
+    public int updateIChild5() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        // New value for one column
+        ContentValues values = new ContentValues();
+        values.put(VIRForm.COLUMN_NAME_ICHILD_5, sA.fc.getIChild5());
+
+        // Which row to update, based on the ID
+        String selection = VIRForm._ID + " LIKE ?";
+        String[] selectionArgs = {String.valueOf(sA.fc.getID())};
+
+        int count = db.update(VIRForm.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return count;
+    }
+
+    public int updateIChild6() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        // New value for one column
+        ContentValues values = new ContentValues();
+        values.put(VIRForm.COLUMN_NAME_ICHILD_6, sA.fc.getIChild6());
+
+        // Which row to update, based on the ID
+        String selection = VIRForm._ID + " LIKE ?";
+        String[] selectionArgs = {String.valueOf(sA.fc.getID())};
+
+        int count = db.update(VIRForm.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return count;
+    }
+
 
     private ContentValues getContentValues(FormsContract fc) {
         ContentValues values = new ContentValues();
@@ -362,7 +490,12 @@ public class FormsDBHelper extends SQLiteOpenHelper {
         values.put(VIRForm.COLUMN_NAME_VC, fc.getVC());
         values.put(VIRForm.COLUMN_NAME_VD, fc.getVD());
         values.put(VIRForm.COLUMN_NAME_VE, fc.getVE());
-        values.put(VIRForm.COLUMN_NAME_ICHILD, fc.getIChild());
+        values.put(VIRForm.COLUMN_NAME_ICHILD_1, fc.getIChild1());
+        values.put(VIRForm.COLUMN_NAME_ICHILD_2, fc.getIChild2());
+        values.put(VIRForm.COLUMN_NAME_ICHILD_3, fc.getIChild3());
+        values.put(VIRForm.COLUMN_NAME_ICHILD_4, fc.getIChild4());
+        values.put(VIRForm.COLUMN_NAME_ICHILD_5, fc.getIChild5());
+        values.put(VIRForm.COLUMN_NAME_ICHILD_6, fc.getIChild6());
         values.put(VIRForm.COLUMN_NAME_DEVICE_ID, fc.getDeviceID());
         values.put(VIRForm.COLUMN_NAME_GPS_LAT, fc.getGPSLat());
         values.put(VIRForm.COLUMN_NAME_GPS_LNG, fc.getGPSLng());
@@ -389,7 +522,12 @@ public class FormsDBHelper extends SQLiteOpenHelper {
         fc.setVC(c.getString(c.getColumnIndex(VIRForm.COLUMN_NAME_VC)));
         fc.setVD(c.getString(c.getColumnIndex(VIRForm.COLUMN_NAME_VD)));
         fc.setVE(c.getString(c.getColumnIndex(VIRForm.COLUMN_NAME_VE)));
-        fc.setVE(c.getString(c.getColumnIndex(VIRForm.COLUMN_NAME_ICHILD)));
+        fc.setVE(c.getString(c.getColumnIndex(VIRForm.COLUMN_NAME_ICHILD_1)));
+        fc.setVE(c.getString(c.getColumnIndex(VIRForm.COLUMN_NAME_ICHILD_2)));
+        fc.setVE(c.getString(c.getColumnIndex(VIRForm.COLUMN_NAME_ICHILD_3)));
+        fc.setVE(c.getString(c.getColumnIndex(VIRForm.COLUMN_NAME_ICHILD_4)));
+        fc.setVE(c.getString(c.getColumnIndex(VIRForm.COLUMN_NAME_ICHILD_5)));
+        fc.setVE(c.getString(c.getColumnIndex(VIRForm.COLUMN_NAME_ICHILD_6)));
         fc.setDeviceID(c.getString(c.getColumnIndex(VIRForm.COLUMN_NAME_DEVICE_ID)));
         fc.setGPSLat(c.getString(c.getColumnIndex(VIRForm.COLUMN_NAME_GPS_LAT)));
         fc.setGPSLng(c.getString(c.getColumnIndex(VIRForm.COLUMN_NAME_GPS_LNG)));

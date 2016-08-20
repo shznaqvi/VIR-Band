@@ -97,7 +97,12 @@ public class SyncForms extends AsyncTask<Void, Void, String> {
                 jsonParam.put("tab_sec_c", fc.getVC());
                 jsonParam.put("tab_sec_d", fc.getVD());
                 jsonParam.put("tab_sec_e", fc.getVE());
-                jsonParam.put("tab_index_child", fc.getIChild());
+                jsonParam.put("tab_index_child", fc.getIChild1());
+                jsonParam.put("tab_index_child", fc.getIChild2());
+                jsonParam.put("tab_index_child", fc.getIChild3());
+                jsonParam.put("tab_index_child", fc.getIChild4());
+                jsonParam.put("tab_index_child", fc.getIChild5());
+                jsonParam.put("tab_index_child", fc.getIChild6());
                 jsonParam.put("tab_109", fc.getVA109());
                 jsonParam.put("tab_gps_lat", fc.getGPSLat());
                 jsonParam.put("tab_gps_lng", fc.getGPSLng());

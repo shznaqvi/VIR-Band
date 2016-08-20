@@ -28,7 +28,12 @@ public final class FormsContract {
     private String VC;
     private String VD;
     private String VE;
-    private String IChild;
+    private String IChild1;
+    private String IChild2;
+    private String IChild3;
+    private String IChild4;
+    private String IChild5;
+    private String IChild6;
     private String DEVICEID;
     private String GPSLat;
     private String GPSLng;
@@ -146,14 +151,53 @@ public final class FormsContract {
         this.VE = VE;
     }
 
-    public String getIChild() {
-        return this.IChild;
+    public String getIChild1() {
+        return this.IChild1;
     }
 
-    public void setIChild(String IChild) {
-        this.IChild = IChild;
+    public void setIChild1(String IChild1) {
+        this.IChild1 = IChild1;
     }
 
+    public String getIChild2() {
+        return this.IChild2;
+    }
+
+    public void setIChild2(String IChild2) {
+        this.IChild2 = IChild2;
+    }
+
+    public String getIChild3() {
+        return this.IChild3;
+    }
+
+    public void setIChild3(String IChild3) {
+        this.IChild3 = IChild3;
+    }
+
+    public String getIChild4() {
+        return this.IChild4;
+    }
+
+    public void setIChild4(String IChild4) {
+        this.IChild4 = IChild4;
+    }
+
+    public String getIChild5() {
+        return this.IChild5;
+    }
+
+    public void setIChild5(String IChild5) {
+        this.IChild5 = IChild5;
+    }
+
+    public String getIChild6() {
+        return this.IChild6;
+    }
+
+    public void setIChild6(String IChild6) {
+        this.IChild6 = IChild6;
+    }
 
     public String getDeviceID() {
         return this.DEVICEID;
@@ -259,7 +303,12 @@ public final class FormsContract {
         public static final String COLUMN_NAME_VC = "vc";
         public static final String COLUMN_NAME_VD = "vd";
         public static final String COLUMN_NAME_VE = "ve";
-        public static final String COLUMN_NAME_ICHILD = "ichild";
+        public static final String COLUMN_NAME_ICHILD_1 = "ichild1";
+        public static final String COLUMN_NAME_ICHILD_2 = "ichild2";
+        public static final String COLUMN_NAME_ICHILD_3 = "ichild3";
+        public static final String COLUMN_NAME_ICHILD_4 = "ichild4";
+        public static final String COLUMN_NAME_ICHILD_5 = "ichild5";
+        public static final String COLUMN_NAME_ICHILD_6 = "ichild6";
         public static final String COLUMN_NAME_DEVICE_ID = "device_id";
         public static final String COLUMN_NAME_GPS_LAT = "gps_lat";
         public static final String COLUMN_NAME_GPS_LNG = "gps_lng";
