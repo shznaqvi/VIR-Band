@@ -65,4 +65,10 @@
         android:onClick="syncFunction"
         android:text="Sync Device" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="openDBManager"
+        android:text="Open DB Manager" />
+
 </LinearLayout>

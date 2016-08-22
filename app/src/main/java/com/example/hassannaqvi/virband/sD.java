@@ -149,6 +149,8 @@ public class sD extends AppCompatActivity {
         if (sC.respIsParent) {
             fldGrpD23.setVisibility(View.GONE);
             D23.clearCheck();
+        } else {
+            fldGrpD23.setVisibility(View.VISIBLE);
         }
     }
 
@@ -205,7 +207,6 @@ public class sD extends AppCompatActivity {
                 sd.put("D23", "i");
             case R.id.D23_j:
                 sd.put("D23", "j");
-
         }
 
         switch (D24.getCheckedRadioButtonId()) {
@@ -229,7 +230,6 @@ public class sD extends AppCompatActivity {
                 sd.put("D24", "i");
             case R.id.D24_j:
                 sd.put("D24", "j");
-
         }
 
         switch (D25.getCheckedRadioButtonId()) {
@@ -253,7 +253,6 @@ public class sD extends AppCompatActivity {
                 sd.put("D25", "i");
             case R.id.D25_j:
                 sd.put("D25", "j");
-
         }
 
         switch (D26.getCheckedRadioButtonId()) {
@@ -269,8 +268,6 @@ public class sD extends AppCompatActivity {
                 sd.put("D26", "e");
             case R.id.D26_g:
                 sd.put("D26", "g");
-
-
         }
 
         switch (D27.getCheckedRadioButtonId()) {
@@ -288,8 +285,6 @@ public class sD extends AppCompatActivity {
                 sd.put("D27", "f");
             case R.id.D27_g:
                 sd.put("D27", "g");
-
-
         }
 
         switch (D28.getCheckedRadioButtonId()) {
@@ -305,8 +300,6 @@ public class sD extends AppCompatActivity {
                 sd.put("D28", "e");
             case R.id.D28_f:
                 sd.put("D28", "f");
-
-
         }
 
 

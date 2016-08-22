@@ -201,6 +201,7 @@ public class sE extends AppCompatActivity {
     RadioButton E38_e;
     @BindView(R.id.E38_f)
     RadioButton E38_f;
+    @BindView(R.id.E39)
     RadioGroup E39;
     @BindView(R.id.E39_a)
     RadioButton E39_a;
@@ -565,7 +566,7 @@ public class sE extends AppCompatActivity {
                     fldGrpE50a.setVisibility(View.VISIBLE);
                     fldGrpE50b.setVisibility(View.GONE);
                     E40b.clearCheck();
-                } else if ((checkedId == E50_b.getId())) {
+                } else if (checkedId == E50_b.getId()) {
                     fldGrpE50b.setVisibility(View.VISIBLE);
                     fldGrpE50a.setVisibility(View.GONE);
                     E50a.clearCheck();
@@ -581,7 +582,7 @@ public class sE extends AppCompatActivity {
         E51.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId == E50_a.getId()) {
+                if (checkedId == E51_a.getId()) {
                     fldGrpE51a.setVisibility(View.VISIBLE);
 
                 } else {
@@ -598,6 +599,8 @@ public class sE extends AppCompatActivity {
             SaveDraft();
             if (UpdateDB()) {
                 Intent SE = new Intent(this, sVD.class);
+                SE.putExtra("icTP", 0);
+                SE.putExtra("ic", true);
 
                 startActivity(SE);
             }
@@ -606,6 +609,7 @@ public class sE extends AppCompatActivity {
     }
 
     private boolean UpdateDB() {
+
         FormsDBHelper db = new FormsDBHelper(this);
 
         int updcount = db.updateSE();
@@ -1143,7 +1147,7 @@ public class sE extends AppCompatActivity {
 
         }
 
-        sA.fc.setVB(se.toString());
+        sA.fc.setVE(se.toString());
 
         Toast.makeText(this, "Saving Draft... Successful!", Toast.LENGTH_SHORT).show();
 
@@ -1368,7 +1372,7 @@ public class sE extends AppCompatActivity {
             E47_c.setError(null);
         }
 
-        if ((E47_b.isChecked() || E47_c.isChecked()) && E48.getCheckedRadioButtonId() == -1) {
+        if (E47_a.isChecked() && E48.getCheckedRadioButtonId() == -1) {
             Toast.makeText(this, "Please select one option", Toast.LENGTH_LONG).show();
             E48_e.setError("Please select select one option");
             Log.i(TAG, "E48: No option selected");

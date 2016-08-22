@@ -153,7 +153,7 @@
     <string name="E33_c"> معذوری </string>
     <string name="E33_d"> انتقال </string>
     <string name="E33_e"> بیماریوں سے بچاوٗ </string>
-    <string name="NOTH"> کچھ نہیں ہوا </string>
+    <string name="NOTH"> کچھ نہیں  </string>
     <string name="E34"> آپ کے خاندان میں ویکسینیشن کے حوالے سے کون فیصلہ کرتا ہے</string>
     <string name="E34_a"> بچے کی والدہ </string>
     <string name="E34_b"> بچے کے والد </string>
@@ -233,7 +233,7 @@
     <string name="E45_a"> جی مجھے معلوم پے </string>
     <string name="E45_b"> نہیں مجھے اس کے بارے میں نہیں معلوم </string>
     <string name="E45_c"> نہیں، ویکسینیشن مفت نہیں ہوتی ہے </string>
-    <string name="E46"> کیا آپ کو معلوم ہے کہ حکومت کی طرف سے تمام ویکسین مفت ملتی ہیں </string>
+    <string name="E46"> آپ کہاں سے مفت میں ویکسین لے سکتے ہیں </string>
     <string name="E46_a"> نجی ہسپتال </string>
     <string name="E47"> کیا آپ ویکسینیشن کے لئے پیسے دیتے ہیں </string>
     <string name="E48"> اگر آپ ویکسینیشن کے لئے پیسے دیتے ہیں توویکسین کے لئے کتنے پیسے ہوتے ہیں </string>

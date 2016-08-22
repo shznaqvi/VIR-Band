@@ -159,6 +159,11 @@ public class MainActivity extends AppCompatActivity {
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
+    public void openDBManager(View v) {
+        Intent dbmanager = new Intent(getApplicationContext(), AndroidDatabaseManager.class);
+        startActivity(dbmanager);
+    }
+
     private boolean isHostAvailable() {
 
         if (isNetworkAvailable()) {

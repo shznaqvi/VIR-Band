@@ -31,6 +31,8 @@ public class sVD
 
     public int updcount;
     public Integer icTP;
+    public boolean ic;
+
     @BindView(R.id.GL53)
     GridLayout gL53;
     @BindView(R.id.textView2)
@@ -208,6 +210,7 @@ public class sVD
 
         icTP = getIntent().getIntExtra("icTP", 0);
         icTP += 1;
+        ic = getIntent().getBooleanExtra("ic", false);
 
         vACNAME01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 
@@ -397,20 +400,23 @@ public class sVD
     void onBtnsubmitSDClick() {
         if (formValidation()) {
             try {
-                SaveDraft();
+                if (SaveDraft()) {
+                    if (UpdateDB()) {
+                        if (icTP < 6) {
+                            Intent sVD = new Intent(this, sVD.class);
+                            sVD.putExtra("icTP", icTP);
+                            sVD.putExtra("ic", true);
+                            startActivity(sVD);
+                        } else {
+                            Intent ending = new Intent(this, MainActivity.class);
+                            startActivity(ending);
+                        }
+                    }
+                }
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-            if (UpdateDB()) {
-                if (icTP < 6) {
-                    Intent sVD = new Intent(this, sVD.class);
-                    sVD.putExtra("icTP", icTP);
-                    startActivity(sVD);
-                } else {
-                    Intent ending = new Intent(this, MainActivity.class);
-                    startActivity(ending);
-                }
-            }
+
         }
     }
 
@@ -455,7 +461,7 @@ public class sVD
         return true;
     }
 
-    private void SaveDraft() throws JSONException {
+    private boolean SaveDraft() throws JSONException {
 
         IChild = new JSONObject();
         String tp = "TP_";
@@ -709,33 +715,32 @@ public class sVD
         switch (icTP) {
             case 1:
                 sA.fc.setIChild1(IChild.toString());
-                icTP += 1;
-                break;
+                Toast.makeText(this, "Saving Dose# 1 Draft... Successful!", Toast.LENGTH_SHORT).show();
+                return true;
             case 2:
                 sA.fc.setIChild2(IChild.toString());
-                icTP += 1;
-                break;
+                Toast.makeText(this, "Saving Dose# 2 Draft... Successful!", Toast.LENGTH_SHORT).show();
+                return true;
             case 3:
                 sA.fc.setIChild3(IChild.toString());
-                icTP += 1;
-                break;
+                Toast.makeText(this, "Saving Dose# 3 Draft... Successful!", Toast.LENGTH_SHORT).show();
+                return true;
             case 4:
                 sA.fc.setIChild4(IChild.toString());
-                icTP += 1;
-                break;
+                Toast.makeText(this, "Saving Dose# 4 Draft... Successful!", Toast.LENGTH_SHORT).show();
+                return true;
             case 5:
                 sA.fc.setIChild5(IChild.toString());
-                icTP += 1;
-                break;
+                Toast.makeText(this, "Saving Dose# 5 Draft... Successful!", Toast.LENGTH_SHORT).show();
+                return true;
             case 6:
                 sA.fc.setIChild6(IChild.toString());
-                icTP += 1;
-                break;
+                Toast.makeText(this, "Saving Dose# 6 Draft... Successful!", Toast.LENGTH_SHORT).show();
+                return true;
 
         }
-        Toast.makeText(this, "Saving Draft... Successful!", Toast.LENGTH_SHORT).show();
 
-
+        return false;
     }
 
     private boolean formValidation() {
@@ -776,7 +781,7 @@ public class sVD
             pLACE03H.setError(null);
         }
 
-        if (vD54.getCheckedRadioButtonId() != -1) {
+        if (vD54.getCheckedRadioButtonId() == -1) {
             Toast.makeText(this, "Please select one option \r\n" + getString(R.string.VD54), Toast.LENGTH_LONG).show();
             vD54F.setError("Please select one option");
             Log.i(TAG, "VD54: No option selected");
@@ -785,7 +790,7 @@ public class sVD
             vD54F.setError(null);
         }
 
-        if (vD56.getCheckedRadioButtonId() != -1) {
+        if (vD56.getCheckedRadioButtonId() == -1) {
             Toast.makeText(this, "Please select one option \r\n" + getString(R.string.VD56), Toast.LENGTH_LONG).show();
             vD56F.setError("Please select  one option");
             Log.i(TAG, "VD56: No option selected");
