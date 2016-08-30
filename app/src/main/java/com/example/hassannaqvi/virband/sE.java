@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -27,48 +30,44 @@ public class sE extends AppCompatActivity {
     RadioButton E29_a;
     @BindView(R.id.E29_b)
     RadioButton E29_b;
-    @BindView(R.id.E30)
-    RadioGroup E30;
     @BindView(R.id.E30_a)
-    RadioButton E30_a;
+    CheckBox E30_a;
     @BindView(R.id.E30_b)
-    RadioButton E30_b;
+    CheckBox E30_b;
     @BindView(R.id.E30_c)
-    RadioButton E30_c;
+    CheckBox E30_c;
     @BindView(R.id.E30_d)
-    RadioButton E30_d;
+    CheckBox E30_d;
     @BindView(R.id.E30_e)
-    RadioButton E30_e;
+    CheckBox E30_e;
     @BindView(R.id.E30_f)
-    RadioButton E30_f;
-    @BindView(R.id.E31)
-    RadioGroup E31;
+    CheckBox E30_f;
     @BindView(R.id.E31_a)
-    RadioButton E31_a;
+    CheckBox E31_a;
     @BindView(R.id.E31_b)
-    RadioButton E31_b;
+    CheckBox E31_b;
     @BindView(R.id.E31_c)
-    RadioButton E31_c;
+    CheckBox E31_c;
     @BindView(R.id.E31_d)
-    RadioButton E31_d;
+    CheckBox E31_d;
     @BindView(R.id.E31_e)
-    RadioButton E31_e;
+    CheckBox E31_e;
     @BindView(R.id.E31_f)
-    RadioButton E31_f;
+    CheckBox E31_f;
     @BindView(R.id.E31_g)
-    RadioButton E31_g;
+    CheckBox E31_g;
     @BindView(R.id.E31_h)
-    RadioButton E31_h;
+    CheckBox E31_h;
     @BindView(R.id.E31_i)
-    RadioButton E31_i;
+    CheckBox E31_i;
     @BindView(R.id.E31_j)
-    RadioButton E31_j;
+    CheckBox E31_j;
     @BindView(R.id.E31_k)
-    RadioButton E31_k;
+    CheckBox E31_k;
     @BindView(R.id.E31_l)
-    RadioButton E31_l;
+    CheckBox E31_l;
     @BindView(R.id.E31_m)
-    RadioButton E31_m;
+    CheckBox E31_m;
     @BindView(R.id.E32_txt)
     TextView E32_txt;
     @BindView(R.id.E32)
@@ -79,22 +78,20 @@ public class sE extends AppCompatActivity {
     RadioButton E32_b;
     @BindView(R.id.E32_c)
     RadioButton E32_c;
-    @BindView(R.id.E33)
-    RadioGroup E33;
     @BindView(R.id.E33_a)
-    RadioButton E33_a;
+    CheckBox E33_a;
     @BindView(R.id.E33_b)
-    RadioButton E33_b;
+    CheckBox E33_b;
     @BindView(R.id.E33_c)
-    RadioButton E33_c;
+    CheckBox E33_c;
     @BindView(R.id.E33_d)
-    RadioButton E33_d;
+    CheckBox E33_d;
     @BindView(R.id.E33_e)
-    RadioButton E33_e;
+    CheckBox E33_e;
     @BindView(R.id.E33_f)
-    RadioButton E33_f;
+    CheckBox E33_f;
     @BindView(R.id.E33_g)
-    RadioButton E33_g;
+    CheckBox E33_g;
     @BindView(R.id.E34)
     RadioGroup E34;
     @BindView(R.id.E34_a)
@@ -143,34 +140,30 @@ public class sE extends AppCompatActivity {
     RadioButton E36_b;
     @BindView(R.id.E36_c)
     RadioButton E36_c;
-    @BindView(R.id.E36a)
-    RadioGroup E36a;
     @BindView(R.id.E36a_1)
-    RadioButton E36a_1;
+    CheckBox E36a_1;
     @BindView(R.id.E36a_2)
-    RadioButton E36a_2;
+    CheckBox E36a_2;
     @BindView(R.id.E36a_3)
-    RadioButton E36a_3;
+    CheckBox E36a_3;
     @BindView(R.id.E36a_4)
-    RadioButton E36a_4;
+    CheckBox E36a_4;
     @BindView(R.id.E36a_5)
-    RadioButton E36a_5;
+    CheckBox E36a_5;
     @BindView(R.id.E36a_6)
-    RadioButton E36a_6;
+    CheckBox E36a_6;
     @BindView(R.id.E36a_7)
-    RadioButton E36a_7;
-    @BindView(R.id.E36b)
-    RadioGroup E36b;
+    CheckBox E36a_7;
     @BindView(R.id.E36b_1)
-    RadioButton E36b_1;
+    CheckBox E36b_1;
     @BindView(R.id.E36b_2)
-    RadioButton E36b_2;
+    CheckBox E36b_2;
     @BindView(R.id.E36b_3)
-    RadioButton E36b_3;
+    CheckBox E36b_3;
     @BindView(R.id.E36b_4)
-    RadioButton E36b_4;
+    CheckBox E36b_4;
     @BindView(R.id.E36b_5)
-    RadioButton E36b_5;
+    CheckBox E36b_5;
     @BindView(R.id.E37)
     RadioGroup E37;
     @BindView(R.id.E37_a)
@@ -448,16 +441,72 @@ public class sE extends AppCompatActivity {
     @BindView(R.id.E52_c)
     RadioButton E52_c;
 
+    @BindView(R.id.E30_x)
+    EditText E30_x;
+    @BindView(R.id.E31_x)
+    EditText E31_x;
+    @BindView(R.id.E33_x)
+    EditText E33_x;
+    @BindView(R.id.E34_x)
+    EditText E34_x;
+    @BindView(R.id.E35a_x)
+    EditText E35a_x;
+    @BindView(R.id.E36a_x)
+    EditText E36a_x;
+    @BindView(R.id.E36b_x)
+    EditText E36b_x;
+    @BindView(R.id.E37_x)
+    EditText E37_x;
+    @BindView(R.id.E38_x)
+    EditText E38_x;
+    @BindView(R.id.E39_x)
+    EditText E39_x;
+    @BindView(R.id.E40a_x)
+    EditText E40a_x;
+    @BindView(R.id.E40b_x)
+    EditText E40b_x;
+    @BindView(R.id.E41_x)
+    EditText E41_x;
+    @BindView(R.id.E42_x)
+    EditText E42_x;
+    @BindView(R.id.E43_x)
+    EditText E43_x;
+    @BindView(R.id.E44_x)
+    EditText E44_x;
+    @BindView(R.id.E46_x)
+    EditText E46_x;
+    @BindView(R.id.E48_x)
+    EditText E48_x;
+    @BindView(R.id.E49_x)
+    EditText E49_x;
+    @BindView(R.id.E50a_x)
+    EditText E50a_x;
+    @BindView(R.id.E50b_x)
+    EditText E50b_x;
+    @BindView(R.id.E51a_x)
+    EditText E51a_x;
+
+
+    @BindView(R.id.fldGrpE29)
+    LinearLayout fldGrpE29;
+    @BindView(R.id.fldGrpE32)
+    LinearLayout fldGrpE32;
+    @BindView(R.id.fldGrpE32b)
+    LinearLayout fldGrpE32b;
     @BindView(R.id.fldGrpE35a)
     LinearLayout fldGrpE35a;
     @BindView(R.id.fldGrpE36a)
     LinearLayout fldGrpE36a;
     @BindView(R.id.fldGrpE36b)
     LinearLayout fldGrpE36b;
+    @BindView(R.id.fldGrpE37)
+    LinearLayout fldGrpE37;
     @BindView(R.id.fldGrpE40a)
     LinearLayout fldGrpE40a;
     @BindView(R.id.fldGrpE40b)
     LinearLayout fldGrpE40b;
+    @BindView(R.id.fldGrpE42)
+    LinearLayout fldGrpE42;
     @BindView(R.id.fldGrpE48)
     LinearLayout fldGrpE48;
     @BindView(R.id.fldGrpE50a)
@@ -484,6 +533,160 @@ public class sE extends AppCompatActivity {
         }
 
         // SKIP PATTERNS
+
+        E29.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (E29_b.isChecked()) {
+                    fldGrpE29.setVisibility(View.GONE);
+                    E30_a.setChecked(false);
+                    E30_b.setChecked(false);
+                    E30_c.setChecked(false);
+                    E30_d.setChecked(false);
+                    E30_e.setChecked(false);
+                    E30_f.setChecked(false);
+                    E31_a.setChecked(false);
+                    E31_b.setChecked(false);
+                    E31_c.setChecked(false);
+                    E31_d.setChecked(false);
+                    E31_e.setChecked(false);
+                    E31_f.setChecked(false);
+                    E31_g.setChecked(false);
+                    E31_h.setChecked(false);
+                    E31_i.setChecked(false);
+                    E31_j.setChecked(false);
+                    E31_k.setChecked(false);
+                    E31_l.setChecked(false);
+                    E31_m.setChecked(false);
+                } else {
+                    fldGrpE29.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        E30_f.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (!E30_f.isChecked()) {
+                    E30_x.setVisibility(View.GONE);
+                    E30_x.setText(null);
+
+                } else {
+                    E30_x.setVisibility(View.VISIBLE);
+
+                }
+            }
+        });
+        E31_m.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (!E31_m.isChecked()) {
+                    E31_x.setVisibility(View.GONE);
+                    E31_x.setText(null);
+
+                } else {
+                    E31_x.setVisibility(View.VISIBLE);
+
+                }
+            }
+        });
+        E33_g.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (!E33_g.isChecked()) {
+                    E33_x.setVisibility(View.GONE);
+                    E33_x.setText(null);
+
+                } else {
+                    E33_x.setVisibility(View.VISIBLE);
+
+                }
+            }
+        });
+
+        E34.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (!E34_k.isChecked()) {
+                    E34_x.setVisibility(View.GONE);
+                    E34_x.setText(null);
+
+                } else {
+                    E34_x.setVisibility(View.VISIBLE);
+
+                }
+            }
+        });
+
+        E35a.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (!E35a_4.isChecked()) {
+                    E35a_x.setVisibility(View.GONE);
+                    E35a_x.setText(null);
+
+                } else {
+                    E35a_x.setVisibility(View.VISIBLE);
+
+                }
+            }
+        });
+
+        E36a_7.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (!E36a_7.isChecked()) {
+                    E36a_x.setVisibility(View.GONE);
+                    E36a_x.setText(null);
+
+                } else {
+                    E36a_x.setVisibility(View.VISIBLE);
+
+                }
+            }
+        });
+
+        E36b_5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (!E36b_5.isChecked()) {
+                    E36b_x.setVisibility(View.GONE);
+                    E36b_x.setText(null);
+
+                } else {
+                    E36b_x.setVisibility(View.VISIBLE);
+
+                }
+            }
+        });
+
+
+        E32.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (E32_b.isChecked()) {
+                    fldGrpE32.setVisibility(View.GONE);
+                    fldGrpE32b.setVisibility(View.GONE);
+
+                    E33_a.setChecked(false);
+                    E33_b.setChecked(false);
+                    E33_c.setChecked(false);
+                    E33_d.setChecked(false);
+                    E33_e.setChecked(false);
+                    E33_f.setChecked(false);
+                    E33_g.setChecked(false);
+
+                    E41.clearCheck();
+                    E42.clearCheck();
+                    E43.clearCheck();
+                    E44.clearCheck();
+
+                } else {
+                    fldGrpE32.setVisibility(View.VISIBLE);
+                    fldGrpE32b.setVisibility(View.VISIBLE);
+                }
+            }
+        });
         E35.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -502,16 +705,86 @@ public class sE extends AppCompatActivity {
                 if (checkedId == E36_a.getId()) {
                     fldGrpE36a.setVisibility(View.VISIBLE);
                     fldGrpE36b.setVisibility(View.GONE);
-                    E36b.clearCheck();
+                    E36b_1.setChecked(false);
+                    E36b_2.setChecked(false);
+                    E36b_3.setChecked(false);
+                    E36b_4.setChecked(false);
+                    E36b_5.setChecked(false);
+
                 } else if ((checkedId == E36_b.getId())) {
                     fldGrpE36b.setVisibility(View.VISIBLE);
                     fldGrpE36a.setVisibility(View.GONE);
-                    E36a.clearCheck();
+                    E36a_1.setChecked(false);
+                    E36a_2.setChecked(false);
+                    E36a_3.setChecked(false);
+                    E36a_4.setChecked(false);
+                    E36a_5.setChecked(false);
+                    E36a_6.setChecked(false);
+                    E36a_7.setChecked(false);
                 } else if ((checkedId == E36_c.getId())) {
                     fldGrpE36a.setVisibility(View.GONE);
                     fldGrpE36b.setVisibility(View.GONE);
-                    E36a.clearCheck();
-                    E36b.clearCheck();
+                    E36b_1.setChecked(false);
+                    E36b_2.setChecked(false);
+                    E36b_3.setChecked(false);
+                    E36b_4.setChecked(false);
+                    E36b_5.setChecked(false);
+                    E36a_1.setChecked(false);
+                    E36a_2.setChecked(false);
+                    E36a_3.setChecked(false);
+                    E36a_4.setChecked(false);
+                    E36a_5.setChecked(false);
+                    E36a_6.setChecked(false);
+                    E36a_7.setChecked(false);
+                }
+            }
+        });
+        E37.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                // Question Skip
+                if (E37_a.isChecked()) {
+                    fldGrpE37.setVisibility(View.GONE);
+                    E38.clearCheck();
+                } else {
+                    fldGrpE37.setVisibility(View.VISIBLE);
+                }
+
+                // Other Skip
+                if (!E37_g.isChecked()) {
+                    E37_x.setVisibility(View.GONE);
+                    E37_x.setText(null);
+
+                } else {
+                    E37_x.setVisibility(View.VISIBLE);
+
+                }
+            }
+        });
+
+        E38.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (!E38_f.isChecked()) {
+                    E38_x.setVisibility(View.GONE);
+                    E38_x.setText(null);
+
+                } else {
+                    E38_x.setVisibility(View.VISIBLE);
+
+                }
+            }
+        });
+        E39.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (!E39_f.isChecked()) {
+                    E39_x.setVisibility(View.GONE);
+                    E39_x.setText(null);
+
+                } else {
+                    E39_x.setVisibility(View.VISIBLE);
+
                 }
             }
         });
@@ -542,6 +815,102 @@ public class sE extends AppCompatActivity {
                     fldGrpE40b.setVisibility(View.VISIBLE);
                     fldGrpE40a.setVisibility(View.GONE);
                     E40a.clearCheck();
+                }
+            }
+        });
+
+        E40a.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (!E40a_7.isChecked()) {
+                    E40a_x.setVisibility(View.GONE);
+                    E40a_x.setText(null);
+
+                } else {
+                    E40a_x.setVisibility(View.VISIBLE);
+
+                }
+            }
+        });
+        E40b.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (!E40b_5.isChecked()) {
+                    E40b_x.setVisibility(View.GONE);
+                    E40b_x.setText(null);
+
+                } else {
+                    E40b_x.setVisibility(View.VISIBLE);
+
+                }
+            }
+        });
+        E41.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (!E41_h.isChecked()) {
+                    E41_x.setVisibility(View.GONE);
+                    E41_x.setText(null);
+
+                } else {
+                    E41_x.setVisibility(View.VISIBLE);
+
+                }
+            }
+        });
+
+        E42.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                // Question Skip
+                if (E42_a.isChecked()) {
+                    fldGrpE42.setVisibility(View.GONE);
+                    E44.clearCheck();
+                } else {
+                    fldGrpE42.setVisibility(View.VISIBLE);
+                }
+
+                // Others Skip
+                if (!E42_g.isChecked()) {
+                    E42_x.setVisibility(View.GONE);
+                    E42_x.setText(null);
+                } else {
+                    E42_x.setVisibility(View.VISIBLE);
+
+                }
+            }
+        });
+
+        E43.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (!E43_f.isChecked()) {
+                    E43_x.setVisibility(View.GONE);
+                    E43_x.setText(null);
+                } else {
+                    E43_x.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+        E44.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (!E44_g.isChecked()) {
+                    E44_x.setVisibility(View.GONE);
+                    E44_x.setText(null);
+                } else {
+                    E44_x.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+        E46.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (!E46_h.isChecked()) {
+                    E46_x.setVisibility(View.GONE);
+                    E46_x.setText(null);
+                } else {
+                    E46_x.setVisibility(View.VISIBLE);
                 }
             }
         });
@@ -555,6 +924,28 @@ public class sE extends AppCompatActivity {
                 } else {
                     fldGrpE48.setVisibility(View.GONE);
                     E48.clearCheck();
+                }
+            }
+        });
+        E48.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (!E48_e.isChecked()) {
+                    E48_x.setVisibility(View.GONE);
+                    E48_x.setText(null);
+                } else {
+                    E48_x.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+        E49.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (!E49_h.isChecked()) {
+                    E49_x.setVisibility(View.GONE);
+                    E49_x.setText(null);
+                } else {
+                    E49_x.setVisibility(View.VISIBLE);
                 }
             }
         });
@@ -579,6 +970,29 @@ public class sE extends AppCompatActivity {
             }
         });
 
+        E50a.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (!E50a_6.isChecked()) {
+                    E50a_x.setVisibility(View.GONE);
+                    E50a_x.setText(null);
+                } else {
+                    E50a_x.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+        E50b.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (!E50b_6.isChecked()) {
+                    E50b_x.setVisibility(View.GONE);
+                    E50b_x.setText(null);
+                } else {
+                    E50b_x.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
         E51.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -591,6 +1005,17 @@ public class sE extends AppCompatActivity {
                 }
             }
         });
+        E51a.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (!E51a_7.isChecked()) {
+                    E51a_x.setVisibility(View.GONE);
+                    E51a_x.setText(null);
+                } else {
+                    E51a_x.setVisibility(View.VISIBLE);
+                }
+            }
+        });
 
     }
 
@@ -598,29 +1023,29 @@ public class sE extends AppCompatActivity {
         if (formValidation()) {
             SaveDraft();
             if (UpdateDB()) {
-                Intent SE = new Intent(this, sVD.class);
-                SE.putExtra("icTP", 0);
-                SE.putExtra("ic", true);
+                if (!E32_b.isChecked()) {
+                    Intent SE = new Intent(this, sVD.class);
+                    SE.putExtra("icTP", 0);
+                    SE.putExtra("ic", true);
 
-                startActivity(SE);
+                    startActivity(SE);
+                } else {
+                    Intent ending = new Intent(this, MainActivity.class);
+                    startActivity(ending);
+                }
             }
         }
 
     }
 
     private boolean UpdateDB() {
-
         FormsDBHelper db = new FormsDBHelper(this);
-
         int updcount = db.updateSE();
-
         if (updcount == 1) {
             Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
-
         }
-
         return true;
     }
 
@@ -634,62 +1059,30 @@ public class sE extends AppCompatActivity {
                 break;
             case R.id.E29_b:
                 se.put("E29", "b");
-
-
         }
 
-        switch (E30.getCheckedRadioButtonId()) {
-            case R.id.E30_a:
-                se.put("E30", "a");
-                break;
-            case R.id.E30_b:
-                se.put("E30", "b");
-                break;
-            case R.id.E30_c:
-                se.put("E30", "c");
-                break;
-            case R.id.E30_d:
-                se.put("E30", "d");
-                break;
-            case R.id.E30_e:
-                se.put("E30", "e");
-                break;
-            case R.id.E30_f:
-                se.put("E30", "f");
-                break;
-
-        }
-
-        switch (E31.getCheckedRadioButtonId()) {
-            case R.id.E31_a:
-                se.put("E31", "a");
-            case R.id.E31_b:
-                se.put("E31", "b");
-            case R.id.E31_c:
-                se.put("E31", "c");
-            case R.id.E31_d:
-                se.put("E31", "d");
-            case R.id.E31_e:
-                se.put("E31", "e");
-            case R.id.E31_f:
-                se.put("E31", "f");
-            case R.id.E31_g:
-                se.put("E31", "g");
-            case R.id.E31_h:
-                se.put("E31", "h");
-            case R.id.E31_i:
-                se.put("E31", "i");
-            case R.id.E31_j:
-                se.put("E31", "j");
-            case R.id.E31_k:
-                se.put("E31", "k");
-            case R.id.E31_l:
-                se.put("E31", "l");
-            case R.id.E31_m:
-                se.put("E31", "m");
+        se.put("E30_a", E30_a.isChecked() ? "a" : "");
+        se.put("E30_b", E30_b.isChecked() ? "b" : "");
+        se.put("E30_c", E30_c.isChecked() ? "c" : "");
+        se.put("E30_d", E30_d.isChecked() ? "d" : "");
+        se.put("E30_e", E30_e.isChecked() ? "e" : "");
+        se.put("E30_f", E30_f.isChecked() ? "f" : "");
 
 
-        }
+        se.put("E31_a", E31_a.isChecked() ? "a" : "");
+        se.put("E31_b", E31_b.isChecked() ? "b" : "");
+        se.put("E31_c", E31_c.isChecked() ? "c" : "");
+        se.put("E31_d", E31_d.isChecked() ? "d" : "");
+        se.put("E31_e", E31_e.isChecked() ? "e" : "");
+        se.put("E31_f", E31_f.isChecked() ? "f" : "");
+        se.put("E31_g", E31_g.isChecked() ? "g" : "");
+        se.put("E31_h", E31_h.isChecked() ? "h" : "");
+        se.put("E31_i", E31_i.isChecked() ? "i" : "");
+        se.put("E31_j", E31_j.isChecked() ? "j" : "");
+        se.put("E31_k", E31_k.isChecked() ? "k" : "");
+        se.put("E31_l", E31_l.isChecked() ? "l" : "");
+        se.put("E31_m", E31_m.isChecked() ? "m" : "");
+
 
         switch (E32.getCheckedRadioButtonId()) {
             case R.id.E32_a:
@@ -699,27 +1092,15 @@ public class sE extends AppCompatActivity {
             case R.id.E32_c:
                 se.put("E32", "c");
 
-
         }
 
-        switch (E33.getCheckedRadioButtonId()) {
-            case R.id.E33_a:
-                se.put("E33", "a");
-            case R.id.E33_b:
-                se.put("E33", "b");
-            case R.id.E33_c:
-                se.put("E33", "c");
-            case R.id.E33_d:
-                se.put("E33", "d");
-            case R.id.E33_e:
-                se.put("E33", "e");
-            case R.id.E33_f:
-                se.put("E33", "f");
-            case R.id.E33_g:
-                se.put("E33", "g");
-
-
-        }
+        se.put("E33_a", E33_a.isChecked() ? "a" : "");
+        se.put("E33_b", E33_b.isChecked() ? "b" : "");
+        se.put("E33_c", E33_c.isChecked() ? "c" : "");
+        se.put("E33_d", E33_d.isChecked() ? "d" : "");
+        se.put("E33_e", E33_e.isChecked() ? "e" : "");
+        se.put("E33_f", E33_f.isChecked() ? "f" : "");
+        se.put("E33_g", E33_g.isChecked() ? "g" : "");
 
         switch (E34.getCheckedRadioButtonId()) {
             case R.id.E34_a:
@@ -745,7 +1126,6 @@ public class sE extends AppCompatActivity {
             case R.id.E34_k:
                 se.put("E34", "k");
 
-
         }
 
         switch (E35.getCheckedRadioButtonId()) {
@@ -753,7 +1133,6 @@ public class sE extends AppCompatActivity {
                 se.put("E35", "a");
             case R.id.E35_b:
                 se.put("E35", "b");
-
 
         }
 
@@ -767,7 +1146,6 @@ public class sE extends AppCompatActivity {
             case R.id.E35a_4:
                 se.put("E35a", "4");
 
-
         }
 
         switch (E36.getCheckedRadioButtonId()) {
@@ -778,42 +1156,22 @@ public class sE extends AppCompatActivity {
             case R.id.E36_c:
                 se.put("E36", "c");
 
-
         }
+        // E36a
+        se.put("E36a_1", E36a_1.isChecked() ? "1" : "");
+        se.put("E36a_2", E36a_2.isChecked() ? "2" : "");
+        se.put("E36a_3", E36a_3.isChecked() ? "3" : "");
+        se.put("E36a_4", E36a_4.isChecked() ? "4" : "");
+        se.put("E36a_5", E36a_5.isChecked() ? "5" : "");
+        se.put("E36a_6", E36a_6.isChecked() ? "6" : "");
+        se.put("E36a_7", E36a_7.isChecked() ? "7" : "");
+        // E36b
+        se.put("E36b_1", E36b_1.isChecked() ? "1" : "");
+        se.put("E36b_2", E36b_2.isChecked() ? "2" : "");
+        se.put("E36b_3", E36b_3.isChecked() ? "3" : "");
+        se.put("E36b_4", E36b_4.isChecked() ? "4" : "");
+        se.put("E36b_5", E36b_5.isChecked() ? "5" : "");
 
-        switch (E36a.getCheckedRadioButtonId()) {
-            case R.id.E36a_1:
-                se.put("E36a", "1");
-            case R.id.E36a_2:
-                se.put("E36a", "2");
-            case R.id.E36a_3:
-                se.put("E36a", "3");
-            case R.id.E36a_4:
-                se.put("E36a", "4");
-            case R.id.E36a_5:
-                se.put("E36a", "5");
-            case R.id.E36a_6:
-                se.put("E36a", "6");
-            case R.id.E36a_7:
-                se.put("E36a", "7");
-
-
-        }
-
-        switch (E36b.getCheckedRadioButtonId()) {
-            case R.id.E36b_1:
-                se.put("E36b", "1");
-            case R.id.E36b_2:
-                se.put("E36b", "2");
-            case R.id.E36b_3:
-                se.put("E36b", "3");
-            case R.id.E36b_4:
-                se.put("E36b", "4");
-            case R.id.E36b_5:
-                se.put("E36b", "5");
-
-
-        }
 
         switch (E37.getCheckedRadioButtonId()) {
             case R.id.E37_a:
@@ -1147,6 +1505,31 @@ public class sE extends AppCompatActivity {
 
         }
 
+        se.put("E30_x", E30_x.getText().toString());
+        se.put("E31_x", E31_x.getText().toString());
+        se.put("E33_x", E33_x.getText().toString());
+        se.put("E34_x", E34_x.getText().toString());
+        se.put("E35a_x", E35a_x.getText().toString());
+        se.put("E36a_x", E36a_x.getText().toString());
+        se.put("E36b_x", E36b_x.getText().toString());
+        se.put("E37_x", E37_x.getText().toString());
+        se.put("E38_x", E38_x.getText().toString());
+        se.put("E39_x", E39_x.getText().toString());
+        se.put("E40a_x", E40a_x.getText().toString());
+        se.put("E40b_x", E40b_x.getText().toString());
+        se.put("E41_x", E41_x.getText().toString());
+        se.put("E42_x", E42_x.getText().toString());
+        se.put("E43_x", E43_x.getText().toString());
+        se.put("E44_x", E44_x.getText().toString());
+        se.put("E46_x", E46_x.getText().toString());
+        se.put("E48_x", E48_x.getText().toString());
+        se.put("E49_x", E49_x.getText().toString());
+        se.put("E50a_x", E50a_x.getText().toString());
+        se.put("E50b_x", E50b_x.getText().toString());
+        se.put("E51a_x", E51a_x.getText().toString());
+
+        sA.fc.setVA109("2");
+
         sA.fc.setVE(se.toString());
 
         Toast.makeText(this, "Saving Draft... Successful!", Toast.LENGTH_SHORT).show();
@@ -1165,7 +1548,8 @@ public class sE extends AppCompatActivity {
             E29_b.setError(null);
         }
 
-        if (E30.getCheckedRadioButtonId() == -1) {
+        if (E29_a.isChecked()
+                && (!(E30_a.isChecked() || E30_b.isChecked() || E30_c.isChecked() || E30_d.isChecked() || E30_e.isChecked() || E30_f.isChecked()))) {
             Toast.makeText(this, "Please select one option", Toast.LENGTH_LONG).show();
             E30_f.setError("Please select select one option");
             Log.i(TAG, "E30: No option selected");
@@ -1174,7 +1558,9 @@ public class sE extends AppCompatActivity {
             E30_f.setError(null);
         }
 
-        if (E31.getCheckedRadioButtonId() == -1) {
+        if (E29_a.isChecked()
+                && (!(E31_a.isChecked() || E31_b.isChecked() || E31_c.isChecked() || E31_d.isChecked() || E31_e.isChecked() || E31_f.isChecked() || E31_g.isChecked()
+                || E31_h.isChecked() || E31_i.isChecked() || E31_j.isChecked() || E31_k.isChecked() || E31_l.isChecked() || E31_m.isChecked()))) {
             Toast.makeText(this, "Please select one option", Toast.LENGTH_LONG).show();
             E31_m.setError("Please select select one option");
             Log.i(TAG, "E31: No option selected");
@@ -1192,7 +1578,9 @@ public class sE extends AppCompatActivity {
             E32_c.setError(null);
         }
 
-        if (E33.getCheckedRadioButtonId() == -1) {
+        if (!E32_b.isChecked()
+                && (!(E33_a.isChecked() || E33_b.isChecked() || E33_c.isChecked() || E33_d.isChecked() || E33_e.isChecked() || E33_f.isChecked() || E33_g.isChecked()
+        ))) {
             Toast.makeText(this, "Please select one option", Toast.LENGTH_LONG).show();
             E33_g.setError("Please select select one option");
             Log.i(TAG, "E33: No option selected");
@@ -1237,7 +1625,9 @@ public class sE extends AppCompatActivity {
             E36_c.setError(null);
         }
 
-        if (E36_a.isChecked() && E36a.getCheckedRadioButtonId() == -1) {
+        if (E36_a.isChecked() &&
+                !(E36a_1.isChecked() || E36a_2.isChecked() || E36a_3.isChecked() || E36a_4.isChecked() || E36a_5.isChecked() || E36a_6.isChecked() || E36a_7.isChecked())
+                ) {
             Toast.makeText(this, "Please select one option", Toast.LENGTH_LONG).show();
             E36a_7.setError("Please select select one option");
             Log.i(TAG, "E36a: No option selected");
@@ -1246,7 +1636,9 @@ public class sE extends AppCompatActivity {
             E36a_7.setError(null);
         }
 
-        if (E36_b.isChecked() && E36b.getCheckedRadioButtonId() == -1) {
+        if (E36_b.isChecked() &&
+                !(E36b_1.isChecked() || E36b_2.isChecked() || E36b_3.isChecked() || E36b_4.isChecked() || E36b_5.isChecked())
+                ) {
             Toast.makeText(this, "Please select one option", Toast.LENGTH_LONG).show();
             E36b_5.setError("Please select select one option");
             Log.i(TAG, "E36b: No option selected");
@@ -1264,7 +1656,7 @@ public class sE extends AppCompatActivity {
             E37_g.setError(null);
         }
 
-        if (E38.getCheckedRadioButtonId() == -1) {
+        if (!E37_a.isChecked() && E38.getCheckedRadioButtonId() == -1) {
             Toast.makeText(this, "Please select one option", Toast.LENGTH_LONG).show();
             E38_f.setError("Please select select one option");
             Log.i(TAG, "E38: No option selected");
@@ -1309,7 +1701,7 @@ public class sE extends AppCompatActivity {
             E40b_5.setError(null);
         }
 
-        if (E41.getCheckedRadioButtonId() == -1) {
+        if (!E32_b.isChecked() && E41.getCheckedRadioButtonId() == -1) {
             Toast.makeText(this, "Please select one option", Toast.LENGTH_LONG).show();
             E41_h.setError("Please select select one option");
             Log.i(TAG, "E41: No option selected");
@@ -1318,7 +1710,7 @@ public class sE extends AppCompatActivity {
             E41_h.setError(null);
         }
 
-        if (E42.getCheckedRadioButtonId() == -1) {
+        if (!E32_b.isChecked() && E42.getCheckedRadioButtonId() == -1) {
             Toast.makeText(this, "Please select one option", Toast.LENGTH_LONG).show();
             E42_g.setError("Please select select one option");
             Log.i(TAG, "E42: No option selected");
@@ -1327,7 +1719,7 @@ public class sE extends AppCompatActivity {
             E42_g.setError(null);
         }
 
-        if (E43.getCheckedRadioButtonId() == -1) {
+        if (!E32_b.isChecked() && E43.getCheckedRadioButtonId() == -1) {
             Toast.makeText(this, "Please select one option", Toast.LENGTH_LONG).show();
             E43_f.setError("Please select select one option");
             Log.i(TAG, "E43: No option selected");
@@ -1336,7 +1728,7 @@ public class sE extends AppCompatActivity {
             E43_f.setError(null);
         }
 
-        if (E44.getCheckedRadioButtonId() == -1) {
+        if (!E32_b.isChecked() && !E42_a.isChecked() && E44.getCheckedRadioButtonId() == -1) {
             Toast.makeText(this, "Please select one option", Toast.LENGTH_LONG).show();
             E44_g.setError("Please select select one option");
             Log.i(TAG, "E44: No option selected");

@@ -12,63 +12,103 @@
     tools:context="com.example.hassannaqvi.virband.MainActivity">
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
         android:onClick="openForm"
-        android:text="Open New Form" />
+        android:text="Open New Form"
+        android:textColor="@color/white"
+        android:textSize="24dp" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
         android:onClick="openSA"
-        android:text="Open section A" />
+        android:text="Open section A"
+        android:textColor="@color/white"
+        android:textSize="24dp" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
         android:onClick="openSB"
-        android:text="Open section B" />
+        android:text="Open section B"
+        android:textColor="@color/white"
+        android:textSize="24dp" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
         android:onClick="openSC"
-        android:text="Open section C" />
+        android:text="Open section C"
+        android:textColor="@color/white"
+        android:textSize="24dp" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
         android:onClick="openSD"
-        android:text="Open section D" />
+        android:text="Open section D"
+        android:textColor="@color/white"
+        android:textSize="24dp" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
         android:onClick="openSE"
-        android:text="Open section E" />
+        android:text="Open section E"
+        android:textColor="@color/white"
+        android:textSize="24dp" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
         android:onClick="openVD"
-        android:text="Open section VD" />
+        android:text="Open section VD"
+        android:textColor="@color/white"
+        android:textSize="24dp" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
         android:onClick="checkLocation"
-        android:text="Check Location" />
+        android:text="Check Location"
+        android:textColor="@color/white"
+        android:textSize="24dp" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
         android:onClick="syncFunction"
-        android:text="Sync Device" />
+        android:text="Sync Device"
+        android:textColor="@color/white"
+        android:textSize="24dp" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="openDBManager"
-        android:text="Open DB Manager" />
 
 </LinearLayout>

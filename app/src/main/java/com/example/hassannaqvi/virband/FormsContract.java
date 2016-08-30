@@ -39,6 +39,9 @@ public final class FormsContract {
     private String GPSLng;
     private String GPSAcc;
     private String GPSTime;
+
+
+
     private Boolean Synced = false;
     private String SyncedDateTime ;
     

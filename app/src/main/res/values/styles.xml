@@ -19,8 +19,12 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="txtView">
+
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">12dp</item>
         <item name="android:background">@color/colorPrimary</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textColor">@color/white</item>
@@ -29,12 +33,27 @@
         <item name="android:typeface">sans</item>
     </style>
 
-    <style name="editTxt">
+
+    <style name="editTxtText">
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">13sp</item>
+        <item name="android:textSize">24sp</item>
         <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:inputType">text</item>
+        <item name="android:digits">QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm</item>
+
+
     </style>
+
+    <style name="editTxtNum">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:inputType">number</item>
+        <item name="android:digits">1234567890</item>
+    </style>
+
 
     <style name="radioBtn">
         <item name="android:layout_height">wrap_content</item>
@@ -53,5 +72,20 @@
         <item name="android:layout_marginTop">16dp</item>
         <item name="android:layout_marginBottom">16dp</item>
     </style>
+
+    <style name="btnSubmit">
+        <item name="android:radius">20dp</item>
+        <item name="android:color">@color/green</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
 
 </resources>

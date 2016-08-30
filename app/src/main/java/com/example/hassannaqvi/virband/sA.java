@@ -24,6 +24,7 @@ public class sA extends AppCompatActivity {
 
     private static final String TAG = "SectionA";
     public static FormsContract fc;
+    public static String HHNo;
     String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
     String deviceId;
 
@@ -88,7 +89,10 @@ public class sA extends AppCompatActivity {
         fc.setVA109("3");
         fc.setDeviceID(deviceId);
         setGPS();
-        Toast.makeText(sA.this, "Saving Draft... Successful!", Toast.LENGTH_SHORT).show();
+        String msg = "Saving Draft... Successful!";
+        Msg.t(getApplicationContext(), msg);
+        Msg.m(msg);
+        //Toast.makeText(sA.this, "Saving Draft... Successful!", Toast.LENGTH_SHORT).show();
 
     }
 
@@ -101,6 +105,7 @@ public class sA extends AppCompatActivity {
             return false;
         } else {
             A02.setError(null);
+            HHNo = A02.getText().toString();
         }
 
         if (A04.getCheckedRadioButtonId() == -1) {

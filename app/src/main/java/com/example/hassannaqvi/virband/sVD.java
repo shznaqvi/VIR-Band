@@ -1,10 +1,13 @@
 package com.example.hassannaqvi.virband;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.GridLayout;
 import android.widget.LinearLayout;
@@ -16,7 +19,9 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -25,6 +30,7 @@ import butterknife.OnLongClick;
 
 public class sVD
         extends AppCompatActivity {
+
 
     private static final String TAG = "SectionVD";
     public static JSONObject IChild;
@@ -182,7 +188,7 @@ public class sVD
     @BindView(R.id.VD54_f)
     RadioButton vD54F;
     @BindView(R.id.DOV)
-    EditText DOV;
+    DatePicker DOV;
     @BindView(R.id.VD56)
     RadioGroup vD56;
     @BindView(R.id.VD56_a)
@@ -199,6 +205,12 @@ public class sVD
     RadioButton vD56F;
     @BindView(R.id.VD57)
     EditText vD57;
+
+    @BindView(R.id.VD54_x)
+    EditText vD54_x;
+
+
+
     @BindView(R.id.fldGrpVD56)
     LinearLayout fldGrpVD56;
 
@@ -211,11 +223,22 @@ public class sVD
         icTP = getIntent().getIntExtra("icTP", 0);
         icTP += 1;
         ic = getIntent().getBooleanExtra("ic", false);
-
+        long minDate = getIntent().getLongExtra("minDate", 0);
+        DOV.setMaxDate(new Date().getTime());
+        switch (icTP) {
+            case 1:
+                DOV.setMinDate(new Date().getTime() - (VIRBandApp.MILLISECONDS_IN_YEAR * 2));
+                break;
+            default:
+                DOV.setMinDate(minDate);
+                break;
+        }
         vACNAME01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                pLACE01.setVisibility(View.VISIBLE);
+                vACNAME02.setVisibility(View.VISIBLE);
 
                 int count = vACNAME01.getChildCount();
                 ArrayList<RadioButton> listOfRadioButtons = new ArrayList<RadioButton>();
@@ -270,7 +293,8 @@ public class sVD
 
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-
+                pLACE02.setVisibility(View.VISIBLE);
+                vACNAME03.setVisibility(View.VISIBLE);
                 int count = vACNAME02.getChildCount();
                 ArrayList<RadioButton> listOfRadioButtons = new ArrayList<RadioButton>();
                 for (int i1 = 0; i1 < count; i1++) {
@@ -300,22 +324,22 @@ public class sVD
 
                     switch (i) {
                         case R.id.VACNAME_02_c:
-                            pLACEV2.setText("BCG");
+                            pLACEV2.setText(getString(R.string.BCG));
                             break;
                         case R.id.VACNAME_02_d:
-                            pLACEV2.setText("PENTA");
+                            pLACEV2.setText(getString(R.string.PENTA));
                             break;
                         case R.id.VACNAME_02_e:
-                            pLACEV2.setText("PCV");
+                            pLACEV2.setText(getString(R.string.PCV));
                             break;
                         case R.id.VACNAME_02_f:
-                            pLACEV2.setText("OPV");
+                            pLACEV2.setText(getString(R.string.OPV));
                             break;
                         case R.id.VACNAME_02_g:
-                            pLACEV2.setText("Pneumococcal");
+                            pLACEV2.setText(getString(R.string.IPV));
                             break;
                         case R.id.VACNAME_02_h:
-                            pLACEV2.setText("Measles");
+                            pLACEV2.setText(getString(R.string.MSL));
                             break;
 
                     }
@@ -327,6 +351,7 @@ public class sVD
 
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                pLACE03.setVisibility(View.VISIBLE);
                 int count = vACNAME03.getChildCount();
                 ArrayList<RadioButton> listOfRadioButtons = new ArrayList<RadioButton>();
                 for (int i1 = 0; i1 < count; i1++) {
@@ -382,6 +407,21 @@ public class sVD
 
 
         // SKIP PATTERN
+
+        vD54.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (!vD54F.isChecked()) {
+                    vD54_x.setVisibility(View.GONE);
+                    vD54_x.setText(null);
+
+                } else {
+                    vD54_x.setVisibility(View.VISIBLE);
+
+                }
+            }
+        });
+
         vD56.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
@@ -394,6 +434,7 @@ public class sVD
             }
         });
 
+
     }
 
     @OnClick(R.id.btnsubmitSD)
@@ -403,10 +444,22 @@ public class sVD
                 if (SaveDraft()) {
                     if (UpdateDB()) {
                         if (icTP < 6) {
+                            if (
+                                    ((icTP == 1) && ((sB.ageindays / 7) > VIRBandApp.TP_02w))
+                                            || ((icTP == 2) && ((sB.ageindays / 7) > VIRBandApp.TP_03w))
+                                            || ((icTP == 3) && ((sB.ageindays / 7) > VIRBandApp.TP_04w))
+                                            || ((icTP == 4) && ((sB.ageindays / 30) > VIRBandApp.TP_05m))
+                                            || ((icTP == 5) && ((sB.ageindays / 30) > VIRBandApp.TP_06m))
+                                    ) {
                             Intent sVD = new Intent(this, sVD.class);
                             sVD.putExtra("icTP", icTP);
                             sVD.putExtra("ic", true);
+                                sVD.putExtra("minDate", DOV.getCalendarView().getDate());
                             startActivity(sVD);
+                            } else {
+                                Intent ending = new Intent(this, MainActivity.class);
+                                startActivity(ending);
+                            }
                         } else {
                             Intent ending = new Intent(this, MainActivity.class);
                             startActivity(ending);
@@ -461,10 +514,11 @@ public class sVD
         return true;
     }
 
+    @TargetApi(Build.VERSION_CODES.N)
     private boolean SaveDraft() throws JSONException {
 
         IChild = new JSONObject();
-        String tp = "TP_";
+        String tp = "TP" + icTP + "_";
 
         switch (vACNAME01.getCheckedRadioButtonId()) {
             case R.id.VACNAME_01_a:
@@ -667,7 +721,9 @@ public class sVD
                 break;
         }
 
-        IChild.put(tp + "DOV", DOV.getText().toString());
+        String spDateT = new SimpleDateFormat("dd-MM-yy").format(DOV.getCalendarView().getDate());
+
+        IChild.put(tp + "DOV", spDateT);
 
         switch (vD54.getCheckedRadioButtonId()) {
             case R.id.VD54_a:
@@ -689,6 +745,8 @@ public class sVD
                 IChild.put(tp + "VD54", "f");
                 break;
         }
+        IChild.put(tp + "VD54_x", vD54_x.getText().toString());
+
 
         switch (vD56.getCheckedRadioButtonId()) {
             case R.id.VD56_a:
@@ -721,7 +779,7 @@ public class sVD
                 sA.fc.setIChild2(IChild.toString());
                 Toast.makeText(this, "Saving Dose# 2 Draft... Successful!", Toast.LENGTH_SHORT).show();
                 return true;
-            case 3:
+            case 3: 
                 sA.fc.setIChild3(IChild.toString());
                 Toast.makeText(this, "Saving Dose# 3 Draft... Successful!", Toast.LENGTH_SHORT).show();
                 return true;

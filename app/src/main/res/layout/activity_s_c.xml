@@ -3,13 +3,14 @@
     android:id="@+id/ScrollView01"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:scrollbars="horizontal">
 
-<!--waqas-->
+    <!--waqas-->
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -17,7 +18,7 @@
         android:background="@drawable/layout"
         android:orientation="vertical"
         tools:context="com.example.hassannaqvi.virband.sC">
-<!--asdfasfas-->
+        <!--asdfasfas-->
 
         <ImageView
             android:layout_width="128dp"
@@ -67,7 +68,7 @@
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
                 android:layout_marginTop="16dp"
                 android:background="@color/colorPrimary"
                 android:padding="12dp"
@@ -80,12 +81,8 @@
                 android:id="@+id/C14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/Sex"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="70dp"
-                android:gravity="right">
+                android:layout_alignRight="@+id/Sex"
+                android:layout_below="@id/Sex">
 
                 <RadioButton
                     android:id="@+id/C14_male"
@@ -113,10 +110,10 @@
                 android:id="@+id/Age"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="8dp"
-                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
                 android:layout_marginTop="16dp"
                 android:background="@color/colorPrimary"
                 android:padding="12dp"
@@ -131,9 +128,9 @@
                 android:id="@+id/C13"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
                 android:layout_marginTop="80dp"
                 android:inputType="date"
                 android:maxLength="2" />
@@ -157,7 +154,7 @@
             android:id="@+id/C15"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal|right"
+            android:layout_gravity="center_horizontal|left"
             android:layout_marginTop="8dp"
             android:inputType="text" />
 
@@ -172,7 +169,7 @@
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
                 android:layout_marginTop="16dp"
                 android:background="@color/colorPrimary"
                 android:padding="12dp"
@@ -186,7 +183,7 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:layout_marginLeft="30dp"
+                android:layout_marginRight="50dp"
                 android:layout_marginTop="80dp">
 
                 <RadioButton
@@ -214,9 +211,9 @@
                 android:id="@+id/contact_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true"
                 android:layout_marginBottom="8dp"
-                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
                 android:layout_marginTop="16dp"
                 android:background="@color/colorPrimary"
                 android:padding="12dp"
@@ -230,20 +227,19 @@
                 android:id="@+id/C17_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/contact_details"
+                android:layout_alignRight="@+id/contact_details"
                 android:layout_below="@+id/contact_details"
                 android:layout_marginTop="8dp"
                 android:hint="@string/C17_a"
                 android:inputType="phone"
                 android:maxLength="8"
-                android:phoneNumber="false"
                 android:textSize="24sp" />
 
             <EditText
                 android:id="@+id/C17_b"
                 android:layout_width="165dp"
                 android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/contact_details"
+                android:layout_alignRight="@+id/contact_details"
                 android:layout_below="@+id/C17_a"
                 android:hint="@string/C17_b"
                 android:inputType="phone"
@@ -265,7 +261,7 @@
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
                 android:layout_marginTop="16dp"
                 android:background="@color/colorPrimary"
                 android:padding="12dp"
@@ -278,9 +274,8 @@
                 android:id="@+id/C18"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="80dp">
+                android:layout_alignRight="@id/religion"
+                android:layout_below="@id/religion">
 
                 <RadioButton
                     android:id="@+id/C18_a"
@@ -319,13 +314,24 @@
                     android:textSize="24sp" />
             </RadioGroup>
 
+            <EditText
+                android:id="@+id/C18_x"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/C18"
+                android:layout_alignRight="@id/C18"
+                android:layout_below="@id/C18"
+                android:digits="QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm"
+                android:hint="@string/OTHER"
+                android:inputType="text" />
+
             <TextView
                 android:id="@+id/family_sys"
                 android:layout_width="170dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true"
                 android:layout_marginBottom="8dp"
-                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
                 android:layout_marginTop="16dp"
                 android:background="@color/colorPrimary"
                 android:padding="12dp"
@@ -338,10 +344,8 @@
                 android:id="@+id/C19"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginBottom="8dp"
-                android:layout_marginRight="50dp"
-                android:layout_marginTop="80dp">
+                android:layout_alignLeft="@id/family_sys"
+                android:layout_below="@id/family_sys">
 
                 <RadioButton
                     android:id="@+id/C19_a"
@@ -372,9 +376,7 @@
                 android:id="@+id/language"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="16dp"
+                android:layout_alignParentRight="true"
                 android:background="@color/colorPrimary"
                 android:padding="12dp"
                 android:text="@string/C20"
@@ -386,10 +388,9 @@
                 android:id="@+id/C20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/language"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="80dp">
+                android:layout_alignRight="@id/language"
+                android:layout_below="@id/language"
+                android:layout_marginTop="8dp">
 
                 <RadioButton
                     android:id="@+id/C20_a"
@@ -462,14 +463,22 @@
                     android:textSize="24sp" />
             </RadioGroup>
 
+            <EditText
+                android:id="@+id/C20_x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/C20"
+                android:layout_alignRight="@id/C20"
+                android:layout_below="@id/C20"
+                android:digits="QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm"
+                android:hint="@string/OTHER"
+                android:inputType="text" />
+
             <TextView
                 android:id="@+id/martual_status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginBottom="8dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="16dp"
+                android:layout_alignParentLeft="true"
                 android:background="@color/colorPrimary"
                 android:padding="12dp"
                 android:text="@string/C21"
@@ -481,10 +490,8 @@
                 android:id="@+id/C21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginBottom="8dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="80dp">
+                android:layout_alignRight="@+id/martual_status"
+                android:layout_below="@id/martual_status">
 
                 <RadioButton
                     android:id="@+id/C21_a"
@@ -539,13 +546,8 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp">
-
-            <TextView
-                android:id="@+id/relation_with_Index"
+        <TextView
+            android:id="@+id/relation_with_Index"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal|right"
@@ -559,68 +561,78 @@
                 android:textSize="25sp" />
 
 
-            <RadioGroup
-                android:id="@+id/C22"
+        <RadioGroup
+            android:id="@+id/C22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp">
+
+            <RadioButton
+                android:id="@+id/C22_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="center"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="80dp">
+                android:layout_gravity="right"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/C22_a"
+                android:textSize="24sp" />
 
-                <RadioButton
-                    android:id="@+id/C22_a"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:button="@null"
-                    android:drawableRight="@android:drawable/btn_radio"
-                    android:text="@string/C22_a"
-                    android:textSize="24sp" />
+            <RadioButton
+                android:id="@+id/C22_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/C22_b"
+                android:textSize="24sp" />
 
-                <RadioButton
-                    android:id="@+id/C22_b"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:button="@null"
-                    android:drawableRight="@android:drawable/btn_radio"
-                    android:text="@string/C22_b"
-                    android:textSize="24sp" />
+            <RadioButton
+                android:id="@+id/C22_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/C22_c"
+                android:textSize="24sp" />
 
-                <RadioButton
-                    android:id="@+id/C22_c"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:button="@null"
-                    android:drawableRight="@android:drawable/btn_radio"
-                    android:text="@string/C22_c"
-                    android:textSize="24sp" />
+            <RadioButton
+                android:id="@+id/C22_d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/AUNT"
+                android:textSize="24sp" />
 
-                <RadioButton
-                    android:id="@+id/C22_d"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:button="@null"
-                    android:drawableRight="@android:drawable/btn_radio"
-                    android:text="@string/AUNT"
-                    android:textSize="24sp" />
+            <RadioButton
+                android:id="@+id/C22_e"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/OTHER"
+                android:textSize="24sp" />
 
-                <RadioButton
-                    android:id="@+id/C22_e"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:button="@null"
-                    android:drawableRight="@android:drawable/btn_radio"
-                    android:text="@string/OTHER"
-                    android:textSize="24sp" />
+        </RadioGroup>
 
-            </RadioGroup>
-        </RelativeLayout>
+        <EditText
+            android:id="@+id/C22_x"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:digits="QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm"
+            android:hint="@string/OTHER"
+            android:inputType="text" />
+
 
         <Button
             android:id="@+id/btnsubmitSC"

@@ -97,8 +97,15 @@ public class sC extends AppCompatActivity {
     RadioButton C22_c;
     @BindView(R.id.C22_d)
     RadioButton C22_d;
-@BindView(R.id.C22_e)
+    @BindView(R.id.C22_e)
     RadioButton C22_e;
+
+    @BindView(R.id.C18_x)
+    EditText C18_x;
+    @BindView(R.id.C20_x)
+    EditText C20_x;
+    @BindView(R.id.C22_x)
+    EditText C22_x;
 
 
     @Override
@@ -106,6 +113,49 @@ public class sC extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_s_c);
         ButterKnife.bind(this);
+
+        // SKIP PATTERN
+        C18.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (!C18_d.isChecked()) {
+                    C18_x.setVisibility(View.GONE);
+                    C18_x.setText(null);
+                } else {
+                    C18_x.setVisibility(View.VISIBLE);
+
+                }
+            }
+        });
+
+        C20.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (!C20_g.isChecked()) {
+                    C20_x.setVisibility(View.GONE);
+                    C20_x.setText(null);
+
+                } else {
+                    C20_x.setVisibility(View.VISIBLE);
+
+                }
+            }
+        });
+
+        C22.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (!C22_e.isChecked()) {
+                    C22_x.setVisibility(View.GONE);
+                    C22_x.setText(null);
+
+                } else {
+                    C22_x.setVisibility(View.VISIBLE);
+
+                }
+            }
+        });
+
     }
 
     public void submitSC(View v) throws JSONException {
@@ -115,7 +165,7 @@ public class sC extends AppCompatActivity {
             if (UpdateDB()) {
 
                 // Skip pattern check for D23
-                if (C22_a.isChecked() || C22_b.isChecked()){
+                if (C22_a.isChecked() || C22_b.isChecked()) {
                     respIsParent = true;
                 }
 
@@ -153,16 +203,20 @@ public class sC extends AppCompatActivity {
         switch (C14.getCheckedRadioButtonId()) {
             case R.id.C14_male:
                 sc.put("C14", "a");
+                break;
             case R.id.C14_female:
                 sc.put("C14", "b");
+                break;
 
         }
         sc.put("C15", C15.getText().toString());
         switch (C16.getCheckedRadioButtonId()) {
             case R.id.C16_a:
                 sc.put("C16", "a");
+                break;
             case R.id.C16_b:
                 sc.put("C16", "b");
+                break;
 
         }
         sc.put("C17_a", C17_a.getText().toString());
@@ -170,67 +224,93 @@ public class sC extends AppCompatActivity {
         switch (C18.getCheckedRadioButtonId()) {
             case R.id.C18_a:
                 sc.put("C18", "a");
+                break;
             case R.id.C18_b:
                 sc.put("C18", "b");
-             case R.id.C18_c:
+                break;
+            case R.id.C18_c:
                 sc.put("C18", "c");
-             case R.id.C18_d:
+                break;
+            case R.id.C18_d:
                 sc.put("C18", "d");
-
+                break;
         }
-switch (C19.getCheckedRadioButtonId()) {
+
+        sc.put("C18_x", C18_x.getText().toString());
+
+        switch (C19.getCheckedRadioButtonId()) {
             case R.id.C19_a:
                 sc.put("C19", "a");
+                break;
             case R.id.C19_b:
                 sc.put("C19", "b");
+                break;
+        }
 
-
-}
         switch (C20.getCheckedRadioButtonId()) {
             case R.id.C20_a:
                 sc.put("C20", "a");
+                break;
             case R.id.C20_b:
                 sc.put("C20", "b");
+                break;
             case R.id.C20_c:
                 sc.put("C20", "c");
+                break;
             case R.id.C20_d:
                 sc.put("C20", "d");
+                break;
             case R.id.C20_e:
                 sc.put("C20", "e");
+                break;
             case R.id.C20_f:
                 sc.put("C20", "f");
+                break;
             case R.id.C20_g:
                 sc.put("C20", "g");
-
-
+                break;
         }
-switch (C21.getCheckedRadioButtonId()) {
+
+        sc.put("C20_x", C20_x.getText().toString());
+
+        switch (C21.getCheckedRadioButtonId()) {
             case R.id.C21_a:
                 sc.put("C21", "a");
+                break;
             case R.id.C21_b:
                 sc.put("C21", "b");
+                break;
             case R.id.C21_c:
                 sc.put("C21", "c");
+                break;
             case R.id.C21_d:
                 sc.put("C21", "d");
+                break;
             case R.id.C21_e:
                 sc.put("C21", "e");
+                break;
 
         }
-switch (C22.getCheckedRadioButtonId()) {
+        switch (C22.getCheckedRadioButtonId()) {
             case R.id.C22_a:
                 sc.put("C22", "a");
+                break;
             case R.id.C22_b:
                 sc.put("C22", "b");
+                break;
             case R.id.C22_c:
                 sc.put("C22", "c");
+                break;
             case R.id.C22_d:
                 sc.put("C22", "d");
+                break;
             case R.id.C22_e:
                 sc.put("C22", "e");
+                break;
+        }
 
+        sc.put("C20_x", C18_x.getText().toString());
 
-}
         sA.fc.setVC(sc.toString());
         Toast.makeText(this, "Saving Draft... Successful!", Toast.LENGTH_SHORT).show();
     }
@@ -252,10 +332,10 @@ switch (C22.getCheckedRadioButtonId()) {
             C13.setError("Please enter respondent age");
             Log.i(TAG, "Age of Respondent not given");
             return false;
-        } else if (Integer.parseInt(C13.getText().toString()) < MIN_RESP_AGE ){
-            Toast.makeText(this, "Respondent is Under age limit ("+MIN_RESP_AGE+")", Toast.LENGTH_LONG).show();
-            C13.setError("Respondent is under Age limit ("+MIN_RESP_AGE+")");
-            Log.i(TAG, "Age of Respondent is under limit ("+MIN_RESP_AGE+")");
+        } else if (Integer.parseInt(C13.getText().toString()) < MIN_RESP_AGE) {
+            Toast.makeText(this, "Respondent is Under age limit (" + MIN_RESP_AGE + ")", Toast.LENGTH_LONG).show();
+            C13.setError("Respondent is under Age limit (" + MIN_RESP_AGE + ")");
+            Log.i(TAG, "Age of Respondent is under limit (" + MIN_RESP_AGE + ")");
             return false;
         } else {
             C13.setError(null);
@@ -267,21 +347,27 @@ switch (C22.getCheckedRadioButtonId()) {
             C14_female.setError("Please select gender");
             Log.i(TAG, "Index Child's Gender not selected");
             return false;
-        } else {C14_female.setError(null);}
+        } else {
+            C14_female.setError(null);
+        }
 
         if (C15.getText().toString().isEmpty()) {
             Toast.makeText(this, "Please enter Address", Toast.LENGTH_LONG).show();
             C15.setError("Please enter Address");
             Log.i(TAG, "Adress not given");
             return false;
-        } else {C15.setError(null);}
+        } else {
+            C15.setError(null);
+        }
 
         if (C16.getCheckedRadioButtonId() == -1) {
             Toast.makeText(this, "Please select residence type", Toast.LENGTH_LONG).show();
             C16_b.setError("Please select residence type");
             Log.i(TAG, "Residence Type not selected");
             return false;
-        } else {C16_b.setError(null);}
+        } else {
+            C16_b.setError(null);
+        }
 
         if (C17_a.getText().toString().isEmpty() && C17_b.getText().toString().isEmpty()) {
             Toast.makeText(this, "Please enter Phone number", Toast.LENGTH_LONG).show();
@@ -289,54 +375,97 @@ switch (C22.getCheckedRadioButtonId()) {
             C17_a.setError("Please enter Phone number");
             Log.i(TAG, "Phone number not given");
             return false;
-        } else {C17_a.setError(null);C17_b.setError(null);}
+        } else {
+            C17_a.setError(null);
+            C17_b.setError(null);
+        }
 
         if (C18.getCheckedRadioButtonId() == -1) {
             Toast.makeText(this, "Please select religion", Toast.LENGTH_LONG).show();
             C18_d.setError("Please select religion");
             Log.i(TAG, "Religion not selected");
             return false;
-        } else {C18_d.setError(null);}
+        } else {
+            C18_d.setError(null);
+        }
+
+        if (C18_d.isChecked() && C18_x.getText().toString().isEmpty()) {
+            Toast.makeText(this, "Please give detail of others", Toast.LENGTH_LONG).show();
+            C18_x.setError("Please give detail of others");
+            Log.i(TAG, "Detail of Others not given");
+            return false;
+        } else {
+            C18_x.setError(null);
+        }
 
         if (C19.getCheckedRadioButtonId() == -1) {
             Toast.makeText(this, "Please select family type", Toast.LENGTH_LONG).show();
             C19_b.setError("Please select family type");
             Log.i(TAG, "Family type not selected");
             return false;
-        } else {C19_b.setError(null);}
+        } else {
+            C19_b.setError(null);
+        }
 
         if (C20.getCheckedRadioButtonId() == -1) {
             Toast.makeText(this, "Please select Language", Toast.LENGTH_LONG).show();
             C20_g.setError("Please select language");
             Log.i(TAG, "Language not selected");
             return false;
-        } else {C20_g.setError(null);}
+        } else {
+            C20_g.setError(null);
+        }
+
+        if (C20_g.isChecked() && C20_x.getText().toString().isEmpty()) {
+            Toast.makeText(this, "Please give detail of others", Toast.LENGTH_LONG).show();
+            C20_x.setError("Please give detail of others");
+            Log.i(TAG, "Detail of Others not given");
+            return false;
+        } else {
+            C20_x.setError(null);
+        }
 
         if (C21.getCheckedRadioButtonId() == -1) {
             Toast.makeText(this, "Please select Marital Status", Toast.LENGTH_LONG).show();
             C21_e.setError("Please select marital status");
             Log.i(TAG, "Marital status not selected");
             return false;
-        } else {C21_e.setError(null);}
+        } else {
+            C21_e.setError(null);
+        }
 
         if (C22.getCheckedRadioButtonId() == -1) {
             Toast.makeText(this, "Please select Relation", Toast.LENGTH_LONG).show();
             C22_d.setError("Please select Relation");
             Log.i(TAG, "Relation not selected");
             return false;
-        } else if (C14_female.isChecked() && C22_b.isChecked()){
+        } else if (C14_female.isChecked() && C22_b.isChecked()) {
             Toast.makeText(this, "Relation DO NOT match with Gender", Toast.LENGTH_LONG).show();
             C22_b.setError("Relation DO NOT match with Gender");
             C14_female.setError("Relation DO NOT match with Gender");
             Log.i(TAG, "Relation DO NOT match with Gender");
             return false;
-        } else if (C14_male.isChecked() && !(C22_b.isChecked() || C22_e.isChecked())){
+        } else if (C14_male.isChecked() && !(C22_b.isChecked() || C22_e.isChecked())) {
             Toast.makeText(this, "Relation DO NOT match with Gender", Toast.LENGTH_LONG).show();
             C22_d.setError("Relation DO NOT match with Gender");
             C14_male.setError("Relation DO NOT match with Gender");
             Log.i(TAG, "Relation DO NOT match with Gender");
             return false;
-        } else {C22_d.setError(null);C22_b.setError(null);C14_female.setError(null);C14_male.setError(null);}
+        } else {
+            C22_d.setError(null);
+            C22_b.setError(null);
+            C14_female.setError(null);
+            C14_male.setError(null);
+        }
+
+        if (C22_e.isChecked() && C22_x.getText().toString().isEmpty()) {
+            Toast.makeText(this, "Please give detail of others", Toast.LENGTH_LONG).show();
+            C22_x.setError("Please give detail of others");
+            Log.i(TAG, "Detail of Others not given");
+            return false;
+        } else {
+            C22_x.setError(null);
+        }
 
         Toast.makeText(this, "Validation... Successful!", Toast.LENGTH_SHORT).show();
 

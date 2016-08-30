@@ -25,14 +25,12 @@ import java.util.concurrent.TimeUnit;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class sB extends AppCompatActivity {
+public class sOCI extends AppCompatActivity {
 
     private static final String TAG = "SectionB";
 
-    public static JSONObject sb;
-    public static int ageindays;
-    public static String iChildName;
-
+    public static JSONObject soc;
+    public static int ageindaysOCI;
 
 
     @BindView(R.id.B05)
@@ -69,11 +67,6 @@ public class sB extends AppCompatActivity {
     RadioButton B11_d;
     @BindView(R.id.B11_e)
     RadioButton B11_e;
-
-    @BindView(R.id.B11_x)
-    EditText B11_x;
-
-
     @BindView(R.id.fldGrpDOB)
     LinearLayout fldGrpDOB;
 
@@ -98,20 +91,6 @@ public class sB extends AppCompatActivity {
                 }
             }
         });
-
-        // SKIP PATTERN
-        B11.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                if (!B11_e.isChecked()) {
-                    B11_x.setVisibility(View.GONE);
-                    B11_x.setText(null);
-                } else {
-                    B11_x.setVisibility(View.VISIBLE);
-
-                }
-            }
-        });
     }
 
     public void submitSB(View v) throws JSONException {
@@ -120,8 +99,10 @@ public class sB extends AppCompatActivity {
         if (formValidation()) {
             SaveDraft();
             if (UpdateDB()) {
-                Intent SB = new Intent(this, sC.class);
-                startActivity(SB);
+                Intent SOC = new Intent(this, sVD.class);
+                SOC.putExtra("icTP", 0);
+                SOC.putExtra("ic", false);
+                startActivity(SOC);
             }
         }
 
@@ -129,87 +110,85 @@ public class sB extends AppCompatActivity {
 
     public boolean UpdateDB() {
 
-        FormsDBHelper db = new FormsDBHelper(this);
+        Long rowId;
+        /*OcsDBHelper db = new OcsDBHelper(this);
 
-        int updcount = db.updateSB();
-
-        if (updcount == 1) {
-            Toast.makeText(sB.this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(sB.this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
-        }
+        rowId = db.addForm(fc);
+        fc.setID(rowId);
+        fc.setFormNo(fc.getDeviceID().substring(fc.getDeviceID().length() - 5) + "-" + fc.getID());
+        Toast.makeText(sA.this, "Current Form No: " + fc.getFormNo(), Toast.LENGTH_SHORT).show();
+*/
         return true;
 
     }
 
     public void SaveDraft() throws JSONException {
 
-        sb = new JSONObject();
+        soc = new JSONObject();
 
         String spDateT = new SimpleDateFormat("dd-MM-yyyy HH:mm").format(B07.getCalendarView().getDate());
 
-        sb.put("B05", B05.getText().toString());
-        iChildName = B05.getText().toString();
+        soc.put("B05", B05.getText().toString());
         Log.d(TAG, String.valueOf(B06.getCheckedRadioButtonId() + "" + R.id.B06_male));
 
         int i = B06.getCheckedRadioButtonId();
         if (i == R.id.B06_male) {
-            sb.put("B06", "a");
+            soc.put("B06", "a");
 
         } else if (i == R.id.B06_female) {
-            sb.put("B06", "b");
+            soc.put("B06", "b");
 
 
         } else {
-            sb.put("B06", "ns"); // none selected
+            soc.put("B06", "ns"); // none selected
         }
-        sb.put("B07", spDateT);
-        sb.put("B08m", B08m.getText().toString());
-        sb.put("B08y", B08y.getText().toString());
-        sb.put("B08d", B08d.getText().toString());
+        soc.put("B07", spDateT);
+        soc.put("B08m", B08m.getText().toString());
+        soc.put("B08y", B08y.getText().toString());
+        soc.put("B08d", B08d.getText().toString());
         if (DOB.isChecked()) {
             Calendar cal = Calendar.getInstance();
             cal.set(B07.getYear(), B07.getMonth(), B07.getDayOfMonth());
             Date date1 = new Date();
             Date date2 = cal.getTime();
             long diff = date1.getTime() - date2.getTime();
-            ageindays = (int) TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
+            ageindaysOCI = (int) TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
         } else {
             int m2days = (Integer.valueOf(B08m.getText().toString()) * 30);
             int y2days = (Integer.valueOf(B08y.getText().toString()) * 365);
-            ageindays = (m2days + y2days + Integer.valueOf(B08d.getText().toString()));
+            ageindaysOCI = (m2days + y2days + Integer.valueOf(B08d.getText().toString()));
         }
-        Log.d(TAG, "Age in Days: " + ageindays);
+        Log.d(TAG, "Age in Days: " + ageindaysOCI);
 
-        sb.put("B09", B09.getText().toString());
-        sb.put("B10", B10.getText().toString());
+        soc.put("B09", B09.getText().toString());
+        soc.put("B10", B10.getText().toString());
         switch (B11.getCheckedRadioButtonId()) {
             case R.id.B11_a:
-                sb.put("B11", "a");
+                soc.put("B11", "a");
                 break;
             case R.id.B11_b:
-                sb.put("B11", "b");
+                soc.put("B11", "b");
                 break;
             case R.id.B11_c:
-                sb.put("B11", "c");
+                soc.put("B11", "c");
                 break;
             case R.id.B11_d:
-                sb.put("B11", "d");
+                soc.put("B11", "d");
                 break;
             case R.id.B11_e:
-                sb.put("B11", "e");
+                soc.put("B11", "e");
                 break;
         }
-        sb.put("B11_x", B11_x.getText().toString());
-        sA.fc.setVB(sb.toString());
-        Toast.makeText(sB.this, "Saving Draft... Successful!", Toast.LENGTH_SHORT).show();
+
+        sA.fc.setVB(soc.toString());
+        Toast.makeText(sOCI.this, "Saving Draft... Successful!", Toast.LENGTH_SHORT).show();
 
     }
 
     private boolean formValidation() {
 
         if (B05.getText().toString().isEmpty()) {
-            Toast.makeText(sB.this, "Please enter index child name", Toast.LENGTH_LONG).show();
+            Toast.makeText(sOCI.this, "Please enter index child name", Toast.LENGTH_LONG).show();
             B05.setError("Please enter index child name");
             Log.i(TAG, "Name of Index Child not given");
             return false;
@@ -218,7 +197,7 @@ public class sB extends AppCompatActivity {
         }
 
         if (B06.getCheckedRadioButtonId() == -1) {
-            Toast.makeText(sB.this, "Please select gender", Toast.LENGTH_LONG).show();
+            Toast.makeText(sOCI.this, "Please select gender", Toast.LENGTH_LONG).show();
             B06_male.setError("Please select gender");
             Log.i(TAG, "Index Child's Gender not selected");
             return false;
@@ -228,7 +207,7 @@ public class sB extends AppCompatActivity {
         }
         Log.d(TAG, String.valueOf(B06.getCheckedRadioButtonId()));
         if (!DOB.isChecked() && (B08m.getText().toString().isEmpty() && B08y.getText().toString().isEmpty() && B08d.getText().toString().isEmpty())) {
-            Toast.makeText(sB.this, "Please enter age", Toast.LENGTH_LONG).show();
+            Toast.makeText(sOCI.this, "Please enter age", Toast.LENGTH_LONG).show();
             B08m.setError("Please enter age");
             Log.i(TAG, "Index Child's Age not given");
             return false;
@@ -238,7 +217,7 @@ public class sB extends AppCompatActivity {
 
         if (!B08m.getText().toString().isEmpty()) {
             if (Integer.valueOf(B08m.getText().toString()) > 11) {
-                Toast.makeText(sB.this, "Months cannot be more than 11", Toast.LENGTH_LONG).show();
+                Toast.makeText(sOCI.this, "Months cannot be more than 11", Toast.LENGTH_LONG).show();
                 B08m.setError("Months cannot be more than 11");
                 Log.i(TAG, "Months cannot be more than 11");
                 return false;
@@ -249,7 +228,7 @@ public class sB extends AppCompatActivity {
 
         if (!B08d.getText().toString().isEmpty()) {
             if (Integer.valueOf(B08d.getText().toString()) > 30) {
-                Toast.makeText(sB.this, "Days cannot be more than 30", Toast.LENGTH_LONG).show();
+                Toast.makeText(sOCI.this, "Days cannot be more than 30", Toast.LENGTH_LONG).show();
                 B08d.setError("Days cannot be more than 30");
                 Log.i(TAG, "Days cannot be more than 30");
                 return false;
@@ -260,7 +239,7 @@ public class sB extends AppCompatActivity {
 
         if (!B08y.getText().toString().isEmpty()) {
             if (Integer.valueOf(B08y.getText().toString()) > 2) {
-                Toast.makeText(sB.this, "Year cannot be more than 2", Toast.LENGTH_LONG).show();
+                Toast.makeText(sOCI.this, "Year cannot be more than 2", Toast.LENGTH_LONG).show();
                 B08y.setError("Year cannot be more than 2");
                 Log.i(TAG, "Year cannot be more than 2");
                 return false;
@@ -270,7 +249,7 @@ public class sB extends AppCompatActivity {
         }
 
         if (B09.getText().toString().isEmpty()) {
-            Toast.makeText(sB.this, "Please enter Mother's Name", Toast.LENGTH_LONG).show();
+            Toast.makeText(sOCI.this, "Please enter Mother's Name", Toast.LENGTH_LONG).show();
             B09.setError("Please enter Mother's Name");
             Log.i(TAG, "Mother's Name not given");
             return false;
@@ -280,7 +259,7 @@ public class sB extends AppCompatActivity {
         }
 
         if (B10.getText().toString().isEmpty()) {
-            Toast.makeText(sB.this, "Please enter Father's Name", Toast.LENGTH_LONG).show();
+            Toast.makeText(sOCI.this, "Please enter Father's Name", Toast.LENGTH_LONG).show();
             B10.setError("Please enter Father's Name");
             Log.i(TAG, "Father's Name not given");
             return false;
@@ -290,7 +269,7 @@ public class sB extends AppCompatActivity {
         }
 
         if (B11.getCheckedRadioButtonId() == -1) {
-            Toast.makeText(sB.this, "Please select the Place of Birth", Toast.LENGTH_LONG).show();
+            Toast.makeText(sOCI.this, "Please select the Place of Birth", Toast.LENGTH_LONG).show();
             B11_e.setError("Please select the Place of Birth");
             Log.i(TAG, "Place of Birth not selected");
             return false;
@@ -298,14 +277,6 @@ public class sB extends AppCompatActivity {
             B11_e.setError(null);
         }
 
-        if (B11_e.isChecked() && B11_x.getText().toString().isEmpty()) {
-            Toast.makeText(this, "Please give detail of others", Toast.LENGTH_LONG).show();
-            B11_x.setError("Please give detail of others");
-            Log.i(TAG, "Detail of Others not given");
-            return false;
-        } else {
-            B11_x.setError(null);
-        }
 
         Toast.makeText(this, "Validation... Successful!", Toast.LENGTH_SHORT).show();
         return true;

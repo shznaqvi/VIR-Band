@@ -10,7 +10,7 @@
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
-    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in">Login</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
@@ -63,7 +63,7 @@
     <string name="C16"> رہائش </string>
     <string name="C16_a"> مستقل </string>
     <string name="C16_b"> عارضی </string>
-    <string name="C17"> رابطے کے تفصیلات </string>
+    <string name="C17"> رابطے کی تفصیلات </string>
     <string name="C17_a"> پی ٹی سی ایل نمبر </string>
     <string name="C17_b"> موبائل نمبر </string>
     <string name="C18"> مذہب </string>
@@ -94,7 +94,7 @@
 
     <!-- SECTION D -->
     <string name="sD"> انڈیکس چائلڈ کے خاندان کی سماجی ومعاشی حیثیت </string>
-    <string name="D23"> جوابدہندہ کی تعلیم حیثیت(اگر جوابدہندہ بچے کے والین ہوں تو یہ سوال نہیں پوچھیں اور اگلا سوال کریں ) </string>
+    <string name="D23"> جوابدہندہ کی تعلیمی حیثیت </string>
     <string name="NA"> ناقابل اطلاق </string>
     <string name="UNEDU"> روایتی تعلیم سے نا آشناؒ </string>
     <string name="PRI"> ابتدائی </string>
@@ -237,9 +237,9 @@
     <string name="E46_a"> نجی ہسپتال </string>
     <string name="E47"> کیا آپ ویکسینیشن کے لئے پیسے دیتے ہیں </string>
     <string name="E48"> اگر آپ ویکسینیشن کے لئے پیسے دیتے ہیں توویکسین کے لئے کتنے پیسے ہوتے ہیں </string>
-    <string name="E48_a"> ہر ویکسین کے لئے بیس روپے سے کم </string>
-    <string name="E48_b"> ہر ویکسین کے لئے پچاس روپے سے کم </string>
-    <string name="E48_c"> ہر ویکسین کے لئے سو روپے سے کم </string>
+    <string name="E48_a"> ہر ویکسین کے لئے 100 روپے سے کم </string>
+    <string name="E48_b"> ہر ویکسین کے لئے 100 سے 500 روپے تک </string>
+    <string name="E48_c"> ہر ویکسین کے لئے 500 روپے سے زیادہ  </string>
     <string name="E49"> ویکسینیشن کی یاددہانی کے لئے آپ کون سا طریقہ استعمال کرتے/کرتی ہیں </string>
     <string name="E49_a"> ویکسینیشن کارڈ </string>
     <string name="E49_b"> اخبار </string>
@@ -275,17 +275,17 @@
     <string name="VD53"> پہلی مرتبہ لگنے والی ویکسینیشن کا نام کیا تھا </string>
     <string name="DNREM"> نہیں یاد </string>
     <string name="VD53_c"> بی سی جی </string>
-    <string name="VD53_C_E">BCG</string>
+    <string name="BCG">BCG</string>
     <string name="VD53_d"> پینٹا </string>
-    <string name="VD53_D_E">PENTA</string>
+    <string name="PENTA">PENTA</string>
     <string name="VD53_e"> پی سی وی </string>
-    <string name="VD53_E_E">PCV</string>
+    <string name="PCV">PCV</string>
     <string name="VD53_f"> او پی وی </string>
-    <string name="VD53_F_E">OPV</string>
+    <string name="OPV">OPV</string>
     <string name="VD53_g"> نیموکوکل </string>
-    <string name="VD53_G_E">Pneumococcal</string>
+    <string name="IPV">IPV</string>
     <string name="VD53_h"> خسرہ </string>
-    <string name="VD53_H_E">Measles</string>
+    <string name="MSL">Measles</string>
     <string name="VD54"> کس عمر میں پہلی مرتبہ ویکسین لگائی گئ تھی </string>
     <string name="VD54_a"> پیدائش کے فوراً بعد </string>
     <string name="VD54_b"> ایک ماہ کی عمر میں </string>
@@ -309,5 +309,8 @@
     <string name="submit">Submit</string>
     <string name="title_activity_calibrate_location">Map</string>
     <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="B08d">دن</string>
+    <string name="B08m">مہینے</string>
+    <string name="B08y">سال</string>
 
 </resources>

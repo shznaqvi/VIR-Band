@@ -3,6 +3,7 @@
     android:id="@+id/ScrollView01"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
     android:scrollbars="horizontal">
 
 
@@ -12,6 +13,10 @@
         android:layout_height="wrap_content"
         android:background="@drawable/layout"
         android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
         tools:context="com.example.hassannaqvi.virband.sC">
 
 
@@ -35,12 +40,6 @@
             android:textSize="24sp" />
 
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp">
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -57,10 +56,11 @@
                 android:id="@+id/E29"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true"
+                android:layout_gravity="center_horizontal|right"
                 android:layout_marginBottom="8dp"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="8dp"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
                 android:gravity="right">
 
                 <RadioButton
@@ -84,8 +84,12 @@
             </RadioGroup>
 
 
-        </RelativeLayout>
-
+        <LinearLayout
+            android:id="@+id/fldGrpE29"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -99,70 +103,56 @@
             android:textColor="@color/white"
             android:textSize="24sp" />
 
-        <RadioGroup
-            android:id="@+id/E30"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal|right"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:gravity="right">
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E30_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/E30_a"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E30_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/E30_b"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E30_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/E30_c"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E30_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/E30_d"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E30_e"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/E30_e"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E30_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/OTHER"
                 android:textSize="24sp" />
 
-        </RadioGroup>
+            <EditText
+                android:id="@+id/E30_x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm"
+                android:hint="@string/OTHER"
+                android:inputType="text" />
 
 
         <TextView
@@ -178,134 +168,107 @@
             android:textColor="@color/white"
             android:textSize="24sp" />
 
-        <RadioGroup
-            android:id="@+id/E31"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:gravity="right">
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E31_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/E31_a"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E31_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/E31_b"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E31_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/E31_c"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E31_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/E31_d"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E31_e"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/TV"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E31_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/E31_f"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E31_g"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/E31_g"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E31_h"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/E31_h"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E31_i"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/E31_i"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E31_j"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/E31_j"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E31_k"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/E31_k"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E31_l"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/LEADER"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E31_m"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/OTHER"
                 android:textSize="24sp" />
 
+            <EditText
+                android:id="@+id/E31_x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm"
+                android:hint="@string/OTHER"
+                android:inputType="text" />
+        </LinearLayout>
 
-        </RadioGroup>
 
 
         <TextView
@@ -361,7 +324,12 @@
                 android:textSize="24sp" />
         </RadioGroup>
 
-
+        <LinearLayout
+            android:id="@+id/fldGrpE32"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -373,83 +341,67 @@
             android:text="@string/E33"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textSize="24sp" />
 
-        <RadioGroup
-            android:id="@+id/E33"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal|right"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:gravity="right">
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E33_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/E33_a"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E33_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/E33_b"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E33_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/E33_c"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E33_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/E33_d"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E33_e"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/E33_e"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E33_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/NOTH"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E33_g"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/OTHER"
                 android:textSize="24sp" />
 
-        </RadioGroup>
+            <EditText
+                android:id="@+id/E33_x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm"
+                android:hint="@string/OTHER"
+                android:inputType="text" />
 
+        </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
@@ -573,6 +525,13 @@
                 android:textSize="24sp" />
         </RadioGroup>
 
+        <EditText
+            android:id="@+id/E34_x"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm"
+            android:hint="@string/OTHER"
+            android:inputType="text" />
 
         <TextView
             android:layout_width="match_parent"
@@ -680,6 +639,14 @@
                 android:textSize="24sp" />
 
         </RadioGroup>
+
+            <EditText
+                android:id="@+id/E35a_x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm"
+                android:hint="@string/OTHER"
+                android:inputType="text" />
         </LinearLayout>
 
         <TextView
@@ -751,16 +718,8 @@
             android:textColor="@color/white"
             android:textSize="24sp" />
 
-        <RadioGroup
-            android:id="@+id/E36a"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal|right"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:gravity="right">
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E36a_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -769,7 +728,7 @@
                 android:text="@string/Ea_1"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E36a_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -778,7 +737,7 @@
                 android:text="@string/Ea_2"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E36a_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -787,7 +746,7 @@
                 android:text="@string/Ea_3"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E36a_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -796,7 +755,7 @@
                 android:text="@string/Ea_4"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E36a_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -805,7 +764,7 @@
                 android:text="@string/Ea_5"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E36a_6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -814,7 +773,7 @@
                 android:text="@string/DNK"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E36a_7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -823,7 +782,13 @@
                 android:text="@string/OTHER"
                 android:textSize="24sp" />
 
-        </RadioGroup>
+            <EditText
+                android:id="@+id/E36a_x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm"
+                android:hint="@string/OTHER"
+                android:inputType="text" />
         </LinearLayout>
 
         <LinearLayout
@@ -845,16 +810,8 @@
             android:textColor="@color/white"
             android:textSize="24sp" />
 
-        <RadioGroup
-            android:id="@+id/E36b"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal|right"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:gravity="right">
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E36b_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -863,7 +820,7 @@
                 android:text="@string/E36b_1"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E36b_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -872,7 +829,7 @@
                 android:text="@string/E36b_2"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E36b_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -881,7 +838,7 @@
                 android:text="@string/E36b_3"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E36b_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -890,7 +847,7 @@
                 android:text="@string/DNK"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E36b_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -899,7 +856,13 @@
                 android:text="@string/OTHER"
                 android:textSize="24sp" />
 
-        </RadioGroup>
+            <EditText
+                android:id="@+id/E36b_x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm"
+                android:hint="@string/OTHER"
+                android:inputType="text" />
         </LinearLayout>
 
         <TextView
@@ -989,6 +952,20 @@
 
         </RadioGroup>
 
+        <EditText
+            android:id="@+id/E37_x"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm"
+            android:hint="@string/OTHER"
+            android:inputType="text" />
+
+        <LinearLayout
+            android:id="@+id/fldGrpE37"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
 
         <TextView
             android:layout_width="match_parent"
@@ -1068,6 +1045,14 @@
 
         </RadioGroup>
 
+            <EditText
+                android:id="@+id/E38_x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm"
+                android:hint="@string/OTHER"
+                android:inputType="text" />
+        </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
@@ -1147,6 +1132,13 @@
 
         </RadioGroup>
 
+        <EditText
+            android:id="@+id/E39_x"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm"
+            android:hint="@string/OTHER"
+            android:inputType="text" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -1291,6 +1283,14 @@
                 android:textSize="24sp" />
 
         </RadioGroup>
+
+            <EditText
+                android:id="@+id/E40a_x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm"
+                android:hint="@string/OTHER"
+                android:inputType="text" />
         </LinearLayout>
 
         <LinearLayout
@@ -1367,8 +1367,22 @@
 
 
         </RadioGroup>
+
+            <EditText
+                android:id="@+id/E40b_x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm"
+                android:hint="@string/OTHER"
+                android:inputType="text" />
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/fldGrpE32b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -1466,6 +1480,13 @@
 
         </RadioGroup>
 
+            <EditText
+                android:id="@+id/E41_x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm"
+                android:hint="@string/OTHER"
+                android:inputType="text" />
 
         <TextView
             android:layout_width="match_parent"
@@ -1555,7 +1576,13 @@
 
         </RadioGroup>
 
-
+            <EditText
+                android:id="@+id/E42_x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm"
+                android:hint="@string/OTHER"
+                android:inputType="text" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -1636,6 +1663,20 @@
 
         </RadioGroup>
 
+            <EditText
+                android:id="@+id/E43_x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm"
+                android:hint="@string/OTHER"
+                android:inputType="text" />
+
+            <LinearLayout
+                android:id="@+id/fldGrpE42"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
 
         <TextView
             android:layout_width="match_parent"
@@ -1723,7 +1764,15 @@
                 android:textSize="24sp" />
         </RadioGroup>
 
-
+                <EditText
+                    android:id="@+id/E44_x"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm"
+                    android:hint="@string/OTHER"
+                    android:inputType="text" />
+            </LinearLayout>
+        </LinearLayout>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -1872,6 +1921,13 @@
 
         </RadioGroup>
 
+        <EditText
+            android:id="@+id/E46_x"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm"
+            android:hint="@string/OTHER"
+            android:inputType="text" />
 
         <TextView
             android:layout_width="match_parent"
@@ -1999,6 +2055,14 @@
                 android:textSize="24sp" />
 
         </RadioGroup>
+
+            <EditText
+                android:id="@+id/E48_x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm"
+                android:hint="@string/OTHER"
+                android:inputType="text" />
         </LinearLayout>
 
         <TextView
@@ -2097,6 +2161,13 @@
 
         </RadioGroup>
 
+        <EditText
+            android:id="@+id/E49_x"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm"
+            android:hint="@string/OTHER"
+            android:inputType="text" />
 
         <TextView
             android:layout_width="match_parent"
@@ -2233,6 +2304,16 @@
                 android:textSize="24sp" />
 
         </RadioGroup>
+
+            <EditText
+                android:id="@+id/E50a_x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm"
+                android:hint="@string/OTHER"
+                android:inputType="text" />
+
+
         </LinearLayout>
 
         <LinearLayout
@@ -2318,6 +2399,15 @@
                 android:textSize="24sp" />
 
         </RadioGroup>
+
+            <EditText
+                android:id="@+id/E50b_x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm"
+                android:hint="@string/OTHER"
+                android:inputType="text" />
+
         </LinearLayout>
 
         <TextView
@@ -2465,6 +2555,15 @@
                 android:textSize="24sp" />
 
         </RadioGroup>
+
+            <EditText
+                android:id="@+id/E51a_x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm"
+                android:hint="@string/OTHER"
+                android:inputType="text" />
+
         </LinearLayout>
 
         <TextView

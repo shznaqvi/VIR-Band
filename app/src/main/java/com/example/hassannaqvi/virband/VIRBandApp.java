@@ -18,11 +18,21 @@ import android.widget.Toast;
  */
 public class VIRBandApp extends Application {
 
+    public static final int TP_02w = 6;
+    public static final int TP_03w = 10;
+    public static final int TP_04w = 14;
+    public static final int TP_05m = 9;
+    public static final int TP_06m = 15;
     private static final long MINIMUM_DISTANCE_CHANGE_FOR_UPDATES = 1; // in Meters
     private static final long MINIMUM_TIME_BETWEEN_UPDATES = 1000; // in Milliseconds
-    private static final int TWO_MINUTES = 1000 * 60 * 2;
-
-
+    private static final long TWO_MINUTES = 1000 * 60 * 2;
+    private static final long MILLIS_IN_SECOND = 1000;
+    private static final long SECONDS_IN_MINUTE = 60;
+    private static final long MINUTES_IN_HOUR = 60;
+    private static final long HOURS_IN_DAY = 24;
+    public static final long MILLISECONDS_IN_DAY = MILLIS_IN_SECOND * SECONDS_IN_MINUTE * MINUTES_IN_HOUR * HOURS_IN_DAY;
+    private static final long DAYS_IN_YEAR = 365;
+    public static final long MILLISECONDS_IN_YEAR = MILLIS_IN_SECOND * SECONDS_IN_MINUTE * MINUTES_IN_HOUR * HOURS_IN_DAY * DAYS_IN_YEAR;
     protected static LocationManager locationManager;
 
     @Override
@@ -49,6 +59,7 @@ public class VIRBandApp extends Application {
                 MINIMUM_DISTANCE_CHANGE_FOR_UPDATES,
                 new MyLocationListener()
         );
+
     }
 
     protected void showCurrentLocation() {

@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/layout"
         android:orientation="vertical"
-        tools:context="com.example.hassannaqvi.virband.sB">
+        tools:context="com.example.hassannaqvi.virband.sOCI">
 
 
         <ImageView
@@ -70,28 +70,29 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:visibility="gone">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="16dp"
-            android:background="@color/colorPrimary"
-            android:padding="12dp"
-            android:text="@string/B07"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="24sp" />
 
-        <DatePicker
-            android:id="@+id/B07"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:calendarViewShown="false"
-            android:datePickerMode="calendar"
-            android:paddingTop="8dp"
-            android:spinnersShown="true" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorPrimary"
+                android:padding="12dp"
+                android:text="@string/B07"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <DatePicker
+                android:id="@+id/B07"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:calendarViewShown="false"
+                android:datePickerMode="calendar"
+                android:paddingTop="8dp"
+                android:spinnersShown="true" />
         </LinearLayout>
 
         <RelativeLayout
@@ -170,7 +171,7 @@
                 android:digits="0,1,2,3,4,5,6,7,8,9"
                 android:hint="@string/B08d"
                 android:inputType="number"
-                android:maxLength="2" />
+                android:maxLength="1" />
 
             <EditText
                 android:id="@+id/B08m"

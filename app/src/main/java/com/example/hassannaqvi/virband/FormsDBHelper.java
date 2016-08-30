@@ -19,7 +19,7 @@ import java.util.Collection;
  */
 public class FormsDBHelper extends SQLiteOpenHelper {
 
-    public static final int DATABASE_VERSION = 3;
+    public static final int DATABASE_VERSION = 4;
     public static final String DATABASE_NAME = "vir_band.db";
     private static final String TEXT_TYPE = " TEXT";
     private static final String COMMA_SEP = ",";
@@ -126,7 +126,6 @@ public class FormsDBHelper extends SQLiteOpenHelper {
         values.put(VIRForm.COLUMN_NAME_GPS_LAT, fc.getGPSLat());
         values.put(VIRForm.COLUMN_NAME_GPS_LNG, fc.getGPSLng());
         values.put(VIRForm.COLUMN_NAME_GPS_ACCURACY, fc.getGPSAcc());
-        values.put(VIRForm.COLUMN_NAME_GPS_TIME, fc.getGPSTime());
         values.put(VIRForm.COLUMN_NAME_GPS_TIME, fc.getGPSTime());
 
 
@@ -301,6 +300,10 @@ public class FormsDBHelper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(VIRForm.COLUMN_NAME_VB, sA.fc.getVB());
         values.put(VIRForm.COLUMN_NAME_FORMNO, sA.fc.getFormNo());
+        values.put(VIRForm.COLUMN_NAME_GPS_LAT, sA.fc.getGPSLat());
+        values.put(VIRForm.COLUMN_NAME_GPS_LNG, sA.fc.getGPSLng());
+        values.put(VIRForm.COLUMN_NAME_GPS_ACCURACY, sA.fc.getGPSAcc());
+        values.put(VIRForm.COLUMN_NAME_GPS_TIME, sA.fc.getGPSTime());
 
 // Which row to update, based on the ID
         String selection = VIRForm._ID + " LIKE ?";
@@ -320,6 +323,10 @@ public class FormsDBHelper extends SQLiteOpenHelper {
 // New value for one column
         ContentValues values = new ContentValues();
         values.put(VIRForm.COLUMN_NAME_VC, sA.fc.getVC());
+        values.put(VIRForm.COLUMN_NAME_GPS_LAT, sA.fc.getGPSLat());
+        values.put(VIRForm.COLUMN_NAME_GPS_LNG, sA.fc.getGPSLng());
+        values.put(VIRForm.COLUMN_NAME_GPS_ACCURACY, sA.fc.getGPSAcc());
+        values.put(VIRForm.COLUMN_NAME_GPS_TIME, sA.fc.getGPSTime());
 
 // Which row to update, based on the ID
         String selection = VIRForm._ID + " LIKE ?";
@@ -338,6 +345,10 @@ public class FormsDBHelper extends SQLiteOpenHelper {
 // New value for one column
         ContentValues values = new ContentValues();
         values.put(VIRForm.COLUMN_NAME_VD, sA.fc.getVD());
+        values.put(VIRForm.COLUMN_NAME_GPS_LAT, sA.fc.getGPSLat());
+        values.put(VIRForm.COLUMN_NAME_GPS_LNG, sA.fc.getGPSLng());
+        values.put(VIRForm.COLUMN_NAME_GPS_ACCURACY, sA.fc.getGPSAcc());
+        values.put(VIRForm.COLUMN_NAME_GPS_TIME, sA.fc.getGPSTime());
 
 // Which row to update, based on the ID
         String selection = VIRForm._ID + " LIKE ?";
@@ -353,11 +364,17 @@ public class FormsDBHelper extends SQLiteOpenHelper {
     public int updateSE() {
         SQLiteDatabase db = this.getReadableDatabase();
 
-// New value for one column
+        // New value for Section E
         ContentValues values = new ContentValues();
-        values.put(VIRForm.COLUMN_NAME_VE, sA.fc.getVE());
 
-// Which row to update, based on the ID
+        values.put(VIRForm.COLUMN_NAME_VA_109, sA.fc.getVA109());
+        values.put(VIRForm.COLUMN_NAME_VE, sA.fc.getVE());
+        values.put(VIRForm.COLUMN_NAME_GPS_LAT, sA.fc.getGPSLat());
+        values.put(VIRForm.COLUMN_NAME_GPS_LNG, sA.fc.getGPSLng());
+        values.put(VIRForm.COLUMN_NAME_GPS_ACCURACY, sA.fc.getGPSAcc());
+        values.put(VIRForm.COLUMN_NAME_GPS_TIME, sA.fc.getGPSTime());
+
+        // Which row to update, based on the ID
         String selection = VIRForm._ID + " LIKE ?";
         String[] selectionArgs = {String.valueOf(sA.fc.getID())};
 
@@ -374,6 +391,10 @@ public class FormsDBHelper extends SQLiteOpenHelper {
 // New value for one column
         ContentValues values = new ContentValues();
         values.put(VIRForm.COLUMN_NAME_ICHILD_1, sA.fc.getIChild1());
+        values.put(VIRForm.COLUMN_NAME_GPS_LAT, sA.fc.getGPSLat());
+        values.put(VIRForm.COLUMN_NAME_GPS_LNG, sA.fc.getGPSLng());
+        values.put(VIRForm.COLUMN_NAME_GPS_ACCURACY, sA.fc.getGPSAcc());
+        values.put(VIRForm.COLUMN_NAME_GPS_TIME, sA.fc.getGPSTime());
 
 // Which row to update, based on the ID
         String selection = VIRForm._ID + " LIKE ?";
