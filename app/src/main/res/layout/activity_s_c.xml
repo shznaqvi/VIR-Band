@@ -599,9 +599,18 @@
                 android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/C22_c"
                 android:textSize="24sp" />
-
             <RadioButton
                 android:id="@+id/C22_d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/E34_f"
+                android:textSize="24sp" />
+
+            <RadioButton
+                android:id="@+id/C22_e"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
@@ -611,7 +620,7 @@
                 android:textSize="24sp" />
 
             <RadioButton
-                android:id="@+id/C22_e"
+                android:id="@+id/C22_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"

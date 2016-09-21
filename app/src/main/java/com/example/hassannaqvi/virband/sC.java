@@ -20,7 +20,7 @@ public class sC extends AppCompatActivity {
 
     private static final String TAG = "SectionC";
     private static final Integer MIN_RESP_AGE = 14;
-    public static boolean respIsParent = false;
+    public static int respIsParent = 0;
     @BindView(R.id.C12)
     EditText C12;
     @BindView(R.id.C13)
@@ -99,6 +99,8 @@ public class sC extends AppCompatActivity {
     RadioButton C22_d;
     @BindView(R.id.C22_e)
     RadioButton C22_e;
+    @BindView(R.id.C22_f)
+    RadioButton C22_f;
 
     @BindView(R.id.C18_x)
     EditText C18_x;
@@ -145,7 +147,7 @@ public class sC extends AppCompatActivity {
         C22.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                if (!C22_e.isChecked()) {
+                if (!C22_f.isChecked()) {
                     C22_x.setVisibility(View.GONE);
                     C22_x.setText(null);
 
@@ -166,7 +168,7 @@ public class sC extends AppCompatActivity {
 
                 // Skip pattern check for D23
                 if (C22_a.isChecked() || C22_b.isChecked()) {
-                    respIsParent = true;
+                    respIsParent = 1;
                 }
 
                 Intent SC = new Intent(this, sD.class);
@@ -207,6 +209,9 @@ public class sC extends AppCompatActivity {
             case R.id.C14_female:
                 sc.put("C14", "b");
                 break;
+            default:
+                sc.put("C14", "xx");
+
 
         }
         sc.put("C15", C15.getText().toString());
@@ -217,7 +222,8 @@ public class sC extends AppCompatActivity {
             case R.id.C16_b:
                 sc.put("C16", "b");
                 break;
-
+            default:
+                sc.put("C16", "xx");
         }
         sc.put("C17_a", C17_a.getText().toString());
         sc.put("C17_b", C17_b.getText().toString());
@@ -234,6 +240,8 @@ public class sC extends AppCompatActivity {
             case R.id.C18_d:
                 sc.put("C18", "d");
                 break;
+            default:
+                sc.put("C18", "xx");
         }
 
         sc.put("C18_x", C18_x.getText().toString());
@@ -245,6 +253,8 @@ public class sC extends AppCompatActivity {
             case R.id.C19_b:
                 sc.put("C19", "b");
                 break;
+            default:
+                sc.put("C19", "xx");
         }
 
         switch (C20.getCheckedRadioButtonId()) {
@@ -269,6 +279,8 @@ public class sC extends AppCompatActivity {
             case R.id.C20_g:
                 sc.put("C20", "g");
                 break;
+            default:
+                sc.put("C20", "xx");
         }
 
         sc.put("C20_x", C20_x.getText().toString());
@@ -289,6 +301,8 @@ public class sC extends AppCompatActivity {
             case R.id.C21_e:
                 sc.put("C21", "e");
                 break;
+            default:
+                sc.put("C21", "xx");
 
         }
         switch (C22.getCheckedRadioButtonId()) {
@@ -307,9 +321,14 @@ public class sC extends AppCompatActivity {
             case R.id.C22_e:
                 sc.put("C22", "e");
                 break;
+            case R.id.C22_f:
+                sc.put("C22", "f");
+                break;
+            default:
+                sc.put("C22", "xx");
         }
 
-        sc.put("C20_x", C18_x.getText().toString());
+        sc.put("C22_x", C22_x.getText().toString());
 
         sA.fc.setVC(sc.toString());
         Toast.makeText(this, "Saving Draft... Successful!", Toast.LENGTH_SHORT).show();
@@ -380,6 +399,23 @@ public class sC extends AppCompatActivity {
             C17_b.setError(null);
         }
 
+        if (!C17_a.getText().toString().isEmpty() && C17_a.getText().toString().length() < 8) {
+            Toast.makeText(this, "Please enter PTCL number correctly.", Toast.LENGTH_LONG).show();
+            C17_a.setError("Please enter PTCL number correctly");
+            Log.i(TAG, "PTCL number not correctly");
+            return false;
+        } else {
+            C17_a.setError(null);
+        }
+        if (!C17_b.getText().toString().isEmpty() && C17_b.getText().toString().length() < 11) {
+            Toast.makeText(this, "Please enter Mobile number correctly.", Toast.LENGTH_LONG).show();
+            C17_b.setError("Please enter Mobile number correctly");
+            Log.i(TAG, "Mobile number not correctly");
+            return false;
+        } else {
+            C17_b.setError(null);
+        }
+
         if (C18.getCheckedRadioButtonId() == -1) {
             Toast.makeText(this, "Please select religion", Toast.LENGTH_LONG).show();
             C18_d.setError("Please select religion");
@@ -445,7 +481,7 @@ public class sC extends AppCompatActivity {
             C14_female.setError("Relation DO NOT match with Gender");
             Log.i(TAG, "Relation DO NOT match with Gender");
             return false;
-        } else if (C14_male.isChecked() && !(C22_b.isChecked() || C22_e.isChecked())) {
+        } else if (C14_male.isChecked() && !(C22_b.isChecked() || C22_f.isChecked())) {
             Toast.makeText(this, "Relation DO NOT match with Gender", Toast.LENGTH_LONG).show();
             C22_d.setError("Relation DO NOT match with Gender");
             C14_male.setError("Relation DO NOT match with Gender");
@@ -458,7 +494,7 @@ public class sC extends AppCompatActivity {
             C14_male.setError(null);
         }
 
-        if (C22_e.isChecked() && C22_x.getText().toString().isEmpty()) {
+        if (C22_f.isChecked() && C22_x.getText().toString().isEmpty()) {
             Toast.makeText(this, "Please give detail of others", Toast.LENGTH_LONG).show();
             C22_x.setError("Please give detail of others");
             Log.i(TAG, "Detail of Others not given");

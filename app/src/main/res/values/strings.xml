@@ -28,7 +28,7 @@
     <string name="female">Female</string>
     <string name="household_number">Household Number</string>
 
-    <string name="sA"> شناختی تفصیلات </string>
+    <string name="sA"> شناختی تفصیلات .A </string>
     <string name="A01"> فارم نمبر </string>
     <string name="A02"> گھرانہ نمبر </string>
     <string name="A03"> پروجیکٹ کا علاقہ </string>
@@ -37,7 +37,7 @@
     <string name="A04_b"> پہلوان گوٹھ </string>
 
     <!-- SECTION B -->
-    <string name="sB"> انڈیکس چائلڈ کی تفصیلات </string>
+    <string name="sB"> B. انڈیکس چائلڈ کی تفصیلات </string>
     <string name="B05"> نام </string>
     <string name="B06"> جنس </string>
     <string name="B06_a"> مرد </string>
@@ -48,13 +48,14 @@
     <string name="B10"> والد کا نام </string>
     <string name="B11"> جائے پیدائش </string>
     <string name="PVTH"> نجی ہسپتال </string>
-    <string name="B11_b"> نجی کلینک </string>
-    <string name="B11_c"> گھر پر </string>
+    <string name="MH">  میٹرنٹی ھوم (TBA یا LHV کا گھر ) </string>
+    <string name="B11_c"> نجی کلینک </string>
+    <string name="B11_d"> گھر پر </string>
     <string name="GOVTH"> سرکاری ہسپتال </string>
     <string name="OTHER"> دیگر </string>
 
     <!-- SECTION C -->
-    <string name="sC"> جوابدہندہ کی تفصیلات </string>
+    <string name="sC"> C. جوابدہندہ کی تفصیلات </string>
     <string name="C12"> نام </string>
     <string name="C14"> جنس </string>
     <string name="C14_m"> مرد </string>
@@ -93,15 +94,15 @@
     <string name="AUNT"> خالہ/پھپھو/چچی/مامی </string>
 
     <!-- SECTION D -->
-    <string name="sD"> انڈیکس چائلڈ کے خاندان کی سماجی ومعاشی حیثیت </string>
-    <string name="D23"> جوابدہندہ کی تعلیمی حیثیت </string>
+    <string name="sD"> D. انڈیکس چائلڈ کے خاندان کی سماجی ومعاشی حیثیت </string>
+    <string name="D23"> جوابدہندہ کی تعلیمی قابلیت</string>
     <string name="NA"> ناقابل اطلاق </string>
-    <string name="UNEDU"> روایتی تعلیم سے نا آشناؒ </string>
+    <string name="UNEDU"> روایتی تعلیم سے نا آشنا </string>
     <string name="PRI"> ابتدائی </string>
     <string name="SEC"> ثانوی </string>
     <string name="METRIC"> میٹرک </string>
     <string name="INTER"> انٹر </string>
-    <string name="GRAD"> گریجوییشن </string>
+    <string name="GRAD"> گریجویٹ </string>
     <string name="MS"> ماسٹرز </string>
     <string name="MADRSA"> مدرسہ تعلیم </string>
     <string name="D24"> والدہ کی تعلیم </string>
@@ -113,16 +114,17 @@
     <string name="PVTBUSI"> نجی کاروبار </string>
     <string name="D27"> والدہ کا پیشہ </string>
     <string name="UNEMP"> بیروزگار </string>
-    <string name="D27_f"> گھریلو بیوی </string>
+    <string name="D27_f"> گھریلو خاتون </string>
     <string name="D28"> گھرانے کی ماہانہ آمدنی </string>
-    <string name="D28_a"> غیر مستقل آمدنی </string>
-    <string name="D28_b"> پانچ ہزارروپے سے کم </string>
-    <string name="D28_c"> پانچ ہزار سے دس ہزار روپے تک </string>
-    <string name="D28_d"> دس سے پندرہ ہزار روپے تک </string>
-    <string name="D28_e"> پندرہ ہزار سے بیس ہزار روپے تک </string>
+    <string name="D28_a"> دس ہزار (10,000) سے کم </string>
+    <string name="D28_b"> دس ہزار ایک (10,001) سے تیس ہزار (30,000) تک </string>
+    <string name="D28_c"> اکتیس ہزار ایک (30,001) سے پچاس ہزار (50,000) تک </string>
+    <string name="D28_d"> اکیاون ہزار (50,001) سے اسی ہزار (80,000) تک </string>
+    <string name="D28_e"> اکیاسی ہزار (80,001) سے ایک لاکھ (100,000) تک </string>
+    <string name="D28_f"> ایک لاکھ (100,000) سے زیادہ </string>
 
     <!-- SECTION 'E' -->
-    <string name="sE"> معلومات، رویہ اور عمل </string>
+    <string name="sE"> E. معلومات، رویہ اور عمل </string>
     <string name="E29"> کیا آپ نے کبھی ویکسینیشن (ٹیکے لگوانے)کے بارے میں سنا ہے </string>
     <string name="YES"> جی ہاں </string>
     <string name="NO"> جی نہیں </string>
@@ -147,6 +149,7 @@
     <string name="LEADER"> مذہبی رہنما </string>
     <string name="E32"> کیا آپ نے کبھی ||| کی ویکسینیشن کروائی  </string>
     <string name="DNK"> نہیں معلوم </string>
+    <string name="INA"> معلومات دستیاب نہیں  </string>
     <string name="E33"> بچے پر ویکسینیشن کا اثر </string>
     <string name="E33_a"> بخار </string>
     <string name="E33_b"> بیماری </string>
@@ -179,12 +182,12 @@
     <string name="Ea_5"> یہ بچے کو مزید مضبوط بناتی ہے </string>
     <string name="E36b"> کیوں غیر ضروری ہے </string>
     <string name="E36b_1"> بچہ کسی انجیکشن کو برداشت نہیں کر سکتا </string>
-    <string name="E36b_2"> ویکسینیشن کی وجہ سے بچہ مزید غیر محفوظ ہو گیا ہے </string>
-    <string name="E36b_3"> ویکسینیشن سے بچوں میں نامردی پیدا ہوتی ہے </string>
+    <string name="E36b_2"> ویکسینیشن کی وجہ سے بچہ مزید غیر محفوظ ہوسکتا ہے </string>
+    <string name="E36b_3"> ویکسینیشن سے بچوں میں نامردی/بانجھ پن پیدا ہوتی ہے </string>
     <string name="E37"> ویکسینیشن شروع کروانے کے لئے مناسب عمر </string>
     <string name="E37_b"> پیدائش کے وقت </string>
     <string name="E37_c"> ایک ہفتے کی عمر میں </string>
-    <string name="E37_d"> ۲ ہفتے کی عمر میں </string>
+    <string name="E37_d"> دو ہفتے کی عمر میں </string>
     <string name="E37_e"> ایک ماہ کی عمر میں </string>
     <string name="E37_f"> دو ماہ کی عمر میں </string>
     <string name="E38"> آپ کے خیال میں ویکسینیشن شروع کرنے کےلئے یہ عمر کیوں مناسب ہے </string>
@@ -192,7 +195,7 @@
     <string name="E38_c"> ویکسینیشن قوت مدافعت بڑھاتی ہے </string>
     <string name="E38_d"> بچپن میں بچے کو زیادہ سے زیادہ تحفظ فراہم کرنے کے لئے </string>
     <string name="E38_e"> ویکسین زیادہ بہتر طور پر اثر کرے گی </string>
-    <string name="E39"> ۴ ماہ کی عمر تک میں بچے کو کتنی ویکسین لگائی جاتی ہیں </string>
+    <string name="E39"> چار(4) ماہ کی عمر تک میں بچے کو کتنی ویکسین لگائی جاتی ہیں </string>
     <string name="E39_b"> ایک </string>
     <string name="E39_c"> دو </string>
     <string name="E39_d"> تین </string>
@@ -230,7 +233,7 @@
     <string name="E44_d"> دو سو ایک سے تین سو روپے </string>
     <string name="E44_e"> تین سو ایک سے چار سو روپے </string>
     <string name="E45"> کیا آپ کو معلوم ہے کہ حکومت کی طرف سے تمام ویکسین مفت ملتی ہیں </string>
-    <string name="E45_a"> جی مجھے معلوم پے </string>
+    <string name="E45_a"> جی مجھے معلوم ہے </string>
     <string name="E45_b"> نہیں مجھے اس کے بارے میں نہیں معلوم </string>
     <string name="E45_c"> نہیں، ویکسینیشن مفت نہیں ہوتی ہے </string>
     <string name="E46"> آپ کہاں سے مفت میں ویکسین لے سکتے ہیں </string>
@@ -272,7 +275,13 @@
 
     <!-- SECTION VACCINATION DOSE -->
     <string name="sVD"> پہلی مرتبہ ویکسینیشن کے حوالے سے </string>
-    <string name="VD53"> پہلی مرتبہ لگنے والی ویکسینیشن کا نام کیا تھا </string>
+    <string name="sVD1"> پہلی مرتبہ ویکسینیشن کے حوالے سے </string>
+    <string name="sVD2"> دوسری مرتبہ ویکسینیشن کے حوالے سے </string>
+    <string name="sVD3"> تیسری مرتبہ ویکسینیشن کے حوالے سے </string>
+    <string name="sVD4"> چوتھی مرتبہ ویکسینیشن کے حوالے سے </string>
+    <string name="sVD5"> پانچویں مرتبہ ویکسینیشن کے حوالے سے </string>
+    <string name="sVD6"> چھٹی مرتبہ ویکسینیشن کے حوالے سے </string>
+    <string name="VD53"> لگنے والی ویکسینیشن کا نام کیا تھا </string>
     <string name="DNREM"> نہیں یاد </string>
     <string name="VD53_c"> بی سی جی </string>
     <string name="BCG">BCG</string>
@@ -286,20 +295,21 @@
     <string name="IPV">IPV</string>
     <string name="VD53_h"> خسرہ </string>
     <string name="MSL">Measles</string>
-    <string name="VD54"> کس عمر میں پہلی مرتبہ ویکسین لگائی گئ تھی </string>
+    <string name="VD54"> کس عمر میں ویکسین لگائی گئ تھی </string>
     <string name="VD54_a"> پیدائش کے فوراً بعد </string>
-    <string name="VD54_b"> ایک ماہ کی عمر میں </string>
-    <string name="VD54_c"> دو ماہ کی عمر میں </string>
-    <string name="VD54_d"> تین ماہ کی عمر میں </string>
-    <string name="VD54_e"> چار ماہ کی عمر میں </string>
-    <string name="VD55"> بچے کو پہلی ویکسین جسم میں کہاں لگائی/دی گئی تھی </string>
+    <string name="VD54_b"> چھ ہفتے (6 weeks) کی عمر میں </string>
+    <string name="VD54_c"> دس ہفتے (10 weeks) کی عمر میں </string>
+    <string name="VD54_d"> چودہ ہفتے (14 weeks) کی عمر میں </string>
+    <string name="VD54_e"> نو ماہ (9 months) کی عمر میں </string>
+    <string name="VD54_f"> پندرہ ماہ (15 months) کی عمر میں </string>
+    <string name="VD55"> بچے کو ویکسین جسم میں کہاں لگائی/دی گئی تھی </string>
     <string name="VD55_a"> منہ میں قطرے </string>
     <string name="VD55_b"> سیدھی والی ران میں </string>
     <string name="VD55_c"> الٹی والی ران میں </string>
     <string name="VD55_d"> سیدھے بازو پر </string>
     <string name="VD55_e"> الٹے بازو پر </string>
     <string name="VD55_f"> پیچھے پچھواڑی پر </string>
-    <string name="VD56"> پہلی ویکسین کے بارے میں آپ کی رائے (فارم بھرنے والا فرد اس کا جواب خود لکھے) </string>
+    <string name="VD56"> ویکسین کے بارے میں آپ کی رائے (فارم بھرنے والا فرد اس کا جواب خود دےگا) </string>
     <string name="VD56_a"> بروقت لگی </string>
     <string name="VD56_b"> دیر ہو گئی </string>
     <string name="VD56_c"> روک دی گئی </string>
@@ -312,5 +322,6 @@
     <string name="B08d">دن</string>
     <string name="B08m">مہینے</string>
     <string name="B08y">سال</string>
+    <string name="Vacc">ویکسینیشن ہوِئی</string>
 
 </resources>

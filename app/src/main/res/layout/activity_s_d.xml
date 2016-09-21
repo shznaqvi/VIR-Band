@@ -202,7 +202,7 @@
                 android:layout_height="wrap_content"
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
-                android:text="@string/NA"
+                android:text="@string/DNK"
                 android:textSize="24sp" />
 
             <RadioButton
@@ -323,7 +323,7 @@
                 android:layout_height="wrap_content"
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
-                android:text="@string/NA"
+                android:text="@string/DNK"
                 android:textSize="24sp" />
 
             <RadioButton
@@ -661,24 +661,16 @@
                 android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/D28_e"
                 android:textSize="24sp" />
-
             <RadioButton
                 android:id="@+id/D28_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
-                android:text="@string/OTHER"
+                android:text="@string/D28_f"
                 android:textSize="24sp" />
-        </RadioGroup>
 
-        <EditText
-            android:id="@+id/D28_x"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:digits="QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm"
-            android:hint="@string/OTHER"
-            android:inputType="text" />
+        </RadioGroup>
 
         <Button
             android:id="@+id/btnsubmitSD"

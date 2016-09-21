@@ -178,6 +178,9 @@ public class sOCI extends AppCompatActivity {
             case R.id.B11_e:
                 soc.put("B11", "e");
                 break;
+            default:
+                soc.put("B11", "xx");
+
         }
 
         sA.fc.setVB(soc.toString());

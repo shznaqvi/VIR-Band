@@ -3,6 +3,7 @@
     android:id="@+id/ScrollView01"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -103,8 +104,11 @@
                 android:id="@+id/textView2"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
                 android:layout_marginBottom="8dp"
-                android:layout_marginLeft="40dp"
+
+                android:layout_marginRight="40dp"
                 android:layout_marginTop="16dp"
                 android:background="@color/colorPrimary"
                 android:padding="12dp"
@@ -121,7 +125,6 @@
                 android:layout_alignStart="@+id/textView2"
                 android:layout_alignTop="@+id/B08d"
                 android:layout_marginBottom="8dp"
-                android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:gravity="right">
 
@@ -148,9 +151,9 @@
                 android:id="@+id/textView"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true"
                 android:layout_marginBottom="8dp"
-                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
                 android:layout_marginTop="16dp"
                 android:background="@color/colorPrimary"
                 android:padding="12dp"
@@ -163,7 +166,7 @@
                 android:id="@+id/B08d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/textView"
+                android:layout_alignLeft="@+id/textView"
                 android:layout_below="@+id/textView"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="8dp"
@@ -179,7 +182,7 @@
                 android:layout_below="@+id/textView"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="8dp"
-                android:layout_toRightOf="@+id/B08d"
+                android:layout_toLeftOf="@+id/B08y"
                 android:digits="0,1,2,3,4,5,6,7,8,9"
                 android:hint="@string/B08m"
                 android:inputType="number"
@@ -189,11 +192,10 @@
                 android:id="@+id/B08y"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/textView"
                 android:layout_below="@+id/textView"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginRight="40dp"
                 android:layout_marginTop="8dp"
-                android:layout_toRightOf="@+id/B08m"
                 android:digits="0,1"
                 android:hint="@string/B08y"
                 android:inputType="number"
@@ -270,7 +272,7 @@
                 android:layout_height="wrap_content"
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
-                android:text="@string/PVTH"
+                android:text="@string/GOVTH"
                 android:textSize="24sp" />
 
             <RadioButton
@@ -279,7 +281,7 @@
                 android:layout_height="wrap_content"
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
-                android:text="@string/PVTC"
+                android:text="@string/PVTH"
                 android:textSize="24sp" />
 
             <RadioButton
@@ -288,7 +290,7 @@
                 android:layout_height="wrap_content"
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
-                android:text="@string/B11_c"
+                android:text="@string/MH"
                 android:textSize="24sp" />
 
             <RadioButton
@@ -297,7 +299,7 @@
                 android:layout_height="wrap_content"
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
-                android:text="@string/GOVTH"
+                android:text="@string/B11_d"
                 android:textSize="24sp" />
 
             <RadioButton

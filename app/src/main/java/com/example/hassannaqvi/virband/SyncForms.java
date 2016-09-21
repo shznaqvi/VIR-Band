@@ -58,8 +58,8 @@ public class SyncForms extends AsyncTask<Void, Void, String> {
 
         HttpURLConnection connection = null;
         try {
-            //String request = "http://192.168.1.10/appdata/syncdb.php";
-            String request = "http://10.1.42.30:3000/forms";
+            String request = "http://192.168.1.10:3000/forms";
+            //String request = "http://10.1.42.30:3000/forms";
 
             URL url = new URL(request);
             connection = (HttpURLConnection) url.openConnection();
@@ -110,7 +110,7 @@ public class SyncForms extends AsyncTask<Void, Void, String> {
                 jsonParam.put("tab_gps_time", fc.getGPSTime());
                 jsonParam.put("tab_device_id", fc.getDeviceID());
 
-                jsonSync.put(jsonParam);
+                jsonSync.put(fc.toJSONObject());
                 //wr.writeBytes(jsonParam.toString().replace("\uFEFF", "") + "\n");
 
             }

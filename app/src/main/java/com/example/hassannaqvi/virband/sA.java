@@ -82,8 +82,12 @@ public class sA extends AppCompatActivity {
         switch (A04.getCheckedRadioButtonId()) {
             case R.id.A04_a:
                 fc.setVA04("a");
+                break;
             case R.id.A04_b:
                 fc.setVA04("b");
+                break;
+            default:
+                fc.setVA04("xx");
 
         }
         fc.setVA109("3");

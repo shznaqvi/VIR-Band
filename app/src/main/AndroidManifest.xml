@@ -81,7 +81,13 @@
         <activity
             android:name=".sVD"
             android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".AndroidDatabaseManager"></activity>
+        <activity
+            android:name=".sOCI"
+            android:windowSoftInputMode="adjustResize" />
+
+
+        <activity android:name=".AndroidDatabaseManager" />
+        <activity android:name=".EndActivity"></activity>
     </application>
 
 </manifest>

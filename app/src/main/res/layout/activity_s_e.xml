@@ -17,7 +17,7 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        tools:context="com.example.hassannaqvi.virband.sC">
+        tools:context="com.example.hassannaqvi.virband.sE">
 
 
         <ImageView
@@ -35,7 +35,7 @@
             android:background="@color/colorPrimary"
             android:padding="12dp"
             android:text="@string/sE"
-            android:textAlignment="viewEnd"
+            android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="24sp" />
 
@@ -723,8 +723,6 @@
                 android:id="@+id/E36a_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/Ea_1"
                 android:textSize="24sp" />
 
@@ -732,8 +730,6 @@
                 android:id="@+id/E36a_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/Ea_2"
                 android:textSize="24sp" />
 
@@ -741,8 +737,6 @@
                 android:id="@+id/E36a_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/Ea_3"
                 android:textSize="24sp" />
 
@@ -750,8 +744,6 @@
                 android:id="@+id/E36a_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/Ea_4"
                 android:textSize="24sp" />
 
@@ -759,8 +751,6 @@
                 android:id="@+id/E36a_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/Ea_5"
                 android:textSize="24sp" />
 
@@ -768,8 +758,6 @@
                 android:id="@+id/E36a_6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/DNK"
                 android:textSize="24sp" />
 
@@ -777,8 +765,6 @@
                 android:id="@+id/E36a_7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/OTHER"
                 android:textSize="24sp" />
 
@@ -815,8 +801,6 @@
                 android:id="@+id/E36b_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/E36b_1"
                 android:textSize="24sp" />
 
@@ -824,8 +808,6 @@
                 android:id="@+id/E36b_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/E36b_2"
                 android:textSize="24sp" />
 
@@ -833,8 +815,6 @@
                 android:id="@+id/E36b_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/E36b_3"
                 android:textSize="24sp" />
 
@@ -842,8 +822,6 @@
                 android:id="@+id/E36b_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/DNK"
                 android:textSize="24sp" />
 
@@ -851,8 +829,6 @@
                 android:id="@+id/E36b_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/OTHER"
                 android:textSize="24sp" />
 
@@ -1838,88 +1814,62 @@
             android:textColor="@color/white"
             android:textSize="24sp" />
 
-        <RadioGroup
-            android:id="@+id/E46"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal|right"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:gravity="right">
 
-            <RadioButton
+        <CheckBox
                 android:id="@+id/E46_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/PVTH"
                 android:textSize="24sp" />
 
-            <RadioButton
+        <CheckBox
                 android:id="@+id/E46_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/PVTC"
                 android:textSize="24sp" />
 
-            <RadioButton
+        <CheckBox
                 android:id="@+id/E46_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/GOVTH"
                 android:textSize="24sp" />
 
-            <RadioButton
+        <CheckBox
                 android:id="@+id/E46_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/GOVTD"
                 android:textSize="24sp" />
 
-            <RadioButton
+        <CheckBox
                 android:id="@+id/E46_e"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/EPIVC"
                 android:textSize="24sp" />
 
-            <RadioButton
+        <CheckBox
                 android:id="@+id/E46_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/HC"
                 android:textSize="24sp" />
 
-            <RadioButton
+        <CheckBox
                 android:id="@+id/E46_g"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/DNK"
                 android:textSize="24sp" />
 
-            <RadioButton
+        <CheckBox
                 android:id="@+id/E46_h"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/OTHER"
                 android:textSize="24sp" />
-
-        </RadioGroup>
 
         <EditText
             android:id="@+id/E46_x"
@@ -2078,88 +2028,63 @@
             android:textColor="@color/white"
             android:textSize="24sp" />
 
-        <RadioGroup
-            android:id="@+id/E49"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal|right"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:gravity="right">
 
-            <RadioButton
+        <CheckBox
                 android:id="@+id/E49_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/E49_a"
                 android:textSize="24sp" />
 
-            <RadioButton
+        <CheckBox
                 android:id="@+id/E49_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/E49_b"
                 android:textSize="24sp" />
 
-            <RadioButton
+        <CheckBox
                 android:id="@+id/E49_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/SMS"
                 android:textSize="24sp" />
 
-            <RadioButton
+        <CheckBox
                 android:id="@+id/E49_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/TV"
                 android:textSize="24sp" />
 
-            <RadioButton
+        <CheckBox
                 android:id="@+id/E49_e"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/E49_e"
                 android:textSize="24sp" />
 
-            <RadioButton
+        <CheckBox
                 android:id="@+id/E49_f"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/E49_f"
                 android:textSize="24sp" />
 
-            <RadioButton
+        <CheckBox
                 android:id="@+id/E49_g"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/E49_g"
                 android:textSize="24sp" />
 
-            <RadioButton
+        <CheckBox
                 android:id="@+id/E49_h"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/OTHER"
                 android:textSize="24sp" />
 
-        </RadioGroup>
 
         <EditText
             android:id="@+id/E49_x"
@@ -2482,79 +2407,69 @@
             android:textSize="24sp" />
 
 
-        <RadioGroup
-            android:id="@+id/E51a"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal|right"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:gravity="right">
-
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E51a_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
+
+
                 android:text="@string/DNK"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E51a_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
+
+
                 android:text="@string/SMS"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E51a_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
+
+
                 android:text="@string/E51a_3"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E51a_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
+
+
                 android:text="@string/E51a_4"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E51a_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
+
+
                 android:text="@string/E51a_5"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E51a_6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
+
+
                 android:text="@string/E51a_6"
                 android:textSize="24sp" />
 
-            <RadioButton
+            <CheckBox
                 android:id="@+id/E51a_7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:drawableRight="@android:drawable/btn_radio"
+
+
                 android:text="@string/OTHER"
                 android:textSize="24sp" />
 
-        </RadioGroup>
 
             <EditText
                 android:id="@+id/E51a_x"

@@ -1,18 +1,18 @@
 package com.example.hassannaqvi.virband;
 
-import android.annotation.TargetApi;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.GridLayout;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,6 +41,8 @@ public class sVD
 
     @BindView(R.id.GL53)
     GridLayout gL53;
+    @BindView(R.id.vacc_status)
+    Switch vacc_status;
     @BindView(R.id.textView2)
     TextView textView2;
     @BindView(R.id.textView3)
@@ -186,7 +188,11 @@ public class sVD
     @BindView(R.id.VD54_e)
     RadioButton vD54E;
     @BindView(R.id.VD54_f)
-    RadioButton vD54F;
+    RadioButton vD54f;
+    @BindView(R.id.VD54_g)
+    RadioButton vD54G;
+    @BindView(R.id.age_status)
+    Switch age_status;
     @BindView(R.id.DOV)
     DatePicker DOV;
     @BindView(R.id.VD56)
@@ -201,16 +207,22 @@ public class sVD
     RadioButton vD56D;
     @BindView(R.id.VD56_e)
     RadioButton vD56E;
-    @BindView(R.id.VD56_f)
-    RadioButton vD56F;
     @BindView(R.id.VD57)
     EditText vD57;
 
     @BindView(R.id.VD54_x)
     EditText vD54_x;
 
+    @BindView(R.id.VDx)
+    TextView VDx; // Textview for section title
 
 
+    @BindView(R.id.fldGrpVaccStatus)
+    LinearLayout fldGrpVaccStatus;
+    @BindView(R.id.fldGrpDOV)
+    LinearLayout fldGrpDOV;
+    @BindView(R.id.fldGrpVD54)
+    LinearLayout fldGrpVD54;
     @BindView(R.id.fldGrpVD56)
     LinearLayout fldGrpVD56;
 
@@ -224,15 +236,53 @@ public class sVD
         icTP += 1;
         ic = getIntent().getBooleanExtra("ic", false);
         long minDate = getIntent().getLongExtra("minDate", 0);
+        Msg.m(String.valueOf(minDate));
         DOV.setMaxDate(new Date().getTime());
         switch (icTP) {
             case 1:
                 DOV.setMinDate(new Date().getTime() - (VIRBandApp.MILLISECONDS_IN_YEAR * 2));
+                VDx.setText(getString(R.string.sVD1));
                 break;
+            case 2:
+                //DOV.setMinDate(new Date().parse(minDate));
+
+                VDx.setText(getString(R.string.sVD2));
+                break;
+            case 3:
+                VDx.setText(getString(R.string.sVD3));
+                break;
+            case 4:
+                VDx.setText(getString(R.string.sVD4));
+                break;
+            case 5:
+                VDx.setText(getString(R.string.sVD5));
+                break;
+            case 6:
+                VDx.setText(getString(R.string.sVD6));
+                break;
+
             default:
                 DOV.setMinDate(minDate);
                 break;
         }
+        vacc_status.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (vacc_status.isChecked()) {
+                    fldGrpVaccStatus.setVisibility(View.VISIBLE);
+                } else {
+                    fldGrpVaccStatus.setVisibility(View.GONE);
+                    vACNAME01.clearCheck();
+                    vACNAME02.clearCheck();
+                    vACNAME03.clearCheck();
+                    pLACE01.clearCheck();
+                    pLACE02.clearCheck();
+                    pLACE03.clearCheck();
+                    vD54.clearCheck();
+                    vD54_x.setText(null);
+                }
+            }
+        });
         vACNAME01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 
             @Override
@@ -257,7 +307,7 @@ public class sVD
                 pLACEV1.setText("V1");
                 pLACE01.clearCheck();
 
-                if (!(i == R.id.VACNAME_01_a || i == R.id.VACNAME_01_b || i == R.id.VACNAME_01_i)) {
+                if (vacc_status.isChecked() && !(i == R.id.VACNAME_01_a || i == R.id.VACNAME_01_b || i == R.id.VACNAME_01_i)) {
 
                     vACNAME02.getChildAt(idx).setEnabled(false);
                     //vACNAME02.clearCheck();
@@ -279,11 +329,13 @@ public class sVD
                             pLACEV1.setText("OPV");
                             break;
                         case R.id.VACNAME_01_g:
-                            pLACEV1.setText("Pneumococcal");
+                            pLACEV1.setText("IPV");
                             break;
                         case R.id.VACNAME_01_h:
                             pLACEV1.setText("Measles");
                             break;
+                        default:
+                            pLACEV1.setText("No Available");
 
                     }
                 }
@@ -307,14 +359,13 @@ public class sVD
                     if (!p.isChecked()) {
                         o.setEnabled(true);
                     }
-
                 }
 
                 View radioButton = vACNAME02.findViewById(i);
                 int idx = vACNAME02.indexOfChild(radioButton);
                 pLACEV2.setText("V2");
                 pLACE02.clearCheck();
-                if (!(i == R.id.VACNAME_02_a || i == R.id.VACNAME_02_b || i == R.id.VACNAME_02_i)) {
+                if (vacc_status.isChecked() && !(i == R.id.VACNAME_02_a || i == R.id.VACNAME_02_b || i == R.id.VACNAME_02_i)) {
 
                     vACNAME01.getChildAt(idx).setEnabled(false);
                     //vACNAME01.clearCheck();
@@ -341,6 +392,8 @@ public class sVD
                         case R.id.VACNAME_02_h:
                             pLACEV2.setText(getString(R.string.MSL));
                             break;
+                        default:
+                            pLACEV2.setText("Not Available");
 
                     }
                 }
@@ -355,7 +408,6 @@ public class sVD
                 int count = vACNAME03.getChildCount();
                 ArrayList<RadioButton> listOfRadioButtons = new ArrayList<RadioButton>();
                 for (int i1 = 0; i1 < count; i1++) {
-
 
                     RadioButton o = (RadioButton) vACNAME01.getChildAt(i1);
                     RadioButton p = (RadioButton) vACNAME02.getChildAt(i1);
@@ -372,7 +424,7 @@ public class sVD
                 pLACEV3.setText("V3");
                 pLACE03.clearCheck();
 
-                if (!(i == R.id.VACNAME_03_a || i == R.id.VACNAME_03_b || i == R.id.VACNAME_03_i)) {
+                if (vacc_status.isChecked() && !(i == R.id.VACNAME_03_a || i == R.id.VACNAME_03_b || i == R.id.VACNAME_03_i)) {
 
                     vACNAME01.getChildAt(idx).setEnabled(false);
                     //vACNAME01.clearCheck();
@@ -394,24 +446,41 @@ public class sVD
                             pLACEV3.setText("OPV");
                             break;
                         case R.id.VACNAME_03_g:
-                            pLACEV3.setText("Pneumococcal");
+                            pLACEV3.setText("IPV");
                             break;
                         case R.id.VACNAME_03_h:
                             pLACEV3.setText("Measles");
                             break;
+                        default:
+                            pLACEV3.setText("Not Available");
+
 
                     }
                 }
             }
         });
 
+        age_status.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (age_status.isChecked()) {
+                    fldGrpVD54.setVisibility(View.VISIBLE);
+                    fldGrpDOV.setVisibility(View.GONE);
+                } else {
+                    fldGrpDOV.setVisibility(View.VISIBLE);
+                    fldGrpVD54.setVisibility(View.GONE);
+                    vD54.clearCheck();
+                    vD54_x.setText(null);
+                }
+            }
+        });
 
         // SKIP PATTERN
 
         vD54.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                if (!vD54F.isChecked()) {
+                if (!vD54G.isChecked()) {
                     vD54_x.setVisibility(View.GONE);
                     vD54_x.setText(null);
 
@@ -443,23 +512,19 @@ public class sVD
             try {
                 if (SaveDraft()) {
                     if (UpdateDB()) {
-                        if (icTP < 6) {
-                            if (
-                                    ((icTP == 1) && ((sB.ageindays / 7) > VIRBandApp.TP_02w))
-                                            || ((icTP == 2) && ((sB.ageindays / 7) > VIRBandApp.TP_03w))
-                                            || ((icTP == 3) && ((sB.ageindays / 7) > VIRBandApp.TP_04w))
-                                            || ((icTP == 4) && ((sB.ageindays / 30) > VIRBandApp.TP_05m))
-                                            || ((icTP == 5) && ((sB.ageindays / 30) > VIRBandApp.TP_06m))
-                                    ) {
+                        if (
+                                icTP == 1 ||
+                                        ((icTP == 2) && ((VIRBandApp.ageindays / 7) > VIRBandApp.TP_02w)) ||
+                                        ((icTP == 3) && ((VIRBandApp.ageindays / 7) > VIRBandApp.TP_03w)) ||
+                                        ((icTP == 4) && ((VIRBandApp.ageindays / 7) > VIRBandApp.TP_04w)) ||
+                                        ((icTP == 5) && ((VIRBandApp.ageindays / 30) > VIRBandApp.TP_05m)) ||
+                                        ((icTP == 6) && ((VIRBandApp.ageindays / 30) > VIRBandApp.TP_06m))
+                                ) {
                             Intent sVD = new Intent(this, sVD.class);
                             sVD.putExtra("icTP", icTP);
                             sVD.putExtra("ic", true);
-                                sVD.putExtra("minDate", DOV.getCalendarView().getDate());
+                            sVD.putExtra("minDate", DOV.getCalendarView().getDate());
                             startActivity(sVD);
-                            } else {
-                                Intent ending = new Intent(this, MainActivity.class);
-                                startActivity(ending);
-                            }
                         } else {
                             Intent ending = new Intent(this, MainActivity.class);
                             startActivity(ending);
@@ -501,6 +566,9 @@ public class sVD
             case 6:
                 updcount = db.updateIChild6();
                 break;
+            default:
+                Toast.makeText(this, "No Update!", Toast.LENGTH_SHORT).show();
+
 
         }
 
@@ -514,7 +582,6 @@ public class sVD
         return true;
     }
 
-    @TargetApi(Build.VERSION_CODES.N)
     private boolean SaveDraft() throws JSONException {
 
         IChild = new JSONObject();
@@ -548,6 +615,9 @@ public class sVD
             case R.id.VACNAME_01_i:
                 IChild.put(tp + "VACNAME", "i");
                 break;
+            default:
+                IChild.put(tp + "VACNAME", "xx");
+
         }
 
         switch (vACNAME01.getCheckedRadioButtonId()) {
@@ -578,6 +648,9 @@ public class sVD
             case R.id.VACNAME_01_i:
                 IChild.put(tp + "VACNAME_01", "i");
                 break;
+            default:
+                IChild.put(tp + "VACNAME_01", "xx");
+
         }
 
         switch (vACNAME02.getCheckedRadioButtonId()) {
@@ -608,6 +681,9 @@ public class sVD
             case R.id.VACNAME_02_i:
                 IChild.put(tp + "VACNAME_02", "i");
                 break;
+            default:
+                IChild.put(tp + "VACNAME_02", "xx");
+
         }
 
         switch (vACNAME03.getCheckedRadioButtonId()) {
@@ -638,6 +714,9 @@ public class sVD
             case R.id.VACNAME_03_i:
                 IChild.put(tp + "VACNAME_03", "i");
                 break;
+            default:
+                IChild.put(tp + "VACNAME_03", "xx");
+
         }
 
         switch (pLACE01.getCheckedRadioButtonId()) {
@@ -665,6 +744,9 @@ public class sVD
             case R.id.PLACE_01_h:
                 IChild.put(tp + "PLACE_01", "h");
                 break;
+            default:
+                IChild.put(tp + "PLACE_01", "xx");
+
         }
 
         switch (pLACE02.getCheckedRadioButtonId()) {
@@ -692,6 +774,9 @@ public class sVD
             case R.id.PLACE_02_h:
                 IChild.put(tp + "PLACE_02", "h");
                 break;
+            default:
+                IChild.put(tp + "PLACE_02", "xx");
+
         }
 
         switch (pLACE03.getCheckedRadioButtonId()) {
@@ -719,6 +804,9 @@ public class sVD
             case R.id.PLACE_03_h:
                 IChild.put(tp + "PLACE_03", "h");
                 break;
+            default:
+                IChild.put(tp + "PLACE_03", "xx");
+
         }
 
         String spDateT = new SimpleDateFormat("dd-MM-yy").format(DOV.getCalendarView().getDate());
@@ -744,6 +832,9 @@ public class sVD
             case R.id.VD54_f:
                 IChild.put(tp + "VD54", "f");
                 break;
+            default:
+                IChild.put(tp + "VD54", "xx");
+
         }
         IChild.put(tp + "VD54_x", vD54_x.getText().toString());
 
@@ -764,9 +855,9 @@ public class sVD
             case R.id.VD56_e:
                 IChild.put(tp + "VD56", "e");
                 break;
-            case R.id.VD56_f:
-                IChild.put(tp + "VD56", "f");
-                break;
+            default:
+                IChild.put(tp + "VD56", "xx");
+
         }
         IChild.put(tp + "VD57", vD57.getText().toString());
 
@@ -779,7 +870,7 @@ public class sVD
                 sA.fc.setIChild2(IChild.toString());
                 Toast.makeText(this, "Saving Dose# 2 Draft... Successful!", Toast.LENGTH_SHORT).show();
                 return true;
-            case 3: 
+            case 3:
                 sA.fc.setIChild3(IChild.toString());
                 Toast.makeText(this, "Saving Dose# 3 Draft... Successful!", Toast.LENGTH_SHORT).show();
                 return true;
@@ -795,66 +886,76 @@ public class sVD
                 sA.fc.setIChild6(IChild.toString());
                 Toast.makeText(this, "Saving Dose# 6 Draft... Successful!", Toast.LENGTH_SHORT).show();
                 return true;
+            default:
+                Toast.makeText(this, "No Saving!", Toast.LENGTH_SHORT).show();
+
 
         }
-
+        sA.fc.setVA109("1");
         return false;
     }
 
     private boolean formValidation() {
 
-        if (vACNAME01.getCheckedRadioButtonId() == -1 && vACNAME02.getCheckedRadioButtonId() == -1 && vACNAME03.getCheckedRadioButtonId() == -1) {
-            Toast.makeText(this, "Please select one option \r\n" + getString(R.string.VD53), Toast.LENGTH_LONG).show();
-            vACNAME01I.setError("Please select one option");
-            Log.i(TAG, "VACNAME: No option selected");
-            return false;
-        } else {
-            vACNAME01I.setError(null);
-        }
+        if (vacc_status.isChecked()) {
+            if (vACNAME01.getCheckedRadioButtonId() == -1 && vACNAME02.getCheckedRadioButtonId() == -1 && vACNAME03.getCheckedRadioButtonId() == -1) {
+                Toast.makeText(this, "Please select one option \r\n" + getString(R.string.VD53), Toast.LENGTH_LONG).show();
+                vACNAME01I.setError("Please select one option");
+                Log.i(TAG, "VACNAME: No option selected");
+                return false;
+            } else {
+                vACNAME01I.setError(null);
+            }
 
-        if (vACNAME01.getCheckedRadioButtonId() != -1 && pLACE01.getCheckedRadioButtonId() == -1) {
-            Toast.makeText(this, "Please select one option \r\n" + getString(R.string.VD55), Toast.LENGTH_LONG).show();
-            pLACE01H.setError("Please select one option");
-            Log.i(TAG, "PLACE: No option selected");
-            return false;
-        } else {
-            pLACE01H.setError(null);
-        }
+            if (vACNAME01.getCheckedRadioButtonId() != -1 && pLACE01.getCheckedRadioButtonId() == -1) {
+                Toast.makeText(this, "Please select one option \r\n" + getString(R.string.VD55), Toast.LENGTH_LONG).show();
+                pLACE01H.setError("Please select one option");
+                Log.i(TAG, "PLACE: No option selected");
+                return false;
+            } else {
+                pLACE01H.setError(null);
+            }
 
-        if (vACNAME02.getCheckedRadioButtonId() != -1 && pLACE02.getCheckedRadioButtonId() == -1) {
-            Toast.makeText(this, "Please select one option \r\n" + getString(R.string.VD55), Toast.LENGTH_LONG).show();
-            pLACE02H.setError("Please select select one option");
-            Log.i(TAG, "PLACE: No option selected");
-            return false;
-        } else {
-            pLACE02H.setError(null);
-        }
+            if (vACNAME02.getCheckedRadioButtonId() != -1 && pLACE02.getCheckedRadioButtonId() == -1) {
+                Toast.makeText(this, "Please select one option \r\n" + getString(R.string.VD55), Toast.LENGTH_LONG).show();
+                pLACE02H.setError("Please select select one option");
+                Log.i(TAG, "PLACE: No option selected");
+                return false;
+            } else {
+                pLACE02H.setError(null);
+            }
 
-        if (vACNAME03.getCheckedRadioButtonId() != -1 && pLACE03.getCheckedRadioButtonId() == -1) {
-            Toast.makeText(this, "Please select one option \r\n" + getString(R.string.VD55), Toast.LENGTH_LONG).show();
-            pLACE03H.setError("Please select one option");
-            Log.i(TAG, "PLACE: No option selected");
-            return false;
-        } else {
-            pLACE03H.setError(null);
-        }
+            if (vACNAME03.getCheckedRadioButtonId() != -1 && pLACE03.getCheckedRadioButtonId() == -1) {
+                Toast.makeText(this, "Please select one option \r\n" + getString(R.string.VD55), Toast.LENGTH_LONG).show();
+                pLACE03H.setError("Please select one option");
+                Log.i(TAG, "PLACE: No option selected");
+                return false;
+            } else {
+                pLACE03H.setError(null);
+            }
 
-        if (vD54.getCheckedRadioButtonId() == -1) {
-            Toast.makeText(this, "Please select one option \r\n" + getString(R.string.VD54), Toast.LENGTH_LONG).show();
-            vD54F.setError("Please select one option");
-            Log.i(TAG, "VD54: No option selected");
-            return false;
-        } else {
-            vD54F.setError(null);
+            if (age_status.isChecked() && vD54.getCheckedRadioButtonId() == -1) {
+                Toast.makeText(this, "Please select one option \r\n" + getString(R.string.VD54), Toast.LENGTH_LONG).show();
+                vD54G.setError("Please select one option");
+                Log.i(TAG, "VD54: No option selected");
+                return false;
+            } else {
+                vD54G.setError(null);
+            }
+            if (vD54G.isChecked() && vD54_x.getText().toString().isEmpty()) {
+                Toast.makeText(this, "Please write others \r\n" + getString(R.string.OTHER), Toast.LENGTH_LONG).show();
+                vD54G.setError("Please write others");
+                Log.i(TAG, "VD54x: No others given");
+                return false;
+            }
         }
-
         if (vD56.getCheckedRadioButtonId() == -1) {
             Toast.makeText(this, "Please select one option \r\n" + getString(R.string.VD56), Toast.LENGTH_LONG).show();
-            vD56F.setError("Please select  one option");
+            vD56E.setError("Please select  one option");
             Log.i(TAG, "VD56: No option selected");
             return false;
         } else {
-            vD56F.setError(null);
+            vD56E.setError(null);
         }
 
         if ((vD56.getCheckedRadioButtonId() == vD56B.getId() || vD56.getCheckedRadioButtonId() == vD56C.getId()) && vD57.getText().toString().isEmpty()) {

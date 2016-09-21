@@ -288,6 +288,39 @@ public final class FormsContract {
         this.VA_109 = va109;
     }
 
+    public JSONObject toJSONObject() throws JSONException {
+        JSONObject json = new JSONObject();
+        json.put(VIRForm._ID, this.ID);
+        json.put(VIRForm.COLUMN_NAME_FORMNO, this.formId);
+        json.put(VIRForm.COLUMN_NAME_VA_101, this.VA_101);
+        json.put(VIRForm.COLUMN_NAME_VA_101TIME, this.VA_101TIME);
+        json.put(VIRForm.COLUMN_NAME_VA_102, this.VA_102);
+        json.put(VIRForm.COLUMN_NAME_VA_01, this.VA_01);
+        json.put(VIRForm.COLUMN_NAME_VA_02, this.VA_02);
+        json.put(VIRForm.COLUMN_NAME_VA_03, this.VA_03);
+        json.put(VIRForm.COLUMN_NAME_VA_04, this.VA_04);
+        json.put(VIRForm.COLUMN_NAME_VA_109, this.VA_109);
+        json.put(VIRForm.COLUMN_NAME_VB, this.VB);
+        json.put(VIRForm.COLUMN_NAME_VC, this.VC);
+        json.put(VIRForm.COLUMN_NAME_VD, this.VD);
+        json.put(VIRForm.COLUMN_NAME_VE, this.VE);
+        json.put(VIRForm.COLUMN_NAME_ICHILD_1, this.IChild1);
+        json.put(VIRForm.COLUMN_NAME_ICHILD_2, this.IChild2);
+        json.put(VIRForm.COLUMN_NAME_ICHILD_3, this.IChild3);
+        json.put(VIRForm.COLUMN_NAME_ICHILD_4, this.IChild4);
+        json.put(VIRForm.COLUMN_NAME_ICHILD_5, this.IChild5);
+        json.put(VIRForm.COLUMN_NAME_ICHILD_6, this.IChild6);
+        json.put(VIRForm.COLUMN_NAME_DEVICE_ID, this.DEVICEID);
+        json.put(VIRForm.COLUMN_NAME_GPS_LAT, this.GPSLat);
+        json.put(VIRForm.COLUMN_NAME_GPS_LNG, this.GPSLng);
+        json.put(VIRForm.COLUMN_NAME_GPS_ACCURACY, this.GPSAcc);
+        json.put(VIRForm.COLUMN_NAME_GPS_TIME, this.GPSTime);
+        json.put(VIRForm.COLUMN_NAME_SYNCED, this.Synced);
+        json.put(VIRForm.COLUMN_NAME_SYNCED_DATE_TIME, this.SyncedDateTime);
+
+        return json;
+    }
+
     public static abstract class VIRForm implements BaseColumns {
 
         public static final String TABLE_NAME = "forms";

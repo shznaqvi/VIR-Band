@@ -316,24 +316,22 @@ public class sE extends AppCompatActivity {
     RadioButton E45_b;
     @BindView(R.id.E45_c)
     RadioButton E45_c;
-    @BindView(R.id.E46)
-    RadioGroup E46;
     @BindView(R.id.E46_a)
-    RadioButton E46_a;
+    CheckBox E46_a;
     @BindView(R.id.E46_b)
-    RadioButton E46_b;
+    CheckBox E46_b;
     @BindView(R.id.E46_c)
-    RadioButton E46_c;
+    CheckBox E46_c;
     @BindView(R.id.E46_d)
-    RadioButton E46_d;
+    CheckBox E46_d;
     @BindView(R.id.E46_e)
-    RadioButton E46_e;
+    CheckBox E46_e;
     @BindView(R.id.E46_f)
-    RadioButton E46_f;
+    CheckBox E46_f;
     @BindView(R.id.E46_g)
-    RadioButton E46_g;
+    CheckBox E46_g;
     @BindView(R.id.E46_h)
-    RadioButton E46_h;
+    CheckBox E46_h;
     @BindView(R.id.E47)
     RadioGroup E47;
     @BindView(R.id.E47_a)
@@ -354,24 +352,23 @@ public class sE extends AppCompatActivity {
     RadioButton E48_d;
     @BindView(R.id.E48_e)
     RadioButton E48_e;
-    @BindView(R.id.E49)
-    RadioGroup E49;
+
     @BindView(R.id.E49_a)
-    RadioButton E49_a;
+    CheckBox E49_a;
     @BindView(R.id.E49_b)
-    RadioButton E49_b;
+    CheckBox E49_b;
     @BindView(R.id.E49_c)
-    RadioButton E49_c;
+    CheckBox E49_c;
     @BindView(R.id.E49_d)
-    RadioButton E49_d;
+    CheckBox E49_d;
     @BindView(R.id.E49_e)
-    RadioButton E49_e;
+    CheckBox E49_e;
     @BindView(R.id.E49_f)
-    RadioButton E49_f;
+    CheckBox E49_f;
     @BindView(R.id.E49_g)
-    RadioButton E49_g;
+    CheckBox E49_g;
     @BindView(R.id.E49_h)
-    RadioButton E49_h;
+    CheckBox E49_h;
     @BindView(R.id.E50)
     RadioGroup E50;
     @BindView(R.id.E50_a)
@@ -416,22 +413,21 @@ public class sE extends AppCompatActivity {
     RadioButton E51_b;
     @BindView(R.id.E51_c)
     RadioButton E51_c;
-    @BindView(R.id.E51a)
-    RadioGroup E51a;
+
     @BindView(R.id.E51a_1)
-    RadioButton E51a_1;
+    CheckBox E51a_1;
     @BindView(R.id.E51a_2)
-    RadioButton E51a_2;
+    CheckBox E51a_2;
     @BindView(R.id.E51a_3)
-    RadioButton E51a_3;
+    CheckBox E51a_3;
     @BindView(R.id.E51a_4)
-    RadioButton E51a_4;
+    CheckBox E51a_4;
     @BindView(R.id.E51a_5)
-    RadioButton E51a_5;
+    CheckBox E51a_5;
     @BindView(R.id.E51a_6)
-    RadioButton E51a_6;
+    CheckBox E51a_6;
     @BindView(R.id.E51a_7)
-    RadioButton E51a_7;
+    CheckBox E51a_7;
     @BindView(R.id.E52)
     RadioGroup E52;
     @BindView(R.id.E52_a)
@@ -721,6 +717,9 @@ public class sE extends AppCompatActivity {
                     E36a_5.setChecked(false);
                     E36a_6.setChecked(false);
                     E36a_7.setChecked(false);
+                    if (E29_b.isChecked() && E32_b.isChecked() && E35_b.isChecked() && E36_b.isChecked()) {
+
+                    }
                 } else if ((checkedId == E36_c.getId())) {
                     fldGrpE36a.setVisibility(View.GONE);
                     fldGrpE36b.setVisibility(View.GONE);
@@ -736,6 +735,7 @@ public class sE extends AppCompatActivity {
                     E36a_5.setChecked(false);
                     E36a_6.setChecked(false);
                     E36a_7.setChecked(false);
+
                 }
             }
         });
@@ -811,10 +811,15 @@ public class sE extends AppCompatActivity {
                     fldGrpE40a.setVisibility(View.VISIBLE);
                     fldGrpE40b.setVisibility(View.GONE);
                     E40b.clearCheck();
-                } else if ((checkedId == E40_b.getId())) {
+                } else if (checkedId == E40_b.getId()) {
                     fldGrpE40b.setVisibility(View.VISIBLE);
                     fldGrpE40a.setVisibility(View.GONE);
                     E40a.clearCheck();
+                } else if (checkedId == E40_c.getId()) {
+                    fldGrpE40b.setVisibility(View.GONE);
+                    fldGrpE40a.setVisibility(View.GONE);
+                    E40a.clearCheck();
+                    E40b.clearCheck();
                 }
             }
         });
@@ -903,9 +908,10 @@ public class sE extends AppCompatActivity {
                 }
             }
         });
-        E46.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+
+        E46_h.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (!E46_h.isChecked()) {
                     E46_x.setVisibility(View.GONE);
                     E46_x.setText(null);
@@ -938,9 +944,9 @@ public class sE extends AppCompatActivity {
                 }
             }
         });
-        E49.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        E49_h.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (!E49_h.isChecked()) {
                     E49_x.setVisibility(View.GONE);
                     E49_x.setText(null);
@@ -949,6 +955,7 @@ public class sE extends AppCompatActivity {
                 }
             }
         });
+
 
         E50.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -1001,13 +1008,19 @@ public class sE extends AppCompatActivity {
 
                 } else {
                     fldGrpE51a.setVisibility(View.GONE);
-                    E51a.clearCheck();
+                    E51a_1.setChecked(false);
+                    E51a_2.setChecked(false);
+                    E51a_3.setChecked(false);
+                    E51a_4.setChecked(false);
+                    E51a_5.setChecked(false);
+                    E51a_6.setChecked(false);
+                    E51a_7.setChecked(false);
                 }
             }
         });
-        E51a.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        E51a_7.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (!E51a_7.isChecked()) {
                     E51a_x.setVisibility(View.GONE);
                     E51a_x.setText(null);
@@ -1017,6 +1030,17 @@ public class sE extends AppCompatActivity {
             }
         });
 
+
+    }
+
+    public void activeRefusal() throws JSONException {
+        Toast.makeText(sE.this, "ACTIVE REFUSAL CASE!", Toast.LENGTH_SHORT).show();
+        SaveDraft();
+        sA.fc.setVA109("4"); //
+        if (UpdateDB()) {
+            Intent ending = new Intent(this, MainActivity.class);
+            startActivity(ending);
+        }
     }
 
     public void submitSE(View v) throws JSONException {
@@ -1059,6 +1083,9 @@ public class sE extends AppCompatActivity {
                 break;
             case R.id.E29_b:
                 se.put("E29", "b");
+                break;
+            default:
+                se.put("E29", "xx");
         }
 
         se.put("E30_a", E30_a.isChecked() ? "a" : "");
@@ -1087,10 +1114,16 @@ public class sE extends AppCompatActivity {
         switch (E32.getCheckedRadioButtonId()) {
             case R.id.E32_a:
                 se.put("E32", "a");
+                break;
             case R.id.E32_b:
                 se.put("E32", "b");
+                break;
             case R.id.E32_c:
                 se.put("E32", "c");
+                break;
+            default:
+                se.put("E32", "xx");
+
 
         }
 
@@ -1105,56 +1138,86 @@ public class sE extends AppCompatActivity {
         switch (E34.getCheckedRadioButtonId()) {
             case R.id.E34_a:
                 se.put("E34", "a");
+                break;
             case R.id.E34_b:
                 se.put("E34", "b");
+                break;
             case R.id.E34_c:
                 se.put("E34", "c");
+                break;
             case R.id.E34_d:
                 se.put("E34", "d");
+                break;
             case R.id.E34_e:
                 se.put("E34", "e");
+                break;
             case R.id.E34_f:
                 se.put("E34", "f");
+                break;
             case R.id.E34_g:
                 se.put("E34", "g");
+                break;
             case R.id.E34_h:
                 se.put("E34", "h");
+                break;
             case R.id.E34_i:
                 se.put("E34", "i");
+                break;
             case R.id.E34_j:
                 se.put("E34", "j");
+                break;
             case R.id.E34_k:
                 se.put("E34", "k");
+                break;
+            default:
+                se.put("E34", "xx");
+
 
         }
 
         switch (E35.getCheckedRadioButtonId()) {
             case R.id.E35_a:
                 se.put("E35", "a");
+                break;
             case R.id.E35_b:
                 se.put("E35", "b");
+                break;
+            default:
+                se.put("E34", "xx");
+
 
         }
 
         switch (E35a.getCheckedRadioButtonId()) {
             case R.id.E35a_1:
                 se.put("E35a", "1");
+                break;
             case R.id.E35a_2:
                 se.put("E35a", "2");
+                break;
             case R.id.E35a_3:
                 se.put("E35a", "3");
+                break;
             case R.id.E35a_4:
                 se.put("E35a", "4");
+                break;
+            default:
+                se.put("E35a", "xx");
 
         }
 
         switch (E36.getCheckedRadioButtonId()) {
             case R.id.E36_a:
                 se.put("E36", "a");
+                break;
             case R.id.E36_b:
                 se.put("E36", "b");
+                break;
             case R.id.E36_c:
                 se.put("E36", "c");
+                break;
+            default:
+                se.put("E36", "xx");
 
         }
         // E36a
@@ -1176,47 +1239,68 @@ public class sE extends AppCompatActivity {
         switch (E37.getCheckedRadioButtonId()) {
             case R.id.E37_a:
                 se.put("E37", "a");
+                break;
             case R.id.E37_b:
                 se.put("E37", "b");
+                break;
             case R.id.E37_c:
                 se.put("E37", "c");
+                break;
             case R.id.E37_d:
                 se.put("E37", "d");
+                break;
             case R.id.E37_e:
                 se.put("E37", "e");
+                break;
+            default:
+                se.put("E37", "xx");
 
         }
 
         switch (E38.getCheckedRadioButtonId()) {
             case R.id.E38_a:
                 se.put("E38", "a");
+                break;
             case R.id.E38_b:
                 se.put("E38", "b");
+                break;
             case R.id.E38_c:
                 se.put("E38", "c");
+                break;
             case R.id.E38_d:
                 se.put("E38", "d");
+                break;
             case R.id.E38_e:
                 se.put("E38", "e");
+                break;
             case R.id.E38_f:
                 se.put("E38", "f");
-
-
+                break;
+            default:
+                se.put("E38", "xx");
         }
 
         switch (E39.getCheckedRadioButtonId()) {
             case R.id.E39_a:
                 se.put("E39", "a");
+                break;
             case R.id.E39_b:
                 se.put("E39", "b");
+                break;
             case R.id.E39_c:
                 se.put("E39", "c");
+                break;
             case R.id.E39_d:
                 se.put("E39", "d");
+                break;
             case R.id.E39_e:
                 se.put("E39", "e");
+                break;
             case R.id.E39_f:
                 se.put("E39", "f");
+                break;
+            default:
+                se.put("E39", "xx");
 
 
         }
@@ -1224,284 +1308,330 @@ public class sE extends AppCompatActivity {
         switch (E40.getCheckedRadioButtonId()) {
             case R.id.E40_a:
                 se.put("E40", "a");
+                break;
             case R.id.E40_b:
                 se.put("E40", "b");
+                break;
             case R.id.E40_c:
                 se.put("E40", "c");
-
-
+                break;
+            default:
+                se.put("E40", "xx");
         }
 
         switch (E40a.getCheckedRadioButtonId()) {
             case R.id.E40a_1:
                 se.put("E40a", "1");
+                break;
             case R.id.E40a_2:
                 se.put("E40a", "2");
+                break;
             case R.id.E40a_3:
                 se.put("E40a", "3");
+                break;
             case R.id.E40a_4:
                 se.put("E40a", "4");
+                break;
             case R.id.E40a_5:
                 se.put("E40a", "5");
+                break;
             case R.id.E40a_6:
                 se.put("E40a", "6");
+                break;
             case R.id.E40a_7:
                 se.put("E40a", "7");
-
+                break;
+            default:
+                se.put("E40a", "xx");
 
         }
 
         switch (E40b.getCheckedRadioButtonId()) {
             case R.id.E40b_1:
                 se.put("E40b", "1");
+                break;
             case R.id.E40b_2:
                 se.put("E40b", "2");
+                break;
             case R.id.E40b_3:
                 se.put("E40b", "3");
+                break;
             case R.id.E40b_4:
                 se.put("E40b", "4");
+                break;
             case R.id.E40b_5:
                 se.put("E40b", "5");
-
-
+                break;
+            default:
+                se.put("E40b", "xx");
         }
 
         switch (E41.getCheckedRadioButtonId()) {
             case R.id.E41_a:
                 se.put("E41", "a");
+                break;
             case R.id.E41_b:
                 se.put("E41", "b");
+                break;
             case R.id.E41_c:
                 se.put("E41", "c");
+                break;
             case R.id.E41_d:
                 se.put("E41", "d");
+                break;
             case R.id.E41_e:
                 se.put("E41", "e");
+                break;
             case R.id.E41_f:
                 se.put("E41", "f");
+                break;
             case R.id.E41_g:
                 se.put("E41", "g");
+                break;
             case R.id.E41_h:
                 se.put("E41", "h");
+                break;
+            default:
+                se.put("E41", "xx");
 
         }
 
         switch (E42.getCheckedRadioButtonId()) {
             case R.id.E42_a:
                 se.put("E42", "a");
+                break;
             case R.id.E42_b:
                 se.put("E42", "b");
+                break;
             case R.id.E42_c:
                 se.put("E42", "c");
+                break;
             case R.id.E42_d:
                 se.put("E42", "d");
+                break;
             case R.id.E42_e:
                 se.put("E42", "e");
+                break;
             case R.id.E42_f:
                 se.put("E42", "f");
+                break;
             case R.id.E42_g:
                 se.put("E42", "g");
-
-
+                break;
+            default:
+                se.put("E42", "xx");
         }
 
         switch (E43.getCheckedRadioButtonId()) {
             case R.id.E43_a:
                 se.put("E43", "a");
+                break;
             case R.id.E43_b:
                 se.put("E43", "b");
+                break;
             case R.id.E43_c:
                 se.put("E43", "c");
+                break;
             case R.id.E43_d:
                 se.put("E43", "d");
+                break;
             case R.id.E43_e:
                 se.put("E43", "e");
+                break;
             case R.id.E43_f:
                 se.put("E43", "f");
-
-
+                break;
+            default:
+                se.put("E43", "xx");
         }
 
         switch (E44.getCheckedRadioButtonId()) {
             case R.id.E44_a:
                 se.put("E44", "a");
+                break;
             case R.id.E44_b:
                 se.put("E44", "b");
+                break;
             case R.id.E44_c:
                 se.put("E44", "c");
+                break;
             case R.id.E44_d:
                 se.put("E44", "d");
+                break;
             case R.id.E44_e:
                 se.put("E44", "e");
+                break;
             case R.id.E44_f:
                 se.put("E44", "f");
+                break;
             case R.id.E44_g:
                 se.put("E44", "g");
-
-
+                break;
+            default:
+                se.put("E44", "xx");
         }
 
         switch (E45.getCheckedRadioButtonId()) {
             case R.id.E45_a:
                 se.put("E45", "a");
+                break;
             case R.id.E45_b:
                 se.put("E45", "b");
+                break;
             case R.id.E45_c:
                 se.put("E45", "c");
-
-
+                break;
+            default:
+                se.put("E45", "xx");
         }
 
-        switch (E46.getCheckedRadioButtonId()) {
-            case R.id.E46_a:
-                se.put("E46", "a");
-            case R.id.E46_b:
-                se.put("E46", "b");
-            case R.id.E46_c:
-                se.put("E46", "c");
-            case R.id.E46_d:
-                se.put("E46", "d");
-            case R.id.E46_e:
-                se.put("E46", "e");
-            case R.id.E46_f:
-                se.put("E46", "f");
-            case R.id.E46_g:
-                se.put("E46", "g");
-            case R.id.E46_h:
-                se.put("E46", "h");
-
-
-        }
+        se.put("E46_a", E46_a.isChecked() ? "a" : "");
+        se.put("E46_b", E46_b.isChecked() ? "b" : "");
+        se.put("E46_c", E46_c.isChecked() ? "c" : "");
+        se.put("E46_d", E46_d.isChecked() ? "d" : "");
+        se.put("E46_e", E46_e.isChecked() ? "e" : "");
+        se.put("E46_f", E46_f.isChecked() ? "f" : "");
+        se.put("E46_g", E46_g.isChecked() ? "g" : "");
+        se.put("E46_h", E46_h.isChecked() ? "h" : "");
 
         switch (E47.getCheckedRadioButtonId()) {
             case R.id.E47_a:
                 se.put("E47", "a");
+                break;
             case R.id.E47_b:
                 se.put("E47", "b");
+                break;
             case R.id.E47_c:
                 se.put("E47", "c");
-
+                break;
+            default:
+                se.put("E47", "xx");
 
         }
 
         switch (E48.getCheckedRadioButtonId()) {
             case R.id.E48_a:
-                se.put("E48", "a");
+                se.put("E48_a", "a");
+                break;
             case R.id.E48_b:
                 se.put("E48", "b");
+                break;
             case R.id.E48_c:
                 se.put("E48", "c");
+                break;
             case R.id.E48_d:
                 se.put("E48", "d");
+                break;
             case R.id.E48_e:
                 se.put("E48", "e");
-
-
+                break;
+            default:
+                se.put("E48", "xx");
         }
 
-        switch (E49.getCheckedRadioButtonId()) {
-            case R.id.E49_a:
-                se.put("E49", "a");
-            case R.id.E49_b:
-                se.put("E49", "b");
-            case R.id.E49_c:
-                se.put("E49", "c");
-            case R.id.E49_d:
-                se.put("E49", "d");
-            case R.id.E49_e:
-                se.put("E49", "e");
-            case R.id.E49_f:
-                se.put("E49", "f");
-            case R.id.E49_g:
-                se.put("E49", "g");
-            case R.id.E49_h:
-                se.put("E49", "h");
-
-
-        }
+        se.put("E49_a", E49_a.isChecked() ? "a" : "");
+        se.put("E49_b", E49_b.isChecked() ? "b" : "");
+        se.put("E49_c", E49_c.isChecked() ? "c" : "");
+        se.put("E49_d", E49_d.isChecked() ? "d" : "");
+        se.put("E49_e", E49_e.isChecked() ? "e" : "");
+        se.put("E49_f", E49_f.isChecked() ? "f" : "");
+        se.put("E49_g", E49_g.isChecked() ? "g" : "");
+        se.put("E49_h", E49_h.isChecked() ? "h" : "");
 
         switch (E50.getCheckedRadioButtonId()) {
             case R.id.E50_a:
                 se.put("E50", "a");
+                break;
             case R.id.E50_b:
                 se.put("E50", "b");
+                break;
             case R.id.E50_c:
                 se.put("E50", "c");
-
-
+                break;
+            default:
+                se.put("E50", "xx");
         }
 
         switch (E50a.getCheckedRadioButtonId()) {
             case R.id.E50a_1:
                 se.put("E50a", "1");
+                break;
             case R.id.E50a_2:
                 se.put("E50a", "2");
+                break;
             case R.id.E50a_3:
                 se.put("E50a", "3");
+                break;
             case R.id.E50a_4:
                 se.put("E50a", "4");
+                break;
             case R.id.E50a_5:
                 se.put("E50a", "5");
+                break;
             case R.id.E50a_6:
                 se.put("E50a", "6");
-
-
+                break;
+            default:
+                se.put("E50a", "xx");
         }
+
 
         switch (E50b.getCheckedRadioButtonId()) {
             case R.id.E50b_1:
                 se.put("E50b", "1");
+                break;
             case R.id.E50b_2:
                 se.put("E50b", "2");
+                break;
             case R.id.E50b_3:
                 se.put("E50b", "3");
+                break;
             case R.id.E50b_4:
                 se.put("E50b", "4");
+                break;
             case R.id.E50b_5:
                 se.put("E50b", "5");
+                break;
             case R.id.E50b_6:
                 se.put("E50b", "6");
-
-
+                break;
+            default:
+                se.put("E50b", "xx");
         }
 
         switch (E51.getCheckedRadioButtonId()) {
             case R.id.E51_a:
                 se.put("E51", "a");
+                break;
             case R.id.E51_b:
                 se.put("E51", "b");
+                break;
             case R.id.E51_c:
                 se.put("E51", "c");
-
+                break;
+            default:
+                se.put("E51", "xx");
         }
-
-        switch (E51a.getCheckedRadioButtonId()) {
-            case R.id.E51a_1:
-                se.put("E51a", "1");
-            case R.id.E51a_2:
-                se.put("E51a", "2");
-            case R.id.E51a_3:
-                se.put("E51a", "3");
-            case R.id.E51a_4:
-                se.put("E51a", "4");
-            case R.id.E51a_5:
-                se.put("E51a", "5");
-            case R.id.E51a_6:
-                se.put("E51a", "6");
-            case R.id.E51a_7:
-                se.put("E51a", "7");
-
-
-        }
+        se.put("E51a_1", E51a_1.isChecked() ? "1" : "");
+        se.put("E51a_1", E51a_1.isChecked() ? "2" : "");
+        se.put("E51a_1", E51a_1.isChecked() ? "3" : "");
+        se.put("E51a_1", E51a_1.isChecked() ? "4" : "");
+        se.put("E51a_1", E51a_1.isChecked() ? "5" : "");
+        se.put("E51a_1", E51a_1.isChecked() ? "6" : "");
+        se.put("E51a_1", E51a_1.isChecked() ? "7" : "");
 
         switch (E52.getCheckedRadioButtonId()) {
             case R.id.E52_a:
                 se.put("E52", "a");
+                break;
             case R.id.E52_b:
                 se.put("E52", "b");
+                break;
             case R.id.E52_c:
                 se.put("E52", "c");
-
+                break;
+            default:
+                se.put("E52", "xx");
 
         }
 
@@ -1584,6 +1714,15 @@ public class sE extends AppCompatActivity {
             Toast.makeText(this, "Please select one option", Toast.LENGTH_LONG).show();
             E33_g.setError("Please select select one option");
             Log.i(TAG, "E33: No option selected");
+            return false;
+        } else {
+            E33_g.setError(null);
+        }
+
+        if (E33_f.isChecked() && ((E33_a.isChecked() || E33_b.isChecked() || E33_c.isChecked() || E33_d.isChecked() || E33_e.isChecked() || E33_g.isChecked()))) {
+            Toast.makeText(this, "Cannot Select Nothing with anyother option", Toast.LENGTH_LONG).show();
+            E33_g.setError("Cannot Select Nothing with anyother option");
+            Log.i(TAG, "E33: Cannot Select Nothing with anyother option");
             return false;
         } else {
             E33_g.setError(null);
@@ -1737,6 +1876,25 @@ public class sE extends AppCompatActivity {
             E44_g.setError(null);
         }
 
+        if (E36a_6.isChecked() && (E36a_1.isChecked() || E36a_2.isChecked() || E36a_3.isChecked() ||
+                E36a_4.isChecked() || E36a_5.isChecked() || E36a_7.isChecked())) {
+            Toast.makeText(this, "Incorrect Selection: Don't know selected with other options", Toast.LENGTH_LONG).show();
+            E36a_6.setError("Incorrect Selection: Don't know selected with other options");
+            Log.i(TAG, "E36a: Incorrect Selection: Don't know selected with other options");
+            return false;
+        } else {
+            E36a_6.setError(null);
+        }
+        if (E36b_4.isChecked() && (E36b_1.isChecked() || E36b_2.isChecked() || E36b_3.isChecked() ||
+                E36b_5.isChecked())) {
+            Toast.makeText(this, "Incorrect Selection: Don't know selected with other options", Toast.LENGTH_LONG).show();
+            E36b_4.setError("Incorrect Selection: Don't know selected with other options");
+            Log.i(TAG, "E36b: Incorrect Selection: Don't know selected with other options");
+            return false;
+        } else {
+            E36b_4.setError(null);
+        }
+
         if (E45.getCheckedRadioButtonId() == -1) {
             Toast.makeText(this, "Please select one option", Toast.LENGTH_LONG).show();
             E45_c.setError("Please select select one option");
@@ -1746,7 +1904,7 @@ public class sE extends AppCompatActivity {
             E45_c.setError(null);
         }
 
-        if (E46.getCheckedRadioButtonId() == -1) {
+        if (!(E46_a.isChecked() || E46_b.isChecked() || E46_c.isChecked() || E46_d.isChecked() || E46_e.isChecked() || E46_f.isChecked() || E46_g.isChecked() || E46_h.isChecked())) {
             Toast.makeText(this, "Please select one option", Toast.LENGTH_LONG).show();
             E46_h.setError("Please select select one option");
             Log.i(TAG, "E46: No option selected");
@@ -1773,7 +1931,16 @@ public class sE extends AppCompatActivity {
             E48_e.setError(null);
         }
 
-        if (E49.getCheckedRadioButtonId() == -1) {
+        if (
+                !(E49_a.isChecked() ||
+                        E49_b.isChecked() ||
+                        E49_c.isChecked() ||
+                        E49_d.isChecked() ||
+                        E49_e.isChecked() ||
+                        E49_f.isChecked() ||
+                        E49_g.isChecked() ||
+                        E49_h.isChecked())
+                ) {
             Toast.makeText(this, "Please select one option", Toast.LENGTH_LONG).show();
             E49_h.setError("Please select select one option");
             Log.i(TAG, "E49: No option selected");
@@ -1818,7 +1985,15 @@ public class sE extends AppCompatActivity {
             E51_c.setError(null);
         }
 
-        if (E51_a.isChecked() && E51a.getCheckedRadioButtonId() == -1) {
+        if (E51_a.isChecked() && !(
+                E51a_1.isChecked() ||
+                        E51a_2.isChecked() ||
+                        E51a_3.isChecked() ||
+                        E51a_4.isChecked() ||
+                        E51a_5.isChecked() ||
+                        E51a_6.isChecked() ||
+                        E51a_7.isChecked()
+        )) {
             Toast.makeText(this, "Please select one option", Toast.LENGTH_LONG).show();
             E51a_7.setError("Please select select one option");
             Log.i(TAG, "E51a: No option selected");

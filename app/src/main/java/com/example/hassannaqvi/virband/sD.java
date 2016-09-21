@@ -146,8 +146,7 @@ public class sD extends AppCompatActivity {
     EditText D26_x;
     @BindView(R.id.D27_x)
     EditText D27_x;
-    @BindView(R.id.D28_x)
-    EditText D28_x;
+
 
 
 
@@ -160,7 +159,7 @@ public class sD extends AppCompatActivity {
 
         //SKIP PATTERNS
 
-        if (sC.respIsParent) {
+        if (sC.respIsParent == 1) {
             fldGrpD23.setVisibility(View.GONE);
             D23.clearCheck();
         } else {
@@ -223,18 +222,6 @@ public class sD extends AppCompatActivity {
                     D27_x.setText(null);
                 } else {
                     D27_x.setVisibility(View.VISIBLE);
-
-                }
-            }
-        });
-        D28.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                if (!D28_f.isChecked()) {
-                    D28_x.setVisibility(View.GONE);
-                    D28_x.setText(null);
-                } else {
-                    D28_x.setVisibility(View.VISIBLE);
 
                 }
             }
@@ -304,6 +291,9 @@ public class sD extends AppCompatActivity {
             case R.id.D23_j:
                 sd.put("D23", "j");
                 break;
+            default:
+                sd.put("D23", "xx");
+
         }
         sd.put("D23_x", D23_x.getText().toString());
 
@@ -338,6 +328,8 @@ public class sD extends AppCompatActivity {
             case R.id.D24_j:
                 sd.put("D24", "j");
                 break;
+            default:
+                sd.put("D24", "xx");
         }
         sd.put("D24_x", D24_x.getText().toString());
 
@@ -372,6 +364,8 @@ public class sD extends AppCompatActivity {
             case R.id.D25_j:
                 sd.put("D25", "j");
                 break;
+            default:
+                sd.put("D25", "xx");
         }
         sd.put("D25_x", D25_x.getText().toString());
 
@@ -394,6 +388,8 @@ public class sD extends AppCompatActivity {
             case R.id.D26_f:
                 sd.put("D26", "f");
                 break;
+            default:
+                sd.put("D26", "xx");
         }
         sd.put("D26_x", D26_x.getText().toString());
 
@@ -419,6 +415,8 @@ public class sD extends AppCompatActivity {
             case R.id.D27_g:
                 sd.put("D27", "g");
                 break;
+            default:
+                sd.put("D27", "xx");
         }
         sd.put("D27_x", D27_x.getText().toString());
 
@@ -441,8 +439,9 @@ public class sD extends AppCompatActivity {
             case R.id.D28_f:
                 sd.put("D28", "f");
                 break;
+            default:
+                sd.put("D28", "xx");
         }
-        sd.put("D28_x", D28_x.getText().toString());
 
 
         sA.fc.setVD(sd.toString());
@@ -451,7 +450,7 @@ public class sD extends AppCompatActivity {
 
     private boolean formValidation() {
 
-        if (!sC.respIsParent && D23.getCheckedRadioButtonId() == -1) {
+        if (sC.respIsParent == 0 && D23.getCheckedRadioButtonId() == -1) {
             Toast.makeText(this, "Please select Respondent Education", Toast.LENGTH_LONG).show();
             D23_j.setError("Please select Respondent Education");
             Log.i(TAG, "Respondent's Education not selected");
@@ -485,7 +484,7 @@ public class sD extends AppCompatActivity {
             Log.i(TAG, "Fathers's Education not selected");
             return false;
         }
-        if (D25_d.isChecked() && D25_x.getText().toString().isEmpty()) {
+        if (D25_j.isChecked() && D25_x.getText().toString().isEmpty()) {
             Toast.makeText(this, "Please give detail of others", Toast.LENGTH_LONG).show();
             D25_x.setError("Please give detail of others");
             Log.i(TAG, "Detail of Others not given");
@@ -499,7 +498,7 @@ public class sD extends AppCompatActivity {
             Log.i(TAG, "Father's Profession not selected");
             return false;
         }
-        if (D26_d.isChecked() && D26_x.getText().toString().isEmpty()) {
+        if (D26_f.isChecked() && D26_x.getText().toString().isEmpty()) {
             Toast.makeText(this, "Please give detail of others", Toast.LENGTH_LONG).show();
             D26_x.setError("Please give detail of others");
             Log.i(TAG, "Detail of Others not given");
@@ -513,7 +512,7 @@ public class sD extends AppCompatActivity {
             Log.i(TAG, "Mother's Profession not selected");
             return false;
         }
-        if (D27_d.isChecked() && D27_x.getText().toString().isEmpty()) {
+        if (D27_g.isChecked() && D27_x.getText().toString().isEmpty()) {
             Toast.makeText(this, "Please give detail of others", Toast.LENGTH_LONG).show();
             D27_x.setError("Please give detail of others");
             Log.i(TAG, "Detail of Others not given");
@@ -527,14 +526,7 @@ public class sD extends AppCompatActivity {
             Log.i(TAG, "Income not selected");
             return false;
         }
-        if (D28_d.isChecked() && D28_x.getText().toString().isEmpty()) {
-            Toast.makeText(this, "Please give detail of others", Toast.LENGTH_LONG).show();
-            D28_x.setError("Please give detail of others");
-            Log.i(TAG, "Detail of Others not given");
-            return false;
-        } else {
-            D28_x.setError(null);
-        }
+
 
         Toast.makeText(this, "Validation... Successful!", Toast.LENGTH_SHORT).show();
 
