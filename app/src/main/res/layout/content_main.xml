@@ -22,6 +22,12 @@
         android:textColor="@color/white"
         android:textSize="24dp" />
 
+    <LinearLayout
+        android:id="@+id/fldGrpAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
     <Button
         style="?android:textAppearanceSmall"
         android:layout_width="match_parent"
@@ -120,5 +126,5 @@
         android:text="Open Database Manager"
         android:textColor="@color/white"
         android:textSize="24dp" />
-
+    </LinearLayout>
 </LinearLayout>

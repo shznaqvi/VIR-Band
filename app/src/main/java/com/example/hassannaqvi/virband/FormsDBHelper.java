@@ -31,6 +31,7 @@ public class FormsDBHelper extends SQLiteOpenHelper {
                     VIRForm.COLUMN_NAME_VA_101 + TEXT_TYPE + COMMA_SEP +
                     VIRForm.COLUMN_NAME_VA_101TIME + TEXT_TYPE + COMMA_SEP +
                     VIRForm.COLUMN_NAME_VA_102 + TEXT_TYPE + COMMA_SEP +
+                    VIRForm.COLUMN_NAME_VA_105 + TEXT_TYPE + COMMA_SEP +
                     VIRForm.COLUMN_NAME_VA_02 + TEXT_TYPE + COMMA_SEP +
                     VIRForm.COLUMN_NAME_VA_03 + TEXT_TYPE + COMMA_SEP +
                     VIRForm.COLUMN_NAME_VA_04 + TEXT_TYPE + COMMA_SEP +
@@ -108,6 +109,7 @@ public class FormsDBHelper extends SQLiteOpenHelper {
         values.put(VIRForm.COLUMN_NAME_VA_101, fc.getVA101());
         values.put(VIRForm.COLUMN_NAME_VA_101TIME, fc.getVA101time());
         values.put(VIRForm.COLUMN_NAME_VA_102, fc.getVA102());
+        values.put(VIRForm.COLUMN_NAME_VA_105, fc.getVA105());
         values.put(VIRForm.COLUMN_NAME_VA_02, fc.getVA02());
         values.put(VIRForm.COLUMN_NAME_VA_03, fc.getVA03());
         values.put(VIRForm.COLUMN_NAME_VA_04, fc.getVA04());
@@ -168,6 +170,7 @@ public class FormsDBHelper extends SQLiteOpenHelper {
                 VIRForm.COLUMN_NAME_VA_101,
                 VIRForm.COLUMN_NAME_VA_101TIME,
                 VIRForm.COLUMN_NAME_VA_102,
+                VIRForm.COLUMN_NAME_VA_105,
                 VIRForm.COLUMN_NAME_VA_01,
                 VIRForm.COLUMN_NAME_VA_02,
                 VIRForm.COLUMN_NAME_VA_03,
@@ -235,6 +238,7 @@ public class FormsDBHelper extends SQLiteOpenHelper {
                 VIRForm.COLUMN_NAME_VA_101,
                 VIRForm.COLUMN_NAME_VA_101TIME,
                 VIRForm.COLUMN_NAME_VA_102,
+                VIRForm.COLUMN_NAME_VA_105,
                 VIRForm.COLUMN_NAME_VA_01,
                 VIRForm.COLUMN_NAME_VA_02,
                 VIRForm.COLUMN_NAME_VA_03,
@@ -505,6 +509,7 @@ public class FormsDBHelper extends SQLiteOpenHelper {
         values.put(VIRForm.COLUMN_NAME_VA_101, fc.getVA101());
         values.put(VIRForm.COLUMN_NAME_VA_101TIME, fc.getVA101time());
         values.put(VIRForm.COLUMN_NAME_VA_102, fc.getVA102());
+        values.put(VIRForm.COLUMN_NAME_VA_105, fc.getVA105());
         values.put(VIRForm.COLUMN_NAME_VA_02, fc.getVA02());
         values.put(VIRForm.COLUMN_NAME_VA_03, fc.getVA03());
         values.put(VIRForm.COLUMN_NAME_VA_04, fc.getVA04());
@@ -537,6 +542,7 @@ public class FormsDBHelper extends SQLiteOpenHelper {
         fc.setVA101(c.getString(c.getColumnIndex(VIRForm.COLUMN_NAME_VA_101)));
         fc.setVA101Time(c.getString(c.getColumnIndex(VIRForm.COLUMN_NAME_VA_101TIME)));
         fc.setVA102(c.getString(c.getColumnIndex(VIRForm.COLUMN_NAME_VA_102)));
+        fc.setVA105(c.getString(c.getColumnIndex(VIRForm.COLUMN_NAME_VA_105)));
         fc.setVA01(c.getString(c.getColumnIndex(VIRForm.COLUMN_NAME_VA_01)));
         fc.setVA02(c.getString(c.getColumnIndex(VIRForm.COLUMN_NAME_VA_02)));
         fc.setVA03(c.getString(c.getColumnIndex(VIRForm.COLUMN_NAME_VA_03)));

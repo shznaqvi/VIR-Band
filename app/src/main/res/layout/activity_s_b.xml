@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ScrollView01"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -36,19 +37,12 @@
             android:text="@string/sB"
             android:textAlignment="viewEnd"
             android:textColor="@color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:typeface="serif" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="20dp"
-            android:background="@color/colorPrimary"
-            android:padding="12dp"
-            android:text="@string/B05"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="24sp" />
+            style="@style/Q_Lable"
+            android:text="@string/B05" />
 
         <EditText
             android:id="@+id/B05"
@@ -57,13 +51,16 @@
             android:layout_marginTop="8dp"
             android:digits="QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm"
             android:inputType="text"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:typeface="serif" />
 
         <CheckBox
             android:id="@+id/DOB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Date of Birth" />
+            android:text="Date of Birth"
+            android:textSize="24sp"
+            android:typeface="serif" />
 
         <LinearLayout
             android:id="@+id/fldGrpDOB"
@@ -82,7 +79,8 @@
             android:text="@string/B07"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:typeface="serif" />
 
         <DatePicker
             android:id="@+id/B07"
@@ -115,7 +113,8 @@
                 android:text="@string/B06"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
             <RadioGroup
                 android:id="@+id/B06"
@@ -135,7 +134,8 @@
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:text="@string/B06_a"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:typeface="serif" />
 
                 <RadioButton
                     android:id="@+id/B06_female"
@@ -144,7 +144,8 @@
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:text="@string/B06_b"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:typeface="serif" />
             </RadioGroup>
 
             <TextView
@@ -160,7 +161,8 @@
                 android:text="@string/AGE"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
             <EditText
                 android:id="@+id/B08d"
@@ -213,7 +215,8 @@
             android:text="@string/B09"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="24dp" />
+            android:textSize="24sp"
+            android:typeface="serif" />
 
         <EditText
             android:id="@+id/B09"
@@ -234,7 +237,8 @@
             android:text="@string/B10"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="24dp" />
+            android:textSize="24sp"
+            android:typeface="serif" />
 
         <EditText
             android:id="@+id/B10"
@@ -255,7 +259,8 @@
             android:text="@string/B11"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="24dp" />
+            android:textSize="24sp"
+            android:typeface="serif" />
 
         <RadioGroup
             android:id="@+id/B11"
@@ -273,7 +278,8 @@
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/GOVTH"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
             <RadioButton
                 android:id="@+id/B11_b"
@@ -282,7 +288,8 @@
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/PVTH"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
             <RadioButton
                 android:id="@+id/B11_c"
@@ -291,7 +298,8 @@
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/MH"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
             <RadioButton
                 android:id="@+id/B11_d"
@@ -300,7 +308,8 @@
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/B11_d"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
             <RadioButton
                 android:id="@+id/B11_e"
@@ -309,7 +318,8 @@
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/OTHER"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
 
         </RadioGroup>
@@ -333,7 +343,8 @@
             android:onClick="submitSB"
             android:text="@string/submit"
             android:textColor="@color/white"
-            android:textSize="24dp" />
+            android:textSize="24sp"
+            android:typeface="serif" />
 
     </LinearLayout>
 </ScrollView>

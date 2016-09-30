@@ -503,6 +503,8 @@ public class sE extends AppCompatActivity {
     LinearLayout fldGrpE40b;
     @BindView(R.id.fldGrpE42)
     LinearLayout fldGrpE42;
+    @BindView(R.id.fldGrpE45)
+    LinearLayout fldGrpE45;
     @BindView(R.id.fldGrpE48)
     LinearLayout fldGrpE48;
     @BindView(R.id.fldGrpE50a)
@@ -905,6 +907,26 @@ public class sE extends AppCompatActivity {
                     E44_x.setText(null);
                 } else {
                     E44_x.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        E45.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (E45_a.isChecked()) {
+                    fldGrpE45.setVisibility(View.VISIBLE);
+                } else {
+                    fldGrpE45.setVisibility(View.GONE);
+                    E46_a.setChecked(false);
+                    E46_b.setChecked(false);
+                    E46_c.setChecked(false);
+                    E46_d.setChecked(false);
+                    E46_e.setChecked(false);
+                    E46_f.setChecked(false);
+                    E46_g.setChecked(false);
+                    E46_h.setChecked(false);
+                    E46_x.setText(null);
                 }
             }
         });
@@ -1904,7 +1926,7 @@ public class sE extends AppCompatActivity {
             E45_c.setError(null);
         }
 
-        if (!(E46_a.isChecked() || E46_b.isChecked() || E46_c.isChecked() || E46_d.isChecked() || E46_e.isChecked() || E46_f.isChecked() || E46_g.isChecked() || E46_h.isChecked())) {
+        if (E45_a.isChecked() && !(E46_a.isChecked() || E46_b.isChecked() || E46_c.isChecked() || E46_d.isChecked() || E46_e.isChecked() || E46_f.isChecked() || E46_g.isChecked() || E46_h.isChecked())) {
             Toast.makeText(this, "Please select one option", Toast.LENGTH_LONG).show();
             E46_h.setError("Please select select one option");
             Log.i(TAG, "E46: No option selected");

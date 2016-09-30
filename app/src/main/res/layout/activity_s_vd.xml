@@ -34,7 +34,8 @@
             android:text="@string/sVD"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:typeface="serif" />
 
 
         <Switch
@@ -66,7 +67,8 @@
                 android:text="@string/VD53"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
 
             <GridLayout
@@ -370,7 +372,8 @@
                 android:text="@string/VD55"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
             <GridLayout
                 android:id="@+id/GL55"
@@ -699,7 +702,8 @@
                     android:text="Date of Vaccination"
                     android:textAlignment="center"
                     android:textColor="@color/white"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:typeface="serif" />
 
                 <DatePicker
                     android:id="@+id/DOV"
@@ -730,7 +734,8 @@
                     android:text="@string/VD54"
                     android:textAlignment="center"
                     android:textColor="@color/white"
-                android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:typeface="serif" />
 
 
                 <RadioGroup
@@ -749,7 +754,8 @@
                         android:button="@null"
                         android:drawableRight="@android:drawable/btn_radio"
                         android:text="@string/VD54_a"
-                        android:textSize="24sp" />
+                        android:textSize="24sp"
+                        android:typeface="serif" />
 
                     <RadioButton
 
@@ -759,7 +765,8 @@
                         android:button="@null"
                         android:drawableRight="@android:drawable/btn_radio"
                         android:text="@string/VD54_b"
-                        android:textSize="24sp" />
+                        android:textSize="24sp"
+                        android:typeface="serif" />
 
                     <RadioButton
                         android:id="@+id/VD54_c"
@@ -768,7 +775,8 @@
                         android:button="@null"
                         android:drawableRight="@android:drawable/btn_radio"
                         android:text="@string/VD54_c"
-                        android:textSize="24sp" />
+                        android:textSize="24sp"
+                        android:typeface="serif" />
 
                     <RadioButton
                         android:id="@+id/VD54_d"
@@ -777,7 +785,8 @@
                         android:button="@null"
                         android:drawableRight="@android:drawable/btn_radio"
                         android:text="@string/VD54_d"
-                        android:textSize="24sp" />
+                        android:textSize="24sp"
+                        android:typeface="serif" />
 
                     <RadioButton
                         android:id="@+id/VD54_e"
@@ -786,7 +795,8 @@
                         android:button="@null"
                         android:drawableRight="@android:drawable/btn_radio"
                         android:text="@string/VD54_e"
-                        android:textSize="24sp" />
+                        android:textSize="24sp"
+                        android:typeface="serif" />
 
                     <RadioButton
                         android:id="@+id/VD54_f"
@@ -795,7 +805,8 @@
                         android:button="@null"
                         android:drawableRight="@android:drawable/btn_radio"
                         android:text="@string/VD54_f"
-                        android:textSize="24sp" />
+                        android:textSize="24sp"
+                        android:typeface="serif" />
 
                     <RadioButton
                         android:id="@+id/VD54_g"
@@ -804,7 +815,8 @@
                         android:button="@null"
                         android:drawableRight="@android:drawable/btn_radio"
                         android:text="@string/OTHER"
-                        android:textSize="24sp" />
+                        android:textSize="24sp"
+                        android:typeface="serif" />
 
 
                 </RadioGroup>
@@ -830,7 +842,8 @@
             android:text="@string/VD56"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:typeface="serif" />
 
 
         <RadioGroup
@@ -849,7 +862,8 @@
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/VD56_a"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
             <RadioButton
                 android:id="@+id/VD56_b"
@@ -858,7 +872,8 @@
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/VD56_b"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
             <RadioButton
                 android:id="@+id/VD56_c"
@@ -867,7 +882,8 @@
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/VD56_c"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
             <RadioButton
                 android:id="@+id/VD56_d"
@@ -876,7 +892,8 @@
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/VD56_d"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
             <RadioButton
                 android:id="@+id/VD56_e"
@@ -885,7 +902,8 @@
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/INA"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
 
         </RadioGroup>
@@ -908,7 +926,8 @@
                 android:text="@string/VD57"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
 
             <EditText
@@ -931,7 +950,8 @@
             android:onClick="Section1"
             android:text="@string/submit"
             android:textColor="@color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:typeface="serif" />
     </LinearLayout>
 
 </ScrollView>

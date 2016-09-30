@@ -10,15 +10,19 @@ import android.provider.BaseColumns;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 
 public final class FormsContract {
     public static final String DATE_FORMAT = "yyyy-MM-dd'T'HH:mm'Z'";
     private final String TAG = "FormsContact";
     private Long ID;
     private String FormNo; //FrmNo
-    private String VA_101; // Date of Interview
+    private String VA_101 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Calendar.getInstance().getTime());  // Date of Interview
     private String VA_101TIME; // Time of Interview
-    private String VA_102; // Name of Interviewer
+    private String VA_102 = VIRBandApp.userid; // Name of Interviewer
+    private String VA_105; // Cluster Number
     private String VA_01; // Form No
     private String VA_02; // Household #
     private String VA_03 = "Gulshan Town, District East, Karachi Division, Karachi"; // Project Area / Town
@@ -34,7 +38,7 @@ public final class FormsContract {
     private String IChild4;
     private String IChild5;
     private String IChild6;
-    private String DEVICEID;
+    private String DEVICEID = VIRBandApp.deviceid;
     private String GPSLat;
     private String GPSLng;
     private String GPSAcc;
@@ -67,6 +71,7 @@ public final class FormsContract {
         this.FormNo = formNo;
         this.VA_01 = fc.getString("va_01");
         this.VA_02 = fc.getString("va_02");
+        this.VA_105 = fc.getString("va_105");
         this.VA_03 = fc.getString("va_03");
         this.VA_04 = fc.getString("va_04");
 
@@ -103,6 +108,14 @@ public final class FormsContract {
 
     public void setVA02(String va02) {
         this.VA_02 = va02;
+    }
+
+    public String getVA105() {
+        return this.VA_105;
+    }
+
+    public void setVA105(String VA105) {
+        this.VA_105 = VA105;
     }
 
     public String getVA03() {
@@ -295,6 +308,7 @@ public final class FormsContract {
         json.put(VIRForm.COLUMN_NAME_VA_101, this.VA_101);
         json.put(VIRForm.COLUMN_NAME_VA_101TIME, this.VA_101TIME);
         json.put(VIRForm.COLUMN_NAME_VA_102, this.VA_102);
+        json.put(VIRForm.COLUMN_NAME_VA_105, this.VA_105);
         json.put(VIRForm.COLUMN_NAME_VA_01, this.VA_01);
         json.put(VIRForm.COLUMN_NAME_VA_02, this.VA_02);
         json.put(VIRForm.COLUMN_NAME_VA_03, this.VA_03);
@@ -330,6 +344,7 @@ public final class FormsContract {
         public static final String COLUMN_NAME_VA_101 = "va_101";
         public static final String COLUMN_NAME_VA_101TIME = "va_101time";
         public static final String COLUMN_NAME_VA_102 = "va_102";
+        public static final String COLUMN_NAME_VA_105 = "va_105";
         public static final String COLUMN_NAME_VA_01 = "va_01";
         public static final String COLUMN_NAME_VA_02 = "va_02";
         public static final String COLUMN_NAME_VA_03 = "va_03";

@@ -236,33 +236,38 @@ public class sVD
         icTP += 1;
         ic = getIntent().getBooleanExtra("ic", false);
         long minDate = getIntent().getLongExtra("minDate", 0);
+        Date d = new Date();
+        d.setTime(getIntent().getLongExtra("minDate", 0));
         Msg.m(String.valueOf(minDate));
         DOV.setMaxDate(new Date().getTime());
         switch (icTP) {
             case 1:
-                DOV.setMinDate(new Date().getTime() - (VIRBandApp.MILLISECONDS_IN_YEAR * 2));
+                DOV.setMinDate(new Date().getTime() - (VIRBandApp.MILLISECONDS_IN_DAY * VIRBandApp.ageindays));
                 VDx.setText(getString(R.string.sVD1));
                 break;
             case 2:
-                //DOV.setMinDate(new Date().parse(minDate));
-
+                DOV.setMinDate(d.getTime() + VIRBandApp.MILLISECONDS_IN_DAY);
                 VDx.setText(getString(R.string.sVD2));
                 break;
             case 3:
+                DOV.setMinDate(d.getTime() + VIRBandApp.MILLISECONDS_IN_DAY);
                 VDx.setText(getString(R.string.sVD3));
                 break;
             case 4:
+                DOV.setMinDate(d.getTime() + VIRBandApp.MILLISECONDS_IN_DAY);
                 VDx.setText(getString(R.string.sVD4));
                 break;
             case 5:
+                DOV.setMinDate(d.getTime() + VIRBandApp.MILLISECONDS_IN_DAY);
                 VDx.setText(getString(R.string.sVD5));
                 break;
             case 6:
+                DOV.setMinDate(d.getTime() + VIRBandApp.MILLISECONDS_IN_DAY);
                 VDx.setText(getString(R.string.sVD6));
                 break;
 
             default:
-                DOV.setMinDate(minDate);
+                DOV.setMinDate(d.getTime() + VIRBandApp.MILLISECONDS_IN_DAY);
                 break;
         }
         vacc_status.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -299,7 +304,6 @@ public class sVD
                         p.setEnabled(true);
                     if (!p.isChecked())
                         o.setEnabled(true);
-
                 }
 
                 View radioButton = vACNAME01.findViewById(i);
@@ -526,7 +530,7 @@ public class sVD
                             sVD.putExtra("minDate", DOV.getCalendarView().getDate());
                             startActivity(sVD);
                         } else {
-                            Intent ending = new Intent(this, MainActivity.class);
+                            Intent ending = new Intent(this, EndActivity.class);
                             startActivity(ending);
                         }
                     }

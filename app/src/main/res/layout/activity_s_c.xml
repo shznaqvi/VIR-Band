@@ -36,7 +36,8 @@
             android:text="@string/sC"
             android:textAlignment="viewEnd"
             android:textColor="@color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:typeface="serif" />
 
         <TextView
             android:layout_width="match_parent"
@@ -48,7 +49,8 @@
             android:text="@string/C12"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:typeface="serif" />
 
         <EditText
             android:id="@+id/C12"
@@ -75,7 +77,8 @@
                 android:text="@string/C14"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
             <RadioGroup
                 android:id="@+id/C14"
@@ -91,8 +94,9 @@
                     android:layout_marginBottom="8dp"
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
-                    android:text="@string/B06_a"
-                    android:textSize="24sp" />
+                    android:text="@string/male"
+                    android:textSize="24sp"
+                    android:typeface="serif" />
 
                 <RadioButton
                     android:id="@+id/C14_female"
@@ -101,8 +105,9 @@
                     android:layout_marginBottom="8dp"
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
-                    android:text="@string/B06_b"
-                    android:textSize="24sp" />
+                    android:text="@string/female"
+                    android:textSize="24sp"
+                    android:typeface="serif" />
             </RadioGroup>
 
 
@@ -117,12 +122,11 @@
                 android:layout_marginTop="16dp"
                 android:background="@color/colorPrimary"
                 android:padding="12dp"
-                android:singleLine="false"
                 android:text="@string/AGE"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="24sp"
-                android:textStyle="bold" />
+                android:typeface="serif" />
 
             <EditText
                 android:id="@+id/C13"
@@ -131,9 +135,10 @@
                 android:layout_alignParentLeft="true"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="40dp"
-                android:layout_marginTop="80dp"
-                android:inputType="date"
-                android:maxLength="2" />
+                android:layout_marginTop="8dp"
+                android:inputType="text"
+                android:maxLength="2"
+                android:textColor="@color/colorPrimary" />
 
         </RelativeLayout>
 
@@ -148,7 +153,8 @@
             android:text="@string/C15"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:typeface="serif" />
 
         <EditText
             android:id="@+id/C15"
@@ -176,15 +182,16 @@
                 android:text="@string/C16"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
             <RadioGroup
+
                 android:id="@+id/C16"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginRight="50dp"
-                android:layout_marginTop="80dp">
+                android:layout_alignRight="@id/residence"
+                android:layout_below="@id/residence">
 
                 <RadioButton
                     android:id="@+id/C16_a"
@@ -193,7 +200,8 @@
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:text="@string/C16_a"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:typeface="serif" />
 
                 <RadioButton
                     android:id="@+id/C16_b"
@@ -202,7 +210,8 @@
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:text="@string/C16_b"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:typeface="serif" />
 
 
             </RadioGroup>
@@ -220,7 +229,8 @@
                 android:text="@string/C17"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
 
             <EditText
@@ -233,7 +243,8 @@
                 android:hint="@string/C17_a"
                 android:inputType="phone"
                 android:maxLength="8"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
             <EditText
                 android:id="@+id/C17_b"
@@ -244,7 +255,8 @@
                 android:hint="@string/C17_b"
                 android:inputType="phone"
                 android:maxLength="11"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
 
         </RelativeLayout>
@@ -268,7 +280,8 @@
                 android:text="@string/C18"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="25dp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
             <RadioGroup
                 android:id="@+id/C18"
@@ -284,7 +297,8 @@
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:text="@string/C18_a"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:typeface="serif" />
 
                 <RadioButton
                     android:id="@+id/C18_b"
@@ -302,7 +316,8 @@
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:text="@string/C18_c"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:typeface="serif" />
 
                 <RadioButton
                     android:id="@+id/C18_d"
@@ -311,7 +326,8 @@
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:text="@string/OTHER"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:typeface="serif" />
             </RadioGroup>
 
             <EditText
@@ -338,7 +354,8 @@
                 android:text="@string/C19"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="25dp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
             <RadioGroup
                 android:id="@+id/C19"
@@ -354,7 +371,8 @@
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:text="@string/C19_a"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:typeface="serif" />
 
                 <RadioButton
                     android:id="@+id/C19_b"
@@ -363,7 +381,8 @@
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:text="@string/C19_b"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:typeface="serif" />
             </RadioGroup>
         </RelativeLayout>
 
@@ -377,12 +396,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
+                android:layout_marginRight="40dp"
                 android:background="@color/colorPrimary"
                 android:padding="12dp"
                 android:text="@string/C20"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
             <RadioGroup
                 android:id="@+id/C20"
@@ -400,7 +421,8 @@
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:text="@string/C20_a"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:typeface="serif" />
 
                 <RadioButton
                     android:id="@+id/C20_b"
@@ -410,7 +432,8 @@
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:text="@string/C20_b"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:typeface="serif" />
 
                 <RadioButton
                     android:id="@+id/C20_c"
@@ -420,7 +443,8 @@
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:text="@string/C20_c"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:typeface="serif" />
 
                 <RadioButton
                     android:id="@+id/C20_d"
@@ -430,7 +454,8 @@
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:text="@string/C20_d"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:typeface="serif" />
 
                 <RadioButton
                     android:id="@+id/C20_e"
@@ -440,7 +465,8 @@
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:text="@string/C20_e"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:typeface="serif" />
 
                 <RadioButton
                     android:id="@+id/C20_f"
@@ -450,7 +476,8 @@
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:text="@string/C20_f"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:typeface="serif" />
 
                 <RadioButton
                     android:id="@+id/C20_g"
@@ -460,7 +487,8 @@
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:text="@string/OTHER"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:typeface="serif" />
             </RadioGroup>
 
             <EditText
@@ -479,12 +507,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
+                android:layout_marginLeft="40dp"
                 android:background="@color/colorPrimary"
                 android:padding="12dp"
                 android:text="@string/C21"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
             <RadioGroup
                 android:id="@+id/C21"
@@ -501,7 +531,8 @@
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:text="@string/C21_a"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:typeface="serif" />
 
                 <RadioButton
                     android:id="@+id/C21_b"
@@ -511,7 +542,8 @@
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:text="@string/C21_b"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:typeface="serif" />
 
                 <RadioButton
                     android:id="@+id/C21_c"
@@ -521,7 +553,8 @@
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:text="@string/C21_c"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:typeface="serif" />
 
                 <RadioButton
                     android:id="@+id/C21_d"
@@ -531,7 +564,8 @@
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:text="@string/C21_d"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:typeface="serif" />
 
                 <RadioButton
                     android:id="@+id/C21_e"
@@ -541,7 +575,8 @@
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:text="@string/C21_e"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:typeface="serif" />
             </RadioGroup>
 
         </RelativeLayout>
@@ -558,7 +593,8 @@
                 android:text="@string/C22"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="25sp" />
+            android:textSize="24sp"
+            android:typeface="serif" />
 
 
         <RadioGroup
@@ -578,7 +614,8 @@
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/C22_a"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
             <RadioButton
                 android:id="@+id/C22_b"
@@ -588,7 +625,8 @@
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/C22_b"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
             <RadioButton
                 android:id="@+id/C22_c"
@@ -598,7 +636,8 @@
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/C22_c"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
             <RadioButton
                 android:id="@+id/C22_d"
                 android:layout_width="wrap_content"
@@ -607,7 +646,8 @@
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/E34_f"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
             <RadioButton
                 android:id="@+id/C22_e"
@@ -617,7 +657,8 @@
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/AUNT"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
             <RadioButton
                 android:id="@+id/C22_f"
@@ -627,7 +668,8 @@
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/OTHER"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
         </RadioGroup>
 
@@ -656,7 +698,8 @@
             android:paddingRight="16dp"
             android:text="Submit"
             android:textColor="@color/white"
-            android:textSize="24dp" />
+            android:textSize="24sp"
+            android:typeface="serif" />
 
 
     </LinearLayout>

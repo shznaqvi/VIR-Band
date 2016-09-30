@@ -237,66 +237,66 @@ public class sB extends AppCompatActivity {
         } else {
             B08m.setError(null);
         }
-
-        if (B08d.getText().toString().isEmpty()) {
-            Toast.makeText(sB.this, "Please enter days (or '0')", Toast.LENGTH_LONG).show();
-            B08d.setError("Please enter days (or '0')");
-            Log.i(TAG, "Please enter days (or '0')");
-            return false;
-        } else {
-            B08d.setError(null);
-        }
-        if (B08m.getText().toString().isEmpty()) {
-            Toast.makeText(sB.this, "Please enter month (or '0')", Toast.LENGTH_LONG).show();
-            B08m.setError("Please enter month (or '0')");
-            Log.i(TAG, "Please enter month (or '0')");
-            return false;
-        } else {
-            B08m.setError(null);
-        }
-
-        if (B08y.getText().toString().isEmpty()) {
-            Toast.makeText(sB.this, "Please enter year (or '0')", Toast.LENGTH_LONG).show();
-            B08y.setError("Please enter year (or '0')");
-            Log.i(TAG, "Please enter year (or '0')");
-            return false;
-        } else {
-            B08y.setError(null);
-        }
-        
-        if (!B08m.getText().toString().isEmpty()) {
-            if (Integer.valueOf(B08m.getText().toString()) > 11) {
-                Toast.makeText(sB.this, "Months cannot be more than 11", Toast.LENGTH_LONG).show();
-                B08m.setError("Months cannot be more than 11");
-                Log.i(TAG, "Months cannot be more than 11");
-                return false;
-            } else {
-                B08m.setError(null);
-            }
-        }
-
-        if (!B08d.getText().toString().isEmpty()) {
-            if (Integer.valueOf(B08d.getText().toString()) > 29) {
-                Toast.makeText(sB.this, "Days cannot be more than 29", Toast.LENGTH_LONG).show();
-                B08d.setError("Days cannot be more than 29");
-                Log.i(TAG, "Days cannot be more than 29");
+        if (!DOB.isChecked()) {
+            if (B08d.getText().toString().isEmpty()) {
+                Toast.makeText(sB.this, "Please enter days (or '0')", Toast.LENGTH_LONG).show();
+                B08d.setError("Please enter days (or '0')");
+                Log.i(TAG, "Please enter days (or '0')");
                 return false;
             } else {
                 B08d.setError(null);
             }
-        }
+            if (B08m.getText().toString().isEmpty()) {
+                Toast.makeText(sB.this, "Please enter month (or '0')", Toast.LENGTH_LONG).show();
+                B08m.setError("Please enter month (or '0')");
+                Log.i(TAG, "Please enter month (or '0')");
+                return false;
+            } else {
+                B08m.setError(null);
+            }
 
-        if (!B08y.getText().toString().isEmpty()) {
-            if (Integer.valueOf(B08y.getText().toString()) > 1) {
-                Toast.makeText(sB.this, "Year cannot be more than 1", Toast.LENGTH_LONG).show();
-                B08y.setError("Year cannot be more than 1");
-                Log.i(TAG, "Year cannot be more than 1");
+            if (B08y.getText().toString().isEmpty()) {
+                Toast.makeText(sB.this, "Please enter year (or '0')", Toast.LENGTH_LONG).show();
+                B08y.setError("Please enter year (or '0')");
+                Log.i(TAG, "Please enter year (or '0')");
                 return false;
             } else {
                 B08y.setError(null);
             }
-        }
 
+            if (!B08m.getText().toString().isEmpty()) {
+                if (Integer.valueOf(B08m.getText().toString()) > 11) {
+                    Toast.makeText(sB.this, "Months cannot be more than 11", Toast.LENGTH_LONG).show();
+                    B08m.setError("Months cannot be more than 11");
+                    Log.i(TAG, "Months cannot be more than 11");
+                    return false;
+                } else {
+                    B08m.setError(null);
+                }
+            }
+
+            if (!B08d.getText().toString().isEmpty()) {
+                if (Integer.valueOf(B08d.getText().toString()) > 29) {
+                    Toast.makeText(sB.this, "Days cannot be more than 29", Toast.LENGTH_LONG).show();
+                    B08d.setError("Days cannot be more than 29");
+                    Log.i(TAG, "Days cannot be more than 29");
+                    return false;
+                } else {
+                    B08d.setError(null);
+                }
+            }
+
+            if (!B08y.getText().toString().isEmpty()) {
+                if (Integer.valueOf(B08y.getText().toString()) > 1) {
+                    Toast.makeText(sB.this, "Year cannot be more than 1", Toast.LENGTH_LONG).show();
+                    B08y.setError("Year cannot be more than 1");
+                    Log.i(TAG, "Year cannot be more than 1");
+                    return false;
+                } else {
+                    B08y.setError(null);
+                }
+            }
+        }
         if (B09.getText().toString().isEmpty()) {
             Toast.makeText(sB.this, "Please enter Mother's Name", Toast.LENGTH_LONG).show();
             B09.setError("Please enter Mother's Name");

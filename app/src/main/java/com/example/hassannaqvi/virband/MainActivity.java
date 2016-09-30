@@ -14,6 +14,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import java.net.InetSocketAddress;
@@ -22,6 +23,7 @@ import java.net.SocketAddress;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
@@ -29,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
     private static String ipAddress = "10.1.42.30";
     private static String port = "3000";
     String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
-
+    @BindView(R.id.fldGrpAdmin)
+    LinearLayout fldGrpAdmin;
 
 
     @Override
@@ -52,7 +55,9 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });*/
-
+        if (VIRBandApp.appAdmin) {
+            fldGrpAdmin.setVisibility(View.VISIBLE);
+        }
         FormsDBHelper db = new FormsDBHelper(this);
         Toast.makeText(this, "Last ID: " + String.valueOf(db.lastInsertId()), Toast.LENGTH_SHORT).show();
 

@@ -48,7 +48,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
      * TODO: remove after connecting to a real authentication system.
      */
     private static final String[] DUMMY_CREDENTIALS = new String[]{
-            "foo@example.com:hello", "bar@example.com:world"
+            "dmu@aku:aku?dmu", "bar@example.com:world",
+            "amj@tvi:amja12345", "sf@tvi:sfsf12345", "fa@tvi:fafa12345",
+            "ss:ssss12345", "fd:fdfd12345", "mf:mfmf12345", "zl:zlzl12345", "sa:sasa12345"
     };
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
@@ -170,11 +172,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             mEmailView.setError(getString(R.string.error_field_required));
             focusView = mEmailView;
             cancel = true;
-        } else if (!isEmailValid(email)) {
+        } /*else if (!isEmailValid(email)) {
             mEmailView.setError(getString(R.string.error_invalid_email));
             focusView = mEmailView;
             cancel = true;
-        }
+        }*/
 
         if (cancel) {
             // There was an error; don't attempt login and focus the first
@@ -336,7 +338,12 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(false);
 
             if (success) {
-                finish();
+                //finish();
+                VIRBandApp.appAdmin = mEmail.contains("@");
+                VIRBandApp.userid = mEmail.toString();
+
+                Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(i);
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
                 mPasswordView.requestFocus();

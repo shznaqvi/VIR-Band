@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:scrollbars="horizontal">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,7 +16,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.hassannaqvi.virband.sA">
+        tools:context="com.example.hassannaqvi.virband.sA">
 
 
     <ImageView
@@ -20,31 +27,49 @@
 
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="left"
         android:layout_marginBottom="8dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:background="@color/colorPrimary"
         android:padding="12dp"
         android:text="@string/A02"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="24dp" />
+        android:textSize="24sp"
+        android:typeface="serif" />
 
     <EditText
         android:id="@+id/A02"
-        android:layout_width="162dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="number"
-        android:maxLength="3"
+        android:digits="1234567890-QWERTYUIOPASDFGHJKLZXCVBNM"
+        android:inputType="text"
+        android:maxLength="5"
         android:textColor="#654688" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            android:padding="12dp"
+            android:text="@string/cluster"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:typeface="serif" />
+
+        <EditText
+            android:id="@+id/A105"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+        android:inputType="number"
+            android:maxLength="9"
+        android:textColor="#654688" />
 
     <TextView
         android:layout_width="match_parent"
@@ -56,7 +81,8 @@
         android:text="@string/A04"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:typeface="serif" />
 
     <RadioGroup
         android:id="@+id/A04"
@@ -74,7 +100,8 @@
             android:button="@null"
             android:drawableRight="@android:drawable/btn_radio"
             android:text="@string/A04_a"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:typeface="serif" />
 
         <RadioButton
             android:id="@+id/A04_b"
@@ -83,7 +110,8 @@
             android:button="@null"
             android:drawableRight="@android:drawable/btn_radio"
             android:text="@string/A04_b"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:typeface="serif" />
     </RadioGroup>
 
     <Button
@@ -99,7 +127,7 @@
         android:paddingRight="16dp"
         android:text="Submit"
         android:textColor="@color/white"
-        android:textSize="24dp" />
-
+        android:textSize="24sp" />
 
 </LinearLayout>
+</ScrollView>

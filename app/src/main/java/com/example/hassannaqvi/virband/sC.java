@@ -475,13 +475,13 @@ public class sC extends AppCompatActivity {
             C22_d.setError("Please select Relation");
             Log.i(TAG, "Relation not selected");
             return false;
-        } else if (C14_female.isChecked() && C22_b.isChecked()) {
+        } else if (C14_female.isChecked() && (C22_b.isChecked() || C22_d.isChecked())) {
             Toast.makeText(this, "Relation DO NOT match with Gender", Toast.LENGTH_LONG).show();
             C22_b.setError("Relation DO NOT match with Gender");
             C14_female.setError("Relation DO NOT match with Gender");
             Log.i(TAG, "Relation DO NOT match with Gender");
             return false;
-        } else if (C14_male.isChecked() && !(C22_b.isChecked() || C22_f.isChecked())) {
+        } else if (C14_male.isChecked() && !(C22_b.isChecked() || C22_d.isChecked())) {
             Toast.makeText(this, "Relation DO NOT match with Gender", Toast.LENGTH_LONG).show();
             C22_d.setError("Relation DO NOT match with Gender");
             C14_male.setError("Relation DO NOT match with Gender");

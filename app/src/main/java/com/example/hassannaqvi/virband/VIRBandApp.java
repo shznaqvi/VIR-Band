@@ -35,7 +35,11 @@ public class VIRBandApp extends Application {
     private static final long DAYS_IN_YEAR = 365;
     public static final long MILLISECONDS_IN_YEAR = MILLIS_IN_SECOND * SECONDS_IN_MINUTE * MINUTES_IN_HOUR * HOURS_IN_DAY * DAYS_IN_YEAR;
     public static int ageindays;
+    public static boolean appAdmin = false;
+    public static String userid;
+    public static String deviceid;
     protected static LocationManager locationManager;
+    public String android_id = "";
 
     public static void longInfo(String str) {
         if (str.length() > 4000) {
@@ -48,9 +52,10 @@ public class VIRBandApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        TypefaceUtil.overrideFont(getApplicationContext(), "SERIF", "fonts/JameelNooriNastaleeq.ttf"); // font from assets: "assets/fonts/Roboto-Regular.ttf
 
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-
+        deviceid = android_id.toString();
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling

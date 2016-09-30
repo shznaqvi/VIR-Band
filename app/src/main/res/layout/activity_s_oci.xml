@@ -32,10 +32,11 @@
             android:layout_marginTop="20dp"
             android:background="@color/colorPrimary"
             android:padding="12dp"
-            android:text="@string/sB"
+            android:text="@string/sOC"
             android:textAlignment="viewEnd"
             android:textColor="@color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:typeface="serif" />
 
         <TextView
             android:layout_width="match_parent"
@@ -47,16 +48,18 @@
             android:text="@string/B05"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:typeface="serif" />
 
         <EditText
-            android:id="@+id/B05"
+            android:id="@+id/OC04"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:digits="QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm"
             android:inputType="text"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:typeface="serif" />
 
         <CheckBox
             android:id="@+id/DOB"
@@ -82,10 +85,11 @@
                 android:text="@string/B07"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
             <DatePicker
-                android:id="@+id/B07"
+                android:id="@+id/OC06"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -112,10 +116,11 @@
                 android:text="@string/B06"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
             <RadioGroup
-                android:id="@+id/B06"
+                android:id="@+id/OC05"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignRight="@+id/textView2"
@@ -127,22 +132,24 @@
                 android:gravity="right">
 
                 <RadioButton
-                    android:id="@+id/B06_male"
+                    android:id="@+id/OC05_male"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:text="@string/B06_a"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:typeface="serif" />
 
                 <RadioButton
-                    android:id="@+id/B06_female"
+                    android:id="@+id/OC05_female"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:text="@string/B06_b"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:typeface="serif" />
             </RadioGroup>
 
             <TextView
@@ -158,10 +165,11 @@
                 android:text="@string/AGE"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
             <EditText
-                android:id="@+id/B08d"
+                android:id="@+id/OC07d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/textView"
@@ -174,7 +182,7 @@
                 android:maxLength="1" />
 
             <EditText
-                android:id="@+id/B08m"
+                android:id="@+id/OC07m"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView"
@@ -187,7 +195,7 @@
                 android:maxLength="2" />
 
             <EditText
-                android:id="@+id/B08y"
+                android:id="@+id/OC07y"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView"
@@ -212,10 +220,10 @@
             android:text="@string/B09"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="24dp" />
+            android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/B09"
+            android:id="@+id/OC08"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
@@ -233,10 +241,10 @@
             android:text="@string/B10"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="24dp" />
+            android:textSize="24sp" />
 
         <EditText
-            android:id="@+id/B10"
+            android:id="@+id/OC09"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -254,10 +262,10 @@
             android:text="@string/B11"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="24dp" />
+            android:textSize="24sp" />
 
         <RadioGroup
-            android:id="@+id/B11"
+            android:id="@+id/OC10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
@@ -266,55 +274,60 @@
             android:gravity="right">
 
             <RadioButton
-                android:id="@+id/B11_a"
+                android:id="@+id/OC10_a"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/PVTH"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
             <RadioButton
-                android:id="@+id/B11_b"
+                android:id="@+id/OC10_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/PVTC"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
             <RadioButton
-                android:id="@+id/B11_c"
+                android:id="@+id/OC10_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/B11_c"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
             <RadioButton
-                android:id="@+id/B11_d"
+                android:id="@+id/OC10_d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/GOVTH"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
             <RadioButton
-                android:id="@+id/B11_e"
+                android:id="@+id/OC10_e"
                 android:layout_width="145dp"
                 android:layout_height="wrap_content"
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
                 android:text="@string/OTHER"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:typeface="serif" />
 
 
         </RadioGroup>
 
         <EditText
-            android:id="@+id/B11_x"
+            android:id="@+id/OC10_x"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:digits="QWERTYUIOPASDFGHJKLZXCVBNM, ,qwertzuiopasdfghjklyxcvbnm"
@@ -322,17 +335,17 @@
             android:inputType="text" />
 
         <Button
-            android:id="@+id/btnSubmitSB"
+            android:id="@+id/btnSubmitOC"
             android:layout_width="225dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="20dp"
             android:layout_marginTop="16dp"
             android:background="@color/green"
-            android:onClick="submitSB"
+            android:onClick="submitOC"
             android:text="@string/submit"
             android:textColor="@color/white"
-            android:textSize="24dp" />
+            android:textSize="24sp" />
 
     </LinearLayout>
 </ScrollView>

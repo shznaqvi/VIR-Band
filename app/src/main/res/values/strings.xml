@@ -24,8 +24,8 @@
     <string name="tvi_logo">TVI LOGO</string>
     <string name="A104_a">Sachal Goth</string>
     <string name="A104_b">Pehalwan Goth</string>
-    <string name="male">Male</string>
-    <string name="female">Female</string>
+    <string name="male">مرد</string>
+    <string name="female">عورت</string>
     <string name="household_number">Household Number</string>
 
     <string name="sA"> شناختی تفصیلات .A </string>
@@ -40,8 +40,8 @@
     <string name="sB"> B. انڈیکس چائلڈ کی تفصیلات </string>
     <string name="B05"> نام </string>
     <string name="B06"> جنس </string>
-    <string name="B06_a"> مرد </string>
-    <string name="B06_b"> عورت </string>
+    <string name="B06_a"> بچہ </string>
+    <string name="B06_b"> بچی </string>
     <string name="B07"> تاریخ پیدائش </string>
     <string name="AGE"> عمر </string>
     <string name="B09"> والدہ کا نام </string>
@@ -62,8 +62,8 @@
     <string name="C14_f"> عورت </string>
     <string name="C15">پتہ</string>
     <string name="C16"> رہائش </string>
-    <string name="C16_a"> مستقل </string>
-    <string name="C16_b"> عارضی </string>
+    <string name="C16_a"> ذاتی </string>
+    <string name="C16_b"> کرایہ دار </string>
     <string name="C17"> رابطے کی تفصیلات </string>
     <string name="C17_a"> پی ٹی سی ایل نمبر </string>
     <string name="C17_b"> موبائل نمبر </string>
@@ -117,24 +117,24 @@
     <string name="D27_f"> گھریلو خاتون </string>
     <string name="D28"> گھرانے کی ماہانہ آمدنی </string>
     <string name="D28_a"> دس ہزار (10,000) سے کم </string>
-    <string name="D28_b"> دس ہزار ایک (10,001) سے تیس ہزار (30,000) تک </string>
-    <string name="D28_c"> اکتیس ہزار ایک (30,001) سے پچاس ہزار (50,000) تک </string>
-    <string name="D28_d"> اکیاون ہزار (50,001) سے اسی ہزار (80,000) تک </string>
-    <string name="D28_e"> اکیاسی ہزار (80,001) سے ایک لاکھ (100,000) تک </string>
+    <string name="D28_b"> دس ہزار (10,000) سے تیس ہزار (30,000) تک </string>
+    <string name="D28_c"> تیس ہزار ایک (30,001) سے پچاس ہزار (50,000) تک </string>
+    <string name="D28_d"> پچاس ہزار ایک (50,001) سے اسی ہزار (80,000) تک </string>
+    <string name="D28_e"> اسی ہزار ایک (80,001) سے ایک لاکھ (100,000) تک </string>
     <string name="D28_f"> ایک لاکھ (100,000) سے زیادہ </string>
 
     <!-- SECTION 'E' -->
     <string name="sE"> E. معلومات، رویہ اور عمل </string>
-    <string name="E29"> کیا آپ نے کبھی ویکسینیشن (ٹیکے لگوانے)کے بارے میں سنا ہے </string>
+    <string name="E29"> کیا آپ نے کبھی ویکسینیشن (ٹیکے لگوانے) کے بارے میں سنا ہے </string>
     <string name="YES"> جی ہاں </string>
     <string name="NO"> جی نہیں </string>
-    <string name="E30"> ویکسینیشن (ٹیکے لگوانے)کے بارے میں کیا سنا ہے </string>
+    <string name="E30"> ویکسینیشن (ٹیکے لگوانے) کے بارے میں کیا سنا ہے </string>
     <string name="E30_a"> بیماریوں کے علاج کے لئے </string>
     <string name="E30_b"> بچوں کے لئے اچھا نہیں ہے </string>
     <string name="E30_c"> بچوں کے لئے بہت اہم ہے </string>
     <string name="E30_d"> بیماریوں سے بچاوٗ کے لئے </string>
     <string name="E30_e"> قوت مدافعت بڑھانے کے لئے </string>
-    <string name="E31"> ویکسینیشن (ٹیکے لگوانے)کے بارے میں کہاں سے معلومات حاصل ہوئیں </string>
+    <string name="E31"> ویکسینیشن (ٹیکے لگوانے) کے بارے میں کہاں سے معلومات حاصل ہوئیں </string>
     <string name="E31_a"> ٹیکے لگانے والا </string>
     <string name="E31_b"> پولیو ٹیم </string>
     <string name="E31_c"> اخبار </string>
@@ -220,7 +220,7 @@
     <string name="E42_d"> ٹیکسی </string>
     <string name="E42_e"> رکشہ </string>
     <string name="E42_f"> بس </string>
-    <string name="E43"> جو سواری آپ استعمال کرتے ہیں اس میں کتنی دیر میں آپ اپنے گھر سے ویکسینیشن کی جگہ تک پپہنچتےہیں </string>
+    <string name="E43"> جو سواری آپ استعمال کرتے ہیں اس میں کتنی دیر میں آپ اپنے گھر سے ویکسینیشن کی جگہ تک پہنچتے ہیں </string>
     <string name="E43_a"> پانچ منٹ میں </string>
     <string name="E43_b"> دس منٹ میں </string>
     <string name="E43_c"> پندرہ منٹ میں </string>
@@ -323,5 +323,7 @@
     <string name="B08m">مہینے</string>
     <string name="B08y">سال</string>
     <string name="Vacc">ویکسینیشن ہوِئی</string>
+    <string name="sOC">بچے کی تفصیلات (اندیکس چائلڈ کے علاوہ، دو سال سے کم عمر)</string>
+    <string name="cluster">کلسٹر</string>
 
 </resources>

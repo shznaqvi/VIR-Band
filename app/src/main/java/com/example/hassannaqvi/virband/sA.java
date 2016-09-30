@@ -31,6 +31,8 @@ public class sA extends AppCompatActivity {
 
     @BindView(R.id.A02)
     EditText A02;
+    @BindView(R.id.A105)
+    EditText A105;
     @BindView(R.id.A04)
     RadioGroup A04;
     @BindView(R.id.A04_a)
@@ -42,7 +44,7 @@ public class sA extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_s_a);
-
+        TypefaceUtil.overrideFont(getApplicationContext(), "sans", "fonts/JameelNooriNastaleeq.ttf");
         ButterKnife.bind(this);
         deviceId = Settings.Secure.getString(getApplicationContext().getContentResolver(),
                 Settings.Secure.ANDROID_ID);
@@ -76,8 +78,9 @@ public class sA extends AppCompatActivity {
 
         fc.setVA101(dtToday);
         fc.setVA102("TestUser");
-        fc.setVA02(A02.getText().toString());
 
+        fc.setVA02(A02.getText().toString());
+        fc.setVA105(A105.getText().toString());
 
         switch (A04.getCheckedRadioButtonId()) {
             case R.id.A04_a:
@@ -88,8 +91,8 @@ public class sA extends AppCompatActivity {
                 break;
             default:
                 fc.setVA04("xx");
-
         }
+
         fc.setVA109("3");
         fc.setDeviceID(deviceId);
         setGPS();
@@ -105,11 +108,20 @@ public class sA extends AppCompatActivity {
         if (A02.getText().toString().isEmpty()) {
 
             A02.setError("Household Number not given!");
-            Log.i(TAG, "A01- Household is empty");
+            Log.i(TAG, "A02- Household is empty");
             return false;
         } else {
             A02.setError(null);
             HHNo = A02.getText().toString();
+        }
+
+        if (A105.getText().toString().isEmpty()) {
+
+            A105.setError("Cluster Number not given!");
+            Log.i(TAG, "A105- Cluster is empty");
+            return false;
+        } else {
+            A105.setError(null);
         }
 
         if (A04.getCheckedRadioButtonId() == -1) {
