@@ -55,21 +55,30 @@ public class sA extends AppCompatActivity {
 
         if (formValidation()) {
             SaveDraft();
-            UpdateDB();
+            if (UpdateDB()) ;
             Intent SA = new Intent(this, sB.class);
             startActivity(SA);
         }
 
     }
 
-    private void UpdateDB() {
+    private boolean UpdateDB() {
         Long rowId;
         FormsDBHelper db = new FormsDBHelper(this);
-
+        rowId = null;
         rowId = db.addForm(fc);
+
         fc.setID(rowId);
-        fc.setFormNo(fc.getDeviceID().substring(fc.getDeviceID().length() - 5) + "-" + fc.getID());
-        Toast.makeText(sA.this, "Current Form No: " + fc.getFormNo(), Toast.LENGTH_SHORT).show();
+
+        if (rowId != null) {
+            Toast.makeText(sA.this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
+            fc.setFormNo(fc.getDeviceID().substring(fc.getDeviceID().length() - 5) + "-" + fc.getID());
+            Toast.makeText(sA.this, "Current Form No: " + fc.getFormNo(), Toast.LENGTH_SHORT).show();
+            return true;
+        } else {
+            Toast.makeText(sA.this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
 
     }
 

@@ -21,66 +21,180 @@ public class OtherChildContract {
     private String OC_01 = sB.iChildName;
     private String OC_02 = sA.fc.getVA02();
     private String OC_03 = sA.fc.getFormNo();
-    private String OC_04;
-    private String OC_05;
-    private String OC_06;
-    private String OC_DOB;
-    private String OC_07d;
-    private String OC_07m;
-    private String OC_07y;
-    private String OC_08;
-    private String OC_09;
-    private String OC_10;
-    private String OC_11;
-    private String OC_12;
-    private String OC_13;
-    private String OC_14;
-    private String OC_V1;
-    private String OC_V2;
-    private String OC_V3;
-    private String OC_V4;
-    private String OC_V5;
-    private String OC_V6;
-
-    public OtherChildContract(Context context) {
-        this.context = context;
-    }
+    private String OC;
+    private String OCV1;
+    private String OCV2;
+    private String OCV3;
+    private String OCV4;
+    private String OCV5;
+    private String OCV6;
+    private String DEVICEID = VIRBandApp.deviceid;
 
     public OtherChildContract() {
     }
 
-    public OtherChildContract(String ocId) {
-        this.OC_ID = ocId;
+    public OtherChildContract(String formNo) {
+        this.FormID = formNo;
     }
 
-    public OtherChildContract(String formId, JSONObject oc) throws JSONException {
+    public OtherChildContract(String formID, String OC) {
+        FormID = formID;
+        this.OC = OC;
+    }
 
-        this.FormID = formId;
-        this.OC_01 = oc.getString("OC01");
-        this.OC_02 = oc.getString("OC02");
-        this.OC_03 = oc.getString("OC03");
-        this.OC_04 = oc.getString("OC04");
-        this.OC_05 = oc.getString("OC05");
-        this.OC_06 = oc.getString("OC06");
-        this.OC_07d = oc.getString("OC07d");
-        this.OC_07m = oc.getString("OC07m");
-        this.OC_07y = oc.getString("OC07y");
-        this.OC_08 = oc.getString("OC08");
-        this.OC_09 = oc.getString("OC09");
-        this.OC_10 = oc.getString("OC10");
-        this.OC_11 = oc.getString("OC11");
-        this.OC_12 = oc.getString("OC12");
-        this.OC_13 = oc.getString("OC13");
-        this.OC_14 = oc.getString("OC14");
+
+    public Long getID() {
+        return ID;
+    }
+
+    public void setID(Long ID) {
+        this.ID = ID;
+    }
+
+    public String getOC_ID() {
+        return OC_ID;
+    }
+
+    public void setOC_ID(String OC_ID) {
+        this.OC_ID = OC_ID;
+    }
+
+    public String getFormID() {
+        return FormID;
+    }
+
+    public void setFormID(String formID) {
+        FormID = formID;
+    }
+
+    public String getOC_01() {
+        return OC_01;
+    }
+
+    public void setOC_01(String OC_01) {
+        this.OC_01 = OC_01;
+    }
+
+    public String getOC_02() {
+        return OC_02;
+    }
+
+    public void setOC_02(String OC_02) {
+        this.OC_02 = OC_02;
+    }
+
+    public String getOC_03() {
+        return OC_03;
+    }
+
+    public void setOC_03(String OC_03) {
+        this.OC_03 = OC_03;
+    }
+
+    public String getOC() {
+        return OC;
+    }
+
+    public void setOC(String OC) {
+        this.OC = OC;
+    }
+
+    public String getOCV1() {
+        return OCV1;
+    }
+
+    public void setOCV1(String OCV1) {
+        this.OCV1 = OCV1;
+    }
+
+    public String getOCV2() {
+        return OCV2;
+    }
+
+    public void setOCV2(String OCV2) {
+        this.OCV2 = OCV2;
+    }
+
+    public String getOCV3() {
+        return OCV3;
+    }
+
+    public void setOCV3(String OCV3) {
+        this.OCV3 = OCV3;
+    }
+
+    public String getOCV4() {
+        return OCV4;
+    }
+
+    public void setOCV4(String OCV4) {
+        this.OCV4 = OCV4;
+    }
+
+    public String getOCV5() {
+        return OCV5;
+    }
+
+    public void setOCV5(String OCV5) {
+        this.OCV5 = OCV5;
+    }
+
+    public String getOCV6() {
+        return OCV6;
+    }
+
+    public void setOCV6(String OCV6) {
+        this.OCV6 = OCV6;
+    }
+
+    public String getDeviceID() {
+        return DEVICEID;
+    }
+
+    public void setDeviceID(String deviceID) {
+        this.DEVICEID = deviceID;
+    }
+
+    public JSONObject toJSONObject() throws JSONException {
+        JSONObject json = new JSONObject();
+        json.put(OCs._ID, this.ID);
+        json.put(OCs.COLUMN_NAME_FORMNO, this.FormID);
+        json.put(OCs.COLUMN_NAME_OC_ID, this.OC_ID);
+        json.put(OCs.COLUMN_NAME_OC_01, this.OC_01);
+        json.put(OCs.COLUMN_NAME_OC_02, this.OC_02);
+        json.put(OCs.COLUMN_NAME_OC_03, this.OC_03);
+        json.put(OCs.COLUMN_NAME_OC, this.OC);
+        json.put(OCs.COLUMN_NAME_OCV1, this.OCV1);
+        json.put(OCs.COLUMN_NAME_OCV2, this.OCV2);
+        json.put(OCs.COLUMN_NAME_OCV3, this.OCV3);
+        json.put(OCs.COLUMN_NAME_OCV4, this.OCV4);
+        json.put(OCs.COLUMN_NAME_OCV5, this.OCV5);
+        json.put(OCs.COLUMN_NAME_OCV6, this.OCV6);
+        json.put(OCs.COLUMN_NAME_DEVICE_ID, this.DEVICEID);
+
+
+        return json;
 
     }
 
-    public static abstract class OtherChild implements BaseColumns {
+    public static abstract class OCs implements BaseColumns {
 
-        public static final String TABLE_NAME = "other_child";
+        public static final String TABLE_NAME = "ocs";
         public static final String COLUMN_NAME_NULLABLE = "NULLHACK";
         public static final String _ID = "_id";
+        public static final String COLUMN_NAME_FORMNO = "oc_frmno";
+        public static final String COLUMN_NAME_OC_ID = "oc_odid";
+        public static final String COLUMN_NAME_OC_01 = "oc_01";
+        public static final String COLUMN_NAME_OC_02 = "oc_02";
+        public static final String COLUMN_NAME_OC_03 = "oc_03";
+        public static final String COLUMN_NAME_OC = "oc";
+        public static final String COLUMN_NAME_OCV1 = "ocv1";
+        public static final String COLUMN_NAME_OCV2 = "ocv2";
+        public static final String COLUMN_NAME_OCV3 = "ocv3";
+        public static final String COLUMN_NAME_OCV4 = "ocv4";
+        public static final String COLUMN_NAME_OCV5 = "ocv5";
+        public static final String COLUMN_NAME_OCV6 = "ocv6";
+        public static final String COLUMN_NAME_DEVICE_ID = "device_id";
     }
-
 
 }

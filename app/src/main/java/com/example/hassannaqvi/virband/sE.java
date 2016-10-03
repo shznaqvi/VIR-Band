@@ -1089,10 +1089,11 @@ public class sE extends AppCompatActivity {
         int updcount = db.updateSE();
         if (updcount == 1) {
             Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
+            return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
         }
-        return true;
     }
 
     private void SaveDraft() throws JSONException {

@@ -130,13 +130,12 @@
 
             <EditText
                 android:id="@+id/C13"
-                android:layout_width="130dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="8dp"
-                android:inputType="text"
+                android:layout_alignLeft="@+id/Age"
+                android:layout_alignRight="@+id/Age"
+                android:layout_below="@id/Age"
+                android:inputType="number"
                 android:maxLength="2"
                 android:textColor="@color/colorPrimary" />
 
@@ -307,7 +306,8 @@
                     android:button="@null"
                     android:drawableRight="@android:drawable/btn_radio"
                     android:text="@string/C18_b"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:typeface="serif" />
 
                 <RadioButton
                     android:id="@+id/C18_c"

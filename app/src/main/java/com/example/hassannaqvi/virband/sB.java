@@ -134,10 +134,11 @@ public class sB extends AppCompatActivity {
 
         if (updcount == 1) {
             Toast.makeText(sB.this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
+            return true;
         } else {
             Toast.makeText(sB.this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
         }
-        return true;
 
     }
 
@@ -176,7 +177,7 @@ public class sB extends AppCompatActivity {
         } else {
             int m2days = (Integer.valueOf(B08m.getText().toString()) * 30);
             int y2days = (Integer.valueOf(B08y.getText().toString()) * 365);
-            VIRBandApp.ageindays = (m2days + y2days + Integer.valueOf(B08d.getText().toString()));
+            VIRBandApp.ageindays = m2days + y2days + Integer.valueOf(B08d.getText().toString());
         }
         Log.d(TAG, "Age in Days: " + VIRBandApp.ageindays);
 

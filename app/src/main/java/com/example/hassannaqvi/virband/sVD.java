@@ -225,6 +225,7 @@ public class sVD
     LinearLayout fldGrpVD54;
     @BindView(R.id.fldGrpVD56)
     LinearLayout fldGrpVD56;
+    private Long minDate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -235,39 +236,38 @@ public class sVD
         icTP = getIntent().getIntExtra("icTP", 0);
         icTP += 1;
         ic = getIntent().getBooleanExtra("ic", false);
-        long minDate = getIntent().getLongExtra("minDate", 0);
-        Date d = new Date();
-        d.setTime(getIntent().getLongExtra("minDate", 0));
-        Msg.m(String.valueOf(minDate));
-        DOV.setMaxDate(new Date().getTime());
+
+        DOV.setMinDate(new Date().getTime() - (VIRBandApp.MILLISECONDS_IN_DAY * (VIRBandApp.ageindays)));
+        DOV.setMaxDate(new Date().getTime() + VIRBandApp.MILLISECONDS_IN_DAY);
+
         switch (icTP) {
             case 1:
-                DOV.setMinDate(new Date().getTime() - (VIRBandApp.MILLISECONDS_IN_DAY * VIRBandApp.ageindays));
+                //DOV.setMinDate(new Date().getTime() - (VIRBandApp.MILLISECONDS_IN_DAY * VIRBandApp.ageindays));
                 VDx.setText(getString(R.string.sVD1));
                 break;
             case 2:
-                DOV.setMinDate(d.getTime() + VIRBandApp.MILLISECONDS_IN_DAY);
+                //DOV.setMinDate(d.getTime());
                 VDx.setText(getString(R.string.sVD2));
                 break;
             case 3:
-                DOV.setMinDate(d.getTime() + VIRBandApp.MILLISECONDS_IN_DAY);
+                //DOV.setMinDate(d.getTime());
                 VDx.setText(getString(R.string.sVD3));
                 break;
             case 4:
-                DOV.setMinDate(d.getTime() + VIRBandApp.MILLISECONDS_IN_DAY);
+                //DOV.setMinDate(d.getTime());
                 VDx.setText(getString(R.string.sVD4));
                 break;
             case 5:
-                DOV.setMinDate(d.getTime() + VIRBandApp.MILLISECONDS_IN_DAY);
+                //DOV.setMinDate(d.getTime());
                 VDx.setText(getString(R.string.sVD5));
                 break;
             case 6:
-                DOV.setMinDate(d.getTime() + VIRBandApp.MILLISECONDS_IN_DAY);
+                //DOV.setMinDate(d.getTime());
                 VDx.setText(getString(R.string.sVD6));
                 break;
 
             default:
-                DOV.setMinDate(d.getTime() + VIRBandApp.MILLISECONDS_IN_DAY);
+                //DOV.setMinDate(d.getTime() + VIRBandApp.MILLISECONDS_IN_DAY);
                 break;
         }
         vacc_status.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -514,27 +514,35 @@ public class sVD
     void onBtnsubmitSDClick() {
         if (formValidation()) {
             try {
+
                 if (SaveDraft()) {
                     if (UpdateDB()) {
                         if (
-                                icTP == 1 ||
-                                        ((icTP == 2) && ((VIRBandApp.ageindays / 7) > VIRBandApp.TP_02w)) ||
-                                        ((icTP == 3) && ((VIRBandApp.ageindays / 7) > VIRBandApp.TP_03w)) ||
-                                        ((icTP == 4) && ((VIRBandApp.ageindays / 7) > VIRBandApp.TP_04w)) ||
-                                        ((icTP == 5) && ((VIRBandApp.ageindays / 30) > VIRBandApp.TP_05m)) ||
-                                        ((icTP == 6) && ((VIRBandApp.ageindays / 30) > VIRBandApp.TP_06m))
+
+                                ((icTP == 1) && ((VIRBandApp.ageindays / 7) > VIRBandApp.TP_02w)) ||
+                                        ((icTP == 2) && ((VIRBandApp.ageindays / 7) > VIRBandApp.TP_03w)) ||
+                                        ((icTP == 3) && ((VIRBandApp.ageindays / 7) > VIRBandApp.TP_04w)) ||
+                                        ((icTP == 4) && ((VIRBandApp.ageindays / 30) > VIRBandApp.TP_05m))
+                                        || ((icTP == 5) && ((VIRBandApp.ageindays / 30) > VIRBandApp.TP_06m))
+
                                 ) {
+
                             Intent sVD = new Intent(this, sVD.class);
                             sVD.putExtra("icTP", icTP);
-                            sVD.putExtra("ic", true);
-                            sVD.putExtra("minDate", DOV.getCalendarView().getDate());
+                            if (ic) {
+                                sVD.putExtra("ic", true);
+                            } else {
+                                sVD.putExtra("ic", false);
+                            }
                             startActivity(sVD);
+
                         } else {
                             Intent ending = new Intent(this, EndActivity.class);
                             startActivity(ending);
                         }
+                        }
                     }
-                }
+
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -550,40 +558,74 @@ public class sVD
 
     private boolean UpdateDB() {
         FormsDBHelper db = new FormsDBHelper(this);
+        if (ic) {
+            switch (icTP) {
+                case 1:
+                    updcount = db.updateIChild1();
+                    break;
+                case 2:
+                    updcount = db.updateIChild2();
+                    break;
+                case 3:
+                    updcount = db.updateIChild3();
+                    break;
+                case 4:
+                    updcount = db.updateIChild4();
+                    break;
+                case 5:
+                    updcount = db.updateIChild5();
+                    break;
+                case 6:
+                    updcount = db.updateIChild6();
+                    break;
+                default:
+                    Toast.makeText(this, "No Update!", Toast.LENGTH_SHORT).show();
 
-        switch (icTP) {
-            case 1:
-                updcount = db.updateIChild1();
-                break;
-            case 2:
-                updcount = db.updateIChild2();
-                break;
-            case 3:
-                updcount = db.updateIChild3();
-                break;
-            case 4:
-                updcount = db.updateIChild4();
-                break;
-            case 5:
-                updcount = db.updateIChild5();
-                break;
-            case 6:
-                updcount = db.updateIChild6();
-                break;
-            default:
-                Toast.makeText(this, "No Update!", Toast.LENGTH_SHORT).show();
+            }
 
+            if (updcount == 1) {
+                Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
+                updcount = 0;
+                return true;
+            } else {
+                Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+                return false;
+            }
 
-        }
-
-        if (updcount == 1) {
-            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            switch (icTP) {
+                case 1:
+                    updcount = db.updateOCV1();
+                    break;
+                case 2:
+                    updcount = db.updateOCV2();
+                    break;
+                case 3:
+                    updcount = db.updateOCV3();
+                    break;
+                case 4:
+                    updcount = db.updateOCV4();
+                    break;
+                case 5:
+                    updcount = db.updateOCV5();
+                    break;
+                case 6:
+                    updcount = db.updateOCV6();
+                    break;
+                default:
+                    Toast.makeText(this, "No Update!", Toast.LENGTH_SHORT).show();
 
+            }
+
+            if (updcount == 1) {
+                Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
+                updcount = 0;
+                return true;
+            } else {
+                Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+                return false;
+            }
         }
-
-        return true;
     }
 
     private boolean SaveDraft() throws JSONException {
@@ -865,37 +907,67 @@ public class sVD
         }
         IChild.put(tp + "VD57", vD57.getText().toString());
 
-        switch (icTP) {
-            case 1:
-                sA.fc.setIChild1(IChild.toString());
-                Toast.makeText(this, "Saving Dose# 1 Draft... Successful!", Toast.LENGTH_SHORT).show();
-                return true;
-            case 2:
-                sA.fc.setIChild2(IChild.toString());
-                Toast.makeText(this, "Saving Dose# 2 Draft... Successful!", Toast.LENGTH_SHORT).show();
-                return true;
-            case 3:
-                sA.fc.setIChild3(IChild.toString());
-                Toast.makeText(this, "Saving Dose# 3 Draft... Successful!", Toast.LENGTH_SHORT).show();
-                return true;
-            case 4:
-                sA.fc.setIChild4(IChild.toString());
-                Toast.makeText(this, "Saving Dose# 4 Draft... Successful!", Toast.LENGTH_SHORT).show();
-                return true;
-            case 5:
-                sA.fc.setIChild5(IChild.toString());
-                Toast.makeText(this, "Saving Dose# 5 Draft... Successful!", Toast.LENGTH_SHORT).show();
-                return true;
-            case 6:
-                sA.fc.setIChild6(IChild.toString());
-                Toast.makeText(this, "Saving Dose# 6 Draft... Successful!", Toast.LENGTH_SHORT).show();
-                return true;
-            default:
-                Toast.makeText(this, "No Saving!", Toast.LENGTH_SHORT).show();
+        if (ic) {
+            switch (icTP) {
+                case 1:
+                    sA.fc.setIChild1(IChild.toString());
+                    Toast.makeText(this, "Saving Dose# 1 Draft... Successful!", Toast.LENGTH_SHORT).show();
+                    sA.fc.setVA109("1");
+                    return true;
+                case 2:
+                    sA.fc.setIChild2(IChild.toString());
+                    Toast.makeText(this, "Saving Dose# 2 Draft... Successful!", Toast.LENGTH_SHORT).show();
+                    return true;
+                case 3:
+                    sA.fc.setIChild3(IChild.toString());
+                    Toast.makeText(this, "Saving Dose# 3 Draft... Successful!", Toast.LENGTH_SHORT).show();
+                    return true;
+                case 4:
+                    sA.fc.setIChild4(IChild.toString());
+                    Toast.makeText(this, "Saving Dose# 4 Draft... Successful!", Toast.LENGTH_SHORT).show();
+                    return true;
+                case 5:
+                    sA.fc.setIChild5(IChild.toString());
+                    Toast.makeText(this, "Saving Dose# 5 Draft... Successful!", Toast.LENGTH_SHORT).show();
+                    return true;
+                case 6:
+                    sA.fc.setIChild6(IChild.toString());
+                    Toast.makeText(this, "Saving Dose# 6 Draft... Successful!", Toast.LENGTH_SHORT).show();
+                    return true;
+                default:
+                    Toast.makeText(this, "No Saving!", Toast.LENGTH_SHORT).show();
+            }
 
-
+        } else {
+            switch (icTP) {
+                case 1:
+                    sOCI.occ.setOCV1(IChild.toString());
+                    Toast.makeText(this, "Saving Dose# 1 Draft... Successful!", Toast.LENGTH_SHORT).show();
+                    return true;
+                case 2:
+                    sOCI.occ.setOCV2(IChild.toString());
+                    Toast.makeText(this, "Saving Dose# 2 Draft... Successful!", Toast.LENGTH_SHORT).show();
+                    return true;
+                case 3:
+                    sOCI.occ.setOCV3(IChild.toString());
+                    Toast.makeText(this, "Saving Dose# 3 Draft... Successful!", Toast.LENGTH_SHORT).show();
+                    return true;
+                case 4:
+                    sOCI.occ.setOCV4(IChild.toString());
+                    Toast.makeText(this, "Saving Dose# 4 Draft... Successful!", Toast.LENGTH_SHORT).show();
+                    return true;
+                case 5:
+                    sOCI.occ.setOCV5(IChild.toString());
+                    Toast.makeText(this, "Saving Dose# 5 Draft... Successful!", Toast.LENGTH_SHORT).show();
+                    return true;
+                case 6:
+                    sOCI.occ.setOCV6(IChild.toString());
+                    Toast.makeText(this, "Saving Dose# 6 Draft... Successful!", Toast.LENGTH_SHORT).show();
+                    return true;
+                default:
+                    Toast.makeText(this, "No Saving!", Toast.LENGTH_SHORT).show();
+            }
         }
-        sA.fc.setVA109("1");
         return false;
     }
 

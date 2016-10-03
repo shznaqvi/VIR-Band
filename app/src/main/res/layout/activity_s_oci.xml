@@ -3,6 +3,7 @@
     android:id="@+id/ScrollView01"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -108,8 +109,10 @@
                 android:id="@+id/textView2"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
                 android:layout_marginBottom="8dp"
-                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
                 android:layout_marginTop="16dp"
                 android:background="@color/colorPrimary"
                 android:padding="12dp"
@@ -123,11 +126,10 @@
                 android:id="@+id/OC05"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView2"
                 android:layout_alignRight="@+id/textView2"
-                android:layout_alignStart="@+id/textView2"
-                android:layout_alignTop="@+id/B08d"
+                android:layout_alignTop="@+id/OC07d"
                 android:layout_marginBottom="8dp"
-                android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:gravity="right">
 
@@ -156,9 +158,9 @@
                 android:id="@+id/textView"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true"
                 android:layout_marginBottom="8dp"
-                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
                 android:layout_marginTop="16dp"
                 android:background="@color/colorPrimary"
                 android:padding="12dp"
@@ -172,14 +174,14 @@
                 android:id="@+id/OC07d"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/textView"
+                android:layout_alignLeft="@+id/textView"
                 android:layout_below="@+id/textView"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="8dp"
                 android:digits="0,1,2,3,4,5,6,7,8,9"
                 android:hint="@string/B08d"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="2" />
 
             <EditText
                 android:id="@+id/OC07m"
@@ -188,7 +190,7 @@
                 android:layout_below="@+id/textView"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="8dp"
-                android:layout_toRightOf="@+id/B08d"
+                android:layout_toLeftOf="@+id/OC07y"
                 android:digits="0,1,2,3,4,5,6,7,8,9"
                 android:hint="@string/B08m"
                 android:inputType="number"
@@ -198,11 +200,10 @@
                 android:id="@+id/OC07y"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/textView"
                 android:layout_below="@+id/textView"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginRight="40dp"
                 android:layout_marginTop="8dp"
-                android:layout_toRightOf="@+id/B08m"
                 android:digits="0,1"
                 android:hint="@string/B08y"
                 android:inputType="number"
@@ -220,7 +221,8 @@
             android:text="@string/B09"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:typeface="serif" />
 
         <EditText
             android:id="@+id/OC08"
@@ -241,7 +243,8 @@
             android:text="@string/B10"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:typeface="serif" />
 
         <EditText
             android:id="@+id/OC09"
@@ -262,7 +265,8 @@
             android:text="@string/B11"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:typeface="serif" />
 
         <RadioGroup
             android:id="@+id/OC10"
@@ -334,6 +338,118 @@
             android:hint="@string/OTHER"
             android:inputType="text" />
 
+
+        <TextView
+            android:id="@+id/OC11_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimary"
+            android:padding="12dp"
+            android:text="@string/OC11"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:typeface="serif" />
+
+        <RadioGroup
+            android:id="@+id/OC11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|right"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:button="@null"
+            android:drawableRight="@android:drawable/btn_radio"
+            android:gravity="right">
+
+            <RadioButton
+                android:id="@+id/OC11_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/YES"
+                android:textSize="24sp"
+                android:typeface="serif" />
+
+            <RadioButton
+                android:id="@+id/OC11_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
+                android:text="@string/NO"
+                android:textSize="24sp"
+                android:typeface="serif" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/fldGrpOC11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorPrimary"
+                android:padding="12dp"
+                android:text="@string/E52"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:typeface="serif" />
+
+
+            <RadioGroup
+                android:id="@+id/OC12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|right"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="right">
+
+                <RadioButton
+                    android:id="@+id/OC12_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:text="@string/E52_a"
+                    android:textSize="24sp"
+                    android:typeface="serif" />
+
+                <RadioButton
+                    android:id="@+id/OC12_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:text="@string/E52_b"
+                    android:textSize="24sp"
+                    android:typeface="serif" />
+
+                <RadioButton
+                    android:id="@+id/OC12_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableRight="@android:drawable/btn_radio"
+                    android:text="@string/E52_c"
+                    android:textSize="24sp"
+                    android:typeface="serif" />
+            </RadioGroup>
+        </LinearLayout>
+
         <Button
             android:id="@+id/btnSubmitOC"
             android:layout_width="225dp"
@@ -346,6 +462,5 @@
             android:text="@string/submit"
             android:textColor="@color/white"
             android:textSize="24sp" />
-
     </LinearLayout>
 </ScrollView>

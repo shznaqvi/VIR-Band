@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -36,22 +37,26 @@ public class sOCI extends AppCompatActivity {
 
     @BindView(R.id.OC04)
     EditText OC04;
+    @BindView(R.id.DOB)
+    CheckBox DOB;
+    @BindView(R.id.fldGrpDOB)
+    LinearLayout fldGrpDOB;
+    @BindView(R.id.fldGrpOC11)
+    LinearLayout fldGrpOC11;
+    @BindView(R.id.OC06)
+    DatePicker OC06;
     @BindView(R.id.OC05)
     RadioGroup OC05;
     @BindView(R.id.OC05_male)
     RadioButton OC05_male;
     @BindView(R.id.OC05_female)
     RadioButton OC05_female;
-    @BindView(R.id.DOB)
-    CheckBox DOB;
-    @BindView(R.id.OC06)
-    DatePicker OC06;
+    @BindView(R.id.OC07d)
+    EditText OC07d;
     @BindView(R.id.OC07m)
     EditText OC07m;
     @BindView(R.id.OC07y)
     EditText OC07y;
-    @BindView(R.id.OC07d)
-    EditText OC07d;
     @BindView(R.id.OC08)
     EditText OC08;
     @BindView(R.id.OC09)
@@ -68,14 +73,30 @@ public class sOCI extends AppCompatActivity {
     RadioButton OC10_d;
     @BindView(R.id.OC10_e)
     RadioButton OC10_e;
-    @BindView(R.id.fldGrpDOB)
-    LinearLayout fldGrpDOB;
+    @BindView(R.id.OC10_x)
+    EditText OC10_x;
+    @BindView(R.id.OC11_txt)
+    TextView OC11_txt;
+    @BindView(R.id.OC11)
+    RadioGroup OC11;
+    @BindView(R.id.OC11_a)
+    RadioButton OC11_a;
+    @BindView(R.id.OC11_b)
+    RadioButton OC11_b;
+    @BindView(R.id.OC12)
+    RadioGroup OC12;
+    @BindView(R.id.OC12_a)
+    RadioButton OC12_a;
+    @BindView(R.id.OC12_b)
+    RadioButton OC12_b;
+    @BindView(R.id.OC12_c)
+    RadioButton OC12_c;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_s_b);
+        setContentView(R.layout.activity_s_oci);
         ButterKnife.bind(this);
         OC06.setMaxDate(new Date().getTime());
         OC06.setMinDate(new Date().getTime() - (VIRBandApp.MILLISECONDS_IN_YEAR * 2));
@@ -92,9 +113,20 @@ public class sOCI extends AppCompatActivity {
                 }
             }
         });
+        OC11.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (OC11_a.isChecked()) {
+                    fldGrpOC11.setVisibility(View.VISIBLE);
+                } else {
+                    fldGrpOC11.setVisibility(View.GONE);
+                    OC12.clearCheck();
+                }
+            }
+        });
     }
 
-    public void submitSB(View v) throws JSONException {
+    public void submitOC(View v) throws JSONException {
         Log.d(TAG, String.valueOf(OC05.getCheckedRadioButtonId() + " || " + R.id.OC05_male));
 
         if (formValidation()) {
@@ -139,7 +171,6 @@ public class sOCI extends AppCompatActivity {
         } else if (i == R.id.OC05_female) {
             soc.put("OC05", "b");
 
-
         } else {
             soc.put("OC05", "ns"); // none selected
         }
@@ -153,11 +184,12 @@ public class sOCI extends AppCompatActivity {
             Date date1 = new Date();
             Date date2 = cal.getTime();
             long diff = date1.getTime() - date2.getTime();
-            ageindaysOCI = (int) TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
+            VIRBandApp.ageindays = (int) TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
+
         } else {
             int m2days = (Integer.valueOf(OC07m.getText().toString()) * 30);
             int y2days = (Integer.valueOf(OC07y.getText().toString()) * 365);
-            ageindaysOCI = (m2days + y2days + Integer.valueOf(OC07d.getText().toString()));
+            VIRBandApp.ageindays = m2days + y2days + Integer.valueOf(OC07d.getText().toString());
         }
         Log.d(TAG, "Age in Days: " + ageindaysOCI);
 
@@ -183,8 +215,33 @@ public class sOCI extends AppCompatActivity {
                 soc.put("OC10", "xx");
 
         }
+        switch (OC11.getCheckedRadioButtonId()) {
+            case R.id.OC11_a:
+                soc.put("OC11", "a");
+                break;
+            case R.id.OC11_b:
+                soc.put("OC11", "b");
+                break;
+            default:
+                soc.put("OC11", "xx");
 
-        occ = new OtherChildContract(sA.fc.getID().toString(), soc);
+        }
+
+        switch (OC12.getCheckedRadioButtonId()) {
+            case R.id.OC12_a:
+                soc.put("OC12", "a");
+                break;
+            case R.id.OC12_b:
+                soc.put("OC12", "b");
+                break;
+            case R.id.OC12_c:
+                soc.put("OC12", "c");
+                break;
+            default:
+                soc.put("OC12", "xx");
+        }
+
+        occ = new OtherChildContract(sA.fc.getID().toString(), soc.toString());
         Toast.makeText(sOCI.this, "Saving Draft... Successful!", Toast.LENGTH_SHORT).show();
 
     }
@@ -279,6 +336,24 @@ public class sOCI extends AppCompatActivity {
             return false;
         } else {
             OC10_e.setError(null);
+        }
+
+        if (OC11.getCheckedRadioButtonId() == -1) {
+            Toast.makeText(sOCI.this, "Please select an answer", Toast.LENGTH_LONG).show();
+            OC11_b.setError("Please select an answer");
+            Log.i(TAG, "Answer not selected");
+            return false;
+        } else {
+            OC11_b.setError(null);
+        }
+
+        if (OC11_a.isChecked() && OC12.getCheckedRadioButtonId() == -1) {
+            Toast.makeText(sOCI.this, "Please select an answer", Toast.LENGTH_LONG).show();
+            OC12_c.setError("Please select an answer");
+            Log.i(TAG, "Answer not selected");
+            return false;
+        } else {
+            OC12_c.setError(null);
         }
 
 
