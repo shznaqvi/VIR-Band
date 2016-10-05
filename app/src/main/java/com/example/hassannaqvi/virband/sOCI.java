@@ -28,8 +28,8 @@ import butterknife.ButterKnife;
 
 public class sOCI extends AppCompatActivity {
 
-    private static final String TAG = "SectionB";
-    public static OtherChildContract occ;
+    private static final String TAG = "SectionOtherChild";
+    public static OtherChildContract occ = null;
 
     public static JSONObject soc;
     public static int ageindaysOCI;
@@ -144,22 +144,23 @@ public class sOCI extends AppCompatActivity {
     public boolean UpdateDB() {
 
         Long rowId;
-        /*OcsDBHelper db = new OcsDBHelper(this);
+        FormsDBHelper db = new FormsDBHelper(this);
 
-        rowId = db.addForm(fc);
-        fc.setID(rowId);
-        fc.setFormNo(fc.getDeviceID().substring(fc.getDeviceID().length() - 5) + "-" + fc.getID());
-        Toast.makeText(sA.this, "Current Form No: " + fc.getFormNo(), Toast.LENGTH_SHORT).show();
-*/
+        rowId = db.addOCS(occ);
+        occ.setID(rowId);
+        //occ.setFormNo(fc.getDeviceID().substring(fc.getDeviceID().length() - 5) + "-" + fc.getID());
+        Toast.makeText(sOCI.this, "Current Form No: " + occ.getFormID(), Toast.LENGTH_SHORT).show();
+
         return true;
 
     }
 
     public void SaveDraft() throws JSONException {
-
         soc = new JSONObject();
 
         String spDateT = new SimpleDateFormat("dd-MM-yyyy HH:mm").format(OC06.getCalendarView().getDate());
+        VIRBandApp.OChID++;
+        occ.setOC_ID(sA.fc.getFormNo().toString() + "-" + VIRBandApp.OChID);
 
         soc.put("OC04", OC04.getText().toString());
         Log.d(TAG, String.valueOf(OC05.getCheckedRadioButtonId() + "" + R.id.B06_male));

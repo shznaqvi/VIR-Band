@@ -17,7 +17,7 @@ public class OtherChildContract {
 
     private Long ID;
     private String OC_ID;
-    private String FormID;
+    private String FormID; // Redundent of OC_03
     private String OC_01 = sB.iChildName;
     private String OC_02 = sA.fc.getVA02();
     private String OC_03 = sA.fc.getFormNo();
@@ -44,7 +44,7 @@ public class OtherChildContract {
 
 
     public Long getID() {
-        return ID;
+        return this.ID;
     }
 
     public void setID(Long ID) {

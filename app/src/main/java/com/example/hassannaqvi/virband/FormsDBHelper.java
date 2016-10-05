@@ -20,7 +20,7 @@ import java.util.Collection;
  */
 public class FormsDBHelper extends SQLiteOpenHelper {
 
-    public static final int DATABASE_VERSION = 6;
+    public static final int DATABASE_VERSION = 7;
     public static final String DATABASE_NAME = "vir_band.db";
     private static final String TEXT_TYPE = " TEXT";
     private static final String COMMA_SEP = ",";

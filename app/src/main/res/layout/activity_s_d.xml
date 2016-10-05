@@ -252,7 +252,7 @@
                 android:layout_height="wrap_content"
                 android:button="@null"
                 android:drawableRight="@android:drawable/btn_radio"
-                android:text="@string/INTER"
+                android:text="@string/METRIC"
                 android:textSize="24sp"
                 android:typeface="serif" />
 

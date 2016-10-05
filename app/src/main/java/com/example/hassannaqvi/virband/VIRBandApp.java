@@ -35,6 +35,7 @@ public class VIRBandApp extends Application {
     private static final long DAYS_IN_YEAR = 365;
     public static final long MILLISECONDS_IN_YEAR = MILLIS_IN_SECOND * SECONDS_IN_MINUTE * MINUTES_IN_HOUR * HOURS_IN_DAY * DAYS_IN_YEAR;
     public static int ageindays;
+    public static int OChID = 0;
     public static boolean appAdmin = false;
     public static String userid;
     public static String deviceid;

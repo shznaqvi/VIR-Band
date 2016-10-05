@@ -11,11 +11,20 @@ public class EndActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end);
-        VIRBandApp.ageindays = 0;
     }
 
     public void addChild(View v) {
         Intent aC = new Intent(this, sOCI.class);
+        VIRBandApp.ageindays = 0;
         startActivity(aC);
+    }
+
+    public void closeForm(View v) {
+        Intent end = new Intent(this, MainActivity.class);
+        sA.fc = null;
+        sOCI.occ = null;
+        VIRBandApp.OChID = 0;
+        VIRBandApp.ageindays = 0;
+        startActivity(end);
     }
 }
