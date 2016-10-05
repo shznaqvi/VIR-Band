@@ -115,7 +115,7 @@ public class sA extends AppCompatActivity {
     public Boolean formValidation() {
 
         if (A02.getText().toString().isEmpty()) {
-
+            Toast.makeText(this, "Household Number not given!", Toast.LENGTH_LONG).show();
             A02.setError("Household Number not given!");
             Log.i(TAG, "A02- Household is empty");
             return false;
@@ -125,7 +125,7 @@ public class sA extends AppCompatActivity {
         }
 
         if (A105.getText().toString().isEmpty()) {
-
+            Toast.makeText(this, "Cluster Number not given!", Toast.LENGTH_LONG).show();
             A105.setError("Cluster Number not given!");
             Log.i(TAG, "A105- Cluster is empty");
             return false;
@@ -134,16 +134,40 @@ public class sA extends AppCompatActivity {
         }
 
         if (A04.getCheckedRadioButtonId() == -1) {
-
+            Toast.makeText(this, "Please select an Area!", Toast.LENGTH_LONG).show();
             A04_b.setError("Please select an Area!");
             Log.i(TAG, "A04- Area not selected");
             return false;
         } else {
             A04_b.setError(null);
         }
+        if (Integer.valueOf(A105.getText().toString()) <= 20 && Integer.valueOf(A105.getText().toString()) > 0) {
+            A105.setError(null);
+            if (A04_a.isChecked() && Integer.valueOf(A105.getText().toString()) < 14) {
+                Toast.makeText(this, "Area do not match cluster!", Toast.LENGTH_LONG).show();
+                A04_b.setError(null);
+                A04_a.setError("Area do not match cluster!");
+                Log.i(TAG, "A04- Area do not match");
+                return false;
+            } else if (A04_b.isChecked() && Integer.valueOf(A105.getText().toString()) >= 14) {
+                Toast.makeText(this, "Area do not match cluster!", Toast.LENGTH_LONG).show();
+                A04_a.setError(null);
+                A04_b.setError("Area do not match cluster!");
+                Log.i(TAG, "A04- Area do not match");
+                return false;
+            } else {
+                A04_b.setError(null);
+                A04_a.setError(null);
+            }
+        } else {
+            Toast.makeText(this, "Invalid Cluster Number!", Toast.LENGTH_LONG).show();
+            A105.setError("Invalid Cluster Number!");
+            Log.i(TAG, "A105- Invalid Cluster Number!");
+            return false;
+        }
+
         Toast.makeText(sA.this, "Validation... Successful!", Toast.LENGTH_SHORT).show();
         return true;
-
     }
 
     public void setGPS() {

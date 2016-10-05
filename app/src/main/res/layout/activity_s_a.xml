@@ -68,7 +68,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
         android:inputType="number"
-            android:maxLength="9"
+            android:maxLength="2"
         android:textColor="#654688" />
 
     <TextView
